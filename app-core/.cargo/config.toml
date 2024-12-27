@@ -1,0 +1,6 @@
+[build]
+target = "thumbv8m.main-none-eabihf"
+
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+# The runner will *not* work properly, the code for the VPR core will be missing.
+# runner = "probe-rs run --chip nrf54l15"

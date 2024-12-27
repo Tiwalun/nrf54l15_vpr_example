@@ -1,0 +1,17 @@
+[package]
+name = "flpr-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nrf54l15-flpr-pac = { version = "0.1.0", path = "../nrf54l15-flpr-pac", features = [
+    "rt",
+    "critical-section",
+] }
+panic-halt = "0.2.0"
+riscv = { version = "0.11.1", features = ["critical-section-single-hart"] }
+riscv-rt = { version = "0.12.2", features = ["single-hart"] }
+
+[patch.crates-io]
+# Patch needed to support RV32E
+riscv-rt = { git = "https://github.com/Tiwalun/riscv", rev = "84644f7b190c22db5b603888b09f6ba1b1fdabc9" }

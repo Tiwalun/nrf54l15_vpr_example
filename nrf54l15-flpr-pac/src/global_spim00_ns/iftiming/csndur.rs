@@ -1,0 +1,40 @@
+#[doc = "Register `CSNDUR` reader"]
+pub type R = crate::R<CsndurSpec>;
+#[doc = "Register `CSNDUR` writer"]
+pub type W = crate::W<CsndurSpec>;
+#[doc = "Field `CSNDUR` reader - Minimum duration between edge of CSN and edge of SCK. When SHORTS.END_START is used, this is the minimum duration CSN must stay high between transactions. The value is specified in number of SPIM core clock cycles."]
+pub type CsndurR = crate::FieldReader;
+#[doc = "Field `CSNDUR` writer - Minimum duration between edge of CSN and edge of SCK. When SHORTS.END_START is used, this is the minimum duration CSN must stay high between transactions. The value is specified in number of SPIM core clock cycles."]
+pub type CsndurW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - Minimum duration between edge of CSN and edge of SCK. When SHORTS.END_START is used, this is the minimum duration CSN must stay high between transactions. The value is specified in number of SPIM core clock cycles."]
+    #[inline(always)]
+    pub fn csndur(&self) -> CsndurR {
+        CsndurR::new((self.bits & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:7 - Minimum duration between edge of CSN and edge of SCK. When SHORTS.END_START is used, this is the minimum duration CSN must stay high between transactions. The value is specified in number of SPIM core clock cycles."]
+    #[inline(always)]
+    #[must_use]
+    pub fn csndur(&mut self) -> CsndurW<CsndurSpec> {
+        CsndurW::new(self, 0)
+    }
+}
+#[doc = "Minimum duration between edge of CSN and edge of SCK. When SHORTS.END_START is used, this is also the minimum duration CSN must stay high between transactions.\n\nYou can [`read`](crate::Reg::read) this register and get [`csndur::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`csndur::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct CsndurSpec;
+impl crate::RegisterSpec for CsndurSpec {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`csndur::R`](R) reader structure"]
+impl crate::Readable for CsndurSpec {}
+#[doc = "`write(|w| ..)` method takes [`csndur::W`](W) writer structure"]
+impl crate::Writable for CsndurSpec {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
+#[doc = "`reset()` method sets CSNDUR to value 0x02"]
+impl crate::Resettable for CsndurSpec {
+    const RESET_VALUE: u32 = 0x02;
+}
