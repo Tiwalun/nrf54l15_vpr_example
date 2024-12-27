@@ -15,7 +15,8 @@ popd
 # To use rust-objcopy, the cargo-binutils tools need to be installed.
 
 rust-objcopy -O ihex $APP_CORE_DIR/target/thumbv8m.main-none-eabihf/release/rust-moonlight app-core.hex
-nrfutil device program --firmware app-core.hex --serial-number "$1" --options verify=VERIFY_READ
+#nrfutil device program --firmware app-core.hex --serial-number "$1" --options verify=VERIFY_READ
+probe-rs download app-core.hex --binary-format hex
 
 #FLPR_ELF="$FLPR_CORE_DIR/target/riscv32emc-unknown-none-elf/release/flpr-core"
 
@@ -27,7 +28,9 @@ nrfutil device program --firmware app-core.hex --serial-number "$1" --options ve
 #objcopy --change-section-lma .rodata-$RELOC_OFFSET $FLPR_ELF
 
 rust-objcopy -O ihex $FLPR_CORE_DIR/target/riscv32emc-unknown-none-elf/release/flpr-core flpr-core.hex
-nrfutil device program --firmware flpr-core.hex --serial-number "$1" --options chip_erase_mode=ERASE_RANGES_TOUCHED_BY_FIRMWARE,verify=VERIFY_READ
-nrfutil device fw-verify --firmware app-core.hex --serial-number "$1"
+#nrfutil device program --firmware flpr-core.hex --serial-number "$1" --options chip_erase_mode=ERASE_RANGES_TOUCHED_BY_FIRMWARE,verify=VERIFY_READ
+#nrfutil device fw-verify --firmware app-core.hex --serial-number "$1"
+probe-rs download flpr-core.hex --binary-format hex
 
-nrfutil device reset --reset-kind RESET_PIN --serial-number "$1"
+#nrfutil device reset --reset-kind RESET_PIN --serial-number "$1"
+probe-rs reset
