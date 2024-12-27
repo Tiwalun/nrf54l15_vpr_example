@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Minimum frame delay in number of 13.56 MHz clock cycles"]
     #[inline(always)]
-    #[must_use]
     pub fn framedelaymin(&mut self) -> FramedelayminW<FramedelayminSpec> {
         FramedelayminW::new(self, 0)
     }

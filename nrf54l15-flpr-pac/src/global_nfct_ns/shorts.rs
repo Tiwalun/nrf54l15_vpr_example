@@ -181,19 +181,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Shortcut between event FIELDDETECTED and task ACTIVATE"]
     #[inline(always)]
-    #[must_use]
     pub fn fielddetected_activate(&mut self) -> FielddetectedActivateW<ShortsSpec> {
         FielddetectedActivateW::new(self, 0)
     }
     #[doc = "Bit 1 - Shortcut between event FIELDLOST and task SENSE"]
     #[inline(always)]
-    #[must_use]
     pub fn fieldlost_sense(&mut self) -> FieldlostSenseW<ShortsSpec> {
         FieldlostSenseW::new(self, 1)
     }
     #[doc = "Bit 5 - Shortcut between event TXFRAMEEND and task ENABLERXDATA"]
     #[inline(always)]
-    #[must_use]
     pub fn txframeend_enablerxdata(&mut self) -> TxframeendEnablerxdataW<ShortsSpec> {
         TxframeendEnablerxdataW::new(self, 5)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - The PWM compare value"]
     #[inline(always)]
-    #[must_use]
     pub fn comparevalue(&mut self) -> ComparevalueW<PwmconfigSpec> {
         ComparevalueW::new(self, 0)
     }

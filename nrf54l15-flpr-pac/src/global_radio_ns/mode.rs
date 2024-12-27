@@ -163,7 +163,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Radio data rate and modulation setting. The radio supports frequency-shift keying (FSK) modulation."]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> ModeW<ModeSpec> {
         ModeW::new(self, 0)
     }

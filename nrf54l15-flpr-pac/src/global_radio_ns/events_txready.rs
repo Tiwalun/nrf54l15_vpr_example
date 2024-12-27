@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RADIO has ramped up and is ready to be started TX path"]
     #[inline(always)]
-    #[must_use]
     pub fn events_txready(&mut self) -> EventsTxreadyW<EventsTxreadySpec> {
         EventsTxreadyW::new(self, 0)
     }

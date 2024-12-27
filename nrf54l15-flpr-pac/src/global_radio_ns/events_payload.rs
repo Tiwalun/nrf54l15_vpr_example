@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Packet payload sent or received"]
     #[inline(always)]
-    #[must_use]
     pub fn events_payload(&mut self) -> EventsPayloadW<EventsPayloadSpec> {
         EventsPayloadW::new(self, 0)
     }

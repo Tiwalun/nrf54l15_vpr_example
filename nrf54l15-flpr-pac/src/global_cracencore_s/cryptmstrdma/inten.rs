@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn inten(&mut self) -> IntenW<IntenSpec> {
         IntenW::new(self, 0)
     }

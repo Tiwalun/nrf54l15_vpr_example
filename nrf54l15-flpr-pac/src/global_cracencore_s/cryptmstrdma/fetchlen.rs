@@ -43,25 +43,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:27"]
     #[inline(always)]
-    #[must_use]
     pub fn fetchlen(&mut self) -> FetchlenW<FetchlenSpec> {
         FetchlenW::new(self, 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    #[must_use]
     pub fn fetchcstaddr(&mut self) -> FetchcstaddrW<FetchlenSpec> {
         FetchcstaddrW::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
     pub fn fetchrealign(&mut self) -> FetchrealignW<FetchlenSpec> {
         FetchrealignW::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
     pub fn fetchzpadding(&mut self) -> FetchzpaddingW<FetchlenSpec> {
         FetchzpaddingW::new(self, 30)
     }

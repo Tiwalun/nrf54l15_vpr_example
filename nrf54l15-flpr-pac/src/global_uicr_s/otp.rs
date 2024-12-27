@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - OTP word"]
     #[inline(always)]
-    #[must_use]
     pub fn otp(&mut self) -> OtpW<OtpSpec> {
         OtpW::new(self, 0)
     }

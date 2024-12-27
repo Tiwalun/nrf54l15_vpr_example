@@ -43,25 +43,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - NFCID1 byte Z (very last byte sent)"]
     #[inline(always)]
-    #[must_use]
     pub fn z(&mut self) -> ZW<LastSpec> {
         ZW::new(self, 0)
     }
     #[doc = "Bits 8:15 - NFCID1 byte Y"]
     #[inline(always)]
-    #[must_use]
     pub fn y(&mut self) -> YW<LastSpec> {
         YW::new(self, 8)
     }
     #[doc = "Bits 16:23 - NFCID1 byte X"]
     #[inline(always)]
-    #[must_use]
     pub fn x(&mut self) -> XW<LastSpec> {
         XW::new(self, 16)
     }
     #[doc = "Bits 24:31 - NFCID1 byte W"]
     #[inline(always)]
-    #[must_use]
     pub fn w(&mut self) -> WW<LastSpec> {
         WW::new(self, 24)
     }

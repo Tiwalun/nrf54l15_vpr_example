@@ -287,7 +287,6 @@ event."]
 impl W {
     #[doc = "Bits 0:1 - Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> ModeW<ConfigSpec> {
         ModeW::new(self, 0)
     }
@@ -295,13 +294,11 @@ impl W {
 tasks and IN\\[n\\]
 event"]
     #[inline(always)]
-    #[must_use]
     pub fn psel(&mut self) -> PselW<ConfigSpec> {
         PselW::new(self, 4)
     }
     #[doc = "Bits 9:12 - Port number"]
     #[inline(always)]
-    #[must_use]
     pub fn port(&mut self) -> PortW<ConfigSpec> {
         PortW::new(self, 9)
     }
@@ -309,13 +306,11 @@ event"]
 task is triggered. When In event mode: Operation on input that shall trigger IN\\[n\\]
 event."]
     #[inline(always)]
-    #[must_use]
     pub fn polarity(&mut self) -> PolarityW<ConfigSpec> {
         PolarityW::new(self, 16)
     }
     #[doc = "Bit 20 - When in task mode: Initial value of the output when the GPIOTE channel is configured. When in event mode: No effect."]
     #[inline(always)]
-    #[must_use]
     pub fn outinit(&mut self) -> OutinitW<ConfigSpec> {
         OutinitW::new(self, 20)
     }

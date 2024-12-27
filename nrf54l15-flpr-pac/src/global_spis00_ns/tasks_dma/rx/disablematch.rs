@@ -33,7 +33,6 @@ impl W {
 event by clearing the ENABLE\\[n\\]
 bit in the CONFIG register."]
     #[inline(always)]
-    #[must_use]
     pub fn disablematch(&mut self) -> DisablematchW<DisablematchSpec> {
         DisablematchW::new(self, 0)
     }

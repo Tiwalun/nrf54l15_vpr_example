@@ -52,31 +52,26 @@ impl R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn fetchctrlindirect(&mut self) -> FetchctrlindirectW<ConfigSpec> {
         FetchctrlindirectW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn pushctrlindirect(&mut self) -> PushctrlindirectW<ConfigSpec> {
         PushctrlindirectW::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn fetchstop(&mut self) -> FetchstopW<ConfigSpec> {
         FetchstopW::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn pushstop(&mut self) -> PushstopW<ConfigSpec> {
         PushstopW::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn softrst(&mut self) -> SoftrstW<ConfigSpec> {
         SoftrstW::new(self, 4)
     }

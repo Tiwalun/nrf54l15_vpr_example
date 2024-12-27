@@ -280,7 +280,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Baud rate"]
     #[inline(always)]
-    #[must_use]
     pub fn baudrate(&mut self) -> BaudrateW<BaudrateSpec> {
         BaudrateW::new(self, 0)
     }

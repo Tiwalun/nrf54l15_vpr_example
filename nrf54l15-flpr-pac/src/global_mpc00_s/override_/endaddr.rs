@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - End address for override region n"]
     #[inline(always)]
-    #[must_use]
     pub fn endaddr(&mut self) -> EndaddrW<EndaddrSpec> {
         EndaddrW::new(self, 0)
     }

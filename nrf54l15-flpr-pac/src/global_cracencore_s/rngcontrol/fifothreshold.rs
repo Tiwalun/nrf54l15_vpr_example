@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - FIFO level below which the module leaves the idle state to refill the FIFO, expressed in number of 128bit blocks."]
     #[inline(always)]
-    #[must_use]
     pub fn fifothreshold(&mut self) -> FifothresholdW<FifothresholdSpec> {
         FifothresholdW::new(self, 0)
     }

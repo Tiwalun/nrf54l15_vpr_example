@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Downward crossing"]
     #[inline(always)]
-    #[must_use]
     pub fn events_down(&mut self) -> EventsDownW<EventsDownSpec> {
         EventsDownW::new(self, 0)
     }

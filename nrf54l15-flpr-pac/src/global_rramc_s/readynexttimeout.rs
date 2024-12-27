@@ -74,13 +74,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - Preload value for waiting for a next write"]
     #[inline(always)]
-    #[must_use]
     pub fn value(&mut self) -> ValueW<ReadynexttimeoutSpec> {
         ValueW::new(self, 0)
     }
     #[doc = "Bit 31 - Enable ready next timeout"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<ReadynexttimeoutSpec> {
         EnW::new(self, 31)
     }

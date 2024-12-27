@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start crystal oscillator (HFXO)"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_xostart(&mut self) -> TasksXostartW<TasksXostartSpec> {
         TasksXostartW::new(self, 0)
     }

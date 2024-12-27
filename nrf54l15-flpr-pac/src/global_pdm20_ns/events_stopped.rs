@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - PDM transfer has finished"]
     #[inline(always)]
-    #[must_use]
     pub fn events_stopped(&mut self) -> EventsStoppedW<EventsStoppedSpec> {
         EventsStoppedW::new(self, 0)
     }

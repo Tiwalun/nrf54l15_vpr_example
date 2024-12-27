@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The RXD.PTR register has been copied to internal double-buffers. When the I2S module is started and RX is enabled, this event will be generated for every RXTXD.MAXCNT words received on the SDIN pin."]
     #[inline(always)]
-    #[must_use]
     pub fn events_rxptrupd(&mut self) -> EventsRxptrupdW<EventsRxptrupdSpec> {
         EventsRxptrupdW::new(self, 0)
     }

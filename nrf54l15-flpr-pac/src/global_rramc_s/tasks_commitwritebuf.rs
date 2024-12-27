@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Commits the data stored in internal write-buffer to RRAM"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_commitwritebuf(&mut self) -> TasksCommitwritebufW<TasksCommitwritebufSpec> {
         TasksCommitwritebufW::new(self, 0)
     }

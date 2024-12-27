@@ -74,13 +74,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - DPPI channel that task XOSTOP will subscribe to"]
     #[inline(always)]
-    #[must_use]
     pub fn chidx(&mut self) -> ChidxW<SubscribeXostopSpec> {
         ChidxW::new(self, 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<SubscribeXostopSpec> {
         EnW::new(self, 31)
     }

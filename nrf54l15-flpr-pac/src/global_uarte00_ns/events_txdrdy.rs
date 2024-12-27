@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Data sent from TXD"]
     #[inline(always)]
-    #[must_use]
     pub fn events_txdrdy(&mut self) -> EventsTxdrdyW<EventsTxdrdySpec> {
         EventsTxdrdyW::new(self, 0)
     }

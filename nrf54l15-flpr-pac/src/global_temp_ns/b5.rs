@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - y-intercept of 6th piece wise linear function"]
     #[inline(always)]
-    #[must_use]
     pub fn b5(&mut self) -> B5W<B5Spec> {
         B5W::new(self, 0)
     }

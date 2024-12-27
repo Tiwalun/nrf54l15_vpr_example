@@ -373,49 +373,41 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Target slave number for region n accesses. Slave number 0 is reserved for default slave"]
     #[inline(always)]
-    #[must_use]
     pub fn slavenumber(&mut self) -> SlavenumberW<ConfigSpec> {
         SlavenumberW::new(self, 0)
     }
     #[doc = "Bit 8 - Locks the region n setting"]
     #[inline(always)]
-    #[must_use]
     pub fn lock(&mut self) -> LockW<ConfigSpec> {
         LockW::new(self, 8)
     }
     #[doc = "Bit 9 - Region n enable"]
     #[inline(always)]
-    #[must_use]
     pub fn enable(&mut self) -> EnableW<ConfigSpec> {
         EnableW::new(self, 9)
     }
     #[doc = "Bit 12 - Read access"]
     #[inline(always)]
-    #[must_use]
     pub fn read(&mut self) -> ReadW<ConfigSpec> {
         ReadW::new(self, 12)
     }
     #[doc = "Bit 13 - Write access"]
     #[inline(always)]
-    #[must_use]
     pub fn write(&mut self) -> WriteW<ConfigSpec> {
         WriteW::new(self, 13)
     }
     #[doc = "Bit 14 - Software execute"]
     #[inline(always)]
-    #[must_use]
     pub fn execute(&mut self) -> ExecuteW<ConfigSpec> {
         ExecuteW::new(self, 14)
     }
     #[doc = "Bit 15 - Memory security mapping"]
     #[inline(always)]
-    #[must_use]
     pub fn secattr(&mut self) -> SecattrW<ConfigSpec> {
         SecattrW::new(self, 15)
     }
     #[doc = "Bits 16:19 - Region owner identifier."]
     #[inline(always)]
-    #[must_use]
     pub fn ownerid(&mut self) -> OwneridW<ConfigSpec> {
         OwneridW::new(self, 16)
     }

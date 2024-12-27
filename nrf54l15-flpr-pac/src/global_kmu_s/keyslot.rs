@@ -2,21 +2,20 @@
 pub type R = crate::R<KeyslotSpec>;
 #[doc = "Register `KEYSLOT` writer"]
 pub type W = crate::W<KeyslotSpec>;
-#[doc = "Field `ID` reader - Select key slot ID to provision, read, or push when TASKS_PROVISION, TASKS_PUSH, TASKS_READMETADATA, or TASKS_REVOKE, is triggered."]
+#[doc = "Field `ID` reader - Select key slot ID to provision, push, read METADATA, revoke or block when the corresponding task is triggered."]
 pub type IdR = crate::FieldReader;
-#[doc = "Field `ID` writer - Select key slot ID to provision, read, or push when TASKS_PROVISION, TASKS_PUSH, TASKS_READMETADATA, or TASKS_REVOKE, is triggered."]
+#[doc = "Field `ID` writer - Select key slot ID to provision, push, read METADATA, revoke or block when the corresponding task is triggered."]
 pub type IdW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
-    #[doc = "Bits 0:7 - Select key slot ID to provision, read, or push when TASKS_PROVISION, TASKS_PUSH, TASKS_READMETADATA, or TASKS_REVOKE, is triggered."]
+    #[doc = "Bits 0:7 - Select key slot ID to provision, push, read METADATA, revoke or block when the corresponding task is triggered."]
     #[inline(always)]
     pub fn id(&self) -> IdR {
         IdR::new((self.bits & 0xff) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:7 - Select key slot ID to provision, read, or push when TASKS_PROVISION, TASKS_PUSH, TASKS_READMETADATA, or TASKS_REVOKE, is triggered."]
+    #[doc = "Bits 0:7 - Select key slot ID to provision, push, read METADATA, revoke or block when the corresponding task is triggered."]
     #[inline(always)]
-    #[must_use]
     pub fn id(&mut self) -> IdW<KeyslotSpec> {
         IdW::new(self, 0)
     }

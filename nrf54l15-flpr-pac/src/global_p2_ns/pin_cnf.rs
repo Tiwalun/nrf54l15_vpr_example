@@ -539,43 +539,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Pin direction. Same physical register as DIR register"]
     #[inline(always)]
-    #[must_use]
     pub fn dir(&mut self) -> DirW<PinCnfSpec> {
         DirW::new(self, 0)
     }
     #[doc = "Bit 1 - Connect or disconnect input buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn input(&mut self) -> InputW<PinCnfSpec> {
         InputW::new(self, 1)
     }
     #[doc = "Bits 2:3 - Pull configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn pull(&mut self) -> PullW<PinCnfSpec> {
         PullW::new(self, 2)
     }
     #[doc = "Bits 8:9 - Drive configuration for '0'"]
     #[inline(always)]
-    #[must_use]
     pub fn drive0(&mut self) -> Drive0W<PinCnfSpec> {
         Drive0W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Drive configuration for '1'"]
     #[inline(always)]
-    #[must_use]
     pub fn drive1(&mut self) -> Drive1W<PinCnfSpec> {
         Drive1W::new(self, 10)
     }
     #[doc = "Bits 16:17 - Pin sensing mechanism"]
     #[inline(always)]
-    #[must_use]
     pub fn sense(&mut self) -> SenseW<PinCnfSpec> {
         SenseW::new(self, 16)
     }
     #[doc = "Bits 28:30 - Select which module has direct control over this pin"]
     #[inline(always)]
-    #[must_use]
     pub fn ctrlsel(&mut self) -> CtrlselW<PinCnfSpec> {
         CtrlselW::new(self, 28)
     }

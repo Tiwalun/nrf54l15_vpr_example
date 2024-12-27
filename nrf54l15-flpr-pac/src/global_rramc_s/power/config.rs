@@ -74,13 +74,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Access timeout, in 31.25 ns units, used for going into standby power mode or remain active on wake up"]
     #[inline(always)]
-    #[must_use]
     pub fn accesstimeout(&mut self) -> AccesstimeoutW<ConfigSpec> {
         AccesstimeoutW::new(self, 0)
     }
     #[doc = "Bit 16 - Power on failure warning handling configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn pof(&mut self) -> PofW<ConfigSpec> {
         PofW::new(self, 16)
     }

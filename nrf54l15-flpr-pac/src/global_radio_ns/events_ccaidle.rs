@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Wireless medium in idle - clear to send"]
     #[inline(always)]
-    #[must_use]
     pub fn events_ccaidle(&mut self) -> EventsCcaidleW<EventsCcaidleSpec> {
         EventsCcaidleW::new(self, 0)
     }

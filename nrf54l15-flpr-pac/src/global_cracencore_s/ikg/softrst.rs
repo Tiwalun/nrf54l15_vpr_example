@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Software reset:"]
     #[inline(always)]
-    #[must_use]
     pub fn softrst(&mut self) -> SoftrstW<SoftrstSpec> {
         SoftrstW::new(self, 0)
     }

@@ -877,91 +877,76 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_0(&mut self) -> Connection0W<MasterportSpec> {
         Connection0W::new(self, 0)
     }
     #[doc = "Bit 1 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_1(&mut self) -> Connection1W<MasterportSpec> {
         Connection1W::new(self, 1)
     }
     #[doc = "Bit 2 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_2(&mut self) -> Connection2W<MasterportSpec> {
         Connection2W::new(self, 2)
     }
     #[doc = "Bit 3 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_3(&mut self) -> Connection3W<MasterportSpec> {
         Connection3W::new(self, 3)
     }
     #[doc = "Bit 4 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_4(&mut self) -> Connection4W<MasterportSpec> {
         Connection4W::new(self, 4)
     }
     #[doc = "Bit 5 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_5(&mut self) -> Connection5W<MasterportSpec> {
         Connection5W::new(self, 5)
     }
     #[doc = "Bit 6 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_6(&mut self) -> Connection6W<MasterportSpec> {
         Connection6W::new(self, 6)
     }
     #[doc = "Bit 7 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_7(&mut self) -> Connection7W<MasterportSpec> {
         Connection7W::new(self, 7)
     }
     #[doc = "Bit 8 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_8(&mut self) -> Connection8W<MasterportSpec> {
         Connection8W::new(self, 8)
     }
     #[doc = "Bit 9 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_9(&mut self) -> Connection9W<MasterportSpec> {
         Connection9W::new(self, 9)
     }
     #[doc = "Bit 10 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_10(&mut self) -> Connection10W<MasterportSpec> {
         Connection10W::new(self, 10)
     }
     #[doc = "Bit 11 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_11(&mut self) -> Connection11W<MasterportSpec> {
         Connection11W::new(self, 11)
     }
     #[doc = "Bit 12 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_12(&mut self) -> Connection12W<MasterportSpec> {
         Connection12W::new(self, 12)
     }
     #[doc = "Bit 13 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_13(&mut self) -> Connection13W<MasterportSpec> {
         Connection13W::new(self, 13)
     }
     #[doc = "Bit 14 - Global slave connection information for master port"]
     #[inline(always)]
-    #[must_use]
     pub fn connection_14(&mut self) -> Connection14W<MasterportSpec> {
         Connection14W::new(self, 14)
     }

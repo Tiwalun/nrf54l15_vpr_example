@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Starts operation using easyDMA to load the values. See peripheral description for operation using easyDMA."]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> StartW<StartSpec> {
         StartW::new(self, 0)
     }

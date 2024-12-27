@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Generated after all MAXCNT bytes have been transferred"]
     #[inline(always)]
-    #[must_use]
     pub fn end(&mut self) -> EndW<EndSpec> {
         EndW::new(self, 0)
     }

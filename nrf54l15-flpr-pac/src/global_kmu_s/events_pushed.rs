@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Key slot successfully pushed"]
     #[inline(always)]
-    #[must_use]
     pub fn events_pushed(&mut self) -> EventsPushedW<EventsPushedSpec> {
         EventsPushedW::new(self, 0)
     }

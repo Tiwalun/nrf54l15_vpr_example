@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Count to add to CC\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn value(&mut self) -> ValueW<IntervalSpec> {
         ValueW::new(self, 0)
     }

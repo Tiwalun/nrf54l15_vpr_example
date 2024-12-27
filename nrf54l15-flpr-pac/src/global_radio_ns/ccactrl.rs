@@ -138,25 +138,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - CCA mode of operation"]
     #[inline(always)]
-    #[must_use]
     pub fn ccamode(&mut self) -> CcamodeW<CcactrlSpec> {
         CcamodeW::new(self, 0)
     }
     #[doc = "Bits 8:15 - CCA energy busy threshold. Used in all the CCA modes except CarrierMode."]
     #[inline(always)]
-    #[must_use]
     pub fn ccaedthres(&mut self) -> CcaedthresW<CcactrlSpec> {
         CcaedthresW::new(self, 8)
     }
     #[doc = "Bits 16:23 - CCA correlator busy threshold. Only relevant to CarrierMode, CarrierAndEdMode, and CarrierOrEdMode."]
     #[inline(always)]
-    #[must_use]
     pub fn ccacorrthres(&mut self) -> CcacorrthresW<CcactrlSpec> {
         CcacorrthresW::new(self, 16)
     }
     #[doc = "Bits 24:31 - Limit for occurances above CCACORRTHRES. When not equal to zero the corrolator based signal detect is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn ccacorrcnt(&mut self) -> CcacorrcntW<CcactrlSpec> {
         CcacorrcntW::new(self, 24)
     }

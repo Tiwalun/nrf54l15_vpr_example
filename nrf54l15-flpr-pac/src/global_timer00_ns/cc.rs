@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Capture/Compare value"]
     #[inline(always)]
-    #[must_use]
     pub fn cc(&mut self) -> CcW<CcSpec> {
         CcW::new(self, 0)
     }

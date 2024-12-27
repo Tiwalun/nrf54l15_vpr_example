@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:19 - Maximum frame delay in number of 13.56 MHz clock cycles"]
     #[inline(always)]
-    #[must_use]
     pub fn framedelaymax(&mut self) -> FramedelaymaxW<FramedelaymaxSpec> {
         FramedelaymaxW::new(self, 0)
     }

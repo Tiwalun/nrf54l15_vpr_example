@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RRAMC is woken up from low power mode"]
     #[inline(always)]
-    #[must_use]
     pub fn events_wokenup(&mut self) -> EventsWokenupW<EventsWokenupSpec> {
         EventsWokenupW::new(self, 0)
     }

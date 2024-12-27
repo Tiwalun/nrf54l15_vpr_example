@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Acquire SPI semaphore"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_acquire(&mut self) -> TasksAcquireW<TasksAcquireSpec> {
         TasksAcquireW::new(self, 0)
     }

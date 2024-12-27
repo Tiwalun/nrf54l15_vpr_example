@@ -1,6 +1,8 @@
 
 ## How to generate
 
+First, get the SVD file from https://github.com/zephyrproject-rtos/hal_nordic/blob/master/nrfx/mdk/nrf54l15_flpr.svd.
+
 Install svd2rust and form, then run:
 
 ```bash

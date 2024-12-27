@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Data received in RXD (but potentially not yet transferred to Data RAM)"]
     #[inline(always)]
-    #[must_use]
     pub fn events_rxdrdy(&mut self) -> EventsRxdrdyW<EventsRxdrdySpec> {
         EventsRxdrdyW::new(self, 0)
     }

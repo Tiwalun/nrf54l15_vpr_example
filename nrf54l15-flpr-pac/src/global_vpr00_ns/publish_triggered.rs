@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 31 - Publication enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<PublishTriggeredSpec> {
         EnW::new(self, 31)
     }

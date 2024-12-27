@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Abort tuning for HFXO"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_xotuneabort(&mut self) -> TasksXotuneabortW<TasksXotuneabortSpec> {
         TasksXotuneabortW::new(self, 0)
     }

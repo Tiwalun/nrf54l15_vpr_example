@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:23 - Time added after the sequence in PWM periods"]
     #[inline(always)]
-    #[must_use]
     pub fn cnt(&mut self) -> CntW<EnddelaySpec> {
         CntW::new(self, 0)
     }

@@ -239,25 +239,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Read access"]
     #[inline(always)]
-    #[must_use]
     pub fn read(&mut self) -> ReadW<PermSpec> {
         ReadW::new(self, 0)
     }
     #[doc = "Bit 1 - Write access"]
     #[inline(always)]
-    #[must_use]
     pub fn write(&mut self) -> WriteW<PermSpec> {
         WriteW::new(self, 1)
     }
     #[doc = "Bit 2 - Software execute"]
     #[inline(always)]
-    #[must_use]
     pub fn execute(&mut self) -> ExecuteW<PermSpec> {
         ExecuteW::new(self, 2)
     }
     #[doc = "Bit 3 - Security mapping"]
     #[inline(always)]
-    #[must_use]
     pub fn secattr(&mut self) -> SecattrW<PermSpec> {
         SecattrW::new(self, 3)
     }

@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Clear time"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_clear(&mut self) -> TasksClearW<TasksClearSpec> {
         TasksClearW::new(self, 0)
     }

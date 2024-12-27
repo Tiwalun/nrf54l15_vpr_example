@@ -27,35 +27,6 @@ impl crate::FieldSpec for Clksel {
     type Ux = u8;
 }
 impl crate::IsEnum for Clksel {}
-#[doc = "Field `CLKSEL` reader - GRTC LFCLK clock source selection"]
-pub type ClkselR = crate::FieldReader<Clksel>;
-impl ClkselR {
-    #[doc = "Get enumerated values variant"]
-    #[inline(always)]
-    pub const fn variant(&self) -> Option<Clksel> {
-        match self.bits {
-            0 => Some(Clksel::Lfxo),
-            1 => Some(Clksel::SystemLfclk),
-            2 => Some(Clksel::Lflprc),
-            _ => None,
-        }
-    }
-    #[doc = "GRTC LFCLK clock source is LFXO"]
-    #[inline(always)]
-    pub fn is_lfxo(&self) -> bool {
-        *self == Clksel::Lfxo
-    }
-    #[doc = "GRTC LFCLK clock source is system LFCLK"]
-    #[inline(always)]
-    pub fn is_system_lfclk(&self) -> bool {
-        *self == Clksel::SystemLfclk
-    }
-    #[doc = "GRTC LFCLK clock source is LFLPRC"]
-    #[inline(always)]
-    pub fn is_lflprc(&self) -> bool {
-        *self == Clksel::Lflprc
-    }
-}
 #[doc = "Field `CLKSEL` writer - GRTC LFCLK clock source selection"]
 pub type ClkselW<'a, REG> = crate::FieldWriter<'a, REG, 2, Clksel>;
 impl<'a, REG> ClkselW<'a, REG>
@@ -85,22 +56,15 @@ impl R {
     pub fn clkfastdiv(&self) -> ClkfastdivR {
         ClkfastdivR::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 16:17 - GRTC LFCLK clock source selection"]
-    #[inline(always)]
-    pub fn clksel(&self) -> ClkselR {
-        ClkselR::new(((self.bits >> 16) & 3) as u8)
-    }
 }
 impl W {
     #[doc = "Bits 0:7 - Fast clock divisor value of clock output"]
     #[inline(always)]
-    #[must_use]
     pub fn clkfastdiv(&mut self) -> ClkfastdivW<ClkcfgSpec> {
         ClkfastdivW::new(self, 0)
     }
     #[doc = "Bits 16:17 - GRTC LFCLK clock source selection"]
     #[inline(always)]
-    #[must_use]
     pub fn clksel(&mut self) -> ClkselW<ClkcfgSpec> {
         ClkselW::new(self, 16)
     }

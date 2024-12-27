@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:14 - Minimum allowed history value."]
     #[inline(always)]
-    #[must_use]
     pub fn hmin(&mut self) -> HminW<Ais31conf2Spec> {
         HminW::new(self, 0)
     }
     #[doc = "Bits 16:30 - Maximum allowed history value."]
     #[inline(always)]
-    #[must_use]
     pub fn hmax(&mut self) -> HmaxW<Ais31conf2Spec> {
         HmaxW::new(self, 16)
     }

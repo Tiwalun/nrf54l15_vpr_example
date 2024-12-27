@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Calibration of LFRC oscillator complete event"]
     #[inline(always)]
-    #[must_use]
     pub fn events_done(&mut self) -> EventsDoneW<EventsDoneSpec> {
         EventsDoneW::new(self, 0)
     }

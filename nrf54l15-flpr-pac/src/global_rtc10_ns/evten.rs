@@ -355,37 +355,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable event routing for event TICK"]
     #[inline(always)]
-    #[must_use]
     pub fn tick(&mut self) -> TickW<EvtenSpec> {
         TickW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable event routing for event OVRFLW"]
     #[inline(always)]
-    #[must_use]
     pub fn ovrflw(&mut self) -> OvrflwW<EvtenSpec> {
         OvrflwW::new(self, 1)
     }
     #[doc = "Bit 16 - Enable or disable event routing for event COMPARE\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare0(&mut self) -> Compare0W<EvtenSpec> {
         Compare0W::new(self, 16)
     }
     #[doc = "Bit 17 - Enable or disable event routing for event COMPARE\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare1(&mut self) -> Compare1W<EvtenSpec> {
         Compare1W::new(self, 17)
     }
     #[doc = "Bit 18 - Enable or disable event routing for event COMPARE\\[2\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare2(&mut self) -> Compare2W<EvtenSpec> {
         Compare2W::new(self, 18)
     }
     #[doc = "Bit 19 - Enable or disable event routing for event COMPARE\\[3\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare3(&mut self) -> Compare3W<EvtenSpec> {
         Compare3W::new(self, 19)
     }

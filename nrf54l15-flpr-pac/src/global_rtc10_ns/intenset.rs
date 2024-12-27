@@ -397,37 +397,31 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to enable interrupt for event TICK"]
     #[inline(always)]
-    #[must_use]
     pub fn tick(&mut self) -> TickW<IntensetSpec> {
         TickW::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to enable interrupt for event OVRFLW"]
     #[inline(always)]
-    #[must_use]
     pub fn ovrflw(&mut self) -> OvrflwW<IntensetSpec> {
         OvrflwW::new(self, 1)
     }
     #[doc = "Bit 16 - Write '1' to enable interrupt for event COMPARE\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare0(&mut self) -> Compare0W<IntensetSpec> {
         Compare0W::new(self, 16)
     }
     #[doc = "Bit 17 - Write '1' to enable interrupt for event COMPARE\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare1(&mut self) -> Compare1W<IntensetSpec> {
         Compare1W::new(self, 17)
     }
     #[doc = "Bit 18 - Write '1' to enable interrupt for event COMPARE\\[2\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare2(&mut self) -> Compare2W<IntensetSpec> {
         Compare2W::new(self, 18)
     }
     #[doc = "Bit 19 - Write '1' to enable interrupt for event COMPARE\\[3\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare3(&mut self) -> Compare3W<IntensetSpec> {
         Compare3W::new(self, 19)
     }

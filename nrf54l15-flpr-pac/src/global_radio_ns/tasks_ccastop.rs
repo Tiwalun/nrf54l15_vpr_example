@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stop the clear channel assessment"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_ccastop(&mut self) -> TasksCcastopW<TasksCcastopSpec> {
         TasksCcastopW::new(self, 0)
     }

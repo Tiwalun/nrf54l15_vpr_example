@@ -413,43 +413,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Shortcut between event REPORTRDY and task READCLRACC"]
     #[inline(always)]
-    #[must_use]
     pub fn reportrdy_readclracc(&mut self) -> ReportrdyReadclraccW<ShortsSpec> {
         ReportrdyReadclraccW::new(self, 0)
     }
     #[doc = "Bit 1 - Shortcut between event SAMPLERDY and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn samplerdy_stop(&mut self) -> SamplerdyStopW<ShortsSpec> {
         SamplerdyStopW::new(self, 1)
     }
     #[doc = "Bit 2 - Shortcut between event REPORTRDY and task RDCLRACC"]
     #[inline(always)]
-    #[must_use]
     pub fn reportrdy_rdclracc(&mut self) -> ReportrdyRdclraccW<ShortsSpec> {
         ReportrdyRdclraccW::new(self, 2)
     }
     #[doc = "Bit 3 - Shortcut between event REPORTRDY and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn reportrdy_stop(&mut self) -> ReportrdyStopW<ShortsSpec> {
         ReportrdyStopW::new(self, 3)
     }
     #[doc = "Bit 4 - Shortcut between event DBLRDY and task RDCLRDBL"]
     #[inline(always)]
-    #[must_use]
     pub fn dblrdy_rdclrdbl(&mut self) -> DblrdyRdclrdblW<ShortsSpec> {
         DblrdyRdclrdblW::new(self, 4)
     }
     #[doc = "Bit 5 - Shortcut between event DBLRDY and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn dblrdy_stop(&mut self) -> DblrdyStopW<ShortsSpec> {
         DblrdyStopW::new(self, 5)
     }
     #[doc = "Bit 6 - Shortcut between event SAMPLERDY and task READCLRACC"]
     #[inline(always)]
-    #[must_use]
     pub fn samplerdy_readclracc(&mut self) -> SamplerdyReadclraccW<ShortsSpec> {
         SamplerdyReadclraccW::new(self, 6)
     }

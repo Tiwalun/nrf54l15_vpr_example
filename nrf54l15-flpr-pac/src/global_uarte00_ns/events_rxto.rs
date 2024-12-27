@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Receiver timeout"]
     #[inline(always)]
-    #[must_use]
     pub fn events_rxto(&mut self) -> EventsRxtoW<EventsRxtoSpec> {
         EventsRxtoW::new(self, 0)
     }

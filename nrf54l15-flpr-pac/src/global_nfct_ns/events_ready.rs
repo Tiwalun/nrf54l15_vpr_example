@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The NFCT peripheral is ready to receive and send frames"]
     #[inline(always)]
-    #[must_use]
     pub fn events_ready(&mut self) -> EventsReadyW<EventsReadySpec> {
         EventsReadyW::new(self, 0)
     }

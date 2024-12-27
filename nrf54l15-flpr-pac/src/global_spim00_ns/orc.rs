@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Byte transmitted after TXD.MAXCNT bytes have been transmitted in the case when RXD.MAXCNT is greater than TXD.MAXCNT."]
     #[inline(always)]
-    #[must_use]
     pub fn orc(&mut self) -> OrcW<OrcSpec> {
         OrcW::new(self, 0)
     }

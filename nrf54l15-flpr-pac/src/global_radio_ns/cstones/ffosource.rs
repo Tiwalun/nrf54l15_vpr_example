@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Use external or internal FFOSOURCE"]
     #[inline(always)]
-    #[must_use]
     pub fn ffosource(&mut self) -> FfosourceW<FfosourceSpec> {
         FfosourceW::new(self, 0)
     }

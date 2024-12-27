@@ -14,13 +14,13 @@ pub struct RegisterBlock {
     events_compare: [EventsCompare; 12],
     _reserved8: [u8; 0x34],
     events_rtcomparesync: EventsRtcomparesync,
-    events_syscountervalid: EventsSyscountervalid,
+    _reserved9: [u8; 0x04],
     events_pwmperiodend: EventsPwmperiodend,
-    _reserved11: [u8; 0x10],
+    _reserved10: [u8; 0x10],
     publish_compare: [PublishCompare; 12],
-    _reserved12: [u8; 0x50],
+    _reserved11: [u8; 0x50],
     shorts: Shorts,
-    _reserved13: [u8; 0xfc],
+    _reserved12: [u8; 0xfc],
     inten0: Inten0,
     intenset0: Intenset0,
     intenclr0: Intenclr0,
@@ -37,24 +37,23 @@ pub struct RegisterBlock {
     intenset3: Intenset3,
     intenclr3: Intenclr3,
     intpend3: Intpend3,
-    _reserved29: [u8; 0xc0],
+    _reserved28: [u8; 0xc0],
     evten: Evten,
     evtenset: Evtenset,
     evtenclr: Evtenclr,
-    _reserved32: [u8; 0x0104],
+    _reserved31: [u8; 0x0104],
     mode: Mode,
-    _reserved33: [u8; 0x0c],
+    _reserved32: [u8; 0x0c],
     cc: [Cc; 12],
-    _reserved34: [u8; 0xc0],
-    keeprunning: Keeprunning,
+    _reserved33: [u8; 0xc4],
     timeout: Timeout,
     interval: Interval,
     waketime: Waketime,
-    _reserved38: [u8; 0x60],
+    _reserved36: [u8; 0x60],
     pwmconfig: Pwmconfig,
     clkout: Clkout,
     clkcfg: Clkcfg,
-    _reserved41: [u8; 0x04],
+    _reserved39: [u8; 0x04],
     syscounter: (),
 }
 impl RegisterBlock {
@@ -120,15 +119,10 @@ match"]
     pub fn events_compare_iter(&self) -> impl Iterator<Item = &EventsCompare> {
         self.events_compare.iter()
     }
-    #[doc = "0x164 - Synchronize always-on LFCLK clock domain"]
+    #[doc = "0x164 - The GRTC low frequency timer is synchronized with the SYSCOUNTER"]
     #[inline(always)]
     pub const fn events_rtcomparesync(&self) -> &EventsRtcomparesync {
         &self.events_rtcomparesync
-    }
-    #[doc = "0x168 - The SYSCOUNTER is in active state and value is valid"]
-    #[inline(always)]
-    pub const fn events_syscountervalid(&self) -> &EventsSyscountervalid {
-        &self.events_syscountervalid
     }
     #[doc = "0x16c - Event on end of each PWM period"]
     #[inline(always)]
@@ -262,11 +256,6 @@ match"]
     pub fn cc_iter(&self) -> impl Iterator<Item = &Cc> {
         self.cc.iter()
     }
-    #[doc = "0x6a0 - Request to keep the SYSCOUNTER in the active state and prevent going to sleep"]
-    #[inline(always)]
-    pub const fn keeprunning(&self) -> &Keeprunning {
-        &self.keeprunning
-    }
     #[doc = "0x6a4 - Timeout after all CPUs gone into sleep state to stop the SYSCOUNTER"]
     #[inline(always)]
     pub const fn timeout(&self) -> &Timeout {
@@ -305,7 +294,7 @@ triggers."]
         #[allow(clippy::no_effect)]
         [(); 4][n];
         unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(1824)
                 .add(16 * n)
@@ -317,7 +306,7 @@ triggers."]
     #[inline(always)]
     pub fn syscounter_iter(&self) -> impl Iterator<Item = &Syscounter> {
         (0..4).map(move |n| unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(1824)
                 .add(16 * n)
@@ -377,18 +366,12 @@ pub type EventsCompare = crate::Reg<events_compare::EventsCompareSpec>;
 #[doc = "Description collection: Compare event on CC\\[n\\]
 match"]
 pub mod events_compare;
-#[doc = "EVENTS_RTCOMPARESYNC (rw) register accessor: Synchronize always-on LFCLK clock domain\n\nYou can [`read`](crate::Reg::read) this register and get [`events_rtcomparesync::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_rtcomparesync::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@events_rtcomparesync`]
+#[doc = "EVENTS_RTCOMPARESYNC (rw) register accessor: The GRTC low frequency timer is synchronized with the SYSCOUNTER\n\nYou can [`read`](crate::Reg::read) this register and get [`events_rtcomparesync::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_rtcomparesync::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@events_rtcomparesync`]
 module"]
 #[doc(alias = "EVENTS_RTCOMPARESYNC")]
 pub type EventsRtcomparesync = crate::Reg<events_rtcomparesync::EventsRtcomparesyncSpec>;
-#[doc = "Synchronize always-on LFCLK clock domain"]
+#[doc = "The GRTC low frequency timer is synchronized with the SYSCOUNTER"]
 pub mod events_rtcomparesync;
-#[doc = "EVENTS_SYSCOUNTERVALID (rw) register accessor: The SYSCOUNTER is in active state and value is valid\n\nYou can [`read`](crate::Reg::read) this register and get [`events_syscountervalid::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_syscountervalid::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@events_syscountervalid`]
-module"]
-#[doc(alias = "EVENTS_SYSCOUNTERVALID")]
-pub type EventsSyscountervalid = crate::Reg<events_syscountervalid::EventsSyscountervalidSpec>;
-#[doc = "The SYSCOUNTER is in active state and value is valid"]
-pub mod events_syscountervalid;
 #[doc = "EVENTS_PWMPERIODEND (rw) register accessor: Event on end of each PWM period\n\nYou can [`read`](crate::Reg::read) this register and get [`events_pwmperiodend::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_pwmperiodend::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@events_pwmperiodend`]
 module"]
 #[doc(alias = "EVENTS_PWMPERIODEND")]
@@ -532,12 +515,6 @@ pub use self::cc::Cc;
 #[doc = r"Cluster"]
 #[doc = "Unspecified"]
 pub mod cc;
-#[doc = "KEEPRUNNING (rw) register accessor: Request to keep the SYSCOUNTER in the active state and prevent going to sleep\n\nYou can [`read`](crate::Reg::read) this register and get [`keeprunning::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`keeprunning::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@keeprunning`]
-module"]
-#[doc(alias = "KEEPRUNNING")]
-pub type Keeprunning = crate::Reg<keeprunning::KeeprunningSpec>;
-#[doc = "Request to keep the SYSCOUNTER in the active state and prevent going to sleep"]
-pub mod keeprunning;
 #[doc = "TIMEOUT (rw) register accessor: Timeout after all CPUs gone into sleep state to stop the SYSCOUNTER\n\nYou can [`read`](crate::Reg::read) this register and get [`timeout::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timeout::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@timeout`]
 module"]
 #[doc(alias = "TIMEOUT")]

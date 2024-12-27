@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start LFCLK source as selected in LFCLK.SRC"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_lfclkstart(&mut self) -> TasksLfclkstartW<TasksLfclkstartSpec> {
         TasksLfclkstartW::new(self, 0)
     }

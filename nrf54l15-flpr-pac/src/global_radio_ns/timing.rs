@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Ramp-up time"]
     #[inline(always)]
-    #[must_use]
     pub fn ru(&mut self) -> RuW<TimingSpec> {
         RuW::new(self, 0)
     }

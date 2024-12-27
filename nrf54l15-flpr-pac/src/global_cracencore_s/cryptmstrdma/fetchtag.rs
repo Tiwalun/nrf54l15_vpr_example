@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn fetchtag(&mut self) -> FetchtagW<FetchtagSpec> {
         FetchtagW::new(self, 0)
     }

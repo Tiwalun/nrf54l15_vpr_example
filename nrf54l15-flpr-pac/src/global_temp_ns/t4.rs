@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - End point of 5th piece wise linear function"]
     #[inline(always)]
-    #[must_use]
     pub fn t4(&mut self) -> T4W<T4Spec> {
         T4W::new(self, 0)
     }

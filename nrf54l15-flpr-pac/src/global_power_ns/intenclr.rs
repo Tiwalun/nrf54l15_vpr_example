@@ -202,19 +202,16 @@ impl R {
 impl W {
     #[doc = "Bit 12 - Write '1' to disable interrupt for event POFWARN"]
     #[inline(always)]
-    #[must_use]
     pub fn pofwarn(&mut self) -> PofwarnW<IntenclrSpec> {
         PofwarnW::new(self, 12)
     }
     #[doc = "Bit 13 - Write '1' to disable interrupt for event SLEEPENTER"]
     #[inline(always)]
-    #[must_use]
     pub fn sleepenter(&mut self) -> SleepenterW<IntenclrSpec> {
         SleepenterW::new(self, 13)
     }
     #[doc = "Bit 14 - Write '1' to disable interrupt for event SLEEPEXIT"]
     #[inline(always)]
-    #[must_use]
     pub fn sleepexit(&mut self) -> SleepexitW<IntenclrSpec> {
         SleepexitW::new(self, 14)
     }

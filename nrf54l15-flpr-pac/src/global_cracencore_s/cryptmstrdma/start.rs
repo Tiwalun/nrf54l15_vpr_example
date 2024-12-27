@@ -9,13 +9,11 @@ pub type StartpushW<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn startfetch(&mut self) -> StartfetchW<StartSpec> {
         StartfetchW::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn startpush(&mut self) -> StartpushW<StartSpec> {
         StartpushW::new(self, 1)
     }

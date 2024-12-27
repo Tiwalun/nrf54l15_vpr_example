@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Initializes the EasyDMA for receive."]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_enablerxdata(&mut self) -> TasksEnablerxdataW<TasksEnablerxdataSpec> {
         TasksEnablerxdataW::new(self, 0)
     }

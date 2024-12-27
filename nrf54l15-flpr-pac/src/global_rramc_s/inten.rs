@@ -214,6 +214,59 @@ where
         self.variant(Accesserror::Enabled)
     }
 }
+#[doc = "Enable or disable interrupt for event ECCERROR\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eccerror {
+    #[doc = "0: Disable"]
+    Disabled = 0,
+    #[doc = "1: Enable"]
+    Enabled = 1,
+}
+impl From<Eccerror> for bool {
+    #[inline(always)]
+    fn from(variant: Eccerror) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ECCERROR` reader - Enable or disable interrupt for event ECCERROR"]
+pub type EccerrorR = crate::BitReader<Eccerror>;
+impl EccerrorR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eccerror {
+        match self.bits {
+            false => Eccerror::Disabled,
+            true => Eccerror::Enabled,
+        }
+    }
+    #[doc = "Disable"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == Eccerror::Disabled
+    }
+    #[doc = "Enable"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == Eccerror::Enabled
+    }
+}
+#[doc = "Field `ECCERROR` writer - Enable or disable interrupt for event ECCERROR"]
+pub type EccerrorW<'a, REG> = crate::BitWriter<'a, REG, Eccerror>;
+impl<'a, REG> EccerrorW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disable"]
+    #[inline(always)]
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
+        self.variant(Eccerror::Disabled)
+    }
+    #[doc = "Enable"]
+    #[inline(always)]
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
+        self.variant(Eccerror::Enabled)
+    }
+}
 impl R {
     #[doc = "Bit 0 - Enable or disable interrupt for event WOKENUP"]
     #[inline(always)]
@@ -235,31 +288,37 @@ impl R {
     pub fn accesserror(&self) -> AccesserrorR {
         AccesserrorR::new(((self.bits >> 3) & 1) != 0)
     }
+    #[doc = "Bit 4 - Enable or disable interrupt for event ECCERROR"]
+    #[inline(always)]
+    pub fn eccerror(&self) -> EccerrorR {
+        EccerrorR::new(((self.bits >> 4) & 1) != 0)
+    }
 }
 impl W {
     #[doc = "Bit 0 - Enable or disable interrupt for event WOKENUP"]
     #[inline(always)]
-    #[must_use]
     pub fn wokenup(&mut self) -> WokenupW<IntenSpec> {
         WokenupW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable interrupt for event READY"]
     #[inline(always)]
-    #[must_use]
     pub fn ready(&mut self) -> ReadyW<IntenSpec> {
         ReadyW::new(self, 1)
     }
     #[doc = "Bit 2 - Enable or disable interrupt for event READYNEXT"]
     #[inline(always)]
-    #[must_use]
     pub fn readynext(&mut self) -> ReadynextW<IntenSpec> {
         ReadynextW::new(self, 2)
     }
     #[doc = "Bit 3 - Enable or disable interrupt for event ACCESSERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn accesserror(&mut self) -> AccesserrorW<IntenSpec> {
         AccesserrorW::new(self, 3)
+    }
+    #[doc = "Bit 4 - Enable or disable interrupt for event ECCERROR"]
+    #[inline(always)]
+    pub fn eccerror(&mut self) -> EccerrorW<IntenSpec> {
+        EccerrorW::new(self, 4)
     }
 }
 #[doc = "Enable or disable interrupt\n\nYou can [`read`](crate::Reg::read) this register and get [`inten::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inten::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

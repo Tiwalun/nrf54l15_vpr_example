@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Wireless medium busy - do not send"]
     #[inline(always)]
-    #[must_use]
     pub fn events_ccabusy(&mut self) -> EventsCcabusyW<EventsCcabusySpec> {
         EventsCcabusyW::new(self, 0)
     }

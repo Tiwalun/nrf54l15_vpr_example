@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Address sent or received"]
     #[inline(always)]
-    #[must_use]
     pub fn events_address(&mut self) -> EventsAddressW<EventsAddressSpec> {
         EventsAddressW::new(self, 0)
     }

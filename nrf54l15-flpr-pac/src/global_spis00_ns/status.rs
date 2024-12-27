@@ -137,13 +137,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - TX buffer over-read detected, and prevented"]
     #[inline(always)]
-    #[must_use]
     pub fn overread(&mut self) -> OverreadW<StatusSpec> {
         OverreadW::new(self, 0)
     }
     #[doc = "Bit 1 - RX buffer overflow detected, and prevented"]
     #[inline(always)]
-    #[must_use]
     pub fn overflow(&mut self) -> OverflowW<StatusSpec> {
         OverflowW::new(self, 1)
     }

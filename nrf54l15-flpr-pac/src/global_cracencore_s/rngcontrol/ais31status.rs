@@ -34,19 +34,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Number of preliminary noise alarms since counter was last cleared."]
     #[inline(always)]
-    #[must_use]
     pub fn numprelimalarms(&mut self) -> NumprelimalarmsW<Ais31statusSpec> {
         NumprelimalarmsW::new(self, 0)
     }
     #[doc = "Bit 16 - Last preliminary noise alarm occurred due to history value out of range."]
     #[inline(always)]
-    #[must_use]
     pub fn prelimnoisealarmrng(&mut self) -> PrelimnoisealarmrngW<Ais31statusSpec> {
         PrelimnoisealarmrngW::new(self, 16)
     }
     #[doc = "Bit 17 - Last preliminary noise alarm occurred due to consecutive high Χ**2."]
     #[inline(always)]
-    #[must_use]
     pub fn prelimnoisealarmrep(&mut self) -> PrelimnoisealarmrepW<Ais31statusSpec> {
         PrelimnoisealarmrepW::new(self, 17)
     }

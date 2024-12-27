@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Low level limit"]
     #[inline(always)]
-    #[must_use]
     pub fn low(&mut self) -> LowW<LimitSpec> {
         LowW::new(self, 0)
     }
     #[doc = "Bits 16:31 - High level limit"]
     #[inline(always)]
-    #[must_use]
     pub fn high(&mut self) -> HighW<LimitSpec> {
         HighW::new(self, 16)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Maximum number of bytes to transfer"]
     #[inline(always)]
-    #[must_use]
     pub fn maxcnt(&mut self) -> MaxcntW<MaxcntSpec> {
         MaxcntW::new(self, 0)
     }

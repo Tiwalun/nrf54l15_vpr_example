@@ -123,13 +123,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Turn on/off down sample of input IQ-signals"]
     #[inline(always)]
-    #[must_use]
     pub fn enablefilter(&mut self) -> EnablefilterW<DownsampleSpec> {
         EnablefilterW::new(self, 0)
     }
     #[doc = "Bit 1 - Indicating if BLE1M or BLE2M is used"]
     #[inline(always)]
-    #[must_use]
     pub fn rate(&mut self) -> RateW<DownsampleSpec> {
         RateW::new(self, 1)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Search pattern configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn mhrmatchconf(&mut self) -> MhrmatchconfW<MhrmatchconfSpec> {
         MhrmatchconfW::new(self, 0)
     }

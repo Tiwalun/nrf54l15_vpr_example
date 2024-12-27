@@ -163,7 +163,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - MCK / LRCK ratio"]
     #[inline(always)]
-    #[must_use]
     pub fn ratio(&mut self) -> RatioW<RatioSpec> {
         RatioW::new(self, 0)
     }

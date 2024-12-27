@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stop LFCLK source"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_lfclkstop(&mut self) -> TasksLfclkstopW<TasksLfclkstopSpec> {
         TasksLfclkstopW::new(self, 0)
     }

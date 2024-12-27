@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Memory Access Error event"]
     #[inline(always)]
-    #[must_use]
     pub fn events_memaccerr(&mut self) -> EventsMemaccerrW<EventsMemaccerrSpec> {
         EventsMemaccerrW::new(self, 0)
     }

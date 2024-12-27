@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Base address 1"]
     #[inline(always)]
-    #[must_use]
     pub fn base1(&mut self) -> Base1W<Base1Spec> {
         Base1W::new(self, 0)
     }

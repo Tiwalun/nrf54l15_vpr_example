@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Transmission (TX) enable"]
     #[inline(always)]
-    #[must_use]
     pub fn txen(&mut self) -> TxenW<TxenSpec> {
         TxenW::new(self, 0)
     }

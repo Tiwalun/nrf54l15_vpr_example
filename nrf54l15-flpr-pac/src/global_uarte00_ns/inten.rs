@@ -1051,109 +1051,91 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable interrupt for event CTS"]
     #[inline(always)]
-    #[must_use]
     pub fn cts(&mut self) -> CtsW<IntenSpec> {
         CtsW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable interrupt for event NCTS"]
     #[inline(always)]
-    #[must_use]
     pub fn ncts(&mut self) -> NctsW<IntenSpec> {
         NctsW::new(self, 1)
     }
     #[doc = "Bit 3 - Enable or disable interrupt for event TXDRDY"]
     #[inline(always)]
-    #[must_use]
     pub fn txdrdy(&mut self) -> TxdrdyW<IntenSpec> {
         TxdrdyW::new(self, 3)
     }
     #[doc = "Bit 4 - Enable or disable interrupt for event RXDRDY"]
     #[inline(always)]
-    #[must_use]
     pub fn rxdrdy(&mut self) -> RxdrdyW<IntenSpec> {
         RxdrdyW::new(self, 4)
     }
     #[doc = "Bit 5 - Enable or disable interrupt for event ERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn error(&mut self) -> ErrorW<IntenSpec> {
         ErrorW::new(self, 5)
     }
     #[doc = "Bit 9 - Enable or disable interrupt for event RXTO"]
     #[inline(always)]
-    #[must_use]
     pub fn rxto(&mut self) -> RxtoW<IntenSpec> {
         RxtoW::new(self, 9)
     }
     #[doc = "Bit 12 - Enable or disable interrupt for event TXSTOPPED"]
     #[inline(always)]
-    #[must_use]
     pub fn txstopped(&mut self) -> TxstoppedW<IntenSpec> {
         TxstoppedW::new(self, 12)
     }
     #[doc = "Bit 19 - Enable or disable interrupt for event DMARXEND"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxend(&mut self) -> DmarxendW<IntenSpec> {
         DmarxendW::new(self, 19)
     }
     #[doc = "Bit 20 - Enable or disable interrupt for event DMARXREADY"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxready(&mut self) -> DmarxreadyW<IntenSpec> {
         DmarxreadyW::new(self, 20)
     }
     #[doc = "Bit 21 - Enable or disable interrupt for event DMARXBUSERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxbuserror(&mut self) -> DmarxbuserrorW<IntenSpec> {
         DmarxbuserrorW::new(self, 21)
     }
     #[doc = "Bit 22 - Enable or disable interrupt for event DMARXMATCH\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxmatch0(&mut self) -> Dmarxmatch0W<IntenSpec> {
         Dmarxmatch0W::new(self, 22)
     }
     #[doc = "Bit 23 - Enable or disable interrupt for event DMARXMATCH\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxmatch1(&mut self) -> Dmarxmatch1W<IntenSpec> {
         Dmarxmatch1W::new(self, 23)
     }
     #[doc = "Bit 24 - Enable or disable interrupt for event DMARXMATCH\\[2\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxmatch2(&mut self) -> Dmarxmatch2W<IntenSpec> {
         Dmarxmatch2W::new(self, 24)
     }
     #[doc = "Bit 25 - Enable or disable interrupt for event DMARXMATCH\\[3\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxmatch3(&mut self) -> Dmarxmatch3W<IntenSpec> {
         Dmarxmatch3W::new(self, 25)
     }
     #[doc = "Bit 26 - Enable or disable interrupt for event DMATXEND"]
     #[inline(always)]
-    #[must_use]
     pub fn dmatxend(&mut self) -> DmatxendW<IntenSpec> {
         DmatxendW::new(self, 26)
     }
     #[doc = "Bit 27 - Enable or disable interrupt for event DMATXREADY"]
     #[inline(always)]
-    #[must_use]
     pub fn dmatxready(&mut self) -> DmatxreadyW<IntenSpec> {
         DmatxreadyW::new(self, 27)
     }
     #[doc = "Bit 28 - Enable or disable interrupt for event DMATXBUSERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn dmatxbuserror(&mut self) -> DmatxbuserrorW<IntenSpec> {
         DmatxbuserrorW::new(self, 28)
     }
     #[doc = "Bit 29 - Enable or disable interrupt for event FRAMETIMEOUT"]
     #[inline(always)]
-    #[must_use]
     pub fn frametimeout(&mut self) -> FrametimeoutW<IntenSpec> {
         FrametimeoutW::new(self, 29)
     }

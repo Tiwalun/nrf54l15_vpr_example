@@ -83,19 +83,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Pin number"]
     #[inline(always)]
-    #[must_use]
     pub fn pin(&mut self) -> PinW<SdoutSpec> {
         PinW::new(self, 0)
     }
     #[doc = "Bits 5:7 - Port number"]
     #[inline(always)]
-    #[must_use]
     pub fn port(&mut self) -> PortW<SdoutSpec> {
         PortW::new(self, 5)
     }
     #[doc = "Bit 31 - Connection"]
     #[inline(always)]
-    #[must_use]
     pub fn connect(&mut self) -> ConnectW<SdoutSpec> {
         ConnectW::new(self, 31)
     }

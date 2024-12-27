@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Provision key slot"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_provision(&mut self) -> TasksProvisionW<TasksProvisionSpec> {
         TasksProvisionW::new(self, 0)
     }

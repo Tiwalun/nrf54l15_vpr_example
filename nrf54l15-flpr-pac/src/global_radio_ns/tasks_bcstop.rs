@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stop the bit counter"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_bcstop(&mut self) -> TasksBcstopW<TasksBcstopSpec> {
         TasksBcstopW::new(self, 0)
     }

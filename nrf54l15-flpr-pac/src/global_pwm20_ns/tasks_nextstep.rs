@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Steps by one value in the current sequence on all enabled channels if DECODER.MODE=NextStep. Does not cause PWM generation to start if not running."]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_nextstep(&mut self) -> TasksNextstepW<TasksNextstepSpec> {
         TasksNextstepW::new(self, 0)
     }

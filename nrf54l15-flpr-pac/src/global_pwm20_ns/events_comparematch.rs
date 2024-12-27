@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This event is generated when the compare matches for the compare channel \\[n\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn events_comparematch(&mut self) -> EventsComparematchW<EventsComparematchSpec> {
         EventsComparematchW::new(self, 0)
     }

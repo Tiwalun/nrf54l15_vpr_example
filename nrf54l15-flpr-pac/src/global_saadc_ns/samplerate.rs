@@ -74,13 +74,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:10 - Capture and compare value. Sample rate is 16 MHz/CC"]
     #[inline(always)]
-    #[must_use]
     pub fn cc(&mut self) -> CcW<SamplerateSpec> {
         CcW::new(self, 0)
     }
     #[doc = "Bit 12 - Select mode for sample rate control"]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> ModeW<SamplerateSpec> {
         ModeW::new(self, 12)
     }

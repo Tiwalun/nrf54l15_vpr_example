@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Counter reload value in number of cycles of the 32.768 kHz clock"]
     #[inline(always)]
-    #[must_use]
     pub fn crv(&mut self) -> CrvW<CrvSpec> {
         CrvW::new(self, 0)
     }

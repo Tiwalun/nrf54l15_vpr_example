@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Attempt to write a VALUE in PROTECT registers without clearing the WRITEPROTECT."]
     #[inline(always)]
-    #[must_use]
     pub fn events_writeerror(&mut self) -> EventsWriteerrorW<EventsWriteerrorSpec> {
         EventsWriteerrorW::new(self, 0)
     }

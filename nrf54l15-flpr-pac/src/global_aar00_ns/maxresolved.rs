@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - The maximum number of IRKs to resolve"]
     #[inline(always)]
-    #[must_use]
     pub fn maxresolved(&mut self) -> MaxresolvedW<MaxresolvedSpec> {
         MaxresolvedW::new(self, 0)
     }

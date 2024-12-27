@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Controls CPU running state after a core reset."]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<CpurunSpec> {
         EnW::new(self, 0)
     }

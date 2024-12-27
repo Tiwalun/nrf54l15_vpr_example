@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Sample delay for input serial data on MISO. The value specifies the number of SPIM core clock cycles delay from the the sampling edge of SCK (leading edge for CONFIG.CPHA = 0, trailing edge for CONFIG.CPHA = 1) until the input serial data is sampled. As en example, if RXDELAY = 0 and CONFIG.CPHA = 0, the input serial data is sampled on the rising edge of SCK."]
     #[inline(always)]
-    #[must_use]
     pub fn rxdelay(&mut self) -> RxdelayW<RxdelaySpec> {
         RxdelayW::new(self, 0)
     }

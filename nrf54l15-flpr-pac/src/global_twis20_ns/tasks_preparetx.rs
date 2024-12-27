@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Prepare the TWI slave to respond to a read command"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_preparetx(&mut self) -> TasksPreparetxW<TasksPreparetxSpec> {
         TasksPreparetxW::new(self, 0)
     }

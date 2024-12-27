@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - A security violation has been detected on one or several peripherals"]
     #[inline(always)]
-    #[must_use]
     pub fn events_periphaccerr(&mut self) -> EventsPeriphaccerrW<EventsPeriphaccerrSpec> {
         EventsPeriphaccerrW::new(self, 0)
     }

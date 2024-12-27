@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CTEInfo byte is received"]
     #[inline(always)]
-    #[must_use]
     pub fn events_ctepresent(&mut self) -> EventsCtepresentW<EventsCtepresentSpec> {
         EventsCtepresentW::new(self, 0)
     }

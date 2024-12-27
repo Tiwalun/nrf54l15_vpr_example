@@ -471,49 +471,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable reception on logical address 0"]
     #[inline(always)]
-    #[must_use]
     pub fn addr0(&mut self) -> Addr0W<RxaddressesSpec> {
         Addr0W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable reception on logical address 1"]
     #[inline(always)]
-    #[must_use]
     pub fn addr1(&mut self) -> Addr1W<RxaddressesSpec> {
         Addr1W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable or disable reception on logical address 2"]
     #[inline(always)]
-    #[must_use]
     pub fn addr2(&mut self) -> Addr2W<RxaddressesSpec> {
         Addr2W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable or disable reception on logical address 3"]
     #[inline(always)]
-    #[must_use]
     pub fn addr3(&mut self) -> Addr3W<RxaddressesSpec> {
         Addr3W::new(self, 3)
     }
     #[doc = "Bit 4 - Enable or disable reception on logical address 4"]
     #[inline(always)]
-    #[must_use]
     pub fn addr4(&mut self) -> Addr4W<RxaddressesSpec> {
         Addr4W::new(self, 4)
     }
     #[doc = "Bit 5 - Enable or disable reception on logical address 5"]
     #[inline(always)]
-    #[must_use]
     pub fn addr5(&mut self) -> Addr5W<RxaddressesSpec> {
         Addr5W::new(self, 5)
     }
     #[doc = "Bit 6 - Enable or disable reception on logical address 6"]
     #[inline(always)]
-    #[must_use]
     pub fn addr6(&mut self) -> Addr6W<RxaddressesSpec> {
         Addr6W::new(self, 6)
     }
     #[doc = "Bit 7 - Enable or disable reception on logical address 7"]
     #[inline(always)]
-    #[must_use]
     pub fn addr7(&mut self) -> Addr7W<RxaddressesSpec> {
         Addr7W::new(self, 7)
     }

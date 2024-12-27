@@ -468,42 +468,6 @@ impl RtcomparesyncR {
         *self == Rtcomparesync::Pending
     }
 }
-#[doc = "Read pending status of interrupt for event SYSCOUNTERVALID\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Syscountervalid {
-    #[doc = "0: Read: Not pending"]
-    NotPending = 0,
-    #[doc = "1: Read: Pending"]
-    Pending = 1,
-}
-impl From<Syscountervalid> for bool {
-    #[inline(always)]
-    fn from(variant: Syscountervalid) -> Self {
-        variant as u8 != 0
-    }
-}
-#[doc = "Field `SYSCOUNTERVALID` reader - Read pending status of interrupt for event SYSCOUNTERVALID"]
-pub type SyscountervalidR = crate::BitReader<Syscountervalid>;
-impl SyscountervalidR {
-    #[doc = "Get enumerated values variant"]
-    #[inline(always)]
-    pub const fn variant(&self) -> Syscountervalid {
-        match self.bits {
-            false => Syscountervalid::NotPending,
-            true => Syscountervalid::Pending,
-        }
-    }
-    #[doc = "Read: Not pending"]
-    #[inline(always)]
-    pub fn is_not_pending(&self) -> bool {
-        *self == Syscountervalid::NotPending
-    }
-    #[doc = "Read: Pending"]
-    #[inline(always)]
-    pub fn is_pending(&self) -> bool {
-        *self == Syscountervalid::Pending
-    }
-}
 #[doc = "Read pending status of interrupt for event PWMPERIODEND\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Pwmperiodend {
@@ -605,11 +569,6 @@ impl R {
     #[inline(always)]
     pub fn rtcomparesync(&self) -> RtcomparesyncR {
         RtcomparesyncR::new(((self.bits >> 25) & 1) != 0)
-    }
-    #[doc = "Bit 26 - Read pending status of interrupt for event SYSCOUNTERVALID"]
-    #[inline(always)]
-    pub fn syscountervalid(&self) -> SyscountervalidR {
-        SyscountervalidR::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - Read pending status of interrupt for event PWMPERIODEND"]
     #[inline(always)]

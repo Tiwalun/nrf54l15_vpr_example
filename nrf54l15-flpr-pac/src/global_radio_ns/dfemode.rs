@@ -85,7 +85,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Direction finding operation mode"]
     #[inline(always)]
-    #[must_use]
     pub fn dfeopmode(&mut self) -> DfeopmodeW<DfemodeSpec> {
         DfeopmodeW::new(self, 0)
     }

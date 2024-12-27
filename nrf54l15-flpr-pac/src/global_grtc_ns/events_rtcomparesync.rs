@@ -2,7 +2,7 @@
 pub type R = crate::R<EventsRtcomparesyncSpec>;
 #[doc = "Register `EVENTS_RTCOMPARESYNC` writer"]
 pub type W = crate::W<EventsRtcomparesyncSpec>;
-#[doc = "Synchronize always-on LFCLK clock domain\n\nValue on reset: 0"]
+#[doc = "The GRTC low frequency timer is synchronized with the SYSCOUNTER\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EventsRtcomparesync {
     #[doc = "0: Event not generated"]
@@ -16,7 +16,7 @@ impl From<EventsRtcomparesync> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EVENTS_RTCOMPARESYNC` reader - Synchronize always-on LFCLK clock domain"]
+#[doc = "Field `EVENTS_RTCOMPARESYNC` reader - The GRTC low frequency timer is synchronized with the SYSCOUNTER"]
 pub type EventsRtcomparesyncR = crate::BitReader<EventsRtcomparesync>;
 impl EventsRtcomparesyncR {
     #[doc = "Get enumerated values variant"]
@@ -38,7 +38,7 @@ impl EventsRtcomparesyncR {
         *self == EventsRtcomparesync::Generated
     }
 }
-#[doc = "Field `EVENTS_RTCOMPARESYNC` writer - Synchronize always-on LFCLK clock domain"]
+#[doc = "Field `EVENTS_RTCOMPARESYNC` writer - The GRTC low frequency timer is synchronized with the SYSCOUNTER"]
 pub type EventsRtcomparesyncW<'a, REG> = crate::BitWriter<'a, REG, EventsRtcomparesync>;
 impl<'a, REG> EventsRtcomparesyncW<'a, REG>
 where
@@ -56,21 +56,20 @@ where
     }
 }
 impl R {
-    #[doc = "Bit 0 - Synchronize always-on LFCLK clock domain"]
+    #[doc = "Bit 0 - The GRTC low frequency timer is synchronized with the SYSCOUNTER"]
     #[inline(always)]
     pub fn events_rtcomparesync(&self) -> EventsRtcomparesyncR {
         EventsRtcomparesyncR::new((self.bits & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Synchronize always-on LFCLK clock domain"]
+    #[doc = "Bit 0 - The GRTC low frequency timer is synchronized with the SYSCOUNTER"]
     #[inline(always)]
-    #[must_use]
     pub fn events_rtcomparesync(&mut self) -> EventsRtcomparesyncW<EventsRtcomparesyncSpec> {
         EventsRtcomparesyncW::new(self, 0)
     }
 }
-#[doc = "Synchronize always-on LFCLK clock domain\n\nYou can [`read`](crate::Reg::read) this register and get [`events_rtcomparesync::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_rtcomparesync::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The GRTC low frequency timer is synchronized with the SYSCOUNTER\n\nYou can [`read`](crate::Reg::read) this register and get [`events_rtcomparesync::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_rtcomparesync::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EventsRtcomparesyncSpec;
 impl crate::RegisterSpec for EventsRtcomparesyncSpec {
     type Ux = u32;

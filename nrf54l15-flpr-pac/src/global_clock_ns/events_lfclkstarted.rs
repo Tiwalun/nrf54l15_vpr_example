@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - LFCLK source started"]
     #[inline(always)]
-    #[must_use]
     pub fn events_lfclkstarted(&mut self) -> EventsLfclkstartedW<EventsLfclkstartedSpec> {
         EventsLfclkstartedW::new(self, 0)
     }

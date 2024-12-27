@@ -43,25 +43,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - When executing primitive arithmetic operations, this pointer defines where operand A is located in memory (location 0x0 to 0xF)."]
     #[inline(always)]
-    #[must_use]
     pub fn opptra(&mut self) -> OpptraW<PointersSpec> {
         OpptraW::new(self, 0)
     }
     #[doc = "Bits 8:11 - When executing primitive arithmetic operations, this pointer defines where operand B is located in memory (location 0x0 to 0xF)."]
     #[inline(always)]
-    #[must_use]
     pub fn opptrb(&mut self) -> OpptrbW<PointersSpec> {
         OpptrbW::new(self, 8)
     }
     #[doc = "Bits 16:19 - When executing primitive arithmetic operations, this pointer defines the location (0x0 to 0xF) where the result will be stored in memory."]
     #[inline(always)]
-    #[must_use]
     pub fn opptrc(&mut self) -> OpptrcW<PointersSpec> {
         OpptrcW::new(self, 16)
     }
     #[doc = "Bits 24:27 - When executing primitive arithmetic operations, this pointer defines the location where the modulus is located in memory (location 0x0 to 0xF)."]
     #[inline(always)]
-    #[must_use]
     pub fn opptrn(&mut self) -> OpptrnW<PointersSpec> {
         OpptrnW::new(self, 24)
     }

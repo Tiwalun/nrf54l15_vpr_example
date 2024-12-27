@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Byte boundary, starting to transmit the last byte"]
     #[inline(always)]
-    #[must_use]
     pub fn events_lasttx(&mut self) -> EventsLasttxW<EventsLasttxSpec> {
         EventsLasttxW::new(self, 0)
     }

@@ -181,19 +181,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable cryptomaster"]
     #[inline(always)]
-    #[must_use]
     pub fn cryptomaster(&mut self) -> CryptomasterW<EnableSpec> {
         CryptomasterW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable RNG"]
     #[inline(always)]
-    #[must_use]
     pub fn rng(&mut self) -> RngW<EnableSpec> {
         RngW::new(self, 1)
     }
     #[doc = "Bit 2 - Enable PKE and IKG"]
     #[inline(always)]
-    #[must_use]
     pub fn pkeikg(&mut self) -> PkeikgW<EnableSpec> {
         PkeikgW::new(self, 2)
     }

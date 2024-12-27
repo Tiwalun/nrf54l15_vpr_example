@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Event on counter overflow"]
     #[inline(always)]
-    #[must_use]
     pub fn events_ovrflw(&mut self) -> EventsOvrflwW<EventsOvrflwSpec> {
         EventsOvrflwW::new(self, 0)
     }

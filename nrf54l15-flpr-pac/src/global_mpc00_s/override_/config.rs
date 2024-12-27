@@ -173,19 +173,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Target slave number for override region n accesses. Slave number 0 is reserved for default slave"]
     #[inline(always)]
-    #[must_use]
     pub fn slavenumber(&mut self) -> SlavenumberW<ConfigSpec> {
         SlavenumberW::new(self, 0)
     }
     #[doc = "Bit 8 - Lock Override region n"]
     #[inline(always)]
-    #[must_use]
     pub fn lock(&mut self) -> LockW<ConfigSpec> {
         LockW::new(self, 8)
     }
     #[doc = "Bit 9 - Enable Override region n"]
     #[inline(always)]
-    #[must_use]
     pub fn enable(&mut self) -> EnableW<ConfigSpec> {
         EnableW::new(self, 9)
     }

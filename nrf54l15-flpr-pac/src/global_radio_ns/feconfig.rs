@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 20 - Mode for narrow scaling output."]
     #[inline(always)]
-    #[must_use]
     pub fn scalermode(&mut self) -> ScalermodeW<FeconfigSpec> {
         ScalermodeW::new(self, 20)
     }

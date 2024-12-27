@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - No STARTTX task triggered before expiration of the time set in FRAMEDELAYMAX"]
     #[inline(always)]
-    #[must_use]
     pub fn framedelaytimeout(&mut self) -> FramedelaytimeoutW<ErrorstatusSpec> {
         FramedelaytimeoutW::new(self, 0)
     }

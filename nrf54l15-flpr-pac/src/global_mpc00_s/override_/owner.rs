@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - owner identifier for override region n"]
     #[inline(always)]
-    #[must_use]
     pub fn ownerid(&mut self) -> OwneridW<OwnerSpec> {
         OwneridW::new(self, 0)
     }

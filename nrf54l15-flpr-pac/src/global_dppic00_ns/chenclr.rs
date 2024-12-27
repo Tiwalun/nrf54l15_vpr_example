@@ -1567,145 +1567,121 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Channel 0 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch0(&mut self) -> Ch0W<ChenclrSpec> {
         Ch0W::new(self, 0)
     }
     #[doc = "Bit 1 - Channel 1 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch1(&mut self) -> Ch1W<ChenclrSpec> {
         Ch1W::new(self, 1)
     }
     #[doc = "Bit 2 - Channel 2 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch2(&mut self) -> Ch2W<ChenclrSpec> {
         Ch2W::new(self, 2)
     }
     #[doc = "Bit 3 - Channel 3 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch3(&mut self) -> Ch3W<ChenclrSpec> {
         Ch3W::new(self, 3)
     }
     #[doc = "Bit 4 - Channel 4 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch4(&mut self) -> Ch4W<ChenclrSpec> {
         Ch4W::new(self, 4)
     }
     #[doc = "Bit 5 - Channel 5 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch5(&mut self) -> Ch5W<ChenclrSpec> {
         Ch5W::new(self, 5)
     }
     #[doc = "Bit 6 - Channel 6 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch6(&mut self) -> Ch6W<ChenclrSpec> {
         Ch6W::new(self, 6)
     }
     #[doc = "Bit 7 - Channel 7 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch7(&mut self) -> Ch7W<ChenclrSpec> {
         Ch7W::new(self, 7)
     }
     #[doc = "Bit 8 - Channel 8 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch8(&mut self) -> Ch8W<ChenclrSpec> {
         Ch8W::new(self, 8)
     }
     #[doc = "Bit 9 - Channel 9 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch9(&mut self) -> Ch9W<ChenclrSpec> {
         Ch9W::new(self, 9)
     }
     #[doc = "Bit 10 - Channel 10 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch10(&mut self) -> Ch10W<ChenclrSpec> {
         Ch10W::new(self, 10)
     }
     #[doc = "Bit 11 - Channel 11 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch11(&mut self) -> Ch11W<ChenclrSpec> {
         Ch11W::new(self, 11)
     }
     #[doc = "Bit 12 - Channel 12 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch12(&mut self) -> Ch12W<ChenclrSpec> {
         Ch12W::new(self, 12)
     }
     #[doc = "Bit 13 - Channel 13 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch13(&mut self) -> Ch13W<ChenclrSpec> {
         Ch13W::new(self, 13)
     }
     #[doc = "Bit 14 - Channel 14 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch14(&mut self) -> Ch14W<ChenclrSpec> {
         Ch14W::new(self, 14)
     }
     #[doc = "Bit 15 - Channel 15 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch15(&mut self) -> Ch15W<ChenclrSpec> {
         Ch15W::new(self, 15)
     }
     #[doc = "Bit 16 - Channel 16 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch16(&mut self) -> Ch16W<ChenclrSpec> {
         Ch16W::new(self, 16)
     }
     #[doc = "Bit 17 - Channel 17 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch17(&mut self) -> Ch17W<ChenclrSpec> {
         Ch17W::new(self, 17)
     }
     #[doc = "Bit 18 - Channel 18 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch18(&mut self) -> Ch18W<ChenclrSpec> {
         Ch18W::new(self, 18)
     }
     #[doc = "Bit 19 - Channel 19 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch19(&mut self) -> Ch19W<ChenclrSpec> {
         Ch19W::new(self, 19)
     }
     #[doc = "Bit 20 - Channel 20 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch20(&mut self) -> Ch20W<ChenclrSpec> {
         Ch20W::new(self, 20)
     }
     #[doc = "Bit 21 - Channel 21 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch21(&mut self) -> Ch21W<ChenclrSpec> {
         Ch21W::new(self, 21)
     }
     #[doc = "Bit 22 - Channel 22 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch22(&mut self) -> Ch22W<ChenclrSpec> {
         Ch22W::new(self, 22)
     }
     #[doc = "Bit 23 - Channel 23 enable clear register. Writing 0 has no effect."]
     #[inline(always)]
-    #[must_use]
     pub fn ch23(&mut self) -> Ch23W<ChenclrSpec> {
         Ch23W::new(self, 23)
     }

@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Request tuning for HFXO"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_xotune(&mut self) -> TasksXotuneW<TasksXotuneSpec> {
         TasksXotuneW::new(self, 0)
     }

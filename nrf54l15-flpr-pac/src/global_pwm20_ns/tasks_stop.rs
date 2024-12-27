@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stops PWM pulse generation on all channels at the end of current PWM period, and stops sequence playback"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_stop(&mut self) -> TasksStopW<TasksStopSpec> {
         TasksStopW::new(self, 0)
     }

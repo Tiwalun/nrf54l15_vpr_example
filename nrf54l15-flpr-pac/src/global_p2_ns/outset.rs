@@ -2087,193 +2087,161 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Pin 0"]
     #[inline(always)]
-    #[must_use]
     pub fn pin0(&mut self) -> Pin0W<OutsetSpec> {
         Pin0W::new(self, 0)
     }
     #[doc = "Bit 1 - Pin 1"]
     #[inline(always)]
-    #[must_use]
     pub fn pin1(&mut self) -> Pin1W<OutsetSpec> {
         Pin1W::new(self, 1)
     }
     #[doc = "Bit 2 - Pin 2"]
     #[inline(always)]
-    #[must_use]
     pub fn pin2(&mut self) -> Pin2W<OutsetSpec> {
         Pin2W::new(self, 2)
     }
     #[doc = "Bit 3 - Pin 3"]
     #[inline(always)]
-    #[must_use]
     pub fn pin3(&mut self) -> Pin3W<OutsetSpec> {
         Pin3W::new(self, 3)
     }
     #[doc = "Bit 4 - Pin 4"]
     #[inline(always)]
-    #[must_use]
     pub fn pin4(&mut self) -> Pin4W<OutsetSpec> {
         Pin4W::new(self, 4)
     }
     #[doc = "Bit 5 - Pin 5"]
     #[inline(always)]
-    #[must_use]
     pub fn pin5(&mut self) -> Pin5W<OutsetSpec> {
         Pin5W::new(self, 5)
     }
     #[doc = "Bit 6 - Pin 6"]
     #[inline(always)]
-    #[must_use]
     pub fn pin6(&mut self) -> Pin6W<OutsetSpec> {
         Pin6W::new(self, 6)
     }
     #[doc = "Bit 7 - Pin 7"]
     #[inline(always)]
-    #[must_use]
     pub fn pin7(&mut self) -> Pin7W<OutsetSpec> {
         Pin7W::new(self, 7)
     }
     #[doc = "Bit 8 - Pin 8"]
     #[inline(always)]
-    #[must_use]
     pub fn pin8(&mut self) -> Pin8W<OutsetSpec> {
         Pin8W::new(self, 8)
     }
     #[doc = "Bit 9 - Pin 9"]
     #[inline(always)]
-    #[must_use]
     pub fn pin9(&mut self) -> Pin9W<OutsetSpec> {
         Pin9W::new(self, 9)
     }
     #[doc = "Bit 10 - Pin 10"]
     #[inline(always)]
-    #[must_use]
     pub fn pin10(&mut self) -> Pin10W<OutsetSpec> {
         Pin10W::new(self, 10)
     }
     #[doc = "Bit 11 - Pin 11"]
     #[inline(always)]
-    #[must_use]
     pub fn pin11(&mut self) -> Pin11W<OutsetSpec> {
         Pin11W::new(self, 11)
     }
     #[doc = "Bit 12 - Pin 12"]
     #[inline(always)]
-    #[must_use]
     pub fn pin12(&mut self) -> Pin12W<OutsetSpec> {
         Pin12W::new(self, 12)
     }
     #[doc = "Bit 13 - Pin 13"]
     #[inline(always)]
-    #[must_use]
     pub fn pin13(&mut self) -> Pin13W<OutsetSpec> {
         Pin13W::new(self, 13)
     }
     #[doc = "Bit 14 - Pin 14"]
     #[inline(always)]
-    #[must_use]
     pub fn pin14(&mut self) -> Pin14W<OutsetSpec> {
         Pin14W::new(self, 14)
     }
     #[doc = "Bit 15 - Pin 15"]
     #[inline(always)]
-    #[must_use]
     pub fn pin15(&mut self) -> Pin15W<OutsetSpec> {
         Pin15W::new(self, 15)
     }
     #[doc = "Bit 16 - Pin 16"]
     #[inline(always)]
-    #[must_use]
     pub fn pin16(&mut self) -> Pin16W<OutsetSpec> {
         Pin16W::new(self, 16)
     }
     #[doc = "Bit 17 - Pin 17"]
     #[inline(always)]
-    #[must_use]
     pub fn pin17(&mut self) -> Pin17W<OutsetSpec> {
         Pin17W::new(self, 17)
     }
     #[doc = "Bit 18 - Pin 18"]
     #[inline(always)]
-    #[must_use]
     pub fn pin18(&mut self) -> Pin18W<OutsetSpec> {
         Pin18W::new(self, 18)
     }
     #[doc = "Bit 19 - Pin 19"]
     #[inline(always)]
-    #[must_use]
     pub fn pin19(&mut self) -> Pin19W<OutsetSpec> {
         Pin19W::new(self, 19)
     }
     #[doc = "Bit 20 - Pin 20"]
     #[inline(always)]
-    #[must_use]
     pub fn pin20(&mut self) -> Pin20W<OutsetSpec> {
         Pin20W::new(self, 20)
     }
     #[doc = "Bit 21 - Pin 21"]
     #[inline(always)]
-    #[must_use]
     pub fn pin21(&mut self) -> Pin21W<OutsetSpec> {
         Pin21W::new(self, 21)
     }
     #[doc = "Bit 22 - Pin 22"]
     #[inline(always)]
-    #[must_use]
     pub fn pin22(&mut self) -> Pin22W<OutsetSpec> {
         Pin22W::new(self, 22)
     }
     #[doc = "Bit 23 - Pin 23"]
     #[inline(always)]
-    #[must_use]
     pub fn pin23(&mut self) -> Pin23W<OutsetSpec> {
         Pin23W::new(self, 23)
     }
     #[doc = "Bit 24 - Pin 24"]
     #[inline(always)]
-    #[must_use]
     pub fn pin24(&mut self) -> Pin24W<OutsetSpec> {
         Pin24W::new(self, 24)
     }
     #[doc = "Bit 25 - Pin 25"]
     #[inline(always)]
-    #[must_use]
     pub fn pin25(&mut self) -> Pin25W<OutsetSpec> {
         Pin25W::new(self, 25)
     }
     #[doc = "Bit 26 - Pin 26"]
     #[inline(always)]
-    #[must_use]
     pub fn pin26(&mut self) -> Pin26W<OutsetSpec> {
         Pin26W::new(self, 26)
     }
     #[doc = "Bit 27 - Pin 27"]
     #[inline(always)]
-    #[must_use]
     pub fn pin27(&mut self) -> Pin27W<OutsetSpec> {
         Pin27W::new(self, 27)
     }
     #[doc = "Bit 28 - Pin 28"]
     #[inline(always)]
-    #[must_use]
     pub fn pin28(&mut self) -> Pin28W<OutsetSpec> {
         Pin28W::new(self, 28)
     }
     #[doc = "Bit 29 - Pin 29"]
     #[inline(always)]
-    #[must_use]
     pub fn pin29(&mut self) -> Pin29W<OutsetSpec> {
         Pin29W::new(self, 29)
     }
     #[doc = "Bit 30 - Pin 30"]
     #[inline(always)]
-    #[must_use]
     pub fn pin30(&mut self) -> Pin30W<OutsetSpec> {
         Pin30W::new(self, 30)
     }
     #[doc = "Bit 31 - Pin 31"]
     #[inline(always)]
-    #[must_use]
     pub fn pin31(&mut self) -> Pin31W<OutsetSpec> {
         Pin31W::new(self, 31)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Personalisation String (write/read value 32-bit by 32-bit)."]
     #[inline(always)]
-    #[must_use]
     pub fn personalisationstring(&mut self) -> PersonalisationstringW<PersonalisationstringSpec> {
         PersonalisationstringW::new(self, 0)
     }

@@ -98,7 +98,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Current source select on analog input"]
     #[inline(always)]
-    #[must_use]
     pub fn isource(&mut self) -> IsourceW<IsourceSpec> {
         IsourceW::new(self, 0)
     }

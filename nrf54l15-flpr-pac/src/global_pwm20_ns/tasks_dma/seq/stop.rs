@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stops operation using easyDMA. This does not trigger an END event."]
     #[inline(always)]
-    #[must_use]
     pub fn stop(&mut self) -> StopW<StopSpec> {
         StopW::new(self, 0)
     }

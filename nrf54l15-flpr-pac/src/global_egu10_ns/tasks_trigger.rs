@@ -30,7 +30,6 @@ impl W {
     #[doc = "Bit 0 - Trigger n for triggering the corresponding TRIGGERED\\[n\\]
 event"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_trigger(&mut self) -> TasksTriggerW<TasksTriggerSpec> {
         TasksTriggerW::new(self, 0)
     }

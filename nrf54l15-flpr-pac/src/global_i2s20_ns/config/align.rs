@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Alignment of sample within a frame"]
     #[inline(always)]
-    #[must_use]
     pub fn align(&mut self) -> AlignW<AlignSpec> {
         AlignW::new(self, 0)
     }

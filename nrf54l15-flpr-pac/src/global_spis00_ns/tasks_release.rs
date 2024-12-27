@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Release SPI semaphore, enabling the SPI slave to acquire it"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_release(&mut self) -> TasksReleaseW<TasksReleaseSpec> {
         TasksReleaseW::new(self, 0)
     }

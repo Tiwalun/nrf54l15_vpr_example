@@ -71,7 +71,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Configure the Capture/Compare register"]
     #[inline(always)]
-    #[must_use]
     pub fn active(&mut self) -> ActiveW<CcenSpec> {
         ActiveW::new(self, 0)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Number of 32 bits words of random available in the FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn fifolevel(&mut self) -> FifolevelW<FifolevelSpec> {
         FifolevelW::new(self, 0)
     }

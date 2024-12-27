@@ -342,37 +342,31 @@ impl R {
 impl W {
     #[doc = "Bits 8:10 - Gain control"]
     #[inline(always)]
-    #[must_use]
     pub fn gain(&mut self) -> GainW<ConfigSpec> {
         GainW::new(self, 8)
     }
     #[doc = "Bit 11 - Enable burst mode"]
     #[inline(always)]
-    #[must_use]
     pub fn burst(&mut self) -> BurstW<ConfigSpec> {
         BurstW::new(self, 11)
     }
     #[doc = "Bit 12 - Reference control"]
     #[inline(always)]
-    #[must_use]
     pub fn refsel(&mut self) -> RefselW<ConfigSpec> {
         RefselW::new(self, 12)
     }
     #[doc = "Bit 15 - Enable differential mode"]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> ModeW<ConfigSpec> {
         ModeW::new(self, 15)
     }
     #[doc = "Bits 16:24 - Acquisition time, the time the ADC uses to sample the input voltage. Resulting acquistion time is ((TACQ+1) x 125 ns)"]
     #[inline(always)]
-    #[must_use]
     pub fn tacq(&mut self) -> TacqW<ConfigSpec> {
         TacqW::new(self, 16)
     }
     #[doc = "Bits 28:30 - Conversion time. Resulting conversion time is ((TCONV+1) x 250 ns)"]
     #[inline(always)]
-    #[must_use]
     pub fn tconv(&mut self) -> TconvW<ConfigSpec> {
         TconvW::new(self, 28)
     }

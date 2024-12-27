@@ -74,13 +74,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - DPPI channel that task EDSTART will subscribe to"]
     #[inline(always)]
-    #[must_use]
     pub fn chidx(&mut self) -> ChidxW<SubscribeEdstartSpec> {
         ChidxW::new(self, 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<SubscribeEdstartSpec> {
         EnW::new(self, 31)
     }

@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - Whitening initial value"]
     #[inline(always)]
-    #[must_use]
     pub fn iv(&mut self) -> IvW<DatawhiteSpec> {
         IvW::new(self, 0)
     }
     #[doc = "Bits 16:25 - Whitening polynomial"]
     #[inline(always)]
-    #[must_use]
     pub fn poly(&mut self) -> PolyW<DatawhiteSpec> {
         PolyW::new(self, 16)
     }

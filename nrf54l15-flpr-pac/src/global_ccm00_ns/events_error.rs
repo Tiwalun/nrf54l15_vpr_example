@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CCM error event"]
     #[inline(always)]
-    #[must_use]
     pub fn events_error(&mut self) -> EventsErrorW<EventsErrorSpec> {
         EventsErrorW::new(self, 0)
     }

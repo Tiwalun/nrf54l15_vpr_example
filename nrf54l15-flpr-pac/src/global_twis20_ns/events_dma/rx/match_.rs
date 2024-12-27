@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Pattern match is detected on the DMA data bus."]
     #[inline(always)]
-    #[must_use]
     pub fn match_(&mut self) -> MatchW<MatchSpec> {
         MatchW::new(self, 0)
     }

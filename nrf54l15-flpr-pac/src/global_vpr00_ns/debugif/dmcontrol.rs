@@ -371,67 +371,56 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Reset signal for the debug module."]
     #[inline(always)]
-    #[must_use]
     pub fn dmactive(&mut self) -> DmactiveW<DmcontrolSpec> {
         DmactiveW::new(self, 0)
     }
     #[doc = "Bit 1 - Reset signal output from the debug module to the system."]
     #[inline(always)]
-    #[must_use]
     pub fn ndmreset(&mut self) -> NdmresetW<DmcontrolSpec> {
         NdmresetW::new(self, 1)
     }
     #[doc = "Bit 2 - Clear the halt on reset request."]
     #[inline(always)]
-    #[must_use]
     pub fn clrresethaltreq(&mut self) -> ClrresethaltreqW<DmcontrolSpec> {
         ClrresethaltreqW::new(self, 2)
     }
     #[doc = "Bit 3 - Set the halt on reset request."]
     #[inline(always)]
-    #[must_use]
     pub fn setresethaltreq(&mut self) -> SetresethaltreqW<DmcontrolSpec> {
         SetresethaltreqW::new(self, 3)
     }
     #[doc = "Bits 6:15 - The high 10 bits of hartsel."]
     #[inline(always)]
-    #[must_use]
     pub fn hartselhi(&mut self) -> HartselhiW<DmcontrolSpec> {
         HartselhiW::new(self, 6)
     }
     #[doc = "Bits 16:25 - The low 10 bits of hartsel."]
     #[inline(always)]
-    #[must_use]
     pub fn hartsello(&mut self) -> HartselloW<DmcontrolSpec> {
         HartselloW::new(self, 16)
     }
     #[doc = "Bit 26 - Definition of currently selected harts."]
     #[inline(always)]
-    #[must_use]
     pub fn hasel(&mut self) -> HaselW<DmcontrolSpec> {
         HaselW::new(self, 26)
     }
     #[doc = "Bit 28 - Clear the havereset."]
     #[inline(always)]
-    #[must_use]
     pub fn ackhavereset(&mut self) -> AckhaveresetW<DmcontrolSpec> {
         AckhaveresetW::new(self, 28)
     }
     #[doc = "Bit 29 - Reset harts."]
     #[inline(always)]
-    #[must_use]
     pub fn hartreset(&mut self) -> HartresetW<DmcontrolSpec> {
         HartresetW::new(self, 29)
     }
     #[doc = "Bit 30 - Resume currently selected harts."]
     #[inline(always)]
-    #[must_use]
     pub fn resumereq(&mut self) -> ResumereqW<DmcontrolSpec> {
         ResumereqW::new(self, 30)
     }
     #[doc = "Bit 31 - Halt currently selected harts."]
     #[inline(always)]
-    #[must_use]
     pub fn haltreq(&mut self) -> HaltreqW<DmcontrolSpec> {
         HaltreqW::new(self, 31)
     }

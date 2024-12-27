@@ -59,7 +59,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Revocation status."]
     #[inline(always)]
-    #[must_use]
     pub fn status(&mut self) -> StatusW<RevokeSpec> {
         StatusW::new(self, 0)
     }

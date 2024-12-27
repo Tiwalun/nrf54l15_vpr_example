@@ -782,66 +782,6 @@ where
         self.variant(RtcomparesyncWO::Set)
     }
 }
-#[doc = "Write '1' to enable interrupt for event SYSCOUNTERVALID\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Syscountervalid {
-    #[doc = "0: Read: Disabled"]
-    Disabled = 0,
-    #[doc = "1: Read: Enabled"]
-    Enabled = 1,
-}
-impl From<Syscountervalid> for bool {
-    #[inline(always)]
-    fn from(variant: Syscountervalid) -> Self {
-        variant as u8 != 0
-    }
-}
-#[doc = "Field `SYSCOUNTERVALID` reader - Write '1' to enable interrupt for event SYSCOUNTERVALID"]
-pub type SyscountervalidR = crate::BitReader<Syscountervalid>;
-impl SyscountervalidR {
-    #[doc = "Get enumerated values variant"]
-    #[inline(always)]
-    pub const fn variant(&self) -> Syscountervalid {
-        match self.bits {
-            false => Syscountervalid::Disabled,
-            true => Syscountervalid::Enabled,
-        }
-    }
-    #[doc = "Read: Disabled"]
-    #[inline(always)]
-    pub fn is_disabled(&self) -> bool {
-        *self == Syscountervalid::Disabled
-    }
-    #[doc = "Read: Enabled"]
-    #[inline(always)]
-    pub fn is_enabled(&self) -> bool {
-        *self == Syscountervalid::Enabled
-    }
-}
-#[doc = "Write '1' to enable interrupt for event SYSCOUNTERVALID\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum SyscountervalidWO {
-    #[doc = "1: Enable"]
-    Set = 1,
-}
-impl From<SyscountervalidWO> for bool {
-    #[inline(always)]
-    fn from(variant: SyscountervalidWO) -> Self {
-        variant as u8 != 0
-    }
-}
-#[doc = "Field `SYSCOUNTERVALID` writer - Write '1' to enable interrupt for event SYSCOUNTERVALID"]
-pub type SyscountervalidW<'a, REG> = crate::BitWriter<'a, REG, SyscountervalidWO>;
-impl<'a, REG> SyscountervalidW<'a, REG>
-where
-    REG: crate::Writable + crate::RegisterSpec,
-{
-    #[doc = "Enable"]
-    #[inline(always)]
-    pub fn set_(self) -> &'a mut crate::W<REG> {
-        self.variant(SyscountervalidWO::Set)
-    }
-}
 #[doc = "Write '1' to enable interrupt for event PWMPERIODEND\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Pwmperiodend {
@@ -968,11 +908,6 @@ impl R {
     pub fn rtcomparesync(&self) -> RtcomparesyncR {
         RtcomparesyncR::new(((self.bits >> 25) & 1) != 0)
     }
-    #[doc = "Bit 26 - Write '1' to enable interrupt for event SYSCOUNTERVALID"]
-    #[inline(always)]
-    pub fn syscountervalid(&self) -> SyscountervalidR {
-        SyscountervalidR::new(((self.bits >> 26) & 1) != 0)
-    }
     #[doc = "Bit 27 - Write '1' to enable interrupt for event PWMPERIODEND"]
     #[inline(always)]
     pub fn pwmperiodend(&self) -> PwmperiodendR {
@@ -982,91 +917,71 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to enable interrupt for event COMPARE\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare0(&mut self) -> Compare0W<Intenset0Spec> {
         Compare0W::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to enable interrupt for event COMPARE\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare1(&mut self) -> Compare1W<Intenset0Spec> {
         Compare1W::new(self, 1)
     }
     #[doc = "Bit 2 - Write '1' to enable interrupt for event COMPARE\\[2\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare2(&mut self) -> Compare2W<Intenset0Spec> {
         Compare2W::new(self, 2)
     }
     #[doc = "Bit 3 - Write '1' to enable interrupt for event COMPARE\\[3\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare3(&mut self) -> Compare3W<Intenset0Spec> {
         Compare3W::new(self, 3)
     }
     #[doc = "Bit 4 - Write '1' to enable interrupt for event COMPARE\\[4\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare4(&mut self) -> Compare4W<Intenset0Spec> {
         Compare4W::new(self, 4)
     }
     #[doc = "Bit 5 - Write '1' to enable interrupt for event COMPARE\\[5\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare5(&mut self) -> Compare5W<Intenset0Spec> {
         Compare5W::new(self, 5)
     }
     #[doc = "Bit 6 - Write '1' to enable interrupt for event COMPARE\\[6\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare6(&mut self) -> Compare6W<Intenset0Spec> {
         Compare6W::new(self, 6)
     }
     #[doc = "Bit 7 - Write '1' to enable interrupt for event COMPARE\\[7\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare7(&mut self) -> Compare7W<Intenset0Spec> {
         Compare7W::new(self, 7)
     }
     #[doc = "Bit 8 - Write '1' to enable interrupt for event COMPARE\\[8\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare8(&mut self) -> Compare8W<Intenset0Spec> {
         Compare8W::new(self, 8)
     }
     #[doc = "Bit 9 - Write '1' to enable interrupt for event COMPARE\\[9\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare9(&mut self) -> Compare9W<Intenset0Spec> {
         Compare9W::new(self, 9)
     }
     #[doc = "Bit 10 - Write '1' to enable interrupt for event COMPARE\\[10\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare10(&mut self) -> Compare10W<Intenset0Spec> {
         Compare10W::new(self, 10)
     }
     #[doc = "Bit 11 - Write '1' to enable interrupt for event COMPARE\\[11\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare11(&mut self) -> Compare11W<Intenset0Spec> {
         Compare11W::new(self, 11)
     }
     #[doc = "Bit 25 - Write '1' to enable interrupt for event RTCOMPARESYNC"]
     #[inline(always)]
-    #[must_use]
     pub fn rtcomparesync(&mut self) -> RtcomparesyncW<Intenset0Spec> {
         RtcomparesyncW::new(self, 25)
     }
-    #[doc = "Bit 26 - Write '1' to enable interrupt for event SYSCOUNTERVALID"]
-    #[inline(always)]
-    #[must_use]
-    pub fn syscountervalid(&mut self) -> SyscountervalidW<Intenset0Spec> {
-        SyscountervalidW::new(self, 26)
-    }
     #[doc = "Bit 27 - Write '1' to enable interrupt for event PWMPERIODEND"]
     #[inline(always)]
-    #[must_use]
     pub fn pwmperiodend(&mut self) -> PwmperiodendW<Intenset0Spec> {
         PwmperiodendW::new(self, 27)
     }

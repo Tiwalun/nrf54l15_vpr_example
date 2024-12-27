@@ -52,31 +52,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Reserved for future use. Shall be 0."]
     #[inline(always)]
-    #[must_use]
     pub fn rfu10(&mut self) -> Rfu10W<SelresSpec> {
         Rfu10W::new(self, 0)
     }
     #[doc = "Bit 2 - Cascade as defined by the b3 of SEL_RES response in the NFC Forum, NFC Digital Protocol Technical Specification (controlled by hardware, shall be 0)"]
     #[inline(always)]
-    #[must_use]
     pub fn cascade(&mut self) -> CascadeW<SelresSpec> {
         CascadeW::new(self, 2)
     }
     #[doc = "Bits 3:4 - Reserved for future use. Shall be 0."]
     #[inline(always)]
-    #[must_use]
     pub fn rfu43(&mut self) -> Rfu43W<SelresSpec> {
         Rfu43W::new(self, 3)
     }
     #[doc = "Bits 5:6 - Protocol as defined by the b7:b6 of SEL_RES response in the NFC Forum, NFC Digital Protocol Technical Specification"]
     #[inline(always)]
-    #[must_use]
     pub fn protocol(&mut self) -> ProtocolW<SelresSpec> {
         ProtocolW::new(self, 5)
     }
     #[doc = "Bit 7 - Reserved for future use. Shall be 0."]
     #[inline(always)]
-    #[must_use]
     pub fn rfu7(&mut self) -> Rfu7W<SelresSpec> {
         Rfu7W::new(self, 7)
     }

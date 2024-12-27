@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Power failure warning"]
     #[inline(always)]
-    #[must_use]
     pub fn events_pofwarn(&mut self) -> EventsPofwarnW<EventsPofwarnSpec> {
         EventsPofwarnW::new(self, 0)
     }

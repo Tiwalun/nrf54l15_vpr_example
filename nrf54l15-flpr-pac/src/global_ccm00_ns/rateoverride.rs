@@ -111,7 +111,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Data rate override setting."]
     #[inline(always)]
-    #[must_use]
     pub fn rateoverride(&mut self) -> RateoverrideW<RateoverrideSpec> {
         RateoverrideW::new(self, 0)
     }

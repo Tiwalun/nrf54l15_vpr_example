@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The sampling of energy detection has stopped"]
     #[inline(always)]
-    #[must_use]
     pub fn events_edstopped(&mut self) -> EventsEdstoppedW<EventsEdstoppedSpec> {
         EventsEdstoppedW::new(self, 0)
     }

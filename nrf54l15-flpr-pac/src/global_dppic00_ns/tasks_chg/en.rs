@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Enable channel group n"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<EnSpec> {
         EnW::new(self, 0)
     }

@@ -1992,224 +1992,192 @@ impl W {
     #[doc = "Bit 0 - Keep the RAM block MEM\\[0\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem0(&mut self) -> Mem0W<RetSpec> {
         Mem0W::new(self, 0)
     }
     #[doc = "Bit 1 - Keep the RAM block MEM\\[1\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem1(&mut self) -> Mem1W<RetSpec> {
         Mem1W::new(self, 1)
     }
     #[doc = "Bit 2 - Keep the RAM block MEM\\[2\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem2(&mut self) -> Mem2W<RetSpec> {
         Mem2W::new(self, 2)
     }
     #[doc = "Bit 3 - Keep the RAM block MEM\\[3\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem3(&mut self) -> Mem3W<RetSpec> {
         Mem3W::new(self, 3)
     }
     #[doc = "Bit 4 - Keep the RAM block MEM\\[4\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem4(&mut self) -> Mem4W<RetSpec> {
         Mem4W::new(self, 4)
     }
     #[doc = "Bit 5 - Keep the RAM block MEM\\[5\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem5(&mut self) -> Mem5W<RetSpec> {
         Mem5W::new(self, 5)
     }
     #[doc = "Bit 6 - Keep the RAM block MEM\\[6\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem6(&mut self) -> Mem6W<RetSpec> {
         Mem6W::new(self, 6)
     }
     #[doc = "Bit 7 - Keep the RAM block MEM\\[7\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem7(&mut self) -> Mem7W<RetSpec> {
         Mem7W::new(self, 7)
     }
     #[doc = "Bit 8 - Keep the RAM block MEM\\[8\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem8(&mut self) -> Mem8W<RetSpec> {
         Mem8W::new(self, 8)
     }
     #[doc = "Bit 9 - Keep the RAM block MEM\\[9\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem9(&mut self) -> Mem9W<RetSpec> {
         Mem9W::new(self, 9)
     }
     #[doc = "Bit 10 - Keep the RAM block MEM\\[10\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem10(&mut self) -> Mem10W<RetSpec> {
         Mem10W::new(self, 10)
     }
     #[doc = "Bit 11 - Keep the RAM block MEM\\[11\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem11(&mut self) -> Mem11W<RetSpec> {
         Mem11W::new(self, 11)
     }
     #[doc = "Bit 12 - Keep the RAM block MEM\\[12\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem12(&mut self) -> Mem12W<RetSpec> {
         Mem12W::new(self, 12)
     }
     #[doc = "Bit 13 - Keep the RAM block MEM\\[13\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem13(&mut self) -> Mem13W<RetSpec> {
         Mem13W::new(self, 13)
     }
     #[doc = "Bit 14 - Keep the RAM block MEM\\[14\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem14(&mut self) -> Mem14W<RetSpec> {
         Mem14W::new(self, 14)
     }
     #[doc = "Bit 15 - Keep the RAM block MEM\\[15\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem15(&mut self) -> Mem15W<RetSpec> {
         Mem15W::new(self, 15)
     }
     #[doc = "Bit 16 - Keep the RAM block MEM\\[16\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem16(&mut self) -> Mem16W<RetSpec> {
         Mem16W::new(self, 16)
     }
     #[doc = "Bit 17 - Keep the RAM block MEM\\[17\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem17(&mut self) -> Mem17W<RetSpec> {
         Mem17W::new(self, 17)
     }
     #[doc = "Bit 18 - Keep the RAM block MEM\\[18\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem18(&mut self) -> Mem18W<RetSpec> {
         Mem18W::new(self, 18)
     }
     #[doc = "Bit 19 - Keep the RAM block MEM\\[19\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem19(&mut self) -> Mem19W<RetSpec> {
         Mem19W::new(self, 19)
     }
     #[doc = "Bit 20 - Keep the RAM block MEM\\[20\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem20(&mut self) -> Mem20W<RetSpec> {
         Mem20W::new(self, 20)
     }
     #[doc = "Bit 21 - Keep the RAM block MEM\\[21\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem21(&mut self) -> Mem21W<RetSpec> {
         Mem21W::new(self, 21)
     }
     #[doc = "Bit 22 - Keep the RAM block MEM\\[22\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem22(&mut self) -> Mem22W<RetSpec> {
         Mem22W::new(self, 22)
     }
     #[doc = "Bit 23 - Keep the RAM block MEM\\[23\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem23(&mut self) -> Mem23W<RetSpec> {
         Mem23W::new(self, 23)
     }
     #[doc = "Bit 24 - Keep the RAM block MEM\\[24\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem24(&mut self) -> Mem24W<RetSpec> {
         Mem24W::new(self, 24)
     }
     #[doc = "Bit 25 - Keep the RAM block MEM\\[25\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem25(&mut self) -> Mem25W<RetSpec> {
         Mem25W::new(self, 25)
     }
     #[doc = "Bit 26 - Keep the RAM block MEM\\[26\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem26(&mut self) -> Mem26W<RetSpec> {
         Mem26W::new(self, 26)
     }
     #[doc = "Bit 27 - Keep the RAM block MEM\\[27\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem27(&mut self) -> Mem27W<RetSpec> {
         Mem27W::new(self, 27)
     }
     #[doc = "Bit 28 - Keep the RAM block MEM\\[28\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem28(&mut self) -> Mem28W<RetSpec> {
         Mem28W::new(self, 28)
     }
     #[doc = "Bit 29 - Keep the RAM block MEM\\[29\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem29(&mut self) -> Mem29W<RetSpec> {
         Mem29W::new(self, 29)
     }
     #[doc = "Bit 30 - Keep the RAM block MEM\\[30\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem30(&mut self) -> Mem30W<RetSpec> {
         Mem30W::new(self, 30)
     }
     #[doc = "Bit 31 - Keep the RAM block MEM\\[31\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem31(&mut self) -> Mem31W<RetSpec> {
         Mem31W::new(self, 31)
     }

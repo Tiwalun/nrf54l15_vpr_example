@@ -74,13 +74,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - DPPI channel that event DMA.BUSERROR will publish to"]
     #[inline(always)]
-    #[must_use]
     pub fn chidx(&mut self) -> ChidxW<BuserrorSpec> {
         ChidxW::new(self, 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<BuserrorSpec> {
         EnW::new(self, 31)
     }

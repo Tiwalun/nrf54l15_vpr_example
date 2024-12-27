@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - Size of the RAM buffer allocated to TXD and RXD data storage each"]
     #[inline(always)]
-    #[must_use]
     pub fn maxlen(&mut self) -> MaxlenW<MaxlenSpec> {
         MaxlenW::new(self, 0)
     }

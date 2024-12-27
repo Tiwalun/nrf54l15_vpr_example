@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Number of core clock cycles."]
     #[inline(always)]
-    #[must_use]
     pub fn timer(&mut self) -> TimerW<TimerSpec> {
         TimerW::new(self, 0)
     }

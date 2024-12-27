@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Nonce (write/read value 32-bit by 32-bit)."]
     #[inline(always)]
-    #[must_use]
     pub fn nonce(&mut self) -> NonceW<NonceSpec> {
         NonceW::new(self, 0)
     }

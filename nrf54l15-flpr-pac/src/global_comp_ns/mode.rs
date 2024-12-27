@@ -143,13 +143,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Speed and power modes"]
     #[inline(always)]
-    #[must_use]
     pub fn sp(&mut self) -> SpW<ModeSpec> {
         SpW::new(self, 0)
     }
     #[doc = "Bit 8 - Main operation modes"]
     #[inline(always)]
-    #[must_use]
     pub fn main(&mut self) -> MainW<ModeSpec> {
         MainW::new(self, 8)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Packet received with CRC ok"]
     #[inline(always)]
-    #[must_use]
     pub fn events_crcok(&mut self) -> EventsCrcokW<EventsCrcokSpec> {
         EventsCrcokW::new(self, 0)
     }

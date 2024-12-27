@@ -74,13 +74,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:30 - Count to add to CC\\[n\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn value(&mut self) -> ValueW<CcaddSpec> {
         ValueW::new(self, 0)
     }
     #[doc = "Bit 31 - Configure the Capture/Compare register"]
     #[inline(always)]
-    #[must_use]
     pub fn reference(&mut self) -> ReferenceW<CcaddSpec> {
         ReferenceW::new(self, 31)
     }

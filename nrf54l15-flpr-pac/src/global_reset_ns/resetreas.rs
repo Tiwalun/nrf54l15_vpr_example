@@ -819,85 +819,71 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Reset from pin reset detected"]
     #[inline(always)]
-    #[must_use]
     pub fn resetpin(&mut self) -> ResetpinW<ResetreasSpec> {
         ResetpinW::new(self, 0)
     }
     #[doc = "Bit 1 - Reset from watchdog timer 0 detected"]
     #[inline(always)]
-    #[must_use]
     pub fn dog0(&mut self) -> Dog0W<ResetreasSpec> {
         Dog0W::new(self, 1)
     }
     #[doc = "Bit 2 - Reset from watchdog timer 1 detected"]
     #[inline(always)]
-    #[must_use]
     pub fn dog1(&mut self) -> Dog1W<ResetreasSpec> {
         Dog1W::new(self, 2)
     }
     #[doc = "Bit 3 - Soft reset from CTRL-AP detected"]
     #[inline(always)]
-    #[must_use]
     pub fn ctrlapsoft(&mut self) -> CtrlapsoftW<ResetreasSpec> {
         CtrlapsoftW::new(self, 3)
     }
     #[doc = "Bit 4 - Reset due to CTRL-AP hard reset"]
     #[inline(always)]
-    #[must_use]
     pub fn ctrlaphard(&mut self) -> CtrlaphardW<ResetreasSpec> {
         CtrlaphardW::new(self, 4)
     }
     #[doc = "Bit 5 - Reset due to CTRL-AP pin reset"]
     #[inline(always)]
-    #[must_use]
     pub fn ctrlappin(&mut self) -> CtrlappinW<ResetreasSpec> {
         CtrlappinW::new(self, 5)
     }
     #[doc = "Bit 6 - Reset from soft reset detected"]
     #[inline(always)]
-    #[must_use]
     pub fn sreq(&mut self) -> SreqW<ResetreasSpec> {
         SreqW::new(self, 6)
     }
     #[doc = "Bit 7 - Reset from CPU lockup detected"]
     #[inline(always)]
-    #[must_use]
     pub fn lockup(&mut self) -> LockupW<ResetreasSpec> {
         LockupW::new(self, 7)
     }
     #[doc = "Bit 8 - Reset due to wakeup from System OFF mode when wakeup is triggered by DETECT signal from GPIO"]
     #[inline(always)]
-    #[must_use]
     pub fn off(&mut self) -> OffW<ResetreasSpec> {
         OffW::new(self, 8)
     }
     #[doc = "Bit 9 - Reset due to wakeup from System OFF mode when wakeup is triggered by ANADETECT signal from LPCOMP"]
     #[inline(always)]
-    #[must_use]
     pub fn lpcomp(&mut self) -> LpcompW<ResetreasSpec> {
         LpcompW::new(self, 9)
     }
     #[doc = "Bit 10 - Reset triggered by Debug Interface"]
     #[inline(always)]
-    #[must_use]
     pub fn dif(&mut self) -> DifW<ResetreasSpec> {
         DifW::new(self, 10)
     }
     #[doc = "Bit 11 - Reset due to wakeup from GRTC"]
     #[inline(always)]
-    #[must_use]
     pub fn grtc(&mut self) -> GrtcW<ResetreasSpec> {
         GrtcW::new(self, 11)
     }
     #[doc = "Bit 12 - Reset after wakeup from System OFF mode due to NFC field being detected"]
     #[inline(always)]
-    #[must_use]
     pub fn nfc(&mut self) -> NfcW<ResetreasSpec> {
         NfcW::new(self, 12)
     }
     #[doc = "Bit 13 - Reset due to illegal tampering of the device"]
     #[inline(always)]
-    #[must_use]
     pub fn sectamper(&mut self) -> SectamperW<ResetreasSpec> {
         SectamperW::new(self, 13)
     }

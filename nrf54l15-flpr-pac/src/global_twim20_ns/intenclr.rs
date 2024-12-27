@@ -982,91 +982,76 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Write '1' to disable interrupt for event STOPPED"]
     #[inline(always)]
-    #[must_use]
     pub fn stopped(&mut self) -> StoppedW<IntenclrSpec> {
         StoppedW::new(self, 1)
     }
     #[doc = "Bit 5 - Write '1' to disable interrupt for event ERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn error(&mut self) -> ErrorW<IntenclrSpec> {
         ErrorW::new(self, 5)
     }
     #[doc = "Bit 10 - Write '1' to disable interrupt for event SUSPENDED"]
     #[inline(always)]
-    #[must_use]
     pub fn suspended(&mut self) -> SuspendedW<IntenclrSpec> {
         SuspendedW::new(self, 10)
     }
     #[doc = "Bit 13 - Write '1' to disable interrupt for event LASTRX"]
     #[inline(always)]
-    #[must_use]
     pub fn lastrx(&mut self) -> LastrxW<IntenclrSpec> {
         LastrxW::new(self, 13)
     }
     #[doc = "Bit 14 - Write '1' to disable interrupt for event LASTTX"]
     #[inline(always)]
-    #[must_use]
     pub fn lasttx(&mut self) -> LasttxW<IntenclrSpec> {
         LasttxW::new(self, 14)
     }
     #[doc = "Bit 19 - Write '1' to disable interrupt for event DMARXEND"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxend(&mut self) -> DmarxendW<IntenclrSpec> {
         DmarxendW::new(self, 19)
     }
     #[doc = "Bit 20 - Write '1' to disable interrupt for event DMARXREADY"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxready(&mut self) -> DmarxreadyW<IntenclrSpec> {
         DmarxreadyW::new(self, 20)
     }
     #[doc = "Bit 21 - Write '1' to disable interrupt for event DMARXBUSERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxbuserror(&mut self) -> DmarxbuserrorW<IntenclrSpec> {
         DmarxbuserrorW::new(self, 21)
     }
     #[doc = "Bit 22 - Write '1' to disable interrupt for event DMARXMATCH\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxmatch0(&mut self) -> Dmarxmatch0W<IntenclrSpec> {
         Dmarxmatch0W::new(self, 22)
     }
     #[doc = "Bit 23 - Write '1' to disable interrupt for event DMARXMATCH\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxmatch1(&mut self) -> Dmarxmatch1W<IntenclrSpec> {
         Dmarxmatch1W::new(self, 23)
     }
     #[doc = "Bit 24 - Write '1' to disable interrupt for event DMARXMATCH\\[2\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxmatch2(&mut self) -> Dmarxmatch2W<IntenclrSpec> {
         Dmarxmatch2W::new(self, 24)
     }
     #[doc = "Bit 25 - Write '1' to disable interrupt for event DMARXMATCH\\[3\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dmarxmatch3(&mut self) -> Dmarxmatch3W<IntenclrSpec> {
         Dmarxmatch3W::new(self, 25)
     }
     #[doc = "Bit 26 - Write '1' to disable interrupt for event DMATXEND"]
     #[inline(always)]
-    #[must_use]
     pub fn dmatxend(&mut self) -> DmatxendW<IntenclrSpec> {
         DmatxendW::new(self, 26)
     }
     #[doc = "Bit 27 - Write '1' to disable interrupt for event DMATXREADY"]
     #[inline(always)]
-    #[must_use]
     pub fn dmatxready(&mut self) -> DmatxreadyW<IntenclrSpec> {
         DmatxreadyW::new(self, 27)
     }
     #[doc = "Bit 28 - Write '1' to disable interrupt for event DMATXBUSERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn dmatxbuserror(&mut self) -> DmatxbuserrorW<IntenclrSpec> {
         DmatxbuserrorW::new(self, 28)
     }

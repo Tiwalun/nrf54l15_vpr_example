@@ -49,13 +49,11 @@ where
 impl W {
     #[doc = "Bits 0:23 - This Field is interpreted in a command specific manner, described for each abstract command."]
     #[inline(always)]
-    #[must_use]
     pub fn control(&mut self) -> ControlW<AbstractcmdSpec> {
         ControlW::new(self, 0)
     }
     #[doc = "Bits 24:31 - The type determines the overall functionality of this abstract command."]
     #[inline(always)]
-    #[must_use]
     pub fn cmdtype(&mut self) -> CmdtypeW<AbstractcmdSpec> {
         CmdtypeW::new(self, 24)
     }

@@ -6,54 +6,56 @@ pub type W = crate::W<TxpowerSpec>;
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Txpower {
-    #[doc = "51: +8 dBm"]
-    Pos8dBm = 51,
-    #[doc = "45: +7 dBm"]
-    Pos7dBm = 45,
-    #[doc = "40: +6 dBm"]
-    Pos6dBm = 40,
-    #[doc = "35: +5 dBm"]
-    Pos5dBm = 35,
-    #[doc = "31: +4 dBm"]
-    Pos4dBm = 31,
-    #[doc = "27: +3 dBm"]
-    Pos3dBm = 27,
-    #[doc = "24: +2 dBm"]
-    Pos2dBm = 24,
-    #[doc = "21: +1 dBm"]
-    Pos1dBm = 21,
-    #[doc = "19: 0 dBm"]
-    _0dBm = 19,
-    #[doc = "17: -1 dBm"]
-    Neg1dBm = 17,
-    #[doc = "15: -2 dBm"]
-    Neg2dBm = 15,
-    #[doc = "13: -3 dBm"]
-    Neg3dBm = 13,
-    #[doc = "11: -4 dBm"]
-    Neg4dBm = 11,
-    #[doc = "10: -5 dBm"]
-    Neg5dBm = 10,
-    #[doc = "9: -6 dBm"]
-    Neg6dBm = 9,
-    #[doc = "8: -7 dBm"]
-    Neg7dBm = 8,
-    #[doc = "7: -8 dBm"]
-    Neg8dBm = 7,
-    #[doc = "6: -9 dBm"]
-    Neg9dBm = 6,
-    #[doc = "5: -10 dBm"]
-    Neg10dBm = 5,
-    #[doc = "4: -12 dBm"]
-    Neg12dBm = 4,
-    #[doc = "3: -14 dBm"]
-    Neg14dBm = 3,
-    #[doc = "2: -16 dBm"]
-    Neg16dBm = 2,
-    #[doc = "1: -20 dBm"]
-    Neg20dBm = 1,
-    #[doc = "0: -26 dBm"]
-    Neg26dBm = 0,
+    #[doc = "63: +8 dBm"]
+    Pos8dBm = 63,
+    #[doc = "57: +7 dBm"]
+    Pos7dBm = 57,
+    #[doc = "51: +6 dBm"]
+    Pos6dBm = 51,
+    #[doc = "45: +5 dBm"]
+    Pos5dBm = 45,
+    #[doc = "40: +4 dBm"]
+    Pos4dBm = 40,
+    #[doc = "35: +3 dBm"]
+    Pos3dBm = 35,
+    #[doc = "31: +2 dBm"]
+    Pos2dBm = 31,
+    #[doc = "27: +1 dBm"]
+    Pos1dBm = 27,
+    #[doc = "24: 0 dBm"]
+    _0dBm = 24,
+    #[doc = "21: -1 dBm"]
+    Neg1dBm = 21,
+    #[doc = "19: -2 dBm"]
+    Neg2dBm = 19,
+    #[doc = "17: -3 dBm"]
+    Neg3dBm = 17,
+    #[doc = "15: -4 dBm"]
+    Neg4dBm = 15,
+    #[doc = "13: -5 dBm"]
+    Neg5dBm = 13,
+    #[doc = "11: -6 dBm"]
+    Neg6dBm = 11,
+    #[doc = "10: -7 dBm"]
+    Neg7dBm = 10,
+    #[doc = "9: -8 dBm"]
+    Neg8dBm = 9,
+    #[doc = "8: -9 dBm"]
+    Neg9dBm = 8,
+    #[doc = "7: -10 dBm"]
+    Neg10dBm = 7,
+    #[doc = "6: -12 dBm"]
+    Neg12dBm = 6,
+    #[doc = "5: -14 dBm"]
+    Neg14dBm = 5,
+    #[doc = "4: -16 dBm"]
+    Neg16dBm = 4,
+    #[doc = "3: -18 dBm"]
+    Neg18dBm = 3,
+    #[doc = "2: -20 dBm"]
+    Neg20dBm = 2,
+    #[doc = "1: -28 dBm"]
+    Neg28dBm = 1,
     #[doc = "304: -40 dBm"]
     Neg40dBm = 304,
     #[doc = "272: -46 dBm"]
@@ -76,30 +78,31 @@ impl TxpowerR {
     #[inline(always)]
     pub const fn variant(&self) -> Option<Txpower> {
         match self.bits {
-            51 => Some(Txpower::Pos8dBm),
-            45 => Some(Txpower::Pos7dBm),
-            40 => Some(Txpower::Pos6dBm),
-            35 => Some(Txpower::Pos5dBm),
-            31 => Some(Txpower::Pos4dBm),
-            27 => Some(Txpower::Pos3dBm),
-            24 => Some(Txpower::Pos2dBm),
-            21 => Some(Txpower::Pos1dBm),
-            19 => Some(Txpower::_0dBm),
-            17 => Some(Txpower::Neg1dBm),
-            15 => Some(Txpower::Neg2dBm),
-            13 => Some(Txpower::Neg3dBm),
-            11 => Some(Txpower::Neg4dBm),
-            10 => Some(Txpower::Neg5dBm),
-            9 => Some(Txpower::Neg6dBm),
-            8 => Some(Txpower::Neg7dBm),
-            7 => Some(Txpower::Neg8dBm),
-            6 => Some(Txpower::Neg9dBm),
-            5 => Some(Txpower::Neg10dBm),
-            4 => Some(Txpower::Neg12dBm),
-            3 => Some(Txpower::Neg14dBm),
-            2 => Some(Txpower::Neg16dBm),
-            1 => Some(Txpower::Neg20dBm),
-            0 => Some(Txpower::Neg26dBm),
+            63 => Some(Txpower::Pos8dBm),
+            57 => Some(Txpower::Pos7dBm),
+            51 => Some(Txpower::Pos6dBm),
+            45 => Some(Txpower::Pos5dBm),
+            40 => Some(Txpower::Pos4dBm),
+            35 => Some(Txpower::Pos3dBm),
+            31 => Some(Txpower::Pos2dBm),
+            27 => Some(Txpower::Pos1dBm),
+            24 => Some(Txpower::_0dBm),
+            21 => Some(Txpower::Neg1dBm),
+            19 => Some(Txpower::Neg2dBm),
+            17 => Some(Txpower::Neg3dBm),
+            15 => Some(Txpower::Neg4dBm),
+            13 => Some(Txpower::Neg5dBm),
+            11 => Some(Txpower::Neg6dBm),
+            10 => Some(Txpower::Neg7dBm),
+            9 => Some(Txpower::Neg8dBm),
+            8 => Some(Txpower::Neg9dBm),
+            7 => Some(Txpower::Neg10dBm),
+            6 => Some(Txpower::Neg12dBm),
+            5 => Some(Txpower::Neg14dBm),
+            4 => Some(Txpower::Neg16dBm),
+            3 => Some(Txpower::Neg18dBm),
+            2 => Some(Txpower::Neg20dBm),
+            1 => Some(Txpower::Neg28dBm),
             304 => Some(Txpower::Neg40dBm),
             272 => Some(Txpower::Neg46dBm),
             _ => None,
@@ -215,15 +218,20 @@ impl TxpowerR {
     pub fn is_neg16d_bm(&self) -> bool {
         *self == Txpower::Neg16dBm
     }
+    #[doc = "-18 dBm"]
+    #[inline(always)]
+    pub fn is_neg18d_bm(&self) -> bool {
+        *self == Txpower::Neg18dBm
+    }
     #[doc = "-20 dBm"]
     #[inline(always)]
     pub fn is_neg20d_bm(&self) -> bool {
         *self == Txpower::Neg20dBm
     }
-    #[doc = "-26 dBm"]
+    #[doc = "-28 dBm"]
     #[inline(always)]
-    pub fn is_neg26d_bm(&self) -> bool {
-        *self == Txpower::Neg26dBm
+    pub fn is_neg28d_bm(&self) -> bool {
+        *self == Txpower::Neg28dBm
     }
     #[doc = "-40 dBm"]
     #[inline(always)]
@@ -353,15 +361,20 @@ where
     pub fn neg16d_bm(self) -> &'a mut crate::W<REG> {
         self.variant(Txpower::Neg16dBm)
     }
+    #[doc = "-18 dBm"]
+    #[inline(always)]
+    pub fn neg18d_bm(self) -> &'a mut crate::W<REG> {
+        self.variant(Txpower::Neg18dBm)
+    }
     #[doc = "-20 dBm"]
     #[inline(always)]
     pub fn neg20d_bm(self) -> &'a mut crate::W<REG> {
         self.variant(Txpower::Neg20dBm)
     }
-    #[doc = "-26 dBm"]
+    #[doc = "-28 dBm"]
     #[inline(always)]
-    pub fn neg26d_bm(self) -> &'a mut crate::W<REG> {
-        self.variant(Txpower::Neg26dBm)
+    pub fn neg28d_bm(self) -> &'a mut crate::W<REG> {
+        self.variant(Txpower::Neg28dBm)
     }
     #[doc = "-40 dBm"]
     #[inline(always)]
@@ -384,7 +397,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:10 - RADIO output power"]
     #[inline(always)]
-    #[must_use]
     pub fn txpower(&mut self) -> TxpowerW<TxpowerSpec> {
         TxpowerW::new(self, 0)
     }

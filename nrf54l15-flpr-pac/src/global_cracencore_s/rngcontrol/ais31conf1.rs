@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:14 - Online repeat threshold."]
     #[inline(always)]
-    #[must_use]
     pub fn onlinerepthreshold(&mut self) -> OnlinerepthresholdW<Ais31conf1Spec> {
         OnlinerepthresholdW::new(self, 0)
     }
     #[doc = "Bits 16:30 - Expected history value."]
     #[inline(always)]
-    #[must_use]
     pub fn hexpectedvalue(&mut self) -> HexpectedvalueW<Ais31conf1Spec> {
         HexpectedvalueW::new(self, 16)
     }

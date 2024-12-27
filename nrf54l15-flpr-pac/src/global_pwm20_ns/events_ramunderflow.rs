@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Emitted when retrieving from RAM does not complete in time for the PWM module"]
     #[inline(always)]
-    #[must_use]
     pub fn events_ramunderflow(&mut self) -> EventsRamunderflowW<EventsRamunderflowSpec> {
         EventsRamunderflowW::new(self, 0)
     }

@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start the ADC and prepare the result buffer in RAM"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_start(&mut self) -> TasksStartW<TasksStartSpec> {
         TasksStartW::new(self, 0)
     }

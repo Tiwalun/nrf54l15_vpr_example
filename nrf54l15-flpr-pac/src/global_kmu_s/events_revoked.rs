@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Key slot has been revoked and can no longer be used"]
     #[inline(always)]
-    #[must_use]
     pub fn events_revoked(&mut self) -> EventsRevokedW<EventsRevokedSpec> {
         EventsRevokedW::new(self, 0)
     }

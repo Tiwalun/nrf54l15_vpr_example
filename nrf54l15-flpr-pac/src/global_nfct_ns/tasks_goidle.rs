@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Force state machine to IDLE state"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_goidle(&mut self) -> TasksGoidleW<TasksGoidleSpec> {
         TasksGoidleW::new(self, 0)
     }

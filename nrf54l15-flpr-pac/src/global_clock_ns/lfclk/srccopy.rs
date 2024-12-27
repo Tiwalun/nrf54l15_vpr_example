@@ -85,7 +85,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Value of LFCLK.SRC register when LFCLKSTART task was triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn src(&mut self) -> SrcW<SrccopySpec> {
         SrcW::new(self, 0)
     }

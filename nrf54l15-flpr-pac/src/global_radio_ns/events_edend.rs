@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Sampling of energy detection complete (a new ED sample is ready for readout from the RADIO.EDSAMPLE register)"]
     #[inline(always)]
-    #[must_use]
     pub fn events_edend(&mut self) -> EventsEdendW<EventsEdendSpec> {
         EventsEdendW::new(self, 0)
     }

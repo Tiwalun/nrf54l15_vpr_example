@@ -33,7 +33,6 @@ where
 impl W {
     #[doc = "Bits 0:31 - Reload request register"]
     #[inline(always)]
-    #[must_use]
     pub fn rr(&mut self) -> RrW<RrSpec> {
         RrW::new(self, 0)
     }

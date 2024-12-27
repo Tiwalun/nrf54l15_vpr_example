@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn fetchaddrmsb(&mut self) -> FetchaddrmsbW<FetchaddrmsbSpec> {
         FetchaddrmsbW::new(self, 0)
     }

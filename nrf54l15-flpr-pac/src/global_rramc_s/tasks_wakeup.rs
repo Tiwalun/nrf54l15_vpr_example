@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Wakeup the RRAM from low power mode"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_wakeup(&mut self) -> TasksWakeupW<TasksWakeupSpec> {
         TasksWakeupW::new(self, 0)
     }

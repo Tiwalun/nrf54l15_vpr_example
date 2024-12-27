@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - NFC RX frame error reported. The FRAMESTATUS.RX register contains details on the source of the error."]
     #[inline(always)]
-    #[must_use]
     pub fn events_rxerror(&mut self) -> EventsRxerrorW<EventsRxerrorSpec> {
         EventsRxerrorW::new(self, 0)
     }

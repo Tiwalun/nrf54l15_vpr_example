@@ -204,25 +204,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set value of external tamper reset enable signal."]
     #[inline(always)]
-    #[must_use]
     pub fn value(&mut self) -> ValueW<CtrlSpec> {
         ValueW::new(self, 0)
     }
     #[doc = "Bit 1 - Lock this register to prevent changes to the VALUE field until next reset."]
     #[inline(always)]
-    #[must_use]
     pub fn lock(&mut self) -> LockW<CtrlSpec> {
         LockW::new(self, 1)
     }
     #[doc = "Bits 4:7 - The write protection must be cleared to allow updates to the VALUE field."]
     #[inline(always)]
-    #[must_use]
     pub fn writeprotection(&mut self) -> WriteprotectionW<CtrlSpec> {
         WriteprotectionW::new(self, 4)
     }
     #[doc = "Bits 16:31 - Required write key for upper 16 bits. Must be included in all register write operations."]
     #[inline(always)]
-    #[must_use]
     pub fn key(&mut self) -> KeyW<CtrlSpec> {
         KeyW::new(self, 16)
     }

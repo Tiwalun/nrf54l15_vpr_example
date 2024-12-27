@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - VDOWN = (THDOWN+1)/64*VREF"]
     #[inline(always)]
-    #[must_use]
     pub fn thdown(&mut self) -> ThdownW<ThSpec> {
         ThdownW::new(self, 0)
     }
     #[doc = "Bits 8:13 - VUP = (THUP+1)/64*VREF"]
     #[inline(always)]
-    #[must_use]
     pub fn thup(&mut self) -> ThupW<ThSpec> {
         ThupW::new(self, 8)
     }

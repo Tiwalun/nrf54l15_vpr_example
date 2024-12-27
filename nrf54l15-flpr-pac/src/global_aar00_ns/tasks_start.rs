@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start resolving addresses based on IRKs specified in the IRK data structure"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_start(&mut self) -> TasksStartW<TasksStartSpec> {
         TasksStartW::new(self, 0)
     }

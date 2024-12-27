@@ -877,91 +877,76 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable region n for master port 0"]
     #[inline(always)]
-    #[must_use]
     pub fn enable0(&mut self) -> Enable0W<MasterportSpec> {
         Enable0W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable region n for master port 1"]
     #[inline(always)]
-    #[must_use]
     pub fn enable1(&mut self) -> Enable1W<MasterportSpec> {
         Enable1W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable region n for master port 2"]
     #[inline(always)]
-    #[must_use]
     pub fn enable2(&mut self) -> Enable2W<MasterportSpec> {
         Enable2W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable region n for master port 3"]
     #[inline(always)]
-    #[must_use]
     pub fn enable3(&mut self) -> Enable3W<MasterportSpec> {
         Enable3W::new(self, 3)
     }
     #[doc = "Bit 4 - Enable region n for master port 4"]
     #[inline(always)]
-    #[must_use]
     pub fn enable4(&mut self) -> Enable4W<MasterportSpec> {
         Enable4W::new(self, 4)
     }
     #[doc = "Bit 5 - Enable region n for master port 5"]
     #[inline(always)]
-    #[must_use]
     pub fn enable5(&mut self) -> Enable5W<MasterportSpec> {
         Enable5W::new(self, 5)
     }
     #[doc = "Bit 6 - Enable region n for master port 6"]
     #[inline(always)]
-    #[must_use]
     pub fn enable6(&mut self) -> Enable6W<MasterportSpec> {
         Enable6W::new(self, 6)
     }
     #[doc = "Bit 7 - Enable region n for master port 7"]
     #[inline(always)]
-    #[must_use]
     pub fn enable7(&mut self) -> Enable7W<MasterportSpec> {
         Enable7W::new(self, 7)
     }
     #[doc = "Bit 8 - Enable region n for master port 8"]
     #[inline(always)]
-    #[must_use]
     pub fn enable8(&mut self) -> Enable8W<MasterportSpec> {
         Enable8W::new(self, 8)
     }
     #[doc = "Bit 9 - Enable region n for master port 9"]
     #[inline(always)]
-    #[must_use]
     pub fn enable9(&mut self) -> Enable9W<MasterportSpec> {
         Enable9W::new(self, 9)
     }
     #[doc = "Bit 10 - Enable region n for master port 10"]
     #[inline(always)]
-    #[must_use]
     pub fn enable10(&mut self) -> Enable10W<MasterportSpec> {
         Enable10W::new(self, 10)
     }
     #[doc = "Bit 11 - Enable region n for master port 11"]
     #[inline(always)]
-    #[must_use]
     pub fn enable11(&mut self) -> Enable11W<MasterportSpec> {
         Enable11W::new(self, 11)
     }
     #[doc = "Bit 12 - Enable region n for master port 12"]
     #[inline(always)]
-    #[must_use]
     pub fn enable12(&mut self) -> Enable12W<MasterportSpec> {
         Enable12W::new(self, 12)
     }
     #[doc = "Bit 13 - Enable region n for master port 13"]
     #[inline(always)]
-    #[must_use]
     pub fn enable13(&mut self) -> Enable13W<MasterportSpec> {
         Enable13W::new(self, 13)
     }
     #[doc = "Bit 14 - Enable region n for master port 14"]
     #[inline(always)]
-    #[must_use]
     pub fn enable14(&mut self) -> Enable14W<MasterportSpec> {
         Enable14W::new(self, 14)
     }

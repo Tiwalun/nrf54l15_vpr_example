@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:23 - CRC initial value"]
     #[inline(always)]
-    #[must_use]
     pub fn crcinit(&mut self) -> CrcinitW<CrcinitSpec> {
         CrcinitW::new(self, 0)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Master clock generator enable"]
     #[inline(always)]
-    #[must_use]
     pub fn mcken(&mut self) -> MckenW<MckenSpec> {
         MckenW::new(self, 0)
     }

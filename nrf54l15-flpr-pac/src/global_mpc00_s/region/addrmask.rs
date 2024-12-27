@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Address mask for memory region n"]
     #[inline(always)]
-    #[must_use]
     pub fn addrmask(&mut self) -> AddrmaskW<AddrmaskSpec> {
         AddrmaskW::new(self, 0)
     }

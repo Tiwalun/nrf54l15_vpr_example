@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Start address of the region \\[n\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn startaddr(&mut self) -> StartaddrW<AddressSpec> {
         StartaddrW::new(self, 0)
     }

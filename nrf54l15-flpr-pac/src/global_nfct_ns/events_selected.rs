@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - NFC auto collision resolution successfully completed"]
     #[inline(always)]
-    #[must_use]
     pub fn events_selected(&mut self) -> EventsSelectedW<EventsSelectedSpec> {
         EventsSelectedW::new(self, 0)
     }

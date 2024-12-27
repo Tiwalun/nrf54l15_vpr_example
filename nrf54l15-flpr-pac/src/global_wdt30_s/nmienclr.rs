@@ -137,13 +137,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to disable interrupt for event TIMEOUT"]
     #[inline(always)]
-    #[must_use]
     pub fn timeout(&mut self) -> TimeoutW<NmienclrSpec> {
         TimeoutW::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to disable interrupt for event STOPPED"]
     #[inline(always)]
-    #[must_use]
     pub fn stopped(&mut self) -> StoppedW<NmienclrSpec> {
         StoppedW::new(self, 1)
     }

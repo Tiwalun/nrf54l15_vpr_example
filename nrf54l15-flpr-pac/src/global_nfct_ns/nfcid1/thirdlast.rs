@@ -34,19 +34,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - NFCID1 byte S"]
     #[inline(always)]
-    #[must_use]
     pub fn s(&mut self) -> SW<ThirdlastSpec> {
         SW::new(self, 0)
     }
     #[doc = "Bits 8:15 - NFCID1 byte R"]
     #[inline(always)]
-    #[must_use]
     pub fn r(&mut self) -> RW<ThirdlastSpec> {
         RW::new(self, 8)
     }
     #[doc = "Bits 16:23 - NFCID1 byte Q"]
     #[inline(always)]
-    #[must_use]
     pub fn q(&mut self) -> QW<ThirdlastSpec> {
         QW::new(self, 16)
     }

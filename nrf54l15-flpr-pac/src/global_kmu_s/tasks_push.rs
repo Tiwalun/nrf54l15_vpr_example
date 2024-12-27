@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Push key slot"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_push(&mut self) -> TasksPushW<TasksPushSpec> {
         TasksPushW::new(self, 0)
     }

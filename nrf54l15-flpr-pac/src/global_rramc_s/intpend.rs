@@ -144,6 +144,42 @@ impl AccesserrorR {
         *self == Accesserror::Pending
     }
 }
+#[doc = "Read pending status of interrupt for event ECCERROR\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Eccerror {
+    #[doc = "0: Read: Not pending"]
+    NotPending = 0,
+    #[doc = "1: Read: Pending"]
+    Pending = 1,
+}
+impl From<Eccerror> for bool {
+    #[inline(always)]
+    fn from(variant: Eccerror) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `ECCERROR` reader - Read pending status of interrupt for event ECCERROR"]
+pub type EccerrorR = crate::BitReader<Eccerror>;
+impl EccerrorR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Eccerror {
+        match self.bits {
+            false => Eccerror::NotPending,
+            true => Eccerror::Pending,
+        }
+    }
+    #[doc = "Read: Not pending"]
+    #[inline(always)]
+    pub fn is_not_pending(&self) -> bool {
+        *self == Eccerror::NotPending
+    }
+    #[doc = "Read: Pending"]
+    #[inline(always)]
+    pub fn is_pending(&self) -> bool {
+        *self == Eccerror::Pending
+    }
+}
 impl R {
     #[doc = "Bit 0 - Read pending status of interrupt for event WOKENUP"]
     #[inline(always)]
@@ -164,6 +200,11 @@ impl R {
     #[inline(always)]
     pub fn accesserror(&self) -> AccesserrorR {
         AccesserrorR::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Read pending status of interrupt for event ECCERROR"]
+    #[inline(always)]
+    pub fn eccerror(&self) -> EccerrorR {
+        EccerrorR::new(((self.bits >> 4) & 1) != 0)
     }
 }
 #[doc = "Pending interrupts\n\nYou can [`read`](crate::Reg::read) this register and get [`intpend::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

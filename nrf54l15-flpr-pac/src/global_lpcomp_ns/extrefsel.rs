@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - External analog reference pin select"]
     #[inline(always)]
-    #[must_use]
     pub fn pin(&mut self) -> PinW<ExtrefselSpec> {
         PinW::new(self, 0)
     }
     #[doc = "Bits 8:11 - GPIO Port selection"]
     #[inline(always)]
-    #[must_use]
     pub fn port(&mut self) -> PortW<ExtrefselSpec> {
         PortW::new(self, 8)
     }

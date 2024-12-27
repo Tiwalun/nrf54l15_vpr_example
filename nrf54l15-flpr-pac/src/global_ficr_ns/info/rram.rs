@@ -1,11 +1,15 @@
 #[doc = "Register `RRAM` reader"]
 pub type R = crate::R<RramSpec>;
-#[doc = "RRAM variant\n\nValue on reset: 4294967295"]
+#[doc = "RRAM size (KB)\n\nValue on reset: 4294967295"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u32)]
 pub enum Rram {
     #[doc = "1524: 1524 KByte RRAM"]
     K1524 = 1524,
+    #[doc = "1012: 1012 KByte RRAM"]
+    K1012 = 1012,
+    #[doc = "500: 500 KByte RRAM"]
+    K500 = 500,
     #[doc = "4294967295: Unspecified"]
     Unspecified = 4294967295,
 }
@@ -19,7 +23,7 @@ impl crate::FieldSpec for Rram {
     type Ux = u32;
 }
 impl crate::IsEnum for Rram {}
-#[doc = "Field `RRAM` reader - RRAM variant"]
+#[doc = "Field `RRAM` reader - RRAM size (KB)"]
 pub type RramR = crate::FieldReader<Rram>;
 impl RramR {
     #[doc = "Get enumerated values variant"]
@@ -27,6 +31,8 @@ impl RramR {
     pub const fn variant(&self) -> Option<Rram> {
         match self.bits {
             1524 => Some(Rram::K1524),
+            1012 => Some(Rram::K1012),
+            500 => Some(Rram::K500),
             4294967295 => Some(Rram::Unspecified),
             _ => None,
         }
@@ -36,6 +42,16 @@ impl RramR {
     pub fn is_k1524(&self) -> bool {
         *self == Rram::K1524
     }
+    #[doc = "1012 KByte RRAM"]
+    #[inline(always)]
+    pub fn is_k1012(&self) -> bool {
+        *self == Rram::K1012
+    }
+    #[doc = "500 KByte RRAM"]
+    #[inline(always)]
+    pub fn is_k500(&self) -> bool {
+        *self == Rram::K500
+    }
     #[doc = "Unspecified"]
     #[inline(always)]
     pub fn is_unspecified(&self) -> bool {
@@ -43,13 +59,13 @@ impl RramR {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - RRAM variant"]
+    #[doc = "Bits 0:31 - RRAM size (KB)"]
     #[inline(always)]
     pub fn rram(&self) -> RramR {
         RramR::new(self.bits)
     }
 }
-#[doc = "RRAM variant\n\nYou can [`read`](crate::Reg::read) this register and get [`rram::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RRAM size (KB)\n\nYou can [`read`](crate::Reg::read) this register and get [`rram::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RramSpec;
 impl crate::RegisterSpec for RramSpec {
     type Ux = u32;

@@ -98,7 +98,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Configuration register for the Frame Delay Timer"]
     #[inline(always)]
-    #[must_use]
     pub fn framedelaymode(&mut self) -> FramedelaymodeW<FramedelaymodeSpec> {
         FramedelaymodeW::new(self, 0)
     }

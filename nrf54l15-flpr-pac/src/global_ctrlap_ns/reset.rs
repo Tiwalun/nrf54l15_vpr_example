@@ -54,7 +54,6 @@ where
 impl W {
     #[doc = "Bits 0:2 - Reset request"]
     #[inline(always)]
-    #[must_use]
     pub fn reset(&mut self) -> ResetW<ResetSpec> {
         ResetW::new(self, 0)
     }

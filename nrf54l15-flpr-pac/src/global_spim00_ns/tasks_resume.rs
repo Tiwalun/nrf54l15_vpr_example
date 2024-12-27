@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Resume SPI transaction"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_resume(&mut self) -> TasksResumeW<TasksResumeSpec> {
         TasksResumeW::new(self, 0)
     }

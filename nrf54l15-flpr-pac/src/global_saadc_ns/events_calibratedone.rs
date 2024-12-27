@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Calibration is complete"]
     #[inline(always)]
-    #[must_use]
     pub fn events_calibratedone(&mut self) -> EventsCalibratedoneW<EventsCalibratedoneSpec> {
         EventsCalibratedoneW::new(self, 0)
     }

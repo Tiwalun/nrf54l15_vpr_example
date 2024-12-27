@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Event indicating that interrupt triggered at Cryptomaster"]
     #[inline(always)]
-    #[must_use]
     pub fn events_cryptomaster(&mut self) -> EventsCryptomasterW<EventsCryptomasterSpec> {
         EventsCryptomasterW::new(self, 0)
     }

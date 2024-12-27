@@ -123,13 +123,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable address matching on ADDRESS\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn address0(&mut self) -> Address0W<ConfigSpec> {
         Address0W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable address matching on ADDRESS\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn address1(&mut self) -> Address1W<ConfigSpec> {
         Address1W::new(self, 1)
     }

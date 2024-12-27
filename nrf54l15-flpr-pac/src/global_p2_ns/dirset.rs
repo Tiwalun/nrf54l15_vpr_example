@@ -2087,193 +2087,161 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Set as output pin 0"]
     #[inline(always)]
-    #[must_use]
     pub fn pin0(&mut self) -> Pin0W<DirsetSpec> {
         Pin0W::new(self, 0)
     }
     #[doc = "Bit 1 - Set as output pin 1"]
     #[inline(always)]
-    #[must_use]
     pub fn pin1(&mut self) -> Pin1W<DirsetSpec> {
         Pin1W::new(self, 1)
     }
     #[doc = "Bit 2 - Set as output pin 2"]
     #[inline(always)]
-    #[must_use]
     pub fn pin2(&mut self) -> Pin2W<DirsetSpec> {
         Pin2W::new(self, 2)
     }
     #[doc = "Bit 3 - Set as output pin 3"]
     #[inline(always)]
-    #[must_use]
     pub fn pin3(&mut self) -> Pin3W<DirsetSpec> {
         Pin3W::new(self, 3)
     }
     #[doc = "Bit 4 - Set as output pin 4"]
     #[inline(always)]
-    #[must_use]
     pub fn pin4(&mut self) -> Pin4W<DirsetSpec> {
         Pin4W::new(self, 4)
     }
     #[doc = "Bit 5 - Set as output pin 5"]
     #[inline(always)]
-    #[must_use]
     pub fn pin5(&mut self) -> Pin5W<DirsetSpec> {
         Pin5W::new(self, 5)
     }
     #[doc = "Bit 6 - Set as output pin 6"]
     #[inline(always)]
-    #[must_use]
     pub fn pin6(&mut self) -> Pin6W<DirsetSpec> {
         Pin6W::new(self, 6)
     }
     #[doc = "Bit 7 - Set as output pin 7"]
     #[inline(always)]
-    #[must_use]
     pub fn pin7(&mut self) -> Pin7W<DirsetSpec> {
         Pin7W::new(self, 7)
     }
     #[doc = "Bit 8 - Set as output pin 8"]
     #[inline(always)]
-    #[must_use]
     pub fn pin8(&mut self) -> Pin8W<DirsetSpec> {
         Pin8W::new(self, 8)
     }
     #[doc = "Bit 9 - Set as output pin 9"]
     #[inline(always)]
-    #[must_use]
     pub fn pin9(&mut self) -> Pin9W<DirsetSpec> {
         Pin9W::new(self, 9)
     }
     #[doc = "Bit 10 - Set as output pin 10"]
     #[inline(always)]
-    #[must_use]
     pub fn pin10(&mut self) -> Pin10W<DirsetSpec> {
         Pin10W::new(self, 10)
     }
     #[doc = "Bit 11 - Set as output pin 11"]
     #[inline(always)]
-    #[must_use]
     pub fn pin11(&mut self) -> Pin11W<DirsetSpec> {
         Pin11W::new(self, 11)
     }
     #[doc = "Bit 12 - Set as output pin 12"]
     #[inline(always)]
-    #[must_use]
     pub fn pin12(&mut self) -> Pin12W<DirsetSpec> {
         Pin12W::new(self, 12)
     }
     #[doc = "Bit 13 - Set as output pin 13"]
     #[inline(always)]
-    #[must_use]
     pub fn pin13(&mut self) -> Pin13W<DirsetSpec> {
         Pin13W::new(self, 13)
     }
     #[doc = "Bit 14 - Set as output pin 14"]
     #[inline(always)]
-    #[must_use]
     pub fn pin14(&mut self) -> Pin14W<DirsetSpec> {
         Pin14W::new(self, 14)
     }
     #[doc = "Bit 15 - Set as output pin 15"]
     #[inline(always)]
-    #[must_use]
     pub fn pin15(&mut self) -> Pin15W<DirsetSpec> {
         Pin15W::new(self, 15)
     }
     #[doc = "Bit 16 - Set as output pin 16"]
     #[inline(always)]
-    #[must_use]
     pub fn pin16(&mut self) -> Pin16W<DirsetSpec> {
         Pin16W::new(self, 16)
     }
     #[doc = "Bit 17 - Set as output pin 17"]
     #[inline(always)]
-    #[must_use]
     pub fn pin17(&mut self) -> Pin17W<DirsetSpec> {
         Pin17W::new(self, 17)
     }
     #[doc = "Bit 18 - Set as output pin 18"]
     #[inline(always)]
-    #[must_use]
     pub fn pin18(&mut self) -> Pin18W<DirsetSpec> {
         Pin18W::new(self, 18)
     }
     #[doc = "Bit 19 - Set as output pin 19"]
     #[inline(always)]
-    #[must_use]
     pub fn pin19(&mut self) -> Pin19W<DirsetSpec> {
         Pin19W::new(self, 19)
     }
     #[doc = "Bit 20 - Set as output pin 20"]
     #[inline(always)]
-    #[must_use]
     pub fn pin20(&mut self) -> Pin20W<DirsetSpec> {
         Pin20W::new(self, 20)
     }
     #[doc = "Bit 21 - Set as output pin 21"]
     #[inline(always)]
-    #[must_use]
     pub fn pin21(&mut self) -> Pin21W<DirsetSpec> {
         Pin21W::new(self, 21)
     }
     #[doc = "Bit 22 - Set as output pin 22"]
     #[inline(always)]
-    #[must_use]
     pub fn pin22(&mut self) -> Pin22W<DirsetSpec> {
         Pin22W::new(self, 22)
     }
     #[doc = "Bit 23 - Set as output pin 23"]
     #[inline(always)]
-    #[must_use]
     pub fn pin23(&mut self) -> Pin23W<DirsetSpec> {
         Pin23W::new(self, 23)
     }
     #[doc = "Bit 24 - Set as output pin 24"]
     #[inline(always)]
-    #[must_use]
     pub fn pin24(&mut self) -> Pin24W<DirsetSpec> {
         Pin24W::new(self, 24)
     }
     #[doc = "Bit 25 - Set as output pin 25"]
     #[inline(always)]
-    #[must_use]
     pub fn pin25(&mut self) -> Pin25W<DirsetSpec> {
         Pin25W::new(self, 25)
     }
     #[doc = "Bit 26 - Set as output pin 26"]
     #[inline(always)]
-    #[must_use]
     pub fn pin26(&mut self) -> Pin26W<DirsetSpec> {
         Pin26W::new(self, 26)
     }
     #[doc = "Bit 27 - Set as output pin 27"]
     #[inline(always)]
-    #[must_use]
     pub fn pin27(&mut self) -> Pin27W<DirsetSpec> {
         Pin27W::new(self, 27)
     }
     #[doc = "Bit 28 - Set as output pin 28"]
     #[inline(always)]
-    #[must_use]
     pub fn pin28(&mut self) -> Pin28W<DirsetSpec> {
         Pin28W::new(self, 28)
     }
     #[doc = "Bit 29 - Set as output pin 29"]
     #[inline(always)]
-    #[must_use]
     pub fn pin29(&mut self) -> Pin29W<DirsetSpec> {
         Pin29W::new(self, 29)
     }
     #[doc = "Bit 30 - Set as output pin 30"]
     #[inline(always)]
-    #[must_use]
     pub fn pin30(&mut self) -> Pin30W<DirsetSpec> {
         Pin30W::new(self, 30)
     }
     #[doc = "Bit 31 - Set as output pin 31"]
     #[inline(always)]
-    #[must_use]
     pub fn pin31(&mut self) -> Pin31W<DirsetSpec> {
         Pin31W::new(self, 31)
     }

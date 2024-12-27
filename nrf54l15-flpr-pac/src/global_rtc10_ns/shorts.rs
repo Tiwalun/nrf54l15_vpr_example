@@ -256,28 +256,24 @@ impl W {
     #[doc = "Bit 0 - Shortcut between event COMPARE\\[0\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare0_clear(&mut self) -> Compare0ClearW<ShortsSpec> {
         Compare0ClearW::new(self, 0)
     }
     #[doc = "Bit 1 - Shortcut between event COMPARE\\[1\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare1_clear(&mut self) -> Compare1ClearW<ShortsSpec> {
         Compare1ClearW::new(self, 1)
     }
     #[doc = "Bit 2 - Shortcut between event COMPARE\\[2\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare2_clear(&mut self) -> Compare2ClearW<ShortsSpec> {
         Compare2ClearW::new(self, 2)
     }
     #[doc = "Bit 3 - Shortcut between event COMPARE\\[3\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare3_clear(&mut self) -> Compare3ClearW<ShortsSpec> {
         Compare3ClearW::new(self, 3)
     }

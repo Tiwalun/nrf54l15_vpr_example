@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Temperature measurement complete, data ready"]
     #[inline(always)]
-    #[must_use]
     pub fn events_datardy(&mut self) -> EventsDatardyW<EventsDatardySpec> {
         EventsDatardyW::new(self, 0)
     }

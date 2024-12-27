@@ -152,19 +152,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Secure mode."]
     #[inline(always)]
-    #[must_use]
     pub fn securemode(&mut self) -> SecuremodeW<PkecommandSpec> {
         SecuremodeW::new(self, 0)
     }
     #[doc = "Bits 4:7 - Select Generated Private Key for PKE operation."]
     #[inline(always)]
-    #[must_use]
     pub fn selectedkey(&mut self) -> SelectedkeyW<PkecommandSpec> {
         SelectedkeyW::new(self, 4)
     }
     #[doc = "Bits 8:9 - Select PKE operation with Isolated Key"]
     #[inline(always)]
-    #[must_use]
     pub fn opsel(&mut self) -> OpselW<PkecommandSpec> {
         OpselW::new(self, 8)
     }

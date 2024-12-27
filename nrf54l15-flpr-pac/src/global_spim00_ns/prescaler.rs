@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - Core clock to SCK divisor"]
     #[inline(always)]
-    #[must_use]
     pub fn divisor(&mut self) -> DivisorW<PrescalerSpec> {
         DivisorW::new(self, 0)
     }

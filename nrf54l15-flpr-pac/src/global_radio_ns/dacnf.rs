@@ -543,97 +543,81 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable device address matching using device address 0"]
     #[inline(always)]
-    #[must_use]
     pub fn ena0(&mut self) -> Ena0W<DacnfSpec> {
         Ena0W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable device address matching using device address 1"]
     #[inline(always)]
-    #[must_use]
     pub fn ena1(&mut self) -> Ena1W<DacnfSpec> {
         Ena1W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable or disable device address matching using device address 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ena2(&mut self) -> Ena2W<DacnfSpec> {
         Ena2W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable or disable device address matching using device address 3"]
     #[inline(always)]
-    #[must_use]
     pub fn ena3(&mut self) -> Ena3W<DacnfSpec> {
         Ena3W::new(self, 3)
     }
     #[doc = "Bit 4 - Enable or disable device address matching using device address 4"]
     #[inline(always)]
-    #[must_use]
     pub fn ena4(&mut self) -> Ena4W<DacnfSpec> {
         Ena4W::new(self, 4)
     }
     #[doc = "Bit 5 - Enable or disable device address matching using device address 5"]
     #[inline(always)]
-    #[must_use]
     pub fn ena5(&mut self) -> Ena5W<DacnfSpec> {
         Ena5W::new(self, 5)
     }
     #[doc = "Bit 6 - Enable or disable device address matching using device address 6"]
     #[inline(always)]
-    #[must_use]
     pub fn ena6(&mut self) -> Ena6W<DacnfSpec> {
         Ena6W::new(self, 6)
     }
     #[doc = "Bit 7 - Enable or disable device address matching using device address 7"]
     #[inline(always)]
-    #[must_use]
     pub fn ena7(&mut self) -> Ena7W<DacnfSpec> {
         Ena7W::new(self, 7)
     }
     #[doc = "Bit 8 - TxAdd for device address 0"]
     #[inline(always)]
-    #[must_use]
     pub fn txadd0(&mut self) -> Txadd0W<DacnfSpec> {
         Txadd0W::new(self, 8)
     }
     #[doc = "Bit 9 - TxAdd for device address 1"]
     #[inline(always)]
-    #[must_use]
     pub fn txadd1(&mut self) -> Txadd1W<DacnfSpec> {
         Txadd1W::new(self, 9)
     }
     #[doc = "Bit 10 - TxAdd for device address 2"]
     #[inline(always)]
-    #[must_use]
     pub fn txadd2(&mut self) -> Txadd2W<DacnfSpec> {
         Txadd2W::new(self, 10)
     }
     #[doc = "Bit 11 - TxAdd for device address 3"]
     #[inline(always)]
-    #[must_use]
     pub fn txadd3(&mut self) -> Txadd3W<DacnfSpec> {
         Txadd3W::new(self, 11)
     }
     #[doc = "Bit 12 - TxAdd for device address 4"]
     #[inline(always)]
-    #[must_use]
     pub fn txadd4(&mut self) -> Txadd4W<DacnfSpec> {
         Txadd4W::new(self, 12)
     }
     #[doc = "Bit 13 - TxAdd for device address 5"]
     #[inline(always)]
-    #[must_use]
     pub fn txadd5(&mut self) -> Txadd5W<DacnfSpec> {
         Txadd5W::new(self, 13)
     }
     #[doc = "Bit 14 - TxAdd for device address 6"]
     #[inline(always)]
-    #[must_use]
     pub fn txadd6(&mut self) -> Txadd6W<DacnfSpec> {
         Txadd6W::new(self, 14)
     }
     #[doc = "Bit 15 - TxAdd for device address 7"]
     #[inline(always)]
-    #[must_use]
     pub fn txadd7(&mut self) -> Txadd7W<DacnfSpec> {
         Txadd7W::new(self, 15)
     }

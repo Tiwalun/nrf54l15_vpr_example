@@ -43,25 +43,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Idle output value for PWM channel \\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn val_0(&mut self) -> Val0W<IdleoutSpec> {
         Val0W::new(self, 0)
     }
     #[doc = "Bit 1 - Idle output value for PWM channel \\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn val_1(&mut self) -> Val1W<IdleoutSpec> {
         Val1W::new(self, 1)
     }
     #[doc = "Bit 2 - Idle output value for PWM channel \\[2\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn val_2(&mut self) -> Val2W<IdleoutSpec> {
         Val2W::new(self, 2)
     }
     #[doc = "Bit 3 - Idle output value for PWM channel \\[3\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn val_3(&mut self) -> Val3W<IdleoutSpec> {
         Val3W::new(self, 3)
     }

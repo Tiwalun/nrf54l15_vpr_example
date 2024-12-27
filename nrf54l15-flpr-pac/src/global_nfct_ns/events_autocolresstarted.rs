@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Auto collision resolution process has started"]
     #[inline(always)]
-    #[must_use]
     pub fn events_autocolresstarted(
         &mut self,
     ) -> EventsAutocolresstartedW<EventsAutocolresstartedSpec> {

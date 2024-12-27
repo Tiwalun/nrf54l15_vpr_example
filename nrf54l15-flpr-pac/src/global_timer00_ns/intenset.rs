@@ -527,49 +527,41 @@ impl R {
 impl W {
     #[doc = "Bit 16 - Write '1' to enable interrupt for event COMPARE\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare0(&mut self) -> Compare0W<IntensetSpec> {
         Compare0W::new(self, 16)
     }
     #[doc = "Bit 17 - Write '1' to enable interrupt for event COMPARE\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare1(&mut self) -> Compare1W<IntensetSpec> {
         Compare1W::new(self, 17)
     }
     #[doc = "Bit 18 - Write '1' to enable interrupt for event COMPARE\\[2\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare2(&mut self) -> Compare2W<IntensetSpec> {
         Compare2W::new(self, 18)
     }
     #[doc = "Bit 19 - Write '1' to enable interrupt for event COMPARE\\[3\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare3(&mut self) -> Compare3W<IntensetSpec> {
         Compare3W::new(self, 19)
     }
     #[doc = "Bit 20 - Write '1' to enable interrupt for event COMPARE\\[4\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare4(&mut self) -> Compare4W<IntensetSpec> {
         Compare4W::new(self, 20)
     }
     #[doc = "Bit 21 - Write '1' to enable interrupt for event COMPARE\\[5\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare5(&mut self) -> Compare5W<IntensetSpec> {
         Compare5W::new(self, 21)
     }
     #[doc = "Bit 22 - Write '1' to enable interrupt for event COMPARE\\[6\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare6(&mut self) -> Compare6W<IntensetSpec> {
         Compare6W::new(self, 22)
     }
     #[doc = "Bit 23 - Write '1' to enable interrupt for event COMPARE\\[7\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare7(&mut self) -> Compare7W<IntensetSpec> {
         Compare7W::new(self, 23)
     }

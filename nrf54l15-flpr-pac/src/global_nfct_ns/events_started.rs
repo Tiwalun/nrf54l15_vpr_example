@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - EasyDMA is ready to receive or send frames."]
     #[inline(always)]
-    #[must_use]
     pub fn events_started(&mut self) -> EventsStartedW<EventsStartedSpec> {
         EventsStartedW::new(self, 0)
     }

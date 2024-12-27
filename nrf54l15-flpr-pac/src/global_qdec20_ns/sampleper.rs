@@ -189,7 +189,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Sample period. The SAMPLE register will be updated for every new sample"]
     #[inline(always)]
-    #[must_use]
     pub fn sampleper(&mut self) -> SampleperW<SampleperSpec> {
         SampleperW::new(self, 0)
     }

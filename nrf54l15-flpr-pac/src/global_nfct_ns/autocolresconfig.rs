@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enables/disables auto collision resolution"]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> ModeW<AutocolresconfigSpec> {
         ModeW::new(self, 0)
     }

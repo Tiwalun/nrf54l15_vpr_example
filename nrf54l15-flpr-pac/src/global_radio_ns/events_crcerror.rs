@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Packet received with CRC error"]
     #[inline(always)]
-    #[must_use]
     pub fn events_crcerror(&mut self) -> EventsCrcerrorW<EventsCrcerrorSpec> {
         EventsCrcerrorW::new(self, 0)
     }

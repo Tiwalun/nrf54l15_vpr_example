@@ -98,7 +98,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Configuration of modulation control."]
     #[inline(always)]
-    #[must_use]
     pub fn modulationctrl(&mut self) -> ModulationctrlW<ModulationctrlSpec> {
         ModulationctrlW::new(self, 0)
     }

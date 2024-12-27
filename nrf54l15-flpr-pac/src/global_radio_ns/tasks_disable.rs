@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Disable RADIO"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_disable(&mut self) -> TasksDisableW<TasksDisableSpec> {
         TasksDisableW::new(self, 0)
     }

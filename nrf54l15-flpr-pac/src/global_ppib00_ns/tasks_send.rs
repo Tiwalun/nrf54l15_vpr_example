@@ -30,7 +30,6 @@ impl W {
     #[doc = "Bit 0 - This task is unused, but the PPIB provides the SUBSCRIBE task to connect SEND \\[n\\]
 task."]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_send(&mut self) -> TasksSendW<TasksSendSpec> {
         TasksSendW::new(self, 0)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - MAC header match found"]
     #[inline(always)]
-    #[must_use]
     pub fn events_mhrmatch(&mut self) -> EventsMhrmatchW<EventsMhrmatchSpec> {
         EventsMhrmatchW::new(self, 0)
     }

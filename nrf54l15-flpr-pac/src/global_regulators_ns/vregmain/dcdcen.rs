@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable DC/DC buck converter"]
     #[inline(always)]
-    #[must_use]
     pub fn val(&mut self) -> ValW<DcdcenSpec> {
         ValW::new(self, 0)
     }

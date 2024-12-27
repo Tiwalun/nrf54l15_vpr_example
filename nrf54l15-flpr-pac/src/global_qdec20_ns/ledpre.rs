@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:8 - Period in us the LED is switched on prior to sampling"]
     #[inline(always)]
-    #[must_use]
     pub fn ledpre(&mut self) -> LedpreW<LedpreSpec> {
         LedpreW::new(self, 0)
     }

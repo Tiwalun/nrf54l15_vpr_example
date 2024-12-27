@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Maximum value supported is 160"]
     #[inline(always)]
-    #[must_use]
     pub fn numsamples(&mut self) -> NumsamplesW<NumsamplesSpec> {
         NumsamplesW::new(self, 0)
     }

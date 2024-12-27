@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Initial sync detected"]
     #[inline(always)]
-    #[must_use]
     pub fn events_sync(&mut self) -> EventsSyncW<EventsSyncSpec> {
         EventsSyncW::new(self, 0)
     }

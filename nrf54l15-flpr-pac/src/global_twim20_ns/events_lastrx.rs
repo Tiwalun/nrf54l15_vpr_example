@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Byte boundary, starting to receive the last byte"]
     #[inline(always)]
-    #[must_use]
     pub fn events_lastrx(&mut self) -> EventsLastrxW<EventsLastrxSpec> {
         EventsLastrxW::new(self, 0)
     }

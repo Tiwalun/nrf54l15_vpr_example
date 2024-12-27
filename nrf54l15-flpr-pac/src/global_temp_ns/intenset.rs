@@ -72,7 +72,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to enable interrupt for event DATARDY"]
     #[inline(always)]
-    #[must_use]
     pub fn datardy(&mut self) -> DatardyW<IntensetSpec> {
         DatardyW::new(self, 0)
     }

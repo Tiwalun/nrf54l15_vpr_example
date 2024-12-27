@@ -982,91 +982,76 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to enable interrupt for event READY"]
     #[inline(always)]
-    #[must_use]
     pub fn ready(&mut self) -> ReadyW<IntensetSpec> {
         ReadyW::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to enable interrupt for event FIELDDETECTED"]
     #[inline(always)]
-    #[must_use]
     pub fn fielddetected(&mut self) -> FielddetectedW<IntensetSpec> {
         FielddetectedW::new(self, 1)
     }
     #[doc = "Bit 2 - Write '1' to enable interrupt for event FIELDLOST"]
     #[inline(always)]
-    #[must_use]
     pub fn fieldlost(&mut self) -> FieldlostW<IntensetSpec> {
         FieldlostW::new(self, 2)
     }
     #[doc = "Bit 3 - Write '1' to enable interrupt for event TXFRAMESTART"]
     #[inline(always)]
-    #[must_use]
     pub fn txframestart(&mut self) -> TxframestartW<IntensetSpec> {
         TxframestartW::new(self, 3)
     }
     #[doc = "Bit 4 - Write '1' to enable interrupt for event TXFRAMEEND"]
     #[inline(always)]
-    #[must_use]
     pub fn txframeend(&mut self) -> TxframeendW<IntensetSpec> {
         TxframeendW::new(self, 4)
     }
     #[doc = "Bit 5 - Write '1' to enable interrupt for event RXFRAMESTART"]
     #[inline(always)]
-    #[must_use]
     pub fn rxframestart(&mut self) -> RxframestartW<IntensetSpec> {
         RxframestartW::new(self, 5)
     }
     #[doc = "Bit 6 - Write '1' to enable interrupt for event RXFRAMEEND"]
     #[inline(always)]
-    #[must_use]
     pub fn rxframeend(&mut self) -> RxframeendW<IntensetSpec> {
         RxframeendW::new(self, 6)
     }
     #[doc = "Bit 7 - Write '1' to enable interrupt for event ERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn error(&mut self) -> ErrorW<IntensetSpec> {
         ErrorW::new(self, 7)
     }
     #[doc = "Bit 10 - Write '1' to enable interrupt for event RXERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn rxerror(&mut self) -> RxerrorW<IntensetSpec> {
         RxerrorW::new(self, 10)
     }
     #[doc = "Bit 11 - Write '1' to enable interrupt for event ENDRX"]
     #[inline(always)]
-    #[must_use]
     pub fn endrx(&mut self) -> EndrxW<IntensetSpec> {
         EndrxW::new(self, 11)
     }
     #[doc = "Bit 12 - Write '1' to enable interrupt for event ENDTX"]
     #[inline(always)]
-    #[must_use]
     pub fn endtx(&mut self) -> EndtxW<IntensetSpec> {
         EndtxW::new(self, 12)
     }
     #[doc = "Bit 14 - Write '1' to enable interrupt for event AUTOCOLRESSTARTED"]
     #[inline(always)]
-    #[must_use]
     pub fn autocolresstarted(&mut self) -> AutocolresstartedW<IntensetSpec> {
         AutocolresstartedW::new(self, 14)
     }
     #[doc = "Bit 18 - Write '1' to enable interrupt for event COLLISION"]
     #[inline(always)]
-    #[must_use]
     pub fn collision(&mut self) -> CollisionW<IntensetSpec> {
         CollisionW::new(self, 18)
     }
     #[doc = "Bit 19 - Write '1' to enable interrupt for event SELECTED"]
     #[inline(always)]
-    #[must_use]
     pub fn selected(&mut self) -> SelectedW<IntensetSpec> {
         SelectedW::new(self, 19)
     }
     #[doc = "Bit 20 - Write '1' to enable interrupt for event STARTED"]
     #[inline(always)]
-    #[must_use]
     pub fn started(&mut self) -> StartedW<IntensetSpec> {
         StartedW::new(self, 20)
     }

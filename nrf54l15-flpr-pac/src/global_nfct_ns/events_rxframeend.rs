@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Received data has been checked (CRC, parity) and transferred to RAM, and EasyDMA has ended accessing the RX buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn events_rxframeend(&mut self) -> EventsRxframeendW<EventsRxframeendSpec> {
         EventsRxframeendW::new(self, 0)
     }

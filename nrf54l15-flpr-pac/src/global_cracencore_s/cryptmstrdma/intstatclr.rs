@@ -7,7 +7,6 @@ pub type IntstatclrW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn intstatclr(&mut self) -> IntstatclrW<IntstatclrSpec> {
         IntstatclrW::new(self, 0)
     }

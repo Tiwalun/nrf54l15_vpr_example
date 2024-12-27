@@ -72,7 +72,6 @@ impl R {
 impl W {
     #[doc = "Bit 27 - Write '1' to disable event routing for event PWMPERIODEND"]
     #[inline(always)]
-    #[must_use]
     pub fn pwmperiodend(&mut self) -> PwmperiodendW<EvtenclrSpec> {
         PwmperiodendW::new(self, 27)
     }

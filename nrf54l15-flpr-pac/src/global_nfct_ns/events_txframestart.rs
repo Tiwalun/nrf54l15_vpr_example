@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Marks the start of the first symbol of a transmitted frame"]
     #[inline(always)]
-    #[must_use]
     pub fn events_txframestart(&mut self) -> EventsTxframestartW<EventsTxframestartSpec> {
         EventsTxframestartW::new(self, 0)
     }

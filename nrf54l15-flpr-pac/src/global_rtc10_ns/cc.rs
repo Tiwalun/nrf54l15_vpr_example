@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:23 - Compare value"]
     #[inline(always)]
-    #[must_use]
     pub fn compare(&mut self) -> CompareW<CcSpec> {
         CompareW::new(self, 0)
     }

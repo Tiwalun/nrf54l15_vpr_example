@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stop the ADC and terminate any on-going conversion"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_stop(&mut self) -> TasksStopW<TasksStopSpec> {
         TasksStopW::new(self, 0)
     }

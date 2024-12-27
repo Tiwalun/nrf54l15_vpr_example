@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stops an issued transmission of a frame"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_stoptx(&mut self) -> TasksStoptxW<TasksStoptxSpec> {
         TasksStoptxW::new(self, 0)
     }

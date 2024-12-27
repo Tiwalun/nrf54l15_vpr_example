@@ -1,6 +1,6 @@
 #[doc = "Register `TASKS_PUSHBLOCK` writer"]
 pub type W = crate::W<TasksPushblockSpec>;
-#[doc = "Block the PUSH operation of key slot, preventing the key slot being PUSH until next reset\n\nValue on reset: 0"]
+#[doc = "Block only the PUSH operation of a key slot, preventing the key slot from being PUSHED until next reset. The task is kept for backwards compatibility.\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TasksPushblock {
     #[doc = "1: Trigger task"]
@@ -12,7 +12,7 @@ impl From<TasksPushblock> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `TASKS_PUSHBLOCK` writer - Block the PUSH operation of key slot, preventing the key slot being PUSH until next reset"]
+#[doc = "Field `TASKS_PUSHBLOCK` writer - Block only the PUSH operation of a key slot, preventing the key slot from being PUSHED until next reset. The task is kept for backwards compatibility."]
 pub type TasksPushblockW<'a, REG> = crate::BitWriter<'a, REG, TasksPushblock>;
 impl<'a, REG> TasksPushblockW<'a, REG>
 where
@@ -25,14 +25,13 @@ where
     }
 }
 impl W {
-    #[doc = "Bit 0 - Block the PUSH operation of key slot, preventing the key slot being PUSH until next reset"]
+    #[doc = "Bit 0 - Block only the PUSH operation of a key slot, preventing the key slot from being PUSHED until next reset. The task is kept for backwards compatibility."]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_pushblock(&mut self) -> TasksPushblockW<TasksPushblockSpec> {
         TasksPushblockW::new(self, 0)
     }
 }
-#[doc = "Block the PUSH operation of key slot, preventing the key slot being PUSH until next reset\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tasks_pushblock::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Block only the PUSH operation of a key slot, preventing the key slot from being PUSHED until next reset. The task is kept for backwards compatibility.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tasks_pushblock::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TasksPushblockSpec;
 impl crate::RegisterSpec for TasksPushblockSpec {
     type Ux = u32;

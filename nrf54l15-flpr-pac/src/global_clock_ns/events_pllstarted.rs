@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - PLL started"]
     #[inline(always)]
-    #[must_use]
     pub fn events_pllstarted(&mut self) -> EventsPllstartedW<EventsPllstartedSpec> {
         EventsPllstartedW::new(self, 0)
     }

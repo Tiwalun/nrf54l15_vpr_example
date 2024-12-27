@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Fill array of GPIO patterns for antenna control"]
     #[inline(always)]
-    #[must_use]
     pub fn switchpattern(&mut self) -> SwitchpatternW<SwitchpatternSpec> {
         SwitchpatternW::new(self, 0)
     }

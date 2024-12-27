@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - NFC error reported. The ERRORSTATUS register contains details on the source of the error."]
     #[inline(always)]
-    #[must_use]
     pub fn events_error(&mut self) -> EventsErrorW<EventsErrorSpec> {
         EventsErrorW::new(self, 0)
     }

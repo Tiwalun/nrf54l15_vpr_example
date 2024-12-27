@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Error detection status."]
     #[inline(always)]
-    #[must_use]
     pub fn error(&mut self) -> ErrorW<StatusSpec> {
         ErrorW::new(self, 0)
     }

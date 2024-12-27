@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Read and clear ACC and ACCDBL"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_readclracc(&mut self) -> TasksReadclraccW<TasksReadclraccSpec> {
         TasksReadclraccW::new(self, 0)
     }

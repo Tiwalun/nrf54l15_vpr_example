@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Generated when EasyDMA has buffered the .PTR and .MAXCNT registers for the channel, allowing them to be written to prepare for the next sequence."]
     #[inline(always)]
-    #[must_use]
     pub fn ready(&mut self) -> ReadyW<ReadySpec> {
         ReadyW::new(self, 0)
     }

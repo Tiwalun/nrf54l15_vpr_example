@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Emitted at end of every sequence n, when last value from RAM has been applied to wave counter"]
     #[inline(always)]
-    #[must_use]
     pub fn events_seqend(&mut self) -> EventsSeqendW<EventsSeqendSpec> {
         EventsSeqendW::new(self, 0)
     }

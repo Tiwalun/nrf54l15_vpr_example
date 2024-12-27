@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Flush RX FIFO into RX buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_flushrx(&mut self) -> TasksFlushrxW<TasksFlushrxSpec> {
         TasksFlushrxW::new(self, 0)
     }

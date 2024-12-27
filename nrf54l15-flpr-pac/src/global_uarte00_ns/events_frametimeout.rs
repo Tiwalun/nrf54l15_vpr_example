@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Timed out due to bus being idle while receiving data."]
     #[inline(always)]
-    #[must_use]
     pub fn events_frametimeout(&mut self) -> EventsFrametimeoutW<EventsFrametimeoutSpec> {
         EventsFrametimeoutW::new(self, 0)
     }

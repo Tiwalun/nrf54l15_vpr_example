@@ -156,13 +156,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - How a sequence is read from RAM and spread to the compare register"]
     #[inline(always)]
-    #[must_use]
     pub fn load(&mut self) -> LoadW<DecoderSpec> {
         LoadW::new(self, 0)
     }
     #[doc = "Bit 8 - Selects source for advancing the active sequence"]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> ModeW<DecoderSpec> {
         ModeW::new(self, 8)
     }

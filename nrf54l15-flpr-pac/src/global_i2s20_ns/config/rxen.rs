@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Reception (RX) enable"]
     #[inline(always)]
-    #[must_use]
     pub fn rxen(&mut self) -> RxenW<RxenSpec> {
         RxenW::new(self, 0)
     }

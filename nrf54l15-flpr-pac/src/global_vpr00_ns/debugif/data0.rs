@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Abstract Data 0"]
     #[inline(always)]
-    #[must_use]
     pub fn data0(&mut self) -> Data0W<Data0Spec> {
         Data0W::new(self, 0)
     }

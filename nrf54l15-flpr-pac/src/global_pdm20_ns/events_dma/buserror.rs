@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - This event is generated if an error occurs during the bus transfer."]
     #[inline(always)]
-    #[must_use]
     pub fn buserror(&mut self) -> BuserrorW<BuserrorSpec> {
         BuserrorW::new(self, 0)
     }

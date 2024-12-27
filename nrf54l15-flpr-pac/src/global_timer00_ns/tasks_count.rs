@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Increment Timer (Counter mode only)"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_count(&mut self) -> TasksCountW<TasksCountSpec> {
         TasksCountW::new(self, 0)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write command received"]
     #[inline(always)]
-    #[must_use]
     pub fn events_write(&mut self) -> EventsWriteW<EventsWriteSpec> {
         EventsWriteW::new(self, 0)
     }

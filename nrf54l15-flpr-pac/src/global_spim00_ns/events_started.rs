@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - SPI transaction has started"]
     #[inline(always)]
-    #[must_use]
     pub fn events_started(&mut self) -> EventsStartedW<EventsStartedSpec> {
         EventsStartedW::new(self, 0)
     }

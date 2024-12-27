@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable interrupt for event PERIPHACCERR"]
     #[inline(always)]
-    #[must_use]
     pub fn periphaccerr(&mut self) -> PeriphaccerrW<IntenSpec> {
         PeriphaccerrW::new(self, 0)
     }

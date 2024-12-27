@@ -163,7 +163,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Oversample control"]
     #[inline(always)]
-    #[must_use]
     pub fn oversample(&mut self) -> OversampleW<OversampleSpec> {
         OversampleW::new(self, 0)
     }

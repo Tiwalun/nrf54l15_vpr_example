@@ -267,25 +267,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to disable interrupt for event READY"]
     #[inline(always)]
-    #[must_use]
     pub fn ready(&mut self) -> ReadyW<IntenclrSpec> {
         ReadyW::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to disable interrupt for event DOWN"]
     #[inline(always)]
-    #[must_use]
     pub fn down(&mut self) -> DownW<IntenclrSpec> {
         DownW::new(self, 1)
     }
     #[doc = "Bit 2 - Write '1' to disable interrupt for event UP"]
     #[inline(always)]
-    #[must_use]
     pub fn up(&mut self) -> UpW<IntenclrSpec> {
         UpW::new(self, 2)
     }
     #[doc = "Bit 3 - Write '1' to disable interrupt for event CROSS"]
     #[inline(always)]
-    #[must_use]
     pub fn cross(&mut self) -> CrossW<IntenclrSpec> {
         CrossW::new(self, 3)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable interrupt for event MEMACCERR"]
     #[inline(always)]
-    #[must_use]
     pub fn memaccerr(&mut self) -> MemaccerrW<IntenSpec> {
         MemaccerrW::new(self, 0)
     }

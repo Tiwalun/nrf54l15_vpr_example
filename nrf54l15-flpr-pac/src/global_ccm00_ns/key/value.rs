@@ -5,7 +5,6 @@ pub type ValueW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl W {
     #[doc = "Bits 0:31 - AES 128-bit key value, bits (32*(i+1))-1 : (32*i)"]
     #[inline(always)]
-    #[must_use]
     pub fn value(&mut self) -> ValueW<ValueSpec> {
         ValueW::new(self, 0)
     }

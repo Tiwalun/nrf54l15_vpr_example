@@ -413,43 +413,36 @@ impl R {
 impl W {
     #[doc = "Bit 16 - Enable or disable interrupt for event TRIGGERED\\[16\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered16(&mut self) -> Triggered16W<IntenSpec> {
         Triggered16W::new(self, 16)
     }
     #[doc = "Bit 17 - Enable or disable interrupt for event TRIGGERED\\[17\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered17(&mut self) -> Triggered17W<IntenSpec> {
         Triggered17W::new(self, 17)
     }
     #[doc = "Bit 18 - Enable or disable interrupt for event TRIGGERED\\[18\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered18(&mut self) -> Triggered18W<IntenSpec> {
         Triggered18W::new(self, 18)
     }
     #[doc = "Bit 19 - Enable or disable interrupt for event TRIGGERED\\[19\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered19(&mut self) -> Triggered19W<IntenSpec> {
         Triggered19W::new(self, 19)
     }
     #[doc = "Bit 20 - Enable or disable interrupt for event TRIGGERED\\[20\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered20(&mut self) -> Triggered20W<IntenSpec> {
         Triggered20W::new(self, 20)
     }
     #[doc = "Bit 21 - Enable or disable interrupt for event TRIGGERED\\[21\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered21(&mut self) -> Triggered21W<IntenSpec> {
         Triggered21W::new(self, 21)
     }
     #[doc = "Bit 22 - Enable or disable interrupt for event TRIGGERED\\[22\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered22(&mut self) -> Triggered22W<IntenSpec> {
         Triggered22W::new(self, 22)
     }

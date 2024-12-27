@@ -150,7 +150,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Prescaler of PWM_CLK"]
     #[inline(always)]
-    #[must_use]
     pub fn prescaler(&mut self) -> PrescalerW<PrescalerSpec> {
         PrescalerW::new(self, 0)
     }

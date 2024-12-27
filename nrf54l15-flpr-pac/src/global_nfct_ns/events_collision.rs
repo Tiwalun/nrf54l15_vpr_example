@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - NFC auto collision resolution error reported."]
     #[inline(always)]
-    #[must_use]
     pub fn events_collision(&mut self) -> EventsCollisionW<EventsCollisionSpec> {
         EventsCollisionW::new(self, 0)
     }

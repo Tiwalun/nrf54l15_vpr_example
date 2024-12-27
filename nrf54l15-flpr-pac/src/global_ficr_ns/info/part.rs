@@ -6,6 +6,10 @@ pub type R = crate::R<PartSpec>;
 pub enum Part {
     #[doc = "346901: nRF54L15"]
     N54l15 = 346901,
+    #[doc = "346896: nRF54L10"]
+    N54l10 = 346896,
+    #[doc = "346885: nRF54L05"]
+    N54l05 = 346885,
     #[doc = "4294967295: Unspecified"]
     Unspecified = 4294967295,
 }
@@ -27,6 +31,8 @@ impl PartR {
     pub const fn variant(&self) -> Option<Part> {
         match self.bits {
             346901 => Some(Part::N54l15),
+            346896 => Some(Part::N54l10),
+            346885 => Some(Part::N54l05),
             4294967295 => Some(Part::Unspecified),
             _ => None,
         }
@@ -35,6 +41,16 @@ impl PartR {
     #[inline(always)]
     pub fn is_n54l15(&self) -> bool {
         *self == Part::N54l15
+    }
+    #[doc = "nRF54L10"]
+    #[inline(always)]
+    pub fn is_n54l10(&self) -> bool {
+        *self == Part::N54l10
+    }
+    #[doc = "nRF54L05"]
+    #[inline(always)]
+    pub fn is_n54l05(&self) -> bool {
+        *self == Part::N54l05
     }
     #[doc = "Unspecified"]
     #[inline(always)]

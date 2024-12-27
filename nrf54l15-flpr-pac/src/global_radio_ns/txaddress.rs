@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Transmit address select"]
     #[inline(always)]
-    #[must_use]
     pub fn txaddress(&mut self) -> TxaddressW<TxaddressSpec> {
         TxaddressW::new(self, 0)
     }

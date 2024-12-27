@@ -2,7 +2,7 @@
 pub type R = crate::R<EventsMetadatareadSpec>;
 #[doc = "Register `EVENTS_METADATAREAD` writer"]
 pub type W = crate::W<EventsMetadatareadSpec>;
-#[doc = "Key slot metedata has been read into METADATA register\n\nValue on reset: 0"]
+#[doc = "Key slot metadata has been read into METADATA register\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EventsMetadataread {
     #[doc = "0: Event not generated"]
@@ -16,7 +16,7 @@ impl From<EventsMetadataread> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EVENTS_METADATAREAD` reader - Key slot metedata has been read into METADATA register"]
+#[doc = "Field `EVENTS_METADATAREAD` reader - Key slot metadata has been read into METADATA register"]
 pub type EventsMetadatareadR = crate::BitReader<EventsMetadataread>;
 impl EventsMetadatareadR {
     #[doc = "Get enumerated values variant"]
@@ -38,7 +38,7 @@ impl EventsMetadatareadR {
         *self == EventsMetadataread::Generated
     }
 }
-#[doc = "Field `EVENTS_METADATAREAD` writer - Key slot metedata has been read into METADATA register"]
+#[doc = "Field `EVENTS_METADATAREAD` writer - Key slot metadata has been read into METADATA register"]
 pub type EventsMetadatareadW<'a, REG> = crate::BitWriter<'a, REG, EventsMetadataread>;
 impl<'a, REG> EventsMetadatareadW<'a, REG>
 where
@@ -56,21 +56,20 @@ where
     }
 }
 impl R {
-    #[doc = "Bit 0 - Key slot metedata has been read into METADATA register"]
+    #[doc = "Bit 0 - Key slot metadata has been read into METADATA register"]
     #[inline(always)]
     pub fn events_metadataread(&self) -> EventsMetadatareadR {
         EventsMetadatareadR::new((self.bits & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Key slot metedata has been read into METADATA register"]
+    #[doc = "Bit 0 - Key slot metadata has been read into METADATA register"]
     #[inline(always)]
-    #[must_use]
     pub fn events_metadataread(&mut self) -> EventsMetadatareadW<EventsMetadatareadSpec> {
         EventsMetadatareadW::new(self, 0)
     }
 }
-#[doc = "Key slot metedata has been read into METADATA register\n\nYou can [`read`](crate::Reg::read) this register and get [`events_metadataread::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_metadataread::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Key slot metadata has been read into METADATA register\n\nYou can [`read`](crate::Reg::read) this register and get [`events_metadataread::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_metadataread::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EventsMetadatareadSpec;
 impl crate::RegisterSpec for EventsMetadatareadSpec {
     type Ux = u32;

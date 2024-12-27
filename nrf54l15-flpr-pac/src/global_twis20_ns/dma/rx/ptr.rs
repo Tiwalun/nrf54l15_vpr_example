@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - RAM buffer start address for this EasyDMA channel. This address is a word aligned Data RAM address."]
     #[inline(always)]
-    #[must_use]
     pub fn ptr(&mut self) -> PtrW<PtrSpec> {
         PtrW::new(self, 0)
     }

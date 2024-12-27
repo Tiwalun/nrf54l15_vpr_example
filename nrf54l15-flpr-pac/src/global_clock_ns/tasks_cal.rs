@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start calibration of LFRC oscillator"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_cal(&mut self) -> TasksCalW<TasksCalSpec> {
         TasksCalW::new(self, 0)
     }

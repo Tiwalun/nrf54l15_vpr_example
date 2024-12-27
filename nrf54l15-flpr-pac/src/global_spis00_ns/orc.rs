@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Over-read character. Character clocked out after an over-read of the transmit buffer."]
     #[inline(always)]
-    #[must_use]
     pub fn orc(&mut self) -> OrcW<OrcSpec> {
         OrcW::new(self, 0)
     }

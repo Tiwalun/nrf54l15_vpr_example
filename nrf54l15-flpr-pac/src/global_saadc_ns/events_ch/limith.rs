@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Last results is equal or above CH\\[n\\].LIMIT.HIGH"]
     #[inline(always)]
-    #[must_use]
     pub fn limith(&mut self) -> LimithW<LimithSpec> {
         LimithW::new(self, 0)
     }

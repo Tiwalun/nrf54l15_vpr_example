@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Bit counter reached bit count value"]
     #[inline(always)]
-    #[must_use]
     pub fn events_bcmatch(&mut self) -> EventsBcmatchW<EventsBcmatchSpec> {
         EventsBcmatchW::new(self, 0)
     }

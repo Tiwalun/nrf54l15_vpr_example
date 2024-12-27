@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Address resolved"]
     #[inline(always)]
-    #[must_use]
     pub fn events_resolved(&mut self) -> EventsResolvedW<EventsResolvedSpec> {
         EventsResolvedW::new(self, 0)
     }

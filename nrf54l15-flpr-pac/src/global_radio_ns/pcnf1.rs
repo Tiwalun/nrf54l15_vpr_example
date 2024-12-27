@@ -208,37 +208,31 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Maximum length of packet payload. If the packet payload is larger than MAXLEN, the radio will truncate the payload to MAXLEN."]
     #[inline(always)]
-    #[must_use]
     pub fn maxlen(&mut self) -> MaxlenW<Pcnf1Spec> {
         MaxlenW::new(self, 0)
     }
     #[doc = "Bits 8:15 - Static length in number of bytes"]
     #[inline(always)]
-    #[must_use]
     pub fn statlen(&mut self) -> StatlenW<Pcnf1Spec> {
         StatlenW::new(self, 8)
     }
     #[doc = "Bits 16:18 - Base address length in number of bytes"]
     #[inline(always)]
-    #[must_use]
     pub fn balen(&mut self) -> BalenW<Pcnf1Spec> {
         BalenW::new(self, 16)
     }
     #[doc = "Bit 24 - On-air endianness of packet, this applies to the S0, LENGTH, S1, and the PAYLOAD fields."]
     #[inline(always)]
-    #[must_use]
     pub fn endian(&mut self) -> EndianW<Pcnf1Spec> {
         EndianW::new(self, 24)
     }
     #[doc = "Bit 25 - Enable or disable packet whitening"]
     #[inline(always)]
-    #[must_use]
     pub fn whiteen(&mut self) -> WhiteenW<Pcnf1Spec> {
         WhiteenW::new(self, 25)
     }
     #[doc = "Bit 26 - If whitening is enabled S0 can be configured to be excluded from whitening"]
     #[inline(always)]
-    #[must_use]
     pub fn whiteoffset(&mut self) -> WhiteoffsetW<Pcnf1Spec> {
         WhiteoffsetW::new(self, 26)
     }

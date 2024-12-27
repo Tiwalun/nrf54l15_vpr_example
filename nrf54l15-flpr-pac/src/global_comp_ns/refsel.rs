@@ -85,7 +85,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Reference select"]
     #[inline(always)]
-    #[must_use]
     pub fn refsel(&mut self) -> RefselW<RefselSpec> {
         RefselW::new(self, 0)
     }

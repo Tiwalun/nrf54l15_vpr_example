@@ -85,7 +85,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Analog detect configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn anadetect(&mut self) -> AnadetectW<AnadetectSpec> {
         AnadetectW::new(self, 0)
     }

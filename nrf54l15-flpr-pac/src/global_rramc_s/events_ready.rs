@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RRAMC is ready"]
     #[inline(always)]
-    #[must_use]
     pub fn events_ready(&mut self) -> EventsReadyW<EventsReadySpec> {
         EventsReadyW::new(self, 0)
     }

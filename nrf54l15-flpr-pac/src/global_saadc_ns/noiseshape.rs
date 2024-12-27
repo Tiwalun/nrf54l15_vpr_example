@@ -85,7 +85,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Enable noise shaping"]
     #[inline(always)]
-    #[must_use]
     pub fn noiseshape(&mut self) -> NoiseshapeW<NoiseshapeSpec> {
         NoiseshapeW::new(self, 0)
     }

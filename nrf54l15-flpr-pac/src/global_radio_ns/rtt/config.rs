@@ -199,31 +199,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable RTT Functionality. Only valid for BLE 1MBPS and 2MBPS mode"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<ConfigSpec> {
         EnW::new(self, 0)
     }
     #[doc = "Bit 1 - Enabling/Disable ping over the entire access address."]
     #[inline(always)]
-    #[must_use]
     pub fn enfullaa(&mut self) -> EnfullaaW<ConfigSpec> {
         EnfullaaW::new(self, 1)
     }
     #[doc = "Bit 2 - Role as a Initiator or Reflector."]
     #[inline(always)]
-    #[must_use]
     pub fn role(&mut self) -> RoleW<ConfigSpec> {
         RoleW::new(self, 2)
     }
     #[doc = "Bits 3:6 - Number of 16bit payload segments available for ToA detection. Allowed values are 0, 2, 4, 6 and 8."]
     #[inline(always)]
-    #[must_use]
     pub fn numsegments(&mut self) -> NumsegmentsW<ConfigSpec> {
         NumsegmentsW::new(self, 3)
     }
     #[doc = "Bits 8:16 - Early Frame Sync Delay, i.e., number of cycles to wait for access address to anchor correctly. For 2MBPSBLE mode, the EFSDELAY value is 64 (2us) and for 1MBPSBLE mode, it can be 256 (8us)."]
     #[inline(always)]
-    #[must_use]
     pub fn efsdelay(&mut self) -> EfsdelayW<ConfigSpec> {
         EfsdelayW::new(self, 8)
     }

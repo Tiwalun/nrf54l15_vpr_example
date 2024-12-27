@@ -5,7 +5,6 @@ pub type KeyW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl W {
     #[doc = "Bits 0:31 - The ERASEALL sequence is initiated if the value of the KEY fields are non-zero and the KEY fields match on both the CPU and debugger sides."]
     #[inline(always)]
-    #[must_use]
     pub fn key(&mut self) -> KeyW<DisableSpec> {
         KeyW::new(self, 0)
     }

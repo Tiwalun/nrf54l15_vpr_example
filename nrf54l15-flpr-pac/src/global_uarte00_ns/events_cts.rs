@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CTS is activated (set low). Clear To Send."]
     #[inline(always)]
-    #[must_use]
     pub fn events_cts(&mut self) -> EventsCtsW<EventsCtsSpec> {
         EventsCtsW::new(self, 0)
     }

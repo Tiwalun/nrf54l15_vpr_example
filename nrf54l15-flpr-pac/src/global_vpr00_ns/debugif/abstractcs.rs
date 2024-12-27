@@ -192,7 +192,6 @@ impl R {
 impl W {
     #[doc = "Bits 8:10 - Command error when the abstract command fails."]
     #[inline(always)]
-    #[must_use]
     pub fn cmderr(&mut self) -> CmderrW<AbstractcsSpec> {
         CmderrW::new(self, 8)
     }

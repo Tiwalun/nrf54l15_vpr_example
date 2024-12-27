@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Coefficient 2**16/(numSamples/16) in Q1.15 format (Default numsamples value is 160)"]
     #[inline(always)]
-    #[must_use]
     pub fn numsamplescoeff(&mut self) -> NumsamplescoeffW<NumsamplescoeffSpec> {
         NumsamplescoeffW::new(self, 0)
     }

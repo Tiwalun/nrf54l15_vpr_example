@@ -181,19 +181,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Configure WDT to either be paused, or kept running, while the CPU is sleeping"]
     #[inline(always)]
-    #[must_use]
     pub fn sleep(&mut self) -> SleepW<ConfigSpec> {
         SleepW::new(self, 0)
     }
     #[doc = "Bit 3 - Configure WDT to either be paused, or kept running, while the CPU is halted by the debugger"]
     #[inline(always)]
-    #[must_use]
     pub fn halt(&mut self) -> HaltW<ConfigSpec> {
         HaltW::new(self, 3)
     }
     #[doc = "Bit 6 - Allow stopping WDT"]
     #[inline(always)]
-    #[must_use]
     pub fn stopen(&mut self) -> StopenW<ConfigSpec> {
         StopenW::new(self, 6)
     }

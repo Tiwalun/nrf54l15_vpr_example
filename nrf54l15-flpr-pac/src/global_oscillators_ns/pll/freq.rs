@@ -72,7 +72,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Select CPU speed"]
     #[inline(always)]
-    #[must_use]
     pub fn freq(&mut self) -> FreqW<FreqSpec> {
         FreqW::new(self, 0)
     }

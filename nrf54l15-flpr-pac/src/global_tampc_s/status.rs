@@ -471,49 +471,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Active shield detector detected an error."]
     #[inline(always)]
-    #[must_use]
     pub fn activeshield(&mut self) -> ActiveshieldW<StatusSpec> {
         ActiveshieldW::new(self, 0)
     }
     #[doc = "Bit 4 - Error detected for the protected signals."]
     #[inline(always)]
-    #[must_use]
     pub fn protect(&mut self) -> ProtectW<StatusSpec> {
         ProtectW::new(self, 4)
     }
     #[doc = "Bit 5 - CRACEN detected an error."]
     #[inline(always)]
-    #[must_use]
     pub fn cracentamp(&mut self) -> CracentampW<StatusSpec> {
         CracentampW::new(self, 5)
     }
     #[doc = "Bit 8 - Slow domain glitch detector 0 detected an error."]
     #[inline(always)]
-    #[must_use]
     pub fn glitchslowdomain_0(&mut self) -> Glitchslowdomain0W<StatusSpec> {
         Glitchslowdomain0W::new(self, 8)
     }
     #[doc = "Bit 12 - Fast domain glitch detector 0 detected an error."]
     #[inline(always)]
-    #[must_use]
     pub fn glitchfastdomain_0(&mut self) -> Glitchfastdomain0W<StatusSpec> {
         Glitchfastdomain0W::new(self, 12)
     }
     #[doc = "Bit 13 - Fast domain glitch detector 1 detected an error."]
     #[inline(always)]
-    #[must_use]
     pub fn glitchfastdomain_1(&mut self) -> Glitchfastdomain1W<StatusSpec> {
         Glitchfastdomain1W::new(self, 13)
     }
     #[doc = "Bit 14 - Fast domain glitch detector 2 detected an error."]
     #[inline(always)]
-    #[must_use]
     pub fn glitchfastdomain_2(&mut self) -> Glitchfastdomain2W<StatusSpec> {
         Glitchfastdomain2W::new(self, 14)
     }
     #[doc = "Bit 15 - Fast domain glitch detector 3 detected an error."]
     #[inline(always)]
-    #[must_use]
     pub fn glitchfastdomain_3(&mut self) -> Glitchfastdomain3W<StatusSpec> {
         Glitchfastdomain3W::new(self, 15)
     }

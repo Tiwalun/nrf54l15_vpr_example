@@ -85,7 +85,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Select which LFCLK source is started by the LFCLKSTART task"]
     #[inline(always)]
-    #[must_use]
     pub fn src(&mut self) -> SrcW<SrcSpec> {
         SrcW::new(self, 0)
     }

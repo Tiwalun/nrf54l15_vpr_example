@@ -462,43 +462,36 @@ impl R {
 impl W {
     #[doc = "Bit 16 - Write '1' to enable interrupt for event TRIGGERED\\[16\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered16(&mut self) -> Triggered16W<IntensetSpec> {
         Triggered16W::new(self, 16)
     }
     #[doc = "Bit 17 - Write '1' to enable interrupt for event TRIGGERED\\[17\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered17(&mut self) -> Triggered17W<IntensetSpec> {
         Triggered17W::new(self, 17)
     }
     #[doc = "Bit 18 - Write '1' to enable interrupt for event TRIGGERED\\[18\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered18(&mut self) -> Triggered18W<IntensetSpec> {
         Triggered18W::new(self, 18)
     }
     #[doc = "Bit 19 - Write '1' to enable interrupt for event TRIGGERED\\[19\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered19(&mut self) -> Triggered19W<IntensetSpec> {
         Triggered19W::new(self, 19)
     }
     #[doc = "Bit 20 - Write '1' to enable interrupt for event TRIGGERED\\[20\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered20(&mut self) -> Triggered20W<IntensetSpec> {
         Triggered20W::new(self, 20)
     }
     #[doc = "Bit 21 - Write '1' to enable interrupt for event TRIGGERED\\[21\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered21(&mut self) -> Triggered21W<IntensetSpec> {
         Triggered21W::new(self, 21)
     }
     #[doc = "Bit 22 - Write '1' to enable interrupt for event TRIGGERED\\[22\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn triggered22(&mut self) -> Triggered22W<IntensetSpec> {
         Triggered22W::new(self, 22)
     }

@@ -123,13 +123,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable glitch detector"]
     #[inline(always)]
-    #[must_use]
     pub fn enable(&mut self) -> EnableW<ConfigSpec> {
         EnableW::new(self, 0)
     }
     #[doc = "Bit 4 - Glitch detector mode"]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> ModeW<ConfigSpec> {
         ModeW::new(self, 4)
     }

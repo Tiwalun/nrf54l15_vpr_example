@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Input pointer"]
     #[inline(always)]
-    #[must_use]
     pub fn ptr(&mut self) -> PtrW<PtrSpec> {
         PtrW::new(self, 0)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RADIO has ramped up and is ready to be started RX path"]
     #[inline(always)]
-    #[must_use]
     pub fn events_rxready(&mut self) -> EventsRxreadyW<EventsRxreadySpec> {
         EventsRxreadyW::new(self, 0)
     }

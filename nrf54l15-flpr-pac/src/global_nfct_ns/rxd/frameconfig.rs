@@ -181,19 +181,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Indicates if parity expected in RX frame"]
     #[inline(always)]
-    #[must_use]
     pub fn parity(&mut self) -> ParityW<FrameconfigSpec> {
         ParityW::new(self, 0)
     }
     #[doc = "Bit 2 - SoF expected or not in RX frames"]
     #[inline(always)]
-    #[must_use]
     pub fn sof(&mut self) -> SofW<FrameconfigSpec> {
         SofW::new(self, 2)
     }
     #[doc = "Bit 4 - CRC mode for incoming frames"]
     #[inline(always)]
-    #[must_use]
     pub fn crcmoderx(&mut self) -> CrcmoderxW<FrameconfigSpec> {
         CrcmoderxW::new(self, 4)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RX buffer (as defined by PACKETPTR and MAXLEN) in Data RAM full."]
     #[inline(always)]
-    #[must_use]
     pub fn events_endrx(&mut self) -> EventsEndrxW<EventsEndrxSpec> {
         EventsEndrxW::new(self, 0)
     }

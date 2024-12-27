@@ -33,7 +33,6 @@ where
 impl W {
     #[doc = "Bits 0:31 - Allow stopping WDT"]
     #[inline(always)]
-    #[must_use]
     pub fn tsen(&mut self) -> TsenW<TsenSpec> {
         TsenW::new(self, 0)
     }

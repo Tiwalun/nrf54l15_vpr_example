@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Starts continuous I2S transfer. Also starts MCK generator when this is enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_start(&mut self) -> TasksStartW<TasksStartSpec> {
         TasksStartW::new(self, 0)
     }

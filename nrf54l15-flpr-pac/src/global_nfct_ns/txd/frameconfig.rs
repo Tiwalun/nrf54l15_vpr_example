@@ -239,25 +239,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Indicates if parity is added to the frame"]
     #[inline(always)]
-    #[must_use]
     pub fn parity(&mut self) -> ParityW<FrameconfigSpec> {
         ParityW::new(self, 0)
     }
     #[doc = "Bit 1 - Discarding unused bits at start or end of a frame"]
     #[inline(always)]
-    #[must_use]
     pub fn discardmode(&mut self) -> DiscardmodeW<FrameconfigSpec> {
         DiscardmodeW::new(self, 1)
     }
     #[doc = "Bit 2 - Adding SoF or not in TX frames"]
     #[inline(always)]
-    #[must_use]
     pub fn sof(&mut self) -> SofW<FrameconfigSpec> {
         SofW::new(self, 2)
     }
     #[doc = "Bit 4 - CRC mode for outgoing frames"]
     #[inline(always)]
-    #[must_use]
     pub fn crcmodetx(&mut self) -> CrcmodetxW<FrameconfigSpec> {
         CrcmodetxW::new(self, 4)
     }

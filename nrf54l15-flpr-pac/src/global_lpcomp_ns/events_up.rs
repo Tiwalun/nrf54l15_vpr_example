@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Upward crossing"]
     #[inline(always)]
-    #[must_use]
     pub fn events_up(&mut self) -> EventsUpW<EventsUpSpec> {
         EventsUpW::new(self, 0)
     }

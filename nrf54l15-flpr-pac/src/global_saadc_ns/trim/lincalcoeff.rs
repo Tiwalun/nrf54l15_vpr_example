@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - value"]
     #[inline(always)]
-    #[must_use]
     pub fn val(&mut self) -> ValW<LincalcoeffSpec> {
         ValW::new(self, 0)
     }

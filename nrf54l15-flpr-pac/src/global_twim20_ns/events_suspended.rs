@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - SUSPEND task has been issued, TWI traffic is now suspended."]
     #[inline(always)]
-    #[must_use]
     pub fn events_suspended(&mut self) -> EventsSuspendedW<EventsSuspendedSpec> {
         EventsSuspendedW::new(self, 0)
     }

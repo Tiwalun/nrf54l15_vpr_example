@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RXSTATUS is changed to DataPending."]
     #[inline(always)]
-    #[must_use]
     pub fn events_rxready(&mut self) -> EventsRxreadyW<EventsRxreadySpec> {
         EventsRxreadyW::new(self, 0)
     }

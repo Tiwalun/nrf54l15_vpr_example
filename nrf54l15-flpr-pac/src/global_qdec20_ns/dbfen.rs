@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable input debounce filters"]
     #[inline(always)]
-    #[must_use]
     pub fn dbfen(&mut self) -> DbfenW<DbfenSpec> {
         DbfenW::new(self, 0)
     }

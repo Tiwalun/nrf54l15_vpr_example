@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - HFXO tuning could not be completed"]
     #[inline(always)]
-    #[must_use]
     pub fn events_xotunefailed(&mut self) -> EventsXotunefailedW<EventsXotunefailedSpec> {
         EventsXotunefailedW::new(self, 0)
     }

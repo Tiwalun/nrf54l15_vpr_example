@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Tamper controller detected an error."]
     #[inline(always)]
-    #[must_use]
     pub fn events_tamper(&mut self) -> EventsTamperW<EventsTamperSpec> {
         EventsTamperW::new(self, 0)
     }

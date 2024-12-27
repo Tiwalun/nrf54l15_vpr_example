@@ -98,7 +98,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Timer bit width"]
     #[inline(always)]
-    #[must_use]
     pub fn bitmode(&mut self) -> BitmodeW<BitmodeSpec> {
         BitmodeW::new(self, 0)
     }

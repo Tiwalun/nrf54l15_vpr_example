@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Last results is equal or below CH\\[n\\].LIMIT.LOW"]
     #[inline(always)]
-    #[must_use]
     pub fn limitl(&mut self) -> LimitlW<LimitlSpec> {
         LimitlW::new(self, 0)
     }

@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Task for writing to pin specified in CONFIG\\[n\\].PSEL. Action on pin is configured in CONFIG\\[n\\].POLARITY."]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_out(&mut self) -> TasksOutW<TasksOutSpec> {
         TasksOutW::new(self, 0)
     }

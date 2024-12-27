@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Concatenated sequences have been played the amount of times defined in LOOP.CNT"]
     #[inline(always)]
-    #[must_use]
     pub fn events_loopsdone(&mut self) -> EventsLoopsdoneW<EventsLoopsdoneSpec> {
         EventsLoopsdoneW::new(self, 0)
     }

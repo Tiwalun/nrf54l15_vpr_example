@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Disable channel group n"]
     #[inline(always)]
-    #[must_use]
     pub fn dis(&mut self) -> DisW<DisSpec> {
         DisW::new(self, 0)
     }

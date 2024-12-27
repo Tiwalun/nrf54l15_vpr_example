@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Activate power-up request"]
     #[inline(always)]
-    #[must_use]
     pub fn active(&mut self) -> ActiveW<SyspwrupreqSpec> {
         ActiveW::new(self, 0)
     }

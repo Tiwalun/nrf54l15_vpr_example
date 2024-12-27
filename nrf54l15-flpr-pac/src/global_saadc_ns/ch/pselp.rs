@@ -181,25 +181,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - GPIO pin selection."]
     #[inline(always)]
-    #[must_use]
     pub fn pin(&mut self) -> PinW<PselpSpec> {
         PinW::new(self, 0)
     }
     #[doc = "Bits 8:11 - GPIO port selection"]
     #[inline(always)]
-    #[must_use]
     pub fn port(&mut self) -> PortW<PselpSpec> {
         PortW::new(self, 8)
     }
     #[doc = "Bits 12:13 - Internal input selection for analog positive input when CH\\[n\\].PSELP.CONNECT = Internal"]
     #[inline(always)]
-    #[must_use]
     pub fn internal(&mut self) -> InternalW<PselpSpec> {
         InternalW::new(self, 12)
     }
     #[doc = "Bits 30:31 - Connection"]
     #[inline(always)]
-    #[must_use]
     pub fn connect(&mut self) -> ConnectW<PselpSpec> {
         ConnectW::new(self, 30)
     }

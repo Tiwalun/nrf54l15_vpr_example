@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Frame format"]
     #[inline(always)]
-    #[must_use]
     pub fn format(&mut self) -> FormatW<FormatSpec> {
         FormatW::new(self, 0)
     }

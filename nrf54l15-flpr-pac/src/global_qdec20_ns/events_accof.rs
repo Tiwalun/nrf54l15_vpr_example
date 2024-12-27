@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - ACC or ACCDBL register overflow"]
     #[inline(always)]
-    #[must_use]
     pub fn events_accof(&mut self) -> EventsAccofW<EventsAccofSpec> {
         EventsAccofW::new(self, 0)
     }

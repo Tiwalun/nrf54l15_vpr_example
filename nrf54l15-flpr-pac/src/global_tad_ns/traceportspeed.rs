@@ -98,7 +98,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Trace port speed is divided from CPU clock. The TRACECLK pin output will be divided again by two from the trace port clock."]
     #[inline(always)]
-    #[must_use]
     pub fn traceportspeed(&mut self) -> TraceportspeedW<TraceportspeedSpec> {
         TraceportspeedW::new(self, 0)
     }

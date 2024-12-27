@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start the PWM"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_pwmstart(&mut self) -> TasksPwmstartW<TasksPwmstartSpec> {
         TasksPwmstartW::new(self, 0)
     }

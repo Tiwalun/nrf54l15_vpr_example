@@ -123,13 +123,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable TPM"]
     #[inline(always)]
-    #[must_use]
     pub fn tpm(&mut self) -> TpmW<ModeSpec> {
         TpmW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable TFM"]
     #[inline(always)]
-    #[must_use]
     pub fn tfm(&mut self) -> TfmW<ModeSpec> {
         TfmW::new(self, 1)
     }

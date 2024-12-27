@@ -150,7 +150,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Sample and half-frame width"]
     #[inline(always)]
-    #[must_use]
     pub fn swidth(&mut self) -> SwidthW<SwidthSpec> {
         SwidthW::new(self, 0)
     }

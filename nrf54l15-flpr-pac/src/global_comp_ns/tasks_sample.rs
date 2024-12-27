@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Sample comparator value. This task requires that COMP has been started by the START Task."]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_sample(&mut self) -> TasksSampleW<TasksSampleSpec> {
         TasksSampleW::new(self, 0)
     }

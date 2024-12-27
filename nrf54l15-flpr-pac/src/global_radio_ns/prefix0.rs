@@ -43,25 +43,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Address prefix 0"]
     #[inline(always)]
-    #[must_use]
     pub fn ap0(&mut self) -> Ap0W<Prefix0Spec> {
         Ap0W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Address prefix 1"]
     #[inline(always)]
-    #[must_use]
     pub fn ap1(&mut self) -> Ap1W<Prefix0Spec> {
         Ap1W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Address prefix 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ap2(&mut self) -> Ap2W<Prefix0Spec> {
         Ap2W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Address prefix 3"]
     #[inline(always)]
-    #[must_use]
     pub fn ap3(&mut self) -> Ap3W<Prefix0Spec> {
         Ap3W::new(self, 24)
     }

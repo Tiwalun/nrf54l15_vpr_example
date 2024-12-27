@@ -117,13 +117,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write enable"]
     #[inline(always)]
-    #[must_use]
     pub fn wen(&mut self) -> WenW<ConfigSpec> {
         WenW::new(self, 0)
     }
     #[doc = "Bits 8:13 - write-buffer size in number of 128-bit words"]
     #[inline(always)]
-    #[must_use]
     pub fn writebufsize(&mut self) -> WritebufsizeW<ConfigSpec> {
         WritebufsizeW::new(self, 8)
     }

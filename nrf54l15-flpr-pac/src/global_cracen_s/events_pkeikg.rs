@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Event indicating that interrupt triggered at PKE or IKG"]
     #[inline(always)]
-    #[must_use]
     pub fn events_pkeikg(&mut self) -> EventsPkeikgW<EventsPkeikgSpec> {
         EventsPkeikgW::new(self, 0)
     }

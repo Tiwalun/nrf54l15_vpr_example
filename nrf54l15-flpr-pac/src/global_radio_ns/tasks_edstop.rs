@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stop the energy detect measurement"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_edstop(&mut self) -> TasksEdstopW<TasksEdstopSpec> {
         TasksEdstopW::new(self, 0)
     }

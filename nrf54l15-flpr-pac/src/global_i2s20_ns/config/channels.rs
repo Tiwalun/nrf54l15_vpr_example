@@ -85,7 +85,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Enable channels"]
     #[inline(always)]
-    #[must_use]
     pub fn channels(&mut self) -> ChannelsW<ChannelsSpec> {
         ChannelsW::new(self, 0)
     }

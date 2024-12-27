@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start RADIO"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_start(&mut self) -> TasksStartW<TasksStartSpec> {
         TasksStartW::new(self, 0)
     }

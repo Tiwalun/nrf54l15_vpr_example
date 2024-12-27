@@ -7,7 +7,6 @@ pub type InitdataW<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - Writing a 1 initialise Nonce and Personalisation_String registers counters, i.e. start writing from the 32 LSB."]
     #[inline(always)]
-    #[must_use]
     pub fn initdata(&mut self) -> InitdataW<InitdataSpec> {
         InitdataW::new(self, 0)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Downward or upward crossing"]
     #[inline(always)]
-    #[must_use]
     pub fn events_cross(&mut self) -> EventsCrossW<EventsCrossSpec> {
         EventsCrossW::new(self, 0)
     }

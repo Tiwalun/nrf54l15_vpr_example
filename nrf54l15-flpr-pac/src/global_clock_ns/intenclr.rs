@@ -462,43 +462,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to disable interrupt for event XOSTARTED"]
     #[inline(always)]
-    #[must_use]
     pub fn xostarted(&mut self) -> XostartedW<IntenclrSpec> {
         XostartedW::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to disable interrupt for event PLLSTARTED"]
     #[inline(always)]
-    #[must_use]
     pub fn pllstarted(&mut self) -> PllstartedW<IntenclrSpec> {
         PllstartedW::new(self, 1)
     }
     #[doc = "Bit 2 - Write '1' to disable interrupt for event LFCLKSTARTED"]
     #[inline(always)]
-    #[must_use]
     pub fn lfclkstarted(&mut self) -> LfclkstartedW<IntenclrSpec> {
         LfclkstartedW::new(self, 2)
     }
     #[doc = "Bit 3 - Write '1' to disable interrupt for event DONE"]
     #[inline(always)]
-    #[must_use]
     pub fn done(&mut self) -> DoneW<IntenclrSpec> {
         DoneW::new(self, 3)
     }
     #[doc = "Bit 4 - Write '1' to disable interrupt for event XOTUNED"]
     #[inline(always)]
-    #[must_use]
     pub fn xotuned(&mut self) -> XotunedW<IntenclrSpec> {
         XotunedW::new(self, 4)
     }
     #[doc = "Bit 5 - Write '1' to disable interrupt for event XOTUNEERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn xotuneerror(&mut self) -> XotuneerrorW<IntenclrSpec> {
         XotuneerrorW::new(self, 5)
     }
     #[doc = "Bit 6 - Write '1' to disable interrupt for event XOTUNEFAILED"]
     #[inline(always)]
-    #[must_use]
     pub fn xotunefailed(&mut self) -> XotunefailedW<IntenclrSpec> {
         XotunefailedW::new(self, 6)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Number of LFCLK clock cycles to wake up before the next scheduled EVENTS_COMPARE event"]
     #[inline(always)]
-    #[must_use]
     pub fn value(&mut self) -> ValueW<WaketimeSpec> {
         ValueW::new(self, 0)
     }

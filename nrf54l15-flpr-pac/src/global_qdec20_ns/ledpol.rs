@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - LED output pin polarity"]
     #[inline(always)]
-    #[must_use]
     pub fn ledpol(&mut self) -> LedpolW<LedpolSpec> {
         LedpolW::new(self, 0)
     }

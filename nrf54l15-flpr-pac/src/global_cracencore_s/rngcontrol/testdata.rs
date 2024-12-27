@@ -7,7 +7,6 @@ pub type TestdataW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl W {
     #[doc = "Bits 0:31 - Test data register."]
     #[inline(always)]
-    #[must_use]
     pub fn testdata(&mut self) -> TestdataW<TestdataSpec> {
         TestdataW::new(self, 0)
     }

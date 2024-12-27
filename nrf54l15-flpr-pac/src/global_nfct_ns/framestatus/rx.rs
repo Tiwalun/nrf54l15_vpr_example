@@ -181,19 +181,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - No valid end of frame (EoF) detected"]
     #[inline(always)]
-    #[must_use]
     pub fn crcerror(&mut self) -> CrcerrorW<RxSpec> {
         CrcerrorW::new(self, 0)
     }
     #[doc = "Bit 2 - Parity status of received frame"]
     #[inline(always)]
-    #[must_use]
     pub fn paritystatus(&mut self) -> ParitystatusW<RxSpec> {
         ParitystatusW::new(self, 2)
     }
     #[doc = "Bit 3 - Overrun detected"]
     #[inline(always)]
-    #[must_use]
     pub fn overrun(&mut self) -> OverrunW<RxSpec> {
         OverrunW::new(self, 3)
     }

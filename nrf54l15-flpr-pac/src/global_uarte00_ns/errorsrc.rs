@@ -239,25 +239,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Overrun error"]
     #[inline(always)]
-    #[must_use]
     pub fn overrun(&mut self) -> OverrunW<ErrorsrcSpec> {
         OverrunW::new(self, 0)
     }
     #[doc = "Bit 1 - Parity error"]
     #[inline(always)]
-    #[must_use]
     pub fn parity(&mut self) -> ParityW<ErrorsrcSpec> {
         ParityW::new(self, 1)
     }
     #[doc = "Bit 2 - Framing error occurred"]
     #[inline(always)]
-    #[must_use]
     pub fn framing(&mut self) -> FramingW<ErrorsrcSpec> {
         FramingW::new(self, 2)
     }
     #[doc = "Bit 3 - Break condition"]
     #[inline(always)]
-    #[must_use]
     pub fn break_(&mut self) -> BreakW<ErrorsrcSpec> {
         BreakW::new(self, 3)
     }

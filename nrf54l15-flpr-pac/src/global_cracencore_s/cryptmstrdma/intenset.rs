@@ -7,7 +7,6 @@ pub type IntensetW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn intenset(&mut self) -> IntensetW<IntensetSpec> {
         IntensetW::new(self, 0)
     }

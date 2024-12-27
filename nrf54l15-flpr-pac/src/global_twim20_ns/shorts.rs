@@ -817,31 +817,26 @@ and task DMA.RX.DISABLEMATCH\\[n\\]"]
 impl W {
     #[doc = "Bit 7 - Shortcut between event LASTTX and task DMA.RX.START"]
     #[inline(always)]
-    #[must_use]
     pub fn lasttx_dma_rx_start(&mut self) -> LasttxDmaRxStartW<ShortsSpec> {
         LasttxDmaRxStartW::new(self, 7)
     }
     #[doc = "Bit 8 - Shortcut between event LASTTX and task SUSPEND"]
     #[inline(always)]
-    #[must_use]
     pub fn lasttx_suspend(&mut self) -> LasttxSuspendW<ShortsSpec> {
         LasttxSuspendW::new(self, 8)
     }
     #[doc = "Bit 9 - Shortcut between event LASTTX and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn lasttx_stop(&mut self) -> LasttxStopW<ShortsSpec> {
         LasttxStopW::new(self, 9)
     }
     #[doc = "Bit 10 - Shortcut between event LASTRX and task DMA.TX.START"]
     #[inline(always)]
-    #[must_use]
     pub fn lastrx_dma_tx_start(&mut self) -> LastrxDmaTxStartW<ShortsSpec> {
         LastrxDmaTxStartW::new(self, 10)
     }
     #[doc = "Bit 12 - Shortcut between event LASTRX and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn lastrx_stop(&mut self) -> LastrxStopW<ShortsSpec> {
         LastrxStopW::new(self, 12)
     }
@@ -849,7 +844,6 @@ impl W {
 and task DMA.RX.ENABLEMATCH\\[1\\]
 Allows daisy-chaining match events."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_rx_match0_dma_rx_enablematch1(
         &mut self,
     ) -> DmaRxMatch0DmaRxEnablematch1W<ShortsSpec> {
@@ -859,7 +853,6 @@ Allows daisy-chaining match events."]
 and task DMA.RX.ENABLEMATCH\\[2\\]
 Allows daisy-chaining match events."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_rx_match1_dma_rx_enablematch2(
         &mut self,
     ) -> DmaRxMatch1DmaRxEnablematch2W<ShortsSpec> {
@@ -869,7 +862,6 @@ Allows daisy-chaining match events."]
 and task DMA.RX.ENABLEMATCH\\[3\\]
 Allows daisy-chaining match events."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_rx_match2_dma_rx_enablematch3(
         &mut self,
     ) -> DmaRxMatch2DmaRxEnablematch3W<ShortsSpec> {
@@ -879,7 +871,6 @@ Allows daisy-chaining match events."]
 and task DMA.RX.ENABLEMATCH\\[0\\]
 Allows daisy-chaining match events."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_rx_match3_dma_rx_enablematch0(
         &mut self,
     ) -> DmaRxMatch3DmaRxEnablematch0W<ShortsSpec> {
@@ -888,7 +879,6 @@ Allows daisy-chaining match events."]
     #[doc = "Bit 25 - Shortcut between event DMA.RX.MATCH\\[n\\]
 and task DMA.RX.DISABLEMATCH\\[n\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_rx_match0_dma_rx_disablematch0(
         &mut self,
     ) -> DmaRxMatch0DmaRxDisablematch0W<ShortsSpec> {
@@ -897,7 +887,6 @@ and task DMA.RX.DISABLEMATCH\\[n\\]"]
     #[doc = "Bit 26 - Shortcut between event DMA.RX.MATCH\\[n\\]
 and task DMA.RX.DISABLEMATCH\\[n\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_rx_match1_dma_rx_disablematch1(
         &mut self,
     ) -> DmaRxMatch1DmaRxDisablematch1W<ShortsSpec> {
@@ -906,7 +895,6 @@ and task DMA.RX.DISABLEMATCH\\[n\\]"]
     #[doc = "Bit 27 - Shortcut between event DMA.RX.MATCH\\[n\\]
 and task DMA.RX.DISABLEMATCH\\[n\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_rx_match2_dma_rx_disablematch2(
         &mut self,
     ) -> DmaRxMatch2DmaRxDisablematch2W<ShortsSpec> {
@@ -915,7 +903,6 @@ and task DMA.RX.DISABLEMATCH\\[n\\]"]
     #[doc = "Bit 28 - Shortcut between event DMA.RX.MATCH\\[n\\]
 and task DMA.RX.DISABLEMATCH\\[n\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_rx_match3_dma_rx_disablematch3(
         &mut self,
     ) -> DmaRxMatch3DmaRxDisablematch3W<ShortsSpec> {

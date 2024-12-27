@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Event indicating that interrupt triggered at RNG"]
     #[inline(always)]
-    #[must_use]
     pub fn events_rng(&mut self) -> EventsRngW<EventsRngSpec> {
         EventsRngW::new(self, 0)
     }

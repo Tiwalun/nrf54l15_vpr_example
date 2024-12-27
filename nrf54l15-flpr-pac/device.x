@@ -76,11 +76,10 @@ PROVIDE(GRTC_2 = DefaultHandler);
 PROVIDE(GRTC_3 = DefaultHandler);
 PROVIDE(SPU30 = DefaultHandler);
 PROVIDE(SERIAL30 = DefaultHandler);
-PROVIDE(RTC30 = DefaultHandler);
+PROVIDE(CLOCK_POWER = DefaultHandler);
 PROVIDE(COMP_LPCOMP = DefaultHandler);
 PROVIDE(WDT30 = DefaultHandler);
 PROVIDE(WDT31 = DefaultHandler);
 PROVIDE(GPIOTE30_0 = DefaultHandler);
 PROVIDE(GPIOTE30_1 = DefaultHandler);
-PROVIDE(CLOCK_POWER = DefaultHandler);
 

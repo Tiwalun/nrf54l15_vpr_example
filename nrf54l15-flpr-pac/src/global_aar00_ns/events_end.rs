@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Address resolution procedure complete or ended due to an error"]
     #[inline(always)]
-    #[must_use]
     pub fn events_end(&mut self) -> EventsEndW<EventsEndSpec> {
         EventsEndW::new(self, 0)
     }

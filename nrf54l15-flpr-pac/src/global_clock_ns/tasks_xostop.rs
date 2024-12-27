@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stop crystal oscillator (HFXO)"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_xostop(&mut self) -> TasksXostopW<TasksXostopSpec> {
         TasksXostopW::new(self, 0)
     }

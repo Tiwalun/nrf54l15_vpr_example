@@ -123,13 +123,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Mono or stereo operation"]
     #[inline(always)]
-    #[must_use]
     pub fn operation(&mut self) -> OperationW<ModeSpec> {
         OperationW::new(self, 0)
     }
     #[doc = "Bit 1 - Defines on which PDM_CLK edge left (or mono) is sampled."]
     #[inline(always)]
-    #[must_use]
     pub fn edge(&mut self) -> EdgeW<ModeSpec> {
         EdgeW::new(self, 1)
     }

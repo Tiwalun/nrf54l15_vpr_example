@@ -30,7 +30,6 @@ impl W {
     #[doc = "Bit 0 - Capture RTC counter to CC\\[n\\]
 register"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_capture(&mut self) -> TasksCaptureW<TasksCaptureSpec> {
         TasksCaptureW::new(self, 0)
     }

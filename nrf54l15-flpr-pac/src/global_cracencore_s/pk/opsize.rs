@@ -111,7 +111,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:12 - Operand size (number of bytes): This register is used when the memory is accessed via AHB Master"]
     #[inline(always)]
-    #[must_use]
     pub fn opsize(&mut self) -> OpsizeW<OpsizeSpec> {
         OpsizeW::new(self, 0)
     }

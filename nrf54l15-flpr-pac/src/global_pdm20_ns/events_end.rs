@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The PDM has written the last sample specified by SAMPLE.MAXCNT (or the last sample after a STOP task has been received) to Data RAM"]
     #[inline(always)]
-    #[must_use]
     pub fn events_end(&mut self) -> EventsEndW<EventsEndSpec> {
         EventsEndW::new(self, 0)
     }

@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Read and clear ACC"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_rdclracc(&mut self) -> TasksRdclraccW<TasksRdclraccSpec> {
         TasksRdclraccW::new(self, 0)
     }

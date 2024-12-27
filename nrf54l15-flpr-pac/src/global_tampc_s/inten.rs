@@ -123,13 +123,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable interrupt for event TAMPER"]
     #[inline(always)]
-    #[must_use]
     pub fn tamper(&mut self) -> TamperW<IntenSpec> {
         TamperW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable interrupt for event WRITEERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn writeerror(&mut self) -> WriteerrorW<IntenSpec> {
         WriteerrorW::new(self, 1)
     }

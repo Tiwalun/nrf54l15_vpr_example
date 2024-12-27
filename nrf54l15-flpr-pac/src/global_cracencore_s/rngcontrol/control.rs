@@ -405,103 +405,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable the NDRNG."]
     #[inline(always)]
-    #[must_use]
     pub fn enable(&mut self) -> EnableW<ControlSpec> {
         EnableW::new(self, 0)
     }
     #[doc = "Bit 1 - Select between the NDRNG with asynchronous free running oscillators (when 0) and the Pseudo-Random generator with synchronous oscillators for simulation purpose (when 1)."]
     #[inline(always)]
-    #[must_use]
     pub fn lfsren(&mut self) -> LfsrenW<ControlSpec> {
         LfsrenW::new(self, 1)
     }
     #[doc = "Bit 2 - Select input for conditioning function and continuous tests:"]
     #[inline(always)]
-    #[must_use]
     pub fn testen(&mut self) -> TestenW<ControlSpec> {
         TestenW::new(self, 2)
     }
     #[doc = "Bit 3 - Conditioning function bypass."]
     #[inline(always)]
-    #[must_use]
     pub fn condbypass(&mut self) -> CondbypassW<ControlSpec> {
         CondbypassW::new(self, 3)
     }
     #[doc = "Bit 4 - Interrupt enable for Repetition Count Test failure."]
     #[inline(always)]
-    #[must_use]
     pub fn intenrep(&mut self) -> IntenrepW<ControlSpec> {
         IntenrepW::new(self, 4)
     }
     #[doc = "Bit 5 - Interrupt enable for Adaptive Proportion Test failure (1024-sample window)."]
     #[inline(always)]
-    #[must_use]
     pub fn intenprop(&mut self) -> IntenpropW<ControlSpec> {
         IntenpropW::new(self, 5)
     }
     #[doc = "Bit 7 - Interrupt enable for FIFO full."]
     #[inline(always)]
-    #[must_use]
     pub fn intenfull(&mut self) -> IntenfullW<ControlSpec> {
         IntenfullW::new(self, 7)
     }
     #[doc = "Bit 8 - Software reset:"]
     #[inline(always)]
-    #[must_use]
     pub fn softrst(&mut self) -> SoftrstW<ControlSpec> {
         SoftrstW::new(self, 8)
     }
     #[doc = "Bit 9 - Interrupt enable for AIS31 preliminary noise alarm."]
     #[inline(always)]
-    #[must_use]
     pub fn intenpre(&mut self) -> IntenpreW<ControlSpec> {
         IntenpreW::new(self, 9)
     }
     #[doc = "Bit 10 - Interrupt enable for AIS31 noise alarm."]
     #[inline(always)]
-    #[must_use]
     pub fn intenalm(&mut self) -> IntenalmW<ControlSpec> {
         IntenalmW::new(self, 10)
     }
     #[doc = "Bit 11 - Force oscillators to run when FIFO is full."]
     #[inline(always)]
-    #[must_use]
     pub fn forceactiveros(&mut self) -> ForceactiverosW<ControlSpec> {
         ForceactiverosW::new(self, 11)
     }
     #[doc = "Bit 12 - Bypass NIST tests such that the results of the start-up and online test do not affect the FSM state."]
     #[inline(always)]
-    #[must_use]
     pub fn healthtestbypass(&mut self) -> HealthtestbypassW<ControlSpec> {
         HealthtestbypassW::new(self, 12)
     }
     #[doc = "Bit 13 - Bypass AIS31 tests such that the results of the start-up and online tests do not affect the FSM state."]
     #[inline(always)]
-    #[must_use]
     pub fn ais31bypass(&mut self) -> Ais31bypassW<ControlSpec> {
         Ais31bypassW::new(self, 13)
     }
     #[doc = "Bit 14 - Select input to health test module:"]
     #[inline(always)]
-    #[must_use]
     pub fn healthtestsel(&mut self) -> HealthtestselW<ControlSpec> {
         HealthtestselW::new(self, 14)
     }
     #[doc = "Bit 15 - Select input to the AIS31 test module:"]
     #[inline(always)]
-    #[must_use]
     pub fn ais31testsel(&mut self) -> Ais31testselW<ControlSpec> {
         Ais31testselW::new(self, 15)
     }
     #[doc = "Bits 16:19 - Number of 128 bit blocks used in AES-CBCMAC post-processing."]
     #[inline(always)]
-    #[must_use]
     pub fn nb128bitblocks(&mut self) -> Nb128bitblocksW<ControlSpec> {
         Nb128bitblocksW::new(self, 16)
     }
     #[doc = "Bit 20 - Enable write of the samples in the FIFO during start-up."]
     #[inline(always)]
-    #[must_use]
     pub fn fifowritestartup(&mut self) -> FifowritestartupW<ControlSpec> {
         FifowritestartupW::new(self, 20)
     }

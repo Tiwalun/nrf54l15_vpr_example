@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - End point of 2nd piece wise linear function"]
     #[inline(always)]
-    #[must_use]
     pub fn t1(&mut self) -> T1W<T1Spec> {
         T1W::new(self, 0)
     }

@@ -993,103 +993,86 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Shortcut between event READY and task START"]
     #[inline(always)]
-    #[must_use]
     pub fn ready_start(&mut self) -> ReadyStartW<ShortsSpec> {
         ReadyStartW::new(self, 0)
     }
     #[doc = "Bit 2 - Shortcut between event DISABLED and task TXEN"]
     #[inline(always)]
-    #[must_use]
     pub fn disabled_txen(&mut self) -> DisabledTxenW<ShortsSpec> {
         DisabledTxenW::new(self, 2)
     }
     #[doc = "Bit 3 - Shortcut between event DISABLED and task RXEN"]
     #[inline(always)]
-    #[must_use]
     pub fn disabled_rxen(&mut self) -> DisabledRxenW<ShortsSpec> {
         DisabledRxenW::new(self, 3)
     }
     #[doc = "Bit 4 - Shortcut between event ADDRESS and task RSSISTART"]
     #[inline(always)]
-    #[must_use]
     pub fn address_rssistart(&mut self) -> AddressRssistartW<ShortsSpec> {
         AddressRssistartW::new(self, 4)
     }
     #[doc = "Bit 5 - Shortcut between event END and task START"]
     #[inline(always)]
-    #[must_use]
     pub fn end_start(&mut self) -> EndStartW<ShortsSpec> {
         EndStartW::new(self, 5)
     }
     #[doc = "Bit 6 - Shortcut between event ADDRESS and task BCSTART"]
     #[inline(always)]
-    #[must_use]
     pub fn address_bcstart(&mut self) -> AddressBcstartW<ShortsSpec> {
         AddressBcstartW::new(self, 6)
     }
     #[doc = "Bit 10 - Shortcut between event RXREADY and task CCASTART"]
     #[inline(always)]
-    #[must_use]
     pub fn rxready_ccastart(&mut self) -> RxreadyCcastartW<ShortsSpec> {
         RxreadyCcastartW::new(self, 10)
     }
     #[doc = "Bit 11 - Shortcut between event CCAIDLE and task TXEN"]
     #[inline(always)]
-    #[must_use]
     pub fn ccaidle_txen(&mut self) -> CcaidleTxenW<ShortsSpec> {
         CcaidleTxenW::new(self, 11)
     }
     #[doc = "Bit 12 - Shortcut between event CCABUSY and task DISABLE"]
     #[inline(always)]
-    #[must_use]
     pub fn ccabusy_disable(&mut self) -> CcabusyDisableW<ShortsSpec> {
         CcabusyDisableW::new(self, 12)
     }
     #[doc = "Bit 13 - Shortcut between event FRAMESTART and task BCSTART"]
     #[inline(always)]
-    #[must_use]
     pub fn framestart_bcstart(&mut self) -> FramestartBcstartW<ShortsSpec> {
         FramestartBcstartW::new(self, 13)
     }
     #[doc = "Bit 14 - Shortcut between event READY and task EDSTART"]
     #[inline(always)]
-    #[must_use]
     pub fn ready_edstart(&mut self) -> ReadyEdstartW<ShortsSpec> {
         ReadyEdstartW::new(self, 14)
     }
     #[doc = "Bit 15 - Shortcut between event EDEND and task DISABLE"]
     #[inline(always)]
-    #[must_use]
     pub fn edend_disable(&mut self) -> EdendDisableW<ShortsSpec> {
         EdendDisableW::new(self, 15)
     }
     #[doc = "Bit 16 - Shortcut between event CCAIDLE and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn ccaidle_stop(&mut self) -> CcaidleStopW<ShortsSpec> {
         CcaidleStopW::new(self, 16)
     }
     #[doc = "Bit 17 - Shortcut between event TXREADY and task START"]
     #[inline(always)]
-    #[must_use]
     pub fn txready_start(&mut self) -> TxreadyStartW<ShortsSpec> {
         TxreadyStartW::new(self, 17)
     }
     #[doc = "Bit 18 - Shortcut between event RXREADY and task START"]
     #[inline(always)]
-    #[must_use]
     pub fn rxready_start(&mut self) -> RxreadyStartW<ShortsSpec> {
         RxreadyStartW::new(self, 18)
     }
     #[doc = "Bit 19 - Shortcut between event PHYEND and task DISABLE"]
     #[inline(always)]
-    #[must_use]
     pub fn phyend_disable(&mut self) -> PhyendDisableW<ShortsSpec> {
         PhyendDisableW::new(self, 19)
     }
     #[doc = "Bit 20 - Shortcut between event PHYEND and task START"]
     #[inline(always)]
-    #[must_use]
     pub fn phyend_start(&mut self) -> PhyendStartW<ShortsSpec> {
         PhyendStartW::new(self, 20)
     }

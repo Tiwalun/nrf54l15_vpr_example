@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Enable System OFF mode"]
     #[inline(always)]
-    #[must_use]
     pub fn systemoff(&mut self) -> SystemoffW<SystemoffSpec> {
         SystemoffW::new(self, 0)
     }

@@ -1992,224 +1992,192 @@ impl W {
     #[doc = "Bit 0 - Keep the memory block MEM\\[0\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem0(&mut self) -> Mem0W<ControlSpec> {
         Mem0W::new(self, 0)
     }
     #[doc = "Bit 1 - Keep the memory block MEM\\[1\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem1(&mut self) -> Mem1W<ControlSpec> {
         Mem1W::new(self, 1)
     }
     #[doc = "Bit 2 - Keep the memory block MEM\\[2\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem2(&mut self) -> Mem2W<ControlSpec> {
         Mem2W::new(self, 2)
     }
     #[doc = "Bit 3 - Keep the memory block MEM\\[3\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem3(&mut self) -> Mem3W<ControlSpec> {
         Mem3W::new(self, 3)
     }
     #[doc = "Bit 4 - Keep the memory block MEM\\[4\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem4(&mut self) -> Mem4W<ControlSpec> {
         Mem4W::new(self, 4)
     }
     #[doc = "Bit 5 - Keep the memory block MEM\\[5\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem5(&mut self) -> Mem5W<ControlSpec> {
         Mem5W::new(self, 5)
     }
     #[doc = "Bit 6 - Keep the memory block MEM\\[6\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem6(&mut self) -> Mem6W<ControlSpec> {
         Mem6W::new(self, 6)
     }
     #[doc = "Bit 7 - Keep the memory block MEM\\[7\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem7(&mut self) -> Mem7W<ControlSpec> {
         Mem7W::new(self, 7)
     }
     #[doc = "Bit 8 - Keep the memory block MEM\\[8\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem8(&mut self) -> Mem8W<ControlSpec> {
         Mem8W::new(self, 8)
     }
     #[doc = "Bit 9 - Keep the memory block MEM\\[9\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem9(&mut self) -> Mem9W<ControlSpec> {
         Mem9W::new(self, 9)
     }
     #[doc = "Bit 10 - Keep the memory block MEM\\[10\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem10(&mut self) -> Mem10W<ControlSpec> {
         Mem10W::new(self, 10)
     }
     #[doc = "Bit 11 - Keep the memory block MEM\\[11\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem11(&mut self) -> Mem11W<ControlSpec> {
         Mem11W::new(self, 11)
     }
     #[doc = "Bit 12 - Keep the memory block MEM\\[12\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem12(&mut self) -> Mem12W<ControlSpec> {
         Mem12W::new(self, 12)
     }
     #[doc = "Bit 13 - Keep the memory block MEM\\[13\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem13(&mut self) -> Mem13W<ControlSpec> {
         Mem13W::new(self, 13)
     }
     #[doc = "Bit 14 - Keep the memory block MEM\\[14\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem14(&mut self) -> Mem14W<ControlSpec> {
         Mem14W::new(self, 14)
     }
     #[doc = "Bit 15 - Keep the memory block MEM\\[15\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem15(&mut self) -> Mem15W<ControlSpec> {
         Mem15W::new(self, 15)
     }
     #[doc = "Bit 16 - Keep the memory block MEM\\[16\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem16(&mut self) -> Mem16W<ControlSpec> {
         Mem16W::new(self, 16)
     }
     #[doc = "Bit 17 - Keep the memory block MEM\\[17\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem17(&mut self) -> Mem17W<ControlSpec> {
         Mem17W::new(self, 17)
     }
     #[doc = "Bit 18 - Keep the memory block MEM\\[18\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem18(&mut self) -> Mem18W<ControlSpec> {
         Mem18W::new(self, 18)
     }
     #[doc = "Bit 19 - Keep the memory block MEM\\[19\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem19(&mut self) -> Mem19W<ControlSpec> {
         Mem19W::new(self, 19)
     }
     #[doc = "Bit 20 - Keep the memory block MEM\\[20\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem20(&mut self) -> Mem20W<ControlSpec> {
         Mem20W::new(self, 20)
     }
     #[doc = "Bit 21 - Keep the memory block MEM\\[21\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem21(&mut self) -> Mem21W<ControlSpec> {
         Mem21W::new(self, 21)
     }
     #[doc = "Bit 22 - Keep the memory block MEM\\[22\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem22(&mut self) -> Mem22W<ControlSpec> {
         Mem22W::new(self, 22)
     }
     #[doc = "Bit 23 - Keep the memory block MEM\\[23\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem23(&mut self) -> Mem23W<ControlSpec> {
         Mem23W::new(self, 23)
     }
     #[doc = "Bit 24 - Keep the memory block MEM\\[24\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem24(&mut self) -> Mem24W<ControlSpec> {
         Mem24W::new(self, 24)
     }
     #[doc = "Bit 25 - Keep the memory block MEM\\[25\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem25(&mut self) -> Mem25W<ControlSpec> {
         Mem25W::new(self, 25)
     }
     #[doc = "Bit 26 - Keep the memory block MEM\\[26\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem26(&mut self) -> Mem26W<ControlSpec> {
         Mem26W::new(self, 26)
     }
     #[doc = "Bit 27 - Keep the memory block MEM\\[27\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem27(&mut self) -> Mem27W<ControlSpec> {
         Mem27W::new(self, 27)
     }
     #[doc = "Bit 28 - Keep the memory block MEM\\[28\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem28(&mut self) -> Mem28W<ControlSpec> {
         Mem28W::new(self, 28)
     }
     #[doc = "Bit 29 - Keep the memory block MEM\\[29\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem29(&mut self) -> Mem29W<ControlSpec> {
         Mem29W::new(self, 29)
     }
     #[doc = "Bit 30 - Keep the memory block MEM\\[30\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem30(&mut self) -> Mem30W<ControlSpec> {
         Mem30W::new(self, 30)
     }
     #[doc = "Bit 31 - Keep the memory block MEM\\[31\\]
 on or off when in System ON mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem31(&mut self) -> Mem31W<ControlSpec> {
         Mem31W::new(self, 31)
     }

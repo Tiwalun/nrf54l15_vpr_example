@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Repetition Test Count Cut-Off value."]
     #[inline(always)]
-    #[must_use]
     pub fn repeatthreshold(&mut self) -> RepeatthresholdW<RepeatthresholdSpec> {
         RepeatthresholdW::new(self, 0)
     }

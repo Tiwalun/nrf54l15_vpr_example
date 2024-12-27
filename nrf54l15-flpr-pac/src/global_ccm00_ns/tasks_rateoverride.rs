@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Override DATARATE setting in MODE register with the contents of the RATEOVERRIDE register for any ongoing encryption/decryption"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_rateoverride(&mut self) -> TasksRateoverrideW<TasksRateoverrideSpec> {
         TasksRateoverrideW::new(self, 0)
     }

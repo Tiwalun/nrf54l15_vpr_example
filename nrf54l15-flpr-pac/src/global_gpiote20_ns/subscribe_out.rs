@@ -78,13 +78,11 @@ impl W {
     #[doc = "Bits 0:7 - DPPI channel that task OUT\\[n\\]
 will subscribe to"]
     #[inline(always)]
-    #[must_use]
     pub fn chidx(&mut self) -> ChidxW<SubscribeOutSpec> {
         ChidxW::new(self, 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<SubscribeOutSpec> {
         EnW::new(self, 31)
     }

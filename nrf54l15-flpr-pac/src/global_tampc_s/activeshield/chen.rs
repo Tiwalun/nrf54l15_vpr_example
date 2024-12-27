@@ -239,25 +239,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable active shield channel 0."]
     #[inline(always)]
-    #[must_use]
     pub fn ch_0(&mut self) -> Ch0W<ChenSpec> {
         Ch0W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable active shield channel 1."]
     #[inline(always)]
-    #[must_use]
     pub fn ch_1(&mut self) -> Ch1W<ChenSpec> {
         Ch1W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable or disable active shield channel 2."]
     #[inline(always)]
-    #[must_use]
     pub fn ch_2(&mut self) -> Ch2W<ChenSpec> {
         Ch2W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable or disable active shield channel 3."]
     #[inline(always)]
-    #[must_use]
     pub fn ch_3(&mut self) -> Ch3W<ChenSpec> {
         Ch3W::new(self, 3)
     }

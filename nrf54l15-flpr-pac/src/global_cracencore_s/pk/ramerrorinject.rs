@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Bit position of first error"]
     #[inline(always)]
-    #[must_use]
     pub fn biterror1(&mut self) -> Biterror1W<RamerrorinjectSpec> {
         Biterror1W::new(self, 0)
     }
     #[doc = "Bits 16:25 - Bit position of second error"]
     #[inline(always)]
-    #[must_use]
     pub fn biterror2(&mut self) -> Biterror2W<RamerrorinjectSpec> {
         Biterror2W::new(self, 16)
     }

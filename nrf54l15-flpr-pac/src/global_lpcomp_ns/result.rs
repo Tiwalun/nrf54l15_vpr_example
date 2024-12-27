@@ -3,9 +3,9 @@ pub type R = crate::R<ResultSpec>;
 #[doc = "Result of last compare. Decision point SAMPLE task.\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Result {
-    #[doc = "0: Input voltage is below the reference threshold (VIN+ &amp;lt; VIN-)"]
+    #[doc = "0: Input voltage is below the reference threshold (VIN+ &lt; VIN-)"]
     Below = 0,
-    #[doc = "1: Input voltage is above the reference threshold (VIN+ &amp;gt; VIN-)"]
+    #[doc = "1: Input voltage is above the reference threshold (VIN+ &gt; VIN-)"]
     Above = 1,
 }
 impl From<Result> for bool {
@@ -25,12 +25,12 @@ impl ResultR {
             true => Result::Above,
         }
     }
-    #[doc = "Input voltage is below the reference threshold (VIN+ &amp;lt; VIN-)"]
+    #[doc = "Input voltage is below the reference threshold (VIN+ &lt; VIN-)"]
     #[inline(always)]
     pub fn is_below(&self) -> bool {
         *self == Result::Below
     }
-    #[doc = "Input voltage is above the reference threshold (VIN+ &amp;gt; VIN-)"]
+    #[doc = "Input voltage is above the reference threshold (VIN+ &gt; VIN-)"]
     #[inline(always)]
     pub fn is_above(&self) -> bool {
         *self == Result::Above

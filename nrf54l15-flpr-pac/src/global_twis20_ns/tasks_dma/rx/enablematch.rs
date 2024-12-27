@@ -33,7 +33,6 @@ impl W {
 event by setting the ENABLE\\[n\\]
 bit in the CONFIG register."]
     #[inline(always)]
-    #[must_use]
     pub fn enablematch(&mut self) -> EnablematchW<EnablematchSpec> {
         EnablematchW::new(self, 0)
     }

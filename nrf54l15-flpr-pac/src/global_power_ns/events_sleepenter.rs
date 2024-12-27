@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CPU entered WFI/WFE sleep"]
     #[inline(always)]
-    #[must_use]
     pub fn events_sleepenter(&mut self) -> EventsSleepenterW<EventsSleepenterSpec> {
         EventsSleepenterW::new(self, 0)
     }

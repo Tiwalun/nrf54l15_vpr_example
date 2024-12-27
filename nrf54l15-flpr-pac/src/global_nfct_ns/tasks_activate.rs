@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Activate NFCT peripheral for incoming and outgoing frames, change state to activated"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_activate(&mut self) -> TasksActivateW<TasksActivateSpec> {
         TasksActivateW::new(self, 0)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - Units 62.5 ppb. Max range +/-100 ppm plus margin."]
     #[inline(always)]
-    #[must_use]
     pub fn fffin(&mut self) -> FffinW<FfoinSpec> {
         FffinW::new(self, 0)
     }

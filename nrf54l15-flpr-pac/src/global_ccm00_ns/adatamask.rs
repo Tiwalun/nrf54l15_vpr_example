@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - CCM adata mask."]
     #[inline(always)]
-    #[must_use]
     pub fn adatamask(&mut self) -> AdatamaskW<AdatamaskSpec> {
         AdatamaskW::new(self, 0)
     }

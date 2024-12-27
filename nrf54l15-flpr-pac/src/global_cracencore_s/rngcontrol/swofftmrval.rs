@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Number of clk cycles to wait before stopping the rings after the FIFO is full."]
     #[inline(always)]
-    #[must_use]
     pub fn swofftmrval(&mut self) -> SwofftmrvalW<SwofftmrvalSpec> {
         SwofftmrvalW::new(self, 0)
     }

@@ -297,31 +297,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Shortcut between event READY and task SAMPLE"]
     #[inline(always)]
-    #[must_use]
     pub fn ready_sample(&mut self) -> ReadySampleW<ShortsSpec> {
         ReadySampleW::new(self, 0)
     }
     #[doc = "Bit 1 - Shortcut between event READY and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn ready_stop(&mut self) -> ReadyStopW<ShortsSpec> {
         ReadyStopW::new(self, 1)
     }
     #[doc = "Bit 2 - Shortcut between event DOWN and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn down_stop(&mut self) -> DownStopW<ShortsSpec> {
         DownStopW::new(self, 2)
     }
     #[doc = "Bit 3 - Shortcut between event UP and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn up_stop(&mut self) -> UpStopW<ShortsSpec> {
         UpStopW::new(self, 3)
     }
     #[doc = "Bit 4 - Shortcut between event CROSS and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn cross_stop(&mut self) -> CrossStopW<ShortsSpec> {
         CrossStopW::new(self, 4)
     }

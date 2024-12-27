@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RADIO has ramped up and is ready to be started"]
     #[inline(always)]
-    #[must_use]
     pub fn events_ready(&mut self) -> EventsReadyW<EventsReadySpec> {
         EventsReadyW::new(self, 0)
     }

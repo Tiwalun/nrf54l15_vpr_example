@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Ready to accept a new write operation"]
     #[inline(always)]
-    #[must_use]
     pub fn events_readynext(&mut self) -> EventsReadynextW<EventsReadynextSpec> {
         EventsReadynextW::new(self, 0)
     }

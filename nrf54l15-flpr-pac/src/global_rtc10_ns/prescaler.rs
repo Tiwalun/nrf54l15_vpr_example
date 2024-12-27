@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - Prescaler value"]
     #[inline(always)]
-    #[must_use]
     pub fn prescaler(&mut self) -> PrescalerW<PrescalerSpec> {
         PrescalerW::new(self, 0)
     }

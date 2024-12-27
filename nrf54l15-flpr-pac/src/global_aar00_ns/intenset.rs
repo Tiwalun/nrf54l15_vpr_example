@@ -267,25 +267,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to enable interrupt for event END"]
     #[inline(always)]
-    #[must_use]
     pub fn end(&mut self) -> EndW<IntensetSpec> {
         EndW::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to enable interrupt for event RESOLVED"]
     #[inline(always)]
-    #[must_use]
     pub fn resolved(&mut self) -> ResolvedW<IntensetSpec> {
         ResolvedW::new(self, 1)
     }
     #[doc = "Bit 2 - Write '1' to enable interrupt for event NOTRESOLVED"]
     #[inline(always)]
-    #[must_use]
     pub fn notresolved(&mut self) -> NotresolvedW<IntensetSpec> {
         NotresolvedW::new(self, 2)
     }
     #[doc = "Bit 3 - Write '1' to enable interrupt for event ERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn error(&mut self) -> ErrorW<IntensetSpec> {
         ErrorW::new(self, 3)
     }

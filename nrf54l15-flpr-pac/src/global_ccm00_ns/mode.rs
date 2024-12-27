@@ -8,9 +8,9 @@ pub type W = crate::W<ModeSpec>;
 pub enum Mode {
     #[doc = "0: AES CCM packet encryption mode"]
     Encryption = 0,
-    #[doc = "1: AES CCM packet decryption mode"]
+    #[doc = "1: Deprecated enumerator - This mode will run CCM decryption in the speed of the DATARATE field."]
     Decryption = 1,
-    #[doc = "2: AES fast decrypt mode. This mode will run CCM decryption as fast as possible, i.e. not locked to a radio data rate. This can be used when a packet has been completely received."]
+    #[doc = "2: AES CCM decryption mode."]
     FastDecryption = 2,
 }
 impl From<Mode> for u8 {
@@ -41,12 +41,12 @@ impl ModeR {
     pub fn is_encryption(&self) -> bool {
         *self == Mode::Encryption
     }
-    #[doc = "AES CCM packet decryption mode"]
+    #[doc = "Deprecated enumerator - This mode will run CCM decryption in the speed of the DATARATE field."]
     #[inline(always)]
     pub fn is_decryption(&self) -> bool {
         *self == Mode::Decryption
     }
-    #[doc = "AES fast decrypt mode. This mode will run CCM decryption as fast as possible, i.e. not locked to a radio data rate. This can be used when a packet has been completely received."]
+    #[doc = "AES CCM decryption mode."]
     #[inline(always)]
     pub fn is_fast_decryption(&self) -> bool {
         *self == Mode::FastDecryption
@@ -64,12 +64,12 @@ where
     pub fn encryption(self) -> &'a mut crate::W<REG> {
         self.variant(Mode::Encryption)
     }
-    #[doc = "AES CCM packet decryption mode"]
+    #[doc = "Deprecated enumerator - This mode will run CCM decryption in the speed of the DATARATE field."]
     #[inline(always)]
     pub fn decryption(self) -> &'a mut crate::W<REG> {
         self.variant(Mode::Decryption)
     }
-    #[doc = "AES fast decrypt mode. This mode will run CCM decryption as fast as possible, i.e. not locked to a radio data rate. This can be used when a packet has been completely received."]
+    #[doc = "AES CCM decryption mode."]
     #[inline(always)]
     pub fn fast_decryption(self) -> &'a mut crate::W<REG> {
         self.variant(Mode::FastDecryption)
@@ -410,25 +410,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - The mode of operation to be used. The settings in this register apply when the CRYPT task is triggered."]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> ModeW<ModeSpec> {
         ModeW::new(self, 0)
     }
     #[doc = "Bits 8:9 - Protocol and packet format selection"]
     #[inline(always)]
-    #[must_use]
     pub fn protocol(&mut self) -> ProtocolW<ModeSpec> {
         ProtocolW::new(self, 8)
     }
     #[doc = "Bits 16:18 - Radio data rate that the CCM shall run synchronous with"]
     #[inline(always)]
-    #[must_use]
     pub fn datarate(&mut self) -> DatarateW<ModeSpec> {
         DatarateW::new(self, 16)
     }
     #[doc = "Bits 24:26 - CCM MAC length (bytes)"]
     #[inline(always)]
-    #[must_use]
     pub fn maclen(&mut self) -> MaclenW<ModeSpec> {
         MaclenW::new(self, 24)
     }

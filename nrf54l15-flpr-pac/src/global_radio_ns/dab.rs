@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Device address base segment n"]
     #[inline(always)]
-    #[must_use]
     pub fn dab(&mut self) -> DabW<DabSpec> {
         DabW::new(self, 0)
     }

@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Take one ADC sample, if scan is enabled all channels are sampled. This task requires that SAADC has started, i.e. EVENTS_STARTED was set and EVENTS_STOPPED was not."]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_sample(&mut self) -> TasksSampleW<TasksSampleSpec> {
         TasksSampleW::new(self, 0)
     }

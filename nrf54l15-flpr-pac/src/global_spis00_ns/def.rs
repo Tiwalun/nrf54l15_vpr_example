@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Default character. Character clocked out in case of an ignored transaction."]
     #[inline(always)]
-    #[must_use]
     pub fn def(&mut self) -> DefW<DefSpec> {
         DefW::new(self, 0)
     }

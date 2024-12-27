@@ -43,25 +43,21 @@ impl R {
 impl W {
     #[doc = "Bits 0:27"]
     #[inline(always)]
-    #[must_use]
     pub fn pushlen(&mut self) -> PushlenW<PushlenSpec> {
         PushlenW::new(self, 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    #[must_use]
     pub fn pushcstaddr(&mut self) -> PushcstaddrW<PushlenSpec> {
         PushcstaddrW::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
     pub fn pushrealign(&mut self) -> PushrealignW<PushlenSpec> {
         PushrealignW::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
     pub fn pushdiscard(&mut self) -> PushdiscardW<PushlenSpec> {
         PushdiscardW::new(self, 30)
     }

@@ -364,43 +364,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Read access"]
     #[inline(always)]
-    #[must_use]
     pub fn read(&mut self) -> ReadW<BootconfSpec> {
         ReadW::new(self, 0)
     }
     #[doc = "Bit 1 - Write access"]
     #[inline(always)]
-    #[must_use]
     pub fn write(&mut self) -> WriteW<BootconfSpec> {
         WriteW::new(self, 1)
     }
     #[doc = "Bit 2 - Execute access"]
     #[inline(always)]
-    #[must_use]
     pub fn execute(&mut self) -> ExecuteW<BootconfSpec> {
         ExecuteW::new(self, 2)
     }
     #[doc = "Bit 3 - Secure access"]
     #[inline(always)]
-    #[must_use]
     pub fn secure(&mut self) -> SecureW<BootconfSpec> {
         SecureW::new(self, 3)
     }
     #[doc = "Bit 12 - Write-once"]
     #[inline(always)]
-    #[must_use]
     pub fn writeonce(&mut self) -> WriteonceW<BootconfSpec> {
         WriteonceW::new(self, 12)
     }
     #[doc = "Bit 13 - Enable lock of configuration register"]
     #[inline(always)]
-    #[must_use]
     pub fn lock(&mut self) -> LockW<BootconfSpec> {
         LockW::new(self, 13)
     }
     #[doc = "Bits 16:20 - Immutable boot region size"]
     #[inline(always)]
-    #[must_use]
     pub fn size(&mut self) -> SizeW<BootconfSpec> {
         SizeW::new(self, 16)
     }

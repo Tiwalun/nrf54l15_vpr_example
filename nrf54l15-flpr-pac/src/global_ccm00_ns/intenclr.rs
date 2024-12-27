@@ -137,13 +137,11 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Write '1' to disable interrupt for event END"]
     #[inline(always)]
-    #[must_use]
     pub fn end(&mut self) -> EndW<IntenclrSpec> {
         EndW::new(self, 1)
     }
     #[doc = "Bit 2 - Write '1' to disable interrupt for event ERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn error(&mut self) -> ErrorW<IntenclrSpec> {
         ErrorW::new(self, 2)
     }

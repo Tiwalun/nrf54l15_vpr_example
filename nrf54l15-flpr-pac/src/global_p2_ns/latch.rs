@@ -1863,193 +1863,161 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Status on whether PIN0 has met criteria set in PIN_CNF\\[0\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin0(&mut self) -> Pin0W<LatchSpec> {
         Pin0W::new(self, 0)
     }
     #[doc = "Bit 1 - Status on whether PIN1 has met criteria set in PIN_CNF\\[1\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin1(&mut self) -> Pin1W<LatchSpec> {
         Pin1W::new(self, 1)
     }
     #[doc = "Bit 2 - Status on whether PIN2 has met criteria set in PIN_CNF\\[2\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin2(&mut self) -> Pin2W<LatchSpec> {
         Pin2W::new(self, 2)
     }
     #[doc = "Bit 3 - Status on whether PIN3 has met criteria set in PIN_CNF\\[3\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin3(&mut self) -> Pin3W<LatchSpec> {
         Pin3W::new(self, 3)
     }
     #[doc = "Bit 4 - Status on whether PIN4 has met criteria set in PIN_CNF\\[4\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin4(&mut self) -> Pin4W<LatchSpec> {
         Pin4W::new(self, 4)
     }
     #[doc = "Bit 5 - Status on whether PIN5 has met criteria set in PIN_CNF\\[5\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin5(&mut self) -> Pin5W<LatchSpec> {
         Pin5W::new(self, 5)
     }
     #[doc = "Bit 6 - Status on whether PIN6 has met criteria set in PIN_CNF\\[6\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin6(&mut self) -> Pin6W<LatchSpec> {
         Pin6W::new(self, 6)
     }
     #[doc = "Bit 7 - Status on whether PIN7 has met criteria set in PIN_CNF\\[7\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin7(&mut self) -> Pin7W<LatchSpec> {
         Pin7W::new(self, 7)
     }
     #[doc = "Bit 8 - Status on whether PIN8 has met criteria set in PIN_CNF\\[8\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin8(&mut self) -> Pin8W<LatchSpec> {
         Pin8W::new(self, 8)
     }
     #[doc = "Bit 9 - Status on whether PIN9 has met criteria set in PIN_CNF\\[9\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin9(&mut self) -> Pin9W<LatchSpec> {
         Pin9W::new(self, 9)
     }
     #[doc = "Bit 10 - Status on whether PIN10 has met criteria set in PIN_CNF\\[10\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin10(&mut self) -> Pin10W<LatchSpec> {
         Pin10W::new(self, 10)
     }
     #[doc = "Bit 11 - Status on whether PIN11 has met criteria set in PIN_CNF\\[11\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin11(&mut self) -> Pin11W<LatchSpec> {
         Pin11W::new(self, 11)
     }
     #[doc = "Bit 12 - Status on whether PIN12 has met criteria set in PIN_CNF\\[12\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin12(&mut self) -> Pin12W<LatchSpec> {
         Pin12W::new(self, 12)
     }
     #[doc = "Bit 13 - Status on whether PIN13 has met criteria set in PIN_CNF\\[13\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin13(&mut self) -> Pin13W<LatchSpec> {
         Pin13W::new(self, 13)
     }
     #[doc = "Bit 14 - Status on whether PIN14 has met criteria set in PIN_CNF\\[14\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin14(&mut self) -> Pin14W<LatchSpec> {
         Pin14W::new(self, 14)
     }
     #[doc = "Bit 15 - Status on whether PIN15 has met criteria set in PIN_CNF\\[15\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin15(&mut self) -> Pin15W<LatchSpec> {
         Pin15W::new(self, 15)
     }
     #[doc = "Bit 16 - Status on whether PIN16 has met criteria set in PIN_CNF\\[16\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin16(&mut self) -> Pin16W<LatchSpec> {
         Pin16W::new(self, 16)
     }
     #[doc = "Bit 17 - Status on whether PIN17 has met criteria set in PIN_CNF\\[17\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin17(&mut self) -> Pin17W<LatchSpec> {
         Pin17W::new(self, 17)
     }
     #[doc = "Bit 18 - Status on whether PIN18 has met criteria set in PIN_CNF\\[18\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin18(&mut self) -> Pin18W<LatchSpec> {
         Pin18W::new(self, 18)
     }
     #[doc = "Bit 19 - Status on whether PIN19 has met criteria set in PIN_CNF\\[19\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin19(&mut self) -> Pin19W<LatchSpec> {
         Pin19W::new(self, 19)
     }
     #[doc = "Bit 20 - Status on whether PIN20 has met criteria set in PIN_CNF\\[20\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin20(&mut self) -> Pin20W<LatchSpec> {
         Pin20W::new(self, 20)
     }
     #[doc = "Bit 21 - Status on whether PIN21 has met criteria set in PIN_CNF\\[21\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin21(&mut self) -> Pin21W<LatchSpec> {
         Pin21W::new(self, 21)
     }
     #[doc = "Bit 22 - Status on whether PIN22 has met criteria set in PIN_CNF\\[22\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin22(&mut self) -> Pin22W<LatchSpec> {
         Pin22W::new(self, 22)
     }
     #[doc = "Bit 23 - Status on whether PIN23 has met criteria set in PIN_CNF\\[23\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin23(&mut self) -> Pin23W<LatchSpec> {
         Pin23W::new(self, 23)
     }
     #[doc = "Bit 24 - Status on whether PIN24 has met criteria set in PIN_CNF\\[24\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin24(&mut self) -> Pin24W<LatchSpec> {
         Pin24W::new(self, 24)
     }
     #[doc = "Bit 25 - Status on whether PIN25 has met criteria set in PIN_CNF\\[25\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin25(&mut self) -> Pin25W<LatchSpec> {
         Pin25W::new(self, 25)
     }
     #[doc = "Bit 26 - Status on whether PIN26 has met criteria set in PIN_CNF\\[26\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin26(&mut self) -> Pin26W<LatchSpec> {
         Pin26W::new(self, 26)
     }
     #[doc = "Bit 27 - Status on whether PIN27 has met criteria set in PIN_CNF\\[27\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin27(&mut self) -> Pin27W<LatchSpec> {
         Pin27W::new(self, 27)
     }
     #[doc = "Bit 28 - Status on whether PIN28 has met criteria set in PIN_CNF\\[28\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin28(&mut self) -> Pin28W<LatchSpec> {
         Pin28W::new(self, 28)
     }
     #[doc = "Bit 29 - Status on whether PIN29 has met criteria set in PIN_CNF\\[29\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin29(&mut self) -> Pin29W<LatchSpec> {
         Pin29W::new(self, 29)
     }
     #[doc = "Bit 30 - Status on whether PIN30 has met criteria set in PIN_CNF\\[30\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin30(&mut self) -> Pin30W<LatchSpec> {
         Pin30W::new(self, 30)
     }
     #[doc = "Bit 31 - Status on whether PIN31 has met criteria set in PIN_CNF\\[31\\].SENSE register. Write '1' to clear."]
     #[inline(always)]
-    #[must_use]
     pub fn pin31(&mut self) -> Pin31W<LatchSpec> {
         Pin31W::new(self, 31)
     }

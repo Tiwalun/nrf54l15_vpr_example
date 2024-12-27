@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Crystal load capacitor as seen by the crystal across its terminals, including pin capacitance but excluding PCB stray capacitance."]
     #[inline(always)]
-    #[must_use]
     pub fn val(&mut self) -> ValW<IntcapSpec> {
         ValW::new(self, 0)
     }

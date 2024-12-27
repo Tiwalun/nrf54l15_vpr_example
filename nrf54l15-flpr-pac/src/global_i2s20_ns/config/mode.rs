@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - I2S mode"]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> ModeW<ModeSpec> {
         ModeW::new(self, 0)
     }

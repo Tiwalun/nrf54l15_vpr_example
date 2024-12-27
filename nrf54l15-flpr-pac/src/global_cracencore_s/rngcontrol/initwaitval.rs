@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Number of clock cycles to wait before sampling data from the noise source."]
     #[inline(always)]
-    #[must_use]
     pub fn initwaitval(&mut self) -> InitwaitvalW<InitwaitvalSpec> {
         InitwaitvalW::new(self, 0)
     }

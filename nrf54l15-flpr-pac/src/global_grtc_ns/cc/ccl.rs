@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Capture/Compare low value in 1 us"]
     #[inline(always)]
-    #[must_use]
     pub fn ccl(&mut self) -> CclW<CclSpec> {
         CclW::new(self, 0)
     }

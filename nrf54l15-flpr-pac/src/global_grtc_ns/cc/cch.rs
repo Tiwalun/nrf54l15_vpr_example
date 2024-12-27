@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:19 - Capture/Compare high value in 1 us"]
     #[inline(always)]
-    #[must_use]
     pub fn cch(&mut self) -> CchW<CchSpec> {
         CchW::new(self, 0)
     }

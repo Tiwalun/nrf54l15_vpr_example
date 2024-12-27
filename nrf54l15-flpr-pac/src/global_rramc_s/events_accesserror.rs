@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RRAM access error"]
     #[inline(always)]
-    #[must_use]
     pub fn events_accesserror(&mut self) -> EventsAccesserrorW<EventsAccesserrorSpec> {
         EventsAccesserrorW::new(self, 0)
     }

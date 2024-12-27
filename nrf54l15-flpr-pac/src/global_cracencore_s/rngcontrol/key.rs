@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Key register."]
     #[inline(always)]
-    #[must_use]
     pub fn key(&mut self) -> KeyW<KeySpec> {
         KeyW::new(self, 0)
     }

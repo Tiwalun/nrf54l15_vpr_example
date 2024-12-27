@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Set counter to 0xFFFFF0"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_trigovrflw(&mut self) -> TasksTrigovrflwW<TasksTrigovrflwSpec> {
         TasksTrigovrflwW::new(self, 0)
     }

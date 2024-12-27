@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Task for writing to pin specified in CONFIG\\[n\\].PSEL. Action on pin is to set it low."]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_clr(&mut self) -> TasksClrW<TasksClrSpec> {
         TasksClrW::new(self, 0)
     }

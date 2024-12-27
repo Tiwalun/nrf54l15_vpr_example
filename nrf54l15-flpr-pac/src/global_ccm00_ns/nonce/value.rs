@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - NONCE value, bits (32*(n+1))-1 : (32*n)"]
     #[inline(always)]
-    #[must_use]
     pub fn value(&mut self) -> ValueW<ValueSpec> {
         ValueW::new(self, 0)
     }

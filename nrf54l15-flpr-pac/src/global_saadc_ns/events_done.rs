@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - A conversion task has been completed. Depending on the mode, multiple conversions might be needed for a result to be transferred to RAM."]
     #[inline(always)]
-    #[must_use]
     pub fn events_done(&mut self) -> EventsDoneW<EventsDoneSpec> {
         EventsDoneW::new(self, 0)
     }

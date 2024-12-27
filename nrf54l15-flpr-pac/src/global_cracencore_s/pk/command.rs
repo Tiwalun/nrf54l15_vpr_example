@@ -334,73 +334,61 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - This field defines the operation to be performed."]
     #[inline(always)]
-    #[must_use]
     pub fn opeaddr(&mut self) -> OpeaddrW<CommandSpec> {
         OpeaddrW::new(self, 0)
     }
     #[doc = "Bit 7 - 0: Field is GF(p) 1: Field is GF(2**m)"]
     #[inline(always)]
-    #[must_use]
     pub fn fieldf(&mut self) -> FieldfW<CommandSpec> {
         FieldfW::new(self, 7)
     }
     #[doc = "Bits 8:17 - This field defines the size (= number of bytes minus one) of the operands for the current operation."]
     #[inline(always)]
-    #[must_use]
     pub fn opbytesm1(&mut self) -> Opbytesm1W<CommandSpec> {
         Opbytesm1W::new(self, 8)
     }
     #[doc = "Bit 19 - Enable randomization of modulus (counter-measure)."]
     #[inline(always)]
-    #[must_use]
     pub fn randmod(&mut self) -> RandmodW<CommandSpec> {
         RandmodW::new(self, 19)
     }
     #[doc = "Bits 20:22 - Enable accelerator for specific curve modulus:"]
     #[inline(always)]
-    #[must_use]
     pub fn selcurve(&mut self) -> SelcurveW<CommandSpec> {
         SelcurveW::new(self, 20)
     }
     #[doc = "Bit 24 - Enable randomization of exponent/scalar (counter-measure)."]
     #[inline(always)]
-    #[must_use]
     pub fn randke(&mut self) -> RandkeW<CommandSpec> {
         RandkeW::new(self, 24)
     }
     #[doc = "Bit 25 - Enable randomization of projective coordinates (counter-measure)."]
     #[inline(always)]
-    #[must_use]
     pub fn randproj(&mut self) -> RandprojW<CommandSpec> {
         RandprojW::new(self, 25)
     }
     #[doc = "Bit 26 - Enable Edwards curve."]
     #[inline(always)]
-    #[must_use]
     pub fn edwards(&mut self) -> EdwardsW<CommandSpec> {
         EdwardsW::new(self, 26)
     }
     #[doc = "Bit 28 - Swap the bytes on AHB interface:"]
     #[inline(always)]
-    #[must_use]
     pub fn swapbytes(&mut self) -> SwapbytesW<CommandSpec> {
         SwapbytesW::new(self, 28)
     }
     #[doc = "Bit 29 - Flag A."]
     #[inline(always)]
-    #[must_use]
     pub fn flaga(&mut self) -> FlagaW<CommandSpec> {
         FlagaW::new(self, 29)
     }
     #[doc = "Bit 30 - Flag B."]
     #[inline(always)]
-    #[must_use]
     pub fn flagb(&mut self) -> FlagbW<CommandSpec> {
         FlagbW::new(self, 30)
     }
     #[doc = "Bit 31 - This bit indicates if the IP has to calculate R**2 mod N for the next operation."]
     #[inline(always)]
-    #[must_use]
     pub fn calcr2(&mut self) -> Calcr2W<CommandSpec> {
         Calcr2W::new(self, 31)
     }

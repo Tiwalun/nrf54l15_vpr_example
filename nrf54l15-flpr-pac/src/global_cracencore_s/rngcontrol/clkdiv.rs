@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Sample clock divider."]
     #[inline(always)]
-    #[must_use]
     pub fn clkdiv(&mut self) -> ClkdivW<ClkdivSpec> {
         ClkdivW::new(self, 0)
     }

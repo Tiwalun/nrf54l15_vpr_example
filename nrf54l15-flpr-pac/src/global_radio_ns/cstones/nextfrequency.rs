@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - Frequency = 2400 + FREQUENCY (MHz)"]
     #[inline(always)]
-    #[must_use]
     pub fn nextfrequency(&mut self) -> NextfrequencyW<NextfrequencySpec> {
         NextfrequencyW::new(self, 0)
     }

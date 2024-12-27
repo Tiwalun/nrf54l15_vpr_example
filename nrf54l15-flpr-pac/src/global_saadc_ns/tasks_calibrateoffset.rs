@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Starts offset auto-calibration"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_calibrateoffset(&mut self) -> TasksCalibrateoffsetW<TasksCalibrateoffsetSpec> {
         TasksCalibrateoffsetW::new(self, 0)
     }

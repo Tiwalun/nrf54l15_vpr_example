@@ -70,7 +70,6 @@ impl W {
     #[doc = "Bit 0 - VPR event \\[n\\]
 register"]
     #[inline(always)]
-    #[must_use]
     pub fn events_triggered(&mut self) -> EventsTriggeredW<EventsTriggeredSpec> {
         EventsTriggeredW::new(self, 0)
     }

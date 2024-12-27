@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - HFXO tuning is done. XOTUNED is generated after TASKS_XOSTART or after TASKS_XOTUNE has completed"]
     #[inline(always)]
-    #[must_use]
     pub fn events_xotuned(&mut self) -> EventsXotunedW<EventsXotunedSpec> {
         EventsXotunedW::new(self, 0)
     }

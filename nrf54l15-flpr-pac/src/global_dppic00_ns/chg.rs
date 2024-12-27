@@ -1399,145 +1399,121 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Include or exclude channel 0"]
     #[inline(always)]
-    #[must_use]
     pub fn ch0(&mut self) -> Ch0W<ChgSpec> {
         Ch0W::new(self, 0)
     }
     #[doc = "Bit 1 - Include or exclude channel 1"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1(&mut self) -> Ch1W<ChgSpec> {
         Ch1W::new(self, 1)
     }
     #[doc = "Bit 2 - Include or exclude channel 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ch2(&mut self) -> Ch2W<ChgSpec> {
         Ch2W::new(self, 2)
     }
     #[doc = "Bit 3 - Include or exclude channel 3"]
     #[inline(always)]
-    #[must_use]
     pub fn ch3(&mut self) -> Ch3W<ChgSpec> {
         Ch3W::new(self, 3)
     }
     #[doc = "Bit 4 - Include or exclude channel 4"]
     #[inline(always)]
-    #[must_use]
     pub fn ch4(&mut self) -> Ch4W<ChgSpec> {
         Ch4W::new(self, 4)
     }
     #[doc = "Bit 5 - Include or exclude channel 5"]
     #[inline(always)]
-    #[must_use]
     pub fn ch5(&mut self) -> Ch5W<ChgSpec> {
         Ch5W::new(self, 5)
     }
     #[doc = "Bit 6 - Include or exclude channel 6"]
     #[inline(always)]
-    #[must_use]
     pub fn ch6(&mut self) -> Ch6W<ChgSpec> {
         Ch6W::new(self, 6)
     }
     #[doc = "Bit 7 - Include or exclude channel 7"]
     #[inline(always)]
-    #[must_use]
     pub fn ch7(&mut self) -> Ch7W<ChgSpec> {
         Ch7W::new(self, 7)
     }
     #[doc = "Bit 8 - Include or exclude channel 8"]
     #[inline(always)]
-    #[must_use]
     pub fn ch8(&mut self) -> Ch8W<ChgSpec> {
         Ch8W::new(self, 8)
     }
     #[doc = "Bit 9 - Include or exclude channel 9"]
     #[inline(always)]
-    #[must_use]
     pub fn ch9(&mut self) -> Ch9W<ChgSpec> {
         Ch9W::new(self, 9)
     }
     #[doc = "Bit 10 - Include or exclude channel 10"]
     #[inline(always)]
-    #[must_use]
     pub fn ch10(&mut self) -> Ch10W<ChgSpec> {
         Ch10W::new(self, 10)
     }
     #[doc = "Bit 11 - Include or exclude channel 11"]
     #[inline(always)]
-    #[must_use]
     pub fn ch11(&mut self) -> Ch11W<ChgSpec> {
         Ch11W::new(self, 11)
     }
     #[doc = "Bit 12 - Include or exclude channel 12"]
     #[inline(always)]
-    #[must_use]
     pub fn ch12(&mut self) -> Ch12W<ChgSpec> {
         Ch12W::new(self, 12)
     }
     #[doc = "Bit 13 - Include or exclude channel 13"]
     #[inline(always)]
-    #[must_use]
     pub fn ch13(&mut self) -> Ch13W<ChgSpec> {
         Ch13W::new(self, 13)
     }
     #[doc = "Bit 14 - Include or exclude channel 14"]
     #[inline(always)]
-    #[must_use]
     pub fn ch14(&mut self) -> Ch14W<ChgSpec> {
         Ch14W::new(self, 14)
     }
     #[doc = "Bit 15 - Include or exclude channel 15"]
     #[inline(always)]
-    #[must_use]
     pub fn ch15(&mut self) -> Ch15W<ChgSpec> {
         Ch15W::new(self, 15)
     }
     #[doc = "Bit 16 - Include or exclude channel 16"]
     #[inline(always)]
-    #[must_use]
     pub fn ch16(&mut self) -> Ch16W<ChgSpec> {
         Ch16W::new(self, 16)
     }
     #[doc = "Bit 17 - Include or exclude channel 17"]
     #[inline(always)]
-    #[must_use]
     pub fn ch17(&mut self) -> Ch17W<ChgSpec> {
         Ch17W::new(self, 17)
     }
     #[doc = "Bit 18 - Include or exclude channel 18"]
     #[inline(always)]
-    #[must_use]
     pub fn ch18(&mut self) -> Ch18W<ChgSpec> {
         Ch18W::new(self, 18)
     }
     #[doc = "Bit 19 - Include or exclude channel 19"]
     #[inline(always)]
-    #[must_use]
     pub fn ch19(&mut self) -> Ch19W<ChgSpec> {
         Ch19W::new(self, 19)
     }
     #[doc = "Bit 20 - Include or exclude channel 20"]
     #[inline(always)]
-    #[must_use]
     pub fn ch20(&mut self) -> Ch20W<ChgSpec> {
         Ch20W::new(self, 20)
     }
     #[doc = "Bit 21 - Include or exclude channel 21"]
     #[inline(always)]
-    #[must_use]
     pub fn ch21(&mut self) -> Ch21W<ChgSpec> {
         Ch21W::new(self, 21)
     }
     #[doc = "Bit 22 - Include or exclude channel 22"]
     #[inline(always)]
-    #[must_use]
     pub fn ch22(&mut self) -> Ch22W<ChgSpec> {
         Ch22W::new(self, 22)
     }
     #[doc = "Bit 23 - Include or exclude channel 23"]
     #[inline(always)]
-    #[must_use]
     pub fn ch23(&mut self) -> Ch23W<ChgSpec> {
         Ch23W::new(self, 23)
     }

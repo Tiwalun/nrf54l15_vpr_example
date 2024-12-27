@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Device UUID \\[n\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn uuid(&mut self) -> UuidW<UuidSpec> {
         UuidW::new(self, 0)
     }

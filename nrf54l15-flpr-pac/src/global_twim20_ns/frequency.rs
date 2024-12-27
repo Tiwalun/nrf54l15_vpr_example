@@ -85,7 +85,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - TWI master clock frequency"]
     #[inline(always)]
-    #[must_use]
     pub fn frequency(&mut self) -> FrequencyW<FrequencySpec> {
         FrequencyW::new(self, 0)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The last bit is sent on air or last bit is received"]
     #[inline(always)]
-    #[must_use]
     pub fn events_phyend(&mut self) -> EventsPhyendW<EventsPhyendSpec> {
         EventsPhyendW::new(self, 0)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Interframe spacing in us. Interframe space is the time interval between two consecutive packets. It is defined as the time, in microseconds, from the end of the last bit of the previous packet to the start of the first bit of the subsequent packet."]
     #[inline(always)]
-    #[must_use]
     pub fn tifs(&mut self) -> TifsW<TifsSpec> {
         TifsW::new(self, 0)
     }

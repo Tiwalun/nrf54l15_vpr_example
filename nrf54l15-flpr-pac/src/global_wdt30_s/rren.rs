@@ -552,56 +552,48 @@ impl W {
     #[doc = "Bit 0 - Enable or disable RR\\[0\\]
 register"]
     #[inline(always)]
-    #[must_use]
     pub fn rr0(&mut self) -> Rr0W<RrenSpec> {
         Rr0W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable RR\\[1\\]
 register"]
     #[inline(always)]
-    #[must_use]
     pub fn rr1(&mut self) -> Rr1W<RrenSpec> {
         Rr1W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable or disable RR\\[2\\]
 register"]
     #[inline(always)]
-    #[must_use]
     pub fn rr2(&mut self) -> Rr2W<RrenSpec> {
         Rr2W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable or disable RR\\[3\\]
 register"]
     #[inline(always)]
-    #[must_use]
     pub fn rr3(&mut self) -> Rr3W<RrenSpec> {
         Rr3W::new(self, 3)
     }
     #[doc = "Bit 4 - Enable or disable RR\\[4\\]
 register"]
     #[inline(always)]
-    #[must_use]
     pub fn rr4(&mut self) -> Rr4W<RrenSpec> {
         Rr4W::new(self, 4)
     }
     #[doc = "Bit 5 - Enable or disable RR\\[5\\]
 register"]
     #[inline(always)]
-    #[must_use]
     pub fn rr5(&mut self) -> Rr5W<RrenSpec> {
         Rr5W::new(self, 5)
     }
     #[doc = "Bit 6 - Enable or disable RR\\[6\\]
 register"]
     #[inline(always)]
-    #[must_use]
     pub fn rr6(&mut self) -> Rr6W<RrenSpec> {
         Rr6W::new(self, 6)
     }
     #[doc = "Bit 7 - Enable or disable RR\\[7\\]
 register"]
     #[inline(always)]
-    #[must_use]
     pub fn rr7(&mut self) -> Rr7W<RrenSpec> {
         Rr7W::new(self, 7)
     }

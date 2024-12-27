@@ -9,9 +9,10 @@ nrf54l15-flpr-pac = { version = "0.1.0", path = "../nrf54l15-flpr-pac", features
     "critical-section",
 ] }
 panic-halt = "0.2.0"
-riscv = { version = "0.11.1", features = ["critical-section-single-hart"] }
-riscv-rt = { version = "0.12.2", features = ["single-hart"] }
+riscv = { version = "0.12.1", features = ["critical-section-single-hart"] }
+riscv-rt = { version = "0.13.0", features = ["single-hart"] }
 
 [patch.crates-io]
 # Patch needed to support RV32E
-riscv-rt = { git = "https://github.com/Tiwalun/riscv", rev = "84644f7b190c22db5b603888b09f6ba1b1fdabc9" }
+riscv-rt = { git = "https://github.com/rust-embedded/riscv", rev = "fe6da179b437f23545a5db13ead28dc9855523a4" }
+riscv = { git = "https://github.com/rust-embedded/riscv", rev = "fe6da179b437f23545a5db13ead28dc9855523a4" }

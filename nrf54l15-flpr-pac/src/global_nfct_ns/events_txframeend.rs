@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Marks the end of the last transmitted on-air symbol of a frame"]
     #[inline(always)]
-    #[must_use]
     pub fn events_txframeend(&mut self) -> EventsTxframeendW<EventsTxframeendSpec> {
         EventsTxframeendW::new(self, 0)
     }

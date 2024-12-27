@@ -18,7 +18,7 @@ pub type S1lenW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum S1incl {
-    #[doc = "0: Include S1 field in RAM only if S1LEN &amp;gt; 0"]
+    #[doc = "0: Include S1 field in RAM only if S1LEN &gt; 0"]
     Automatic = 0,
     #[doc = "1: Always include S1 field in RAM independent of S1LEN"]
     Include = 1,
@@ -45,7 +45,7 @@ impl S1inclR {
             _ => None,
         }
     }
-    #[doc = "Include S1 field in RAM only if S1LEN &amp;gt; 0"]
+    #[doc = "Include S1 field in RAM only if S1LEN &gt; 0"]
     #[inline(always)]
     pub fn is_automatic(&self) -> bool {
         *self == S1incl::Automatic
@@ -63,7 +63,7 @@ where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
 {
-    #[doc = "Include S1 field in RAM only if S1LEN &amp;gt; 0"]
+    #[doc = "Include S1 field in RAM only if S1LEN &gt; 0"]
     #[inline(always)]
     pub fn automatic(self) -> &'a mut crate::W<REG> {
         self.variant(S1incl::Automatic)
@@ -266,49 +266,41 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Length on air of LENGTH field in number of bits."]
     #[inline(always)]
-    #[must_use]
     pub fn lflen(&mut self) -> LflenW<Pcnf0Spec> {
         LflenW::new(self, 0)
     }
     #[doc = "Bit 8 - Length on air of S0 field in number of bytes."]
     #[inline(always)]
-    #[must_use]
     pub fn s0len(&mut self) -> S0lenW<Pcnf0Spec> {
         S0lenW::new(self, 8)
     }
     #[doc = "Bits 16:19 - Length on air of S1 field in number of bits."]
     #[inline(always)]
-    #[must_use]
     pub fn s1len(&mut self) -> S1lenW<Pcnf0Spec> {
         S1lenW::new(self, 16)
     }
     #[doc = "Bits 20:21 - Include or exclude S1 field in RAM"]
     #[inline(always)]
-    #[must_use]
     pub fn s1incl(&mut self) -> S1inclW<Pcnf0Spec> {
         S1inclW::new(self, 20)
     }
     #[doc = "Bits 22:23 - Length of code indicator - long range"]
     #[inline(always)]
-    #[must_use]
     pub fn cilen(&mut self) -> CilenW<Pcnf0Spec> {
         CilenW::new(self, 22)
     }
     #[doc = "Bits 24:25 - Length of preamble on air. Decision point: TASKS_START task"]
     #[inline(always)]
-    #[must_use]
     pub fn plen(&mut self) -> PlenW<Pcnf0Spec> {
         PlenW::new(self, 24)
     }
     #[doc = "Bit 26 - Indicates if LENGTH field contains CRC or not"]
     #[inline(always)]
-    #[must_use]
     pub fn crcinc(&mut self) -> CrcincW<Pcnf0Spec> {
         CrcincW::new(self, 26)
     }
     #[doc = "Bits 29:30 - Length of TERM field in Long Range operation"]
     #[inline(always)]
-    #[must_use]
     pub fn termlen(&mut self) -> TermlenW<Pcnf0Spec> {
         TermlenW::new(self, 29)
     }

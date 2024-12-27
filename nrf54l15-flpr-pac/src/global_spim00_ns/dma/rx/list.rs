@@ -72,7 +72,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - List type"]
     #[inline(always)]
-    #[must_use]
     pub fn type_(&mut self) -> TypeW<ListSpec> {
         TypeW::new(self, 0)
     }

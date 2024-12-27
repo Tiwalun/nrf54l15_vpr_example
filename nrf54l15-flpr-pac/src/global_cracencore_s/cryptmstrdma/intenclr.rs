@@ -7,7 +7,6 @@ pub type IntenclrW<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn intenclr(&mut self) -> IntenclrW<IntenclrSpec> {
         IntenclrW::new(self, 0)
     }

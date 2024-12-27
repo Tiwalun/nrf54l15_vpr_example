@@ -332,31 +332,26 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to enable interrupt for event SAMPLERDY"]
     #[inline(always)]
-    #[must_use]
     pub fn samplerdy(&mut self) -> SamplerdyW<IntensetSpec> {
         SamplerdyW::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to enable interrupt for event REPORTRDY"]
     #[inline(always)]
-    #[must_use]
     pub fn reportrdy(&mut self) -> ReportrdyW<IntensetSpec> {
         ReportrdyW::new(self, 1)
     }
     #[doc = "Bit 2 - Write '1' to enable interrupt for event ACCOF"]
     #[inline(always)]
-    #[must_use]
     pub fn accof(&mut self) -> AccofW<IntensetSpec> {
         AccofW::new(self, 2)
     }
     #[doc = "Bit 3 - Write '1' to enable interrupt for event DBLRDY"]
     #[inline(always)]
-    #[must_use]
     pub fn dblrdy(&mut self) -> DblrdyW<IntensetSpec> {
         DblrdyW::new(self, 3)
     }
     #[doc = "Bit 4 - Write '1' to enable interrupt for event STOPPED"]
     #[inline(always)]
-    #[must_use]
     pub fn stopped(&mut self) -> StoppedW<IntensetSpec> {
         StoppedW::new(self, 4)
     }

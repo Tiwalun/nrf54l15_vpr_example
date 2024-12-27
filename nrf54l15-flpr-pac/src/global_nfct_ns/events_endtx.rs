@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Transmission of data in RAM has ended, and EasyDMA has ended accessing the TX buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn events_endtx(&mut self) -> EventsEndtxW<EventsEndtxSpec> {
         EventsEndtxW::new(self, 0)
     }

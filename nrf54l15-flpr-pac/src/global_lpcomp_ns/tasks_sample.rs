@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Sample comparator value. This task requires that LPCOMP has been started by the START task."]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_sample(&mut self) -> TasksSampleW<TasksSampleSpec> {
         TasksSampleW::new(self, 0)
     }

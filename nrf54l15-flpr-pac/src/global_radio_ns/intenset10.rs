@@ -1502,139 +1502,116 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to enable interrupt for event READY"]
     #[inline(always)]
-    #[must_use]
     pub fn ready(&mut self) -> ReadyW<Intenset10Spec> {
         ReadyW::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to enable interrupt for event TXREADY"]
     #[inline(always)]
-    #[must_use]
     pub fn txready(&mut self) -> TxreadyW<Intenset10Spec> {
         TxreadyW::new(self, 1)
     }
     #[doc = "Bit 2 - Write '1' to enable interrupt for event RXREADY"]
     #[inline(always)]
-    #[must_use]
     pub fn rxready(&mut self) -> RxreadyW<Intenset10Spec> {
         RxreadyW::new(self, 2)
     }
     #[doc = "Bit 3 - Write '1' to enable interrupt for event ADDRESS"]
     #[inline(always)]
-    #[must_use]
     pub fn address(&mut self) -> AddressW<Intenset10Spec> {
         AddressW::new(self, 3)
     }
     #[doc = "Bit 4 - Write '1' to enable interrupt for event FRAMESTART"]
     #[inline(always)]
-    #[must_use]
     pub fn framestart(&mut self) -> FramestartW<Intenset10Spec> {
         FramestartW::new(self, 4)
     }
     #[doc = "Bit 5 - Write '1' to enable interrupt for event PAYLOAD"]
     #[inline(always)]
-    #[must_use]
     pub fn payload(&mut self) -> PayloadW<Intenset10Spec> {
         PayloadW::new(self, 5)
     }
     #[doc = "Bit 6 - Write '1' to enable interrupt for event END"]
     #[inline(always)]
-    #[must_use]
     pub fn end(&mut self) -> EndW<Intenset10Spec> {
         EndW::new(self, 6)
     }
     #[doc = "Bit 7 - Write '1' to enable interrupt for event PHYEND"]
     #[inline(always)]
-    #[must_use]
     pub fn phyend(&mut self) -> PhyendW<Intenset10Spec> {
         PhyendW::new(self, 7)
     }
     #[doc = "Bit 8 - Write '1' to enable interrupt for event DISABLED"]
     #[inline(always)]
-    #[must_use]
     pub fn disabled(&mut self) -> DisabledW<Intenset10Spec> {
         DisabledW::new(self, 8)
     }
     #[doc = "Bit 9 - Write '1' to enable interrupt for event DEVMATCH"]
     #[inline(always)]
-    #[must_use]
     pub fn devmatch(&mut self) -> DevmatchW<Intenset10Spec> {
         DevmatchW::new(self, 9)
     }
     #[doc = "Bit 10 - Write '1' to enable interrupt for event DEVMISS"]
     #[inline(always)]
-    #[must_use]
     pub fn devmiss(&mut self) -> DevmissW<Intenset10Spec> {
         DevmissW::new(self, 10)
     }
     #[doc = "Bit 11 - Write '1' to enable interrupt for event CRCOK"]
     #[inline(always)]
-    #[must_use]
     pub fn crcok(&mut self) -> CrcokW<Intenset10Spec> {
         CrcokW::new(self, 11)
     }
     #[doc = "Bit 12 - Write '1' to enable interrupt for event CRCERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn crcerror(&mut self) -> CrcerrorW<Intenset10Spec> {
         CrcerrorW::new(self, 12)
     }
     #[doc = "Bit 14 - Write '1' to enable interrupt for event BCMATCH"]
     #[inline(always)]
-    #[must_use]
     pub fn bcmatch(&mut self) -> BcmatchW<Intenset10Spec> {
         BcmatchW::new(self, 14)
     }
     #[doc = "Bit 15 - Write '1' to enable interrupt for event EDEND"]
     #[inline(always)]
-    #[must_use]
     pub fn edend(&mut self) -> EdendW<Intenset10Spec> {
         EdendW::new(self, 15)
     }
     #[doc = "Bit 16 - Write '1' to enable interrupt for event EDSTOPPED"]
     #[inline(always)]
-    #[must_use]
     pub fn edstopped(&mut self) -> EdstoppedW<Intenset10Spec> {
         EdstoppedW::new(self, 16)
     }
     #[doc = "Bit 17 - Write '1' to enable interrupt for event CCAIDLE"]
     #[inline(always)]
-    #[must_use]
     pub fn ccaidle(&mut self) -> CcaidleW<Intenset10Spec> {
         CcaidleW::new(self, 17)
     }
     #[doc = "Bit 18 - Write '1' to enable interrupt for event CCABUSY"]
     #[inline(always)]
-    #[must_use]
     pub fn ccabusy(&mut self) -> CcabusyW<Intenset10Spec> {
         CcabusyW::new(self, 18)
     }
     #[doc = "Bit 19 - Write '1' to enable interrupt for event CCASTOPPED"]
     #[inline(always)]
-    #[must_use]
     pub fn ccastopped(&mut self) -> CcastoppedW<Intenset10Spec> {
         CcastoppedW::new(self, 19)
     }
     #[doc = "Bit 20 - Write '1' to enable interrupt for event RATEBOOST"]
     #[inline(always)]
-    #[must_use]
     pub fn rateboost(&mut self) -> RateboostW<Intenset10Spec> {
         RateboostW::new(self, 20)
     }
     #[doc = "Bit 21 - Write '1' to enable interrupt for event MHRMATCH"]
     #[inline(always)]
-    #[must_use]
     pub fn mhrmatch(&mut self) -> MhrmatchW<Intenset10Spec> {
         MhrmatchW::new(self, 21)
     }
     #[doc = "Bit 22 - Write '1' to enable interrupt for event SYNC"]
     #[inline(always)]
-    #[must_use]
     pub fn sync(&mut self) -> SyncW<Intenset10Spec> {
         SyncW::new(self, 22)
     }
     #[doc = "Bit 23 - Write '1' to enable interrupt for event CTEPRESENT"]
     #[inline(always)]
-    #[must_use]
     pub fn ctepresent(&mut self) -> CtepresentW<Intenset10Spec> {
         CtepresentW::new(self, 23)
     }

@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Enable Low-power mode (variable latency)"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_lowpwr(&mut self) -> TasksLowpwrW<TasksLowpwrSpec> {
         TasksLowpwrW::new(self, 0)
     }

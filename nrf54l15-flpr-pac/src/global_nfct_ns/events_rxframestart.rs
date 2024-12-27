@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Marks the end of the first symbol of a received frame"]
     #[inline(always)]
-    #[must_use]
     pub fn events_rxframestart(&mut self) -> EventsRxframestartW<EventsRxframestartSpec> {
         EventsRxframestartW::new(self, 0)
     }

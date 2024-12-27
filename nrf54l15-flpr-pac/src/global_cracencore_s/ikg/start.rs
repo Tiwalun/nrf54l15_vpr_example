@@ -7,7 +7,6 @@ pub type StartW<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - Start the Isolated Key Generation."]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> StartW<StartSpec> {
         StartW::new(self, 0)
     }

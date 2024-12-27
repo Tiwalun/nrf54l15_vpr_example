@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - First PWM period started on sequence n"]
     #[inline(always)]
-    #[must_use]
     pub fn events_seqstarted(&mut self) -> EventsSeqstartedW<EventsSeqstartedSpec> {
         EventsSeqstartedW::new(self, 0)
     }

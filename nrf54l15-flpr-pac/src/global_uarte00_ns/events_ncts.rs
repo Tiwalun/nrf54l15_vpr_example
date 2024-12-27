@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CTS is deactivated (set high). Not Clear To Send."]
     #[inline(always)]
-    #[must_use]
     pub fn events_ncts(&mut self) -> EventsNctsW<EventsNctsSpec> {
         EventsNctsW::new(self, 0)
     }

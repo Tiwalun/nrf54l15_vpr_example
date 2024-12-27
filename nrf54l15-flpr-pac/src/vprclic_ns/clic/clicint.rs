@@ -340,19 +340,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Interrupt Pending bit."]
     #[inline(always)]
-    #[must_use]
     pub fn ip(&mut self) -> IpW<ClicintSpec> {
         IpW::new(self, 0)
     }
     #[doc = "Bit 8 - Interrupt enable bit."]
     #[inline(always)]
-    #[must_use]
     pub fn ie(&mut self) -> IeW<ClicintSpec> {
         IeW::new(self, 8)
     }
     #[doc = "Bits 24:31 - Interrupt priority level"]
     #[inline(always)]
-    #[must_use]
     pub fn priority(&mut self) -> PriorityW<ClicintSpec> {
         PriorityW::new(self, 24)
     }

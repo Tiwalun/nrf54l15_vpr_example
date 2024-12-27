@@ -479,43 +479,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Hardware flow control"]
     #[inline(always)]
-    #[must_use]
     pub fn hwfc(&mut self) -> HwfcW<ConfigSpec> {
         HwfcW::new(self, 0)
     }
     #[doc = "Bits 1:3 - Parity"]
     #[inline(always)]
-    #[must_use]
     pub fn parity(&mut self) -> ParityW<ConfigSpec> {
         ParityW::new(self, 1)
     }
     #[doc = "Bit 4 - Stop bits"]
     #[inline(always)]
-    #[must_use]
     pub fn stop(&mut self) -> StopW<ConfigSpec> {
         StopW::new(self, 4)
     }
     #[doc = "Bit 8 - Even or odd parity type"]
     #[inline(always)]
-    #[must_use]
     pub fn paritytype(&mut self) -> ParitytypeW<ConfigSpec> {
         ParitytypeW::new(self, 8)
     }
     #[doc = "Bits 9:12 - Set the data frame size"]
     #[inline(always)]
-    #[must_use]
     pub fn framesize(&mut self) -> FramesizeW<ConfigSpec> {
         FramesizeW::new(self, 9)
     }
     #[doc = "Bit 13 - Select if data is trimmed from MSB or LSB end when the data frame size is less than 8."]
     #[inline(always)]
-    #[must_use]
     pub fn endian(&mut self) -> EndianW<ConfigSpec> {
         EndianW::new(self, 13)
     }
     #[doc = "Bit 14 - Enable packet timeout."]
     #[inline(always)]
-    #[must_use]
     pub fn frametimeout(&mut self) -> FrametimeoutW<ConfigSpec> {
         FrametimeoutW::new(self, 14)
     }

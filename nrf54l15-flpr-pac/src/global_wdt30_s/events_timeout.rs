@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Watchdog timeout"]
     #[inline(always)]
-    #[must_use]
     pub fn events_timeout(&mut self) -> EventsTimeoutW<EventsTimeoutSpec> {
         EventsTimeoutW::new(self, 0)
     }

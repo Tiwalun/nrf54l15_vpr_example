@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:11 - Slope of 2nd piece wise linear function"]
     #[inline(always)]
-    #[must_use]
     pub fn a1(&mut self) -> A1W<A1Spec> {
         A1W::new(self, 0)
     }

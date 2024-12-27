@@ -267,25 +267,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to disable interrupt for event STARTED"]
     #[inline(always)]
-    #[must_use]
     pub fn started(&mut self) -> StartedW<IntenclrSpec> {
         StartedW::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to disable interrupt for event STOPPED"]
     #[inline(always)]
-    #[must_use]
     pub fn stopped(&mut self) -> StoppedW<IntenclrSpec> {
         StoppedW::new(self, 1)
     }
     #[doc = "Bit 2 - Write '1' to disable interrupt for event END"]
     #[inline(always)]
-    #[must_use]
     pub fn end(&mut self) -> EndW<IntenclrSpec> {
         EndW::new(self, 2)
     }
     #[doc = "Bit 4 - Write '1' to disable interrupt for event DMABUSERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn dmabuserror(&mut self) -> DmabuserrorW<IntenclrSpec> {
         DmabuserrorW::new(self, 4)
     }

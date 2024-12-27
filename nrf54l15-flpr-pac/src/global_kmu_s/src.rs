@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Source address for TASKS_PROVISION."]
     #[inline(always)]
-    #[must_use]
     pub fn src(&mut self) -> SrcW<SrcSpec> {
         SrcW::new(self, 0)
     }

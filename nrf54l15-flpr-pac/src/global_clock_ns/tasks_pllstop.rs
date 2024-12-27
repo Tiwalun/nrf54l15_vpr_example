@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stop PLL"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_pllstop(&mut self) -> TasksPllstopW<TasksPllstopSpec> {
         TasksPllstopW::new(self, 0)
     }

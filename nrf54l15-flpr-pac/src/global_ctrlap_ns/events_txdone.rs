@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - TXSTATUS is changed to NoDataPending."]
     #[inline(always)]
-    #[must_use]
     pub fn events_txdone(&mut self) -> EventsTxdoneW<EventsTxdoneSpec> {
         EventsTxdoneW::new(self, 0)
     }

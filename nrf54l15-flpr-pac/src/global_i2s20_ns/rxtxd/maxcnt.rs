@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:13 - Size of RXD and TXD buffers in number of 32 bit words"]
     #[inline(always)]
-    #[must_use]
     pub fn maxcnt(&mut self) -> MaxcntW<MaxcntSpec> {
         MaxcntW::new(self, 0)
     }

@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Revoke key slot"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_revoke(&mut self) -> TasksRevokeW<TasksRevokeSpec> {
         TasksRevokeW::new(self, 0)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Read metadata."]
     #[inline(always)]
-    #[must_use]
     pub fn metadata(&mut self) -> MetadataW<MetadataSpec> {
         MetadataW::new(self, 0)
     }

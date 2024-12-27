@@ -691,59 +691,6 @@ where
         self.variant(Rtcomparesync::Enabled)
     }
 }
-#[doc = "Enable or disable interrupt for event SYSCOUNTERVALID\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Syscountervalid {
-    #[doc = "0: Disable"]
-    Disabled = 0,
-    #[doc = "1: Enable"]
-    Enabled = 1,
-}
-impl From<Syscountervalid> for bool {
-    #[inline(always)]
-    fn from(variant: Syscountervalid) -> Self {
-        variant as u8 != 0
-    }
-}
-#[doc = "Field `SYSCOUNTERVALID` reader - Enable or disable interrupt for event SYSCOUNTERVALID"]
-pub type SyscountervalidR = crate::BitReader<Syscountervalid>;
-impl SyscountervalidR {
-    #[doc = "Get enumerated values variant"]
-    #[inline(always)]
-    pub const fn variant(&self) -> Syscountervalid {
-        match self.bits {
-            false => Syscountervalid::Disabled,
-            true => Syscountervalid::Enabled,
-        }
-    }
-    #[doc = "Disable"]
-    #[inline(always)]
-    pub fn is_disabled(&self) -> bool {
-        *self == Syscountervalid::Disabled
-    }
-    #[doc = "Enable"]
-    #[inline(always)]
-    pub fn is_enabled(&self) -> bool {
-        *self == Syscountervalid::Enabled
-    }
-}
-#[doc = "Field `SYSCOUNTERVALID` writer - Enable or disable interrupt for event SYSCOUNTERVALID"]
-pub type SyscountervalidW<'a, REG> = crate::BitWriter<'a, REG, Syscountervalid>;
-impl<'a, REG> SyscountervalidW<'a, REG>
-where
-    REG: crate::Writable + crate::RegisterSpec,
-{
-    #[doc = "Disable"]
-    #[inline(always)]
-    pub fn disabled(self) -> &'a mut crate::W<REG> {
-        self.variant(Syscountervalid::Disabled)
-    }
-    #[doc = "Enable"]
-    #[inline(always)]
-    pub fn enabled(self) -> &'a mut crate::W<REG> {
-        self.variant(Syscountervalid::Enabled)
-    }
-}
 #[doc = "Enable or disable interrupt for event PWMPERIODEND\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Pwmperiodend {
@@ -863,11 +810,6 @@ impl R {
     pub fn rtcomparesync(&self) -> RtcomparesyncR {
         RtcomparesyncR::new(((self.bits >> 25) & 1) != 0)
     }
-    #[doc = "Bit 26 - Enable or disable interrupt for event SYSCOUNTERVALID"]
-    #[inline(always)]
-    pub fn syscountervalid(&self) -> SyscountervalidR {
-        SyscountervalidR::new(((self.bits >> 26) & 1) != 0)
-    }
     #[doc = "Bit 27 - Enable or disable interrupt for event PWMPERIODEND"]
     #[inline(always)]
     pub fn pwmperiodend(&self) -> PwmperiodendR {
@@ -877,91 +819,71 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable interrupt for event COMPARE\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare0(&mut self) -> Compare0W<Inten1Spec> {
         Compare0W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable interrupt for event COMPARE\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare1(&mut self) -> Compare1W<Inten1Spec> {
         Compare1W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable or disable interrupt for event COMPARE\\[2\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare2(&mut self) -> Compare2W<Inten1Spec> {
         Compare2W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable or disable interrupt for event COMPARE\\[3\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare3(&mut self) -> Compare3W<Inten1Spec> {
         Compare3W::new(self, 3)
     }
     #[doc = "Bit 4 - Enable or disable interrupt for event COMPARE\\[4\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare4(&mut self) -> Compare4W<Inten1Spec> {
         Compare4W::new(self, 4)
     }
     #[doc = "Bit 5 - Enable or disable interrupt for event COMPARE\\[5\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare5(&mut self) -> Compare5W<Inten1Spec> {
         Compare5W::new(self, 5)
     }
     #[doc = "Bit 6 - Enable or disable interrupt for event COMPARE\\[6\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare6(&mut self) -> Compare6W<Inten1Spec> {
         Compare6W::new(self, 6)
     }
     #[doc = "Bit 7 - Enable or disable interrupt for event COMPARE\\[7\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare7(&mut self) -> Compare7W<Inten1Spec> {
         Compare7W::new(self, 7)
     }
     #[doc = "Bit 8 - Enable or disable interrupt for event COMPARE\\[8\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare8(&mut self) -> Compare8W<Inten1Spec> {
         Compare8W::new(self, 8)
     }
     #[doc = "Bit 9 - Enable or disable interrupt for event COMPARE\\[9\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare9(&mut self) -> Compare9W<Inten1Spec> {
         Compare9W::new(self, 9)
     }
     #[doc = "Bit 10 - Enable or disable interrupt for event COMPARE\\[10\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare10(&mut self) -> Compare10W<Inten1Spec> {
         Compare10W::new(self, 10)
     }
     #[doc = "Bit 11 - Enable or disable interrupt for event COMPARE\\[11\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn compare11(&mut self) -> Compare11W<Inten1Spec> {
         Compare11W::new(self, 11)
     }
     #[doc = "Bit 25 - Enable or disable interrupt for event RTCOMPARESYNC"]
     #[inline(always)]
-    #[must_use]
     pub fn rtcomparesync(&mut self) -> RtcomparesyncW<Inten1Spec> {
         RtcomparesyncW::new(self, 25)
     }
-    #[doc = "Bit 26 - Enable or disable interrupt for event SYSCOUNTERVALID"]
-    #[inline(always)]
-    #[must_use]
-    pub fn syscountervalid(&mut self) -> SyscountervalidW<Inten1Spec> {
-        SyscountervalidW::new(self, 26)
-    }
     #[doc = "Bit 27 - Enable or disable interrupt for event PWMPERIODEND"]
     #[inline(always)]
-    #[must_use]
     pub fn pwmperiodend(&mut self) -> PwmperiodendW<Inten1Spec> {
         PwmperiodendW::new(self, 27)
     }

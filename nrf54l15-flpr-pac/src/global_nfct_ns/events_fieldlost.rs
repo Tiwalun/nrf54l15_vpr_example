@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Remote NFC field lost"]
     #[inline(always)]
-    #[must_use]
     pub fn events_fieldlost(&mut self) -> EventsFieldlostW<EventsFieldlostSpec> {
         EventsFieldlostW::new(self, 0)
     }

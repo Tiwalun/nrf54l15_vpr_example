@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Semaphore acquired"]
     #[inline(always)]
-    #[must_use]
     pub fn events_acquired(&mut self) -> EventsAcquiredW<EventsAcquiredSpec> {
         EventsAcquiredW::new(self, 0)
     }

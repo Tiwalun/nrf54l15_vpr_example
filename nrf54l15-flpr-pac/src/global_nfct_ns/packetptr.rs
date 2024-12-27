@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Packet pointer for TXD and RXD data storage in Data RAM. This address is a byte-aligned RAM address."]
     #[inline(always)]
-    #[must_use]
     pub fn ptr(&mut self) -> PtrW<PacketptrSpec> {
         PtrW::new(self, 0)
     }

@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Task starting the quadrature decoder"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_start(&mut self) -> TasksStartW<TasksStartSpec> {
         TasksStartW::new(self, 0)
     }

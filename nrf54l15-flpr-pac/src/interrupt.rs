@@ -158,8 +158,8 @@ pub enum Interrupt {
     SPU30 = 256,
     #[doc = "260 - SERIAL30"]
     SERIAL30 = 260,
-    #[doc = "261 - RTC30"]
-    RTC30 = 261,
+    #[doc = "261 - CLOCK_POWER"]
+    CLOCK_POWER = 261,
     #[doc = "262 - COMP_LPCOMP"]
     COMP_LPCOMP = 262,
     #[doc = "264 - WDT30"]
@@ -170,8 +170,6 @@ pub enum Interrupt {
     GPIOTE30_0 = 268,
     #[doc = "269 - GPIOTE30_1"]
     GPIOTE30_1 = 269,
-    #[doc = "270 - CLOCK_POWER"]
-    CLOCK_POWER = 270,
 }
 #[doc = r" TryFromInterruptError"]
 #[derive(Debug, Copy, Clone)]
@@ -259,13 +257,12 @@ impl Interrupt {
             229 => Ok(Interrupt::GRTC_3),
             256 => Ok(Interrupt::SPU30),
             260 => Ok(Interrupt::SERIAL30),
-            261 => Ok(Interrupt::RTC30),
+            261 => Ok(Interrupt::CLOCK_POWER),
             262 => Ok(Interrupt::COMP_LPCOMP),
             264 => Ok(Interrupt::WDT30),
             265 => Ok(Interrupt::WDT31),
             268 => Ok(Interrupt::GPIOTE30_0),
             269 => Ok(Interrupt::GPIOTE30_1),
-            270 => Ok(Interrupt::CLOCK_POWER),
             _ => Err(TryFromInterruptError(())),
         }
     }

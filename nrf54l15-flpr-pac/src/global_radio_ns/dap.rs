@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Device address prefix n"]
     #[inline(always)]
-    #[must_use]
     pub fn dap(&mut self) -> DapW<DapSpec> {
         DapW::new(self, 0)
     }

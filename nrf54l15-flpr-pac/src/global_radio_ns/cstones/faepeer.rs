@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Units 31.25 ppb."]
     #[inline(always)]
-    #[must_use]
     pub fn faepeer(&mut self) -> FaepeerW<FaepeerSpec> {
         FaepeerW::new(self, 0)
     }

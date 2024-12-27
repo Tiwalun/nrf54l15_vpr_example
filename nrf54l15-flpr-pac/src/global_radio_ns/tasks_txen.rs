@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Enable RADIO in TX mode"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_txen(&mut self) -> TasksTxenW<TasksTxenSpec> {
         TasksTxenW::new(self, 0)
     }

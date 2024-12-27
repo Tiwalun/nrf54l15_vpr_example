@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable one-shot operation"]
     #[inline(always)]
-    #[must_use]
     pub fn oneshoten(&mut self) -> OneshotenW<OneshotenSpec> {
         OneshotenW::new(self, 0)
     }

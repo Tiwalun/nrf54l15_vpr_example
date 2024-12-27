@@ -85,7 +85,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:1 - Enable low-power operation, or use low-latency"]
     #[inline(always)]
-    #[must_use]
     pub fn lpop(&mut self) -> LpopW<ModeSpec> {
         LpopW::new(self, 0)
     }

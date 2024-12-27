@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - CPU exited WFI/WFE sleep"]
     #[inline(always)]
-    #[must_use]
     pub fn events_sleepexit(&mut self) -> EventsSleepexitW<EventsSleepexitSpec> {
         EventsSleepexitW::new(self, 0)
     }

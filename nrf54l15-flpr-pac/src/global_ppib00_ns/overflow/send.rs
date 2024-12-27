@@ -1863,193 +1863,161 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The status for tasks overflow at SUBSCRIBE_SEND\\[0\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_0(&mut self) -> Send0W<SendSpec> {
         Send0W::new(self, 0)
     }
     #[doc = "Bit 1 - The status for tasks overflow at SUBSCRIBE_SEND\\[1\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_1(&mut self) -> Send1W<SendSpec> {
         Send1W::new(self, 1)
     }
     #[doc = "Bit 2 - The status for tasks overflow at SUBSCRIBE_SEND\\[2\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_2(&mut self) -> Send2W<SendSpec> {
         Send2W::new(self, 2)
     }
     #[doc = "Bit 3 - The status for tasks overflow at SUBSCRIBE_SEND\\[3\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_3(&mut self) -> Send3W<SendSpec> {
         Send3W::new(self, 3)
     }
     #[doc = "Bit 4 - The status for tasks overflow at SUBSCRIBE_SEND\\[4\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_4(&mut self) -> Send4W<SendSpec> {
         Send4W::new(self, 4)
     }
     #[doc = "Bit 5 - The status for tasks overflow at SUBSCRIBE_SEND\\[5\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_5(&mut self) -> Send5W<SendSpec> {
         Send5W::new(self, 5)
     }
     #[doc = "Bit 6 - The status for tasks overflow at SUBSCRIBE_SEND\\[6\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_6(&mut self) -> Send6W<SendSpec> {
         Send6W::new(self, 6)
     }
     #[doc = "Bit 7 - The status for tasks overflow at SUBSCRIBE_SEND\\[7\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_7(&mut self) -> Send7W<SendSpec> {
         Send7W::new(self, 7)
     }
     #[doc = "Bit 8 - The status for tasks overflow at SUBSCRIBE_SEND\\[8\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_8(&mut self) -> Send8W<SendSpec> {
         Send8W::new(self, 8)
     }
     #[doc = "Bit 9 - The status for tasks overflow at SUBSCRIBE_SEND\\[9\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_9(&mut self) -> Send9W<SendSpec> {
         Send9W::new(self, 9)
     }
     #[doc = "Bit 10 - The status for tasks overflow at SUBSCRIBE_SEND\\[10\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_10(&mut self) -> Send10W<SendSpec> {
         Send10W::new(self, 10)
     }
     #[doc = "Bit 11 - The status for tasks overflow at SUBSCRIBE_SEND\\[11\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_11(&mut self) -> Send11W<SendSpec> {
         Send11W::new(self, 11)
     }
     #[doc = "Bit 12 - The status for tasks overflow at SUBSCRIBE_SEND\\[12\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_12(&mut self) -> Send12W<SendSpec> {
         Send12W::new(self, 12)
     }
     #[doc = "Bit 13 - The status for tasks overflow at SUBSCRIBE_SEND\\[13\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_13(&mut self) -> Send13W<SendSpec> {
         Send13W::new(self, 13)
     }
     #[doc = "Bit 14 - The status for tasks overflow at SUBSCRIBE_SEND\\[14\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_14(&mut self) -> Send14W<SendSpec> {
         Send14W::new(self, 14)
     }
     #[doc = "Bit 15 - The status for tasks overflow at SUBSCRIBE_SEND\\[15\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_15(&mut self) -> Send15W<SendSpec> {
         Send15W::new(self, 15)
     }
     #[doc = "Bit 16 - The status for tasks overflow at SUBSCRIBE_SEND\\[16\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_16(&mut self) -> Send16W<SendSpec> {
         Send16W::new(self, 16)
     }
     #[doc = "Bit 17 - The status for tasks overflow at SUBSCRIBE_SEND\\[17\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_17(&mut self) -> Send17W<SendSpec> {
         Send17W::new(self, 17)
     }
     #[doc = "Bit 18 - The status for tasks overflow at SUBSCRIBE_SEND\\[18\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_18(&mut self) -> Send18W<SendSpec> {
         Send18W::new(self, 18)
     }
     #[doc = "Bit 19 - The status for tasks overflow at SUBSCRIBE_SEND\\[19\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_19(&mut self) -> Send19W<SendSpec> {
         Send19W::new(self, 19)
     }
     #[doc = "Bit 20 - The status for tasks overflow at SUBSCRIBE_SEND\\[20\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_20(&mut self) -> Send20W<SendSpec> {
         Send20W::new(self, 20)
     }
     #[doc = "Bit 21 - The status for tasks overflow at SUBSCRIBE_SEND\\[21\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_21(&mut self) -> Send21W<SendSpec> {
         Send21W::new(self, 21)
     }
     #[doc = "Bit 22 - The status for tasks overflow at SUBSCRIBE_SEND\\[22\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_22(&mut self) -> Send22W<SendSpec> {
         Send22W::new(self, 22)
     }
     #[doc = "Bit 23 - The status for tasks overflow at SUBSCRIBE_SEND\\[23\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_23(&mut self) -> Send23W<SendSpec> {
         Send23W::new(self, 23)
     }
     #[doc = "Bit 24 - The status for tasks overflow at SUBSCRIBE_SEND\\[24\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_24(&mut self) -> Send24W<SendSpec> {
         Send24W::new(self, 24)
     }
     #[doc = "Bit 25 - The status for tasks overflow at SUBSCRIBE_SEND\\[25\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_25(&mut self) -> Send25W<SendSpec> {
         Send25W::new(self, 25)
     }
     #[doc = "Bit 26 - The status for tasks overflow at SUBSCRIBE_SEND\\[26\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_26(&mut self) -> Send26W<SendSpec> {
         Send26W::new(self, 26)
     }
     #[doc = "Bit 27 - The status for tasks overflow at SUBSCRIBE_SEND\\[27\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_27(&mut self) -> Send27W<SendSpec> {
         Send27W::new(self, 27)
     }
     #[doc = "Bit 28 - The status for tasks overflow at SUBSCRIBE_SEND\\[28\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_28(&mut self) -> Send28W<SendSpec> {
         Send28W::new(self, 28)
     }
     #[doc = "Bit 29 - The status for tasks overflow at SUBSCRIBE_SEND\\[29\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_29(&mut self) -> Send29W<SendSpec> {
         Send29W::new(self, 29)
     }
     #[doc = "Bit 30 - The status for tasks overflow at SUBSCRIBE_SEND\\[30\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_30(&mut self) -> Send30W<SendSpec> {
         Send30W::new(self, 30)
     }
     #[doc = "Bit 31 - The status for tasks overflow at SUBSCRIBE_SEND\\[31\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn send_31(&mut self) -> Send31W<SendSpec> {
         Send31W::new(self, 31)
     }

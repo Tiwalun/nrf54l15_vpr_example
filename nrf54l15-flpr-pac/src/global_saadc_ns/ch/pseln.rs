@@ -90,19 +90,16 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - GPIO pin selection."]
     #[inline(always)]
-    #[must_use]
     pub fn pin(&mut self) -> PinW<PselnSpec> {
         PinW::new(self, 0)
     }
     #[doc = "Bits 8:11 - GPIO Port selection"]
     #[inline(always)]
-    #[must_use]
     pub fn port(&mut self) -> PortW<PselnSpec> {
         PortW::new(self, 8)
     }
     #[doc = "Bits 30:31 - Connection"]
     #[inline(always)]
-    #[must_use]
     pub fn connect(&mut self) -> ConnectW<PselnSpec> {
         ConnectW::new(self, 30)
     }

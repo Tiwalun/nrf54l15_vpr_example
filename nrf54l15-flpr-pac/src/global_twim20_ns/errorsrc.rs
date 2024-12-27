@@ -181,19 +181,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Overrun error"]
     #[inline(always)]
-    #[must_use]
     pub fn overrun(&mut self) -> OverrunW<ErrorsrcSpec> {
         OverrunW::new(self, 0)
     }
     #[doc = "Bit 1 - NACK received after sending the address (write '1' to clear)"]
     #[inline(always)]
-    #[must_use]
     pub fn anack(&mut self) -> AnackW<ErrorsrcSpec> {
         AnackW::new(self, 1)
     }
     #[doc = "Bit 2 - NACK received after sending a data byte (write '1' to clear)"]
     #[inline(always)]
-    #[must_use]
     pub fn dnack(&mut self) -> DnackW<ErrorsrcSpec> {
         DnackW::new(self, 2)
     }

@@ -98,7 +98,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Set the resolution"]
     #[inline(always)]
-    #[must_use]
     pub fn val(&mut self) -> ValW<ResolutionSpec> {
         ValW::new(self, 0)
     }

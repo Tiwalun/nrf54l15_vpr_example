@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Crystal oscillator has started"]
     #[inline(always)]
-    #[must_use]
     pub fn events_xostarted(&mut self) -> EventsXostartedW<EventsXostartedSpec> {
         EventsXostartedW::new(self, 0)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:14 - Value up to which the pulse generator counter counts. This register is ignored when DECODER.MODE=WaveForm and only values from RAM are used."]
     #[inline(always)]
-    #[must_use]
     pub fn countertop(&mut self) -> CountertopW<CountertopSpec> {
         CountertopW::new(self, 0)
     }

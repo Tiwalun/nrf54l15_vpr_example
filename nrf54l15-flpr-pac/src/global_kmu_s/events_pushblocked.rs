@@ -2,7 +2,7 @@
 pub type R = crate::R<EventsPushblockedSpec>;
 #[doc = "Register `EVENTS_PUSHBLOCKED` writer"]
 pub type W = crate::W<EventsPushblockedSpec>;
-#[doc = "The PUSHBLOCK operation was succesful\n\nValue on reset: 0"]
+#[doc = "The PUSHBLOCK operation was successful. The event is kept for backwards compatibility.\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EventsPushblocked {
     #[doc = "0: Event not generated"]
@@ -16,7 +16,7 @@ impl From<EventsPushblocked> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EVENTS_PUSHBLOCKED` reader - The PUSHBLOCK operation was succesful"]
+#[doc = "Field `EVENTS_PUSHBLOCKED` reader - The PUSHBLOCK operation was successful. The event is kept for backwards compatibility."]
 pub type EventsPushblockedR = crate::BitReader<EventsPushblocked>;
 impl EventsPushblockedR {
     #[doc = "Get enumerated values variant"]
@@ -38,7 +38,7 @@ impl EventsPushblockedR {
         *self == EventsPushblocked::Generated
     }
 }
-#[doc = "Field `EVENTS_PUSHBLOCKED` writer - The PUSHBLOCK operation was succesful"]
+#[doc = "Field `EVENTS_PUSHBLOCKED` writer - The PUSHBLOCK operation was successful. The event is kept for backwards compatibility."]
 pub type EventsPushblockedW<'a, REG> = crate::BitWriter<'a, REG, EventsPushblocked>;
 impl<'a, REG> EventsPushblockedW<'a, REG>
 where
@@ -56,21 +56,20 @@ where
     }
 }
 impl R {
-    #[doc = "Bit 0 - The PUSHBLOCK operation was succesful"]
+    #[doc = "Bit 0 - The PUSHBLOCK operation was successful. The event is kept for backwards compatibility."]
     #[inline(always)]
     pub fn events_pushblocked(&self) -> EventsPushblockedR {
         EventsPushblockedR::new((self.bits & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - The PUSHBLOCK operation was succesful"]
+    #[doc = "Bit 0 - The PUSHBLOCK operation was successful. The event is kept for backwards compatibility."]
     #[inline(always)]
-    #[must_use]
     pub fn events_pushblocked(&mut self) -> EventsPushblockedW<EventsPushblockedSpec> {
         EventsPushblockedW::new(self, 0)
     }
 }
-#[doc = "The PUSHBLOCK operation was succesful\n\nYou can [`read`](crate::Reg::read) this register and get [`events_pushblocked::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_pushblocked::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The PUSHBLOCK operation was successful. The event is kept for backwards compatibility.\n\nYou can [`read`](crate::Reg::read) this register and get [`events_pushblocked::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_pushblocked::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EventsPushblockedSpec;
 impl crate::RegisterSpec for EventsPushblockedSpec {
     type Ux = u32;

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RADIO has been disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn events_disabled(&mut self) -> EventsDisabledW<EventsDisabledSpec> {
         EventsDisabledW::new(self, 0)
     }

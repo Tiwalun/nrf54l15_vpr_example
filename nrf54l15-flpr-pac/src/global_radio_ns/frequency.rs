@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - Radio channel frequency. Frequency = 2400 + FREQUENCY (MHz)."]
     #[inline(always)]
-    #[must_use]
     pub fn frequency(&mut self) -> FrequencyW<FrequencySpec> {
         FrequencyW::new(self, 0)
     }
     #[doc = "Bit 8 - Channel map selection. 0: Channel map between 2400 MHZ to 2500 MHz, Frequency = 2400 + FREQUENCY (MHz). 1: Channel map between 2360 MHZ to 2460 MHz, Frequency = 2360 + FREQUENCY (MHz)."]
     #[inline(always)]
-    #[must_use]
     pub fn map(&mut self) -> MapW<FrequencySpec> {
         MapW::new(self, 8)
     }

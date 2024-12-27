@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Event on counter increment"]
     #[inline(always)]
-    #[must_use]
     pub fn events_tick(&mut self) -> EventsTickW<EventsTickSpec> {
         EventsTickW::new(self, 0)
     }

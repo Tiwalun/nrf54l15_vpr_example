@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Number of UARTE bits before timeout."]
     #[inline(always)]
-    #[must_use]
     pub fn countertop(&mut self) -> CountertopW<FrametimeoutSpec> {
         CountertopW::new(self, 0)
     }

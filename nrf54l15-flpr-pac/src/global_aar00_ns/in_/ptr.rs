@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Points to a job list containing AAR data structure"]
     #[inline(always)]
-    #[must_use]
     pub fn ptr(&mut self) -> PtrW<PtrSpec> {
         PtrW::new(self, 0)
     }

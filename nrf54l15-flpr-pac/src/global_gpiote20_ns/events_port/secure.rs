@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Secure port event from owner n"]
     #[inline(always)]
-    #[must_use]
     pub fn secure(&mut self) -> SecureW<SecureSpec> {
         SecureW::new(self, 0)
     }

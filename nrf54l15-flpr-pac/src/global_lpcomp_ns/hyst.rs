@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Comparator hysteresis enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hyst(&mut self) -> HystW<HystSpec> {
         HystW::new(self, 0)
     }

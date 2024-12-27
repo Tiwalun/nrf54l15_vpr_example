@@ -657,61 +657,51 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to enable interrupt for event IN\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn in0(&mut self) -> In0W<Intenset0Spec> {
         In0W::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to enable interrupt for event IN\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn in1(&mut self) -> In1W<Intenset0Spec> {
         In1W::new(self, 1)
     }
     #[doc = "Bit 2 - Write '1' to enable interrupt for event IN\\[2\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn in2(&mut self) -> In2W<Intenset0Spec> {
         In2W::new(self, 2)
     }
     #[doc = "Bit 3 - Write '1' to enable interrupt for event IN\\[3\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn in3(&mut self) -> In3W<Intenset0Spec> {
         In3W::new(self, 3)
     }
     #[doc = "Bit 4 - Write '1' to enable interrupt for event IN\\[4\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn in4(&mut self) -> In4W<Intenset0Spec> {
         In4W::new(self, 4)
     }
     #[doc = "Bit 5 - Write '1' to enable interrupt for event IN\\[5\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn in5(&mut self) -> In5W<Intenset0Spec> {
         In5W::new(self, 5)
     }
     #[doc = "Bit 6 - Write '1' to enable interrupt for event IN\\[6\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn in6(&mut self) -> In6W<Intenset0Spec> {
         In6W::new(self, 6)
     }
     #[doc = "Bit 7 - Write '1' to enable interrupt for event IN\\[7\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn in7(&mut self) -> In7W<Intenset0Spec> {
         In7W::new(self, 7)
     }
     #[doc = "Bit 16 - Write '1' to enable interrupt for event PORT0NONSECURE"]
     #[inline(always)]
-    #[must_use]
     pub fn port0nonsecure(&mut self) -> Port0nonsecureW<Intenset0Spec> {
         Port0nonsecureW::new(self, 16)
     }
     #[doc = "Bit 17 - Write '1' to enable interrupt for event PORT0SECURE"]
     #[inline(always)]
-    #[must_use]
     pub fn port0secure(&mut self) -> Port0secureW<Intenset0Spec> {
         Port0secureW::new(self, 17)
     }

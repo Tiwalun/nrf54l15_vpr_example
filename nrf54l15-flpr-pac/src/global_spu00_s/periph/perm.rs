@@ -340,19 +340,16 @@ impl R {
 impl W {
     #[doc = "Bit 4 - Peripheral security mapping"]
     #[inline(always)]
-    #[must_use]
     pub fn secattr(&mut self) -> SecattrW<PermSpec> {
         SecattrW::new(self, 4)
     }
     #[doc = "Bit 5 - Security attribution for the DMA transfer"]
     #[inline(always)]
-    #[must_use]
     pub fn dmasec(&mut self) -> DmasecW<PermSpec> {
         DmasecW::new(self, 5)
     }
     #[doc = "Bit 8 - Register lock"]
     #[inline(always)]
-    #[must_use]
     pub fn lock(&mut self) -> LockW<PermSpec> {
         LockW::new(self, 8)
     }

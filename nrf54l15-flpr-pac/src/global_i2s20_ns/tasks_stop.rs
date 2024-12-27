@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stops I2S transfer and MCK generator. Triggering this task will cause the event STOPPED to be generated."]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_stop(&mut self) -> TasksStopW<TasksStopSpec> {
         TasksStopW::new(self, 0)
     }

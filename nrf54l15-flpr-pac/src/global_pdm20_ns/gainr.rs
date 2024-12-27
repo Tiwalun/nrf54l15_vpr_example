@@ -85,7 +85,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - Right output gain adjustment, in 0.5 dB steps, around the default module gain (see electrical parameters)"]
     #[inline(always)]
-    #[must_use]
     pub fn gainr(&mut self) -> GainrW<GainrSpec> {
         GainrW::new(self, 0)
     }

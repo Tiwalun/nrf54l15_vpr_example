@@ -181,19 +181,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable interrupt for event CRYPTOMASTER"]
     #[inline(always)]
-    #[must_use]
     pub fn cryptomaster(&mut self) -> CryptomasterW<IntenSpec> {
         CryptomasterW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable interrupt for event RNG"]
     #[inline(always)]
-    #[must_use]
     pub fn rng(&mut self) -> RngW<IntenSpec> {
         RngW::new(self, 1)
     }
     #[doc = "Bit 2 - Enable or disable interrupt for event PKEIKG"]
     #[inline(always)]
-    #[must_use]
     pub fn pkeikg(&mut self) -> PkeikgW<IntenSpec> {
         PkeikgW::new(self, 2)
     }

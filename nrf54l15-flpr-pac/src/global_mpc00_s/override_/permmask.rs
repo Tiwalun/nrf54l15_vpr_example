@@ -239,25 +239,21 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Read mask"]
     #[inline(always)]
-    #[must_use]
     pub fn read(&mut self) -> ReadW<PermmaskSpec> {
         ReadW::new(self, 0)
     }
     #[doc = "Bit 1 - Write mask"]
     #[inline(always)]
-    #[must_use]
     pub fn write(&mut self) -> WriteW<PermmaskSpec> {
         WriteW::new(self, 1)
     }
     #[doc = "Bit 2 - Execute mask"]
     #[inline(always)]
-    #[must_use]
     pub fn execute(&mut self) -> ExecuteW<PermmaskSpec> {
         ExecuteW::new(self, 2)
     }
     #[doc = "Bit 3 - Security mapping mask"]
     #[inline(always)]
-    #[must_use]
     pub fn secattr(&mut self) -> SecattrW<PermmaskSpec> {
         SecattrW::new(self, 3)
     }

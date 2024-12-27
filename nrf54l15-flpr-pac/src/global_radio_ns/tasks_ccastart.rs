@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start the clear channel assessment used in IEEE 802.15.4 mode"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_ccastart(&mut self) -> TasksCcastartW<TasksCcastartSpec> {
         TasksCcastartW::new(self, 0)
     }

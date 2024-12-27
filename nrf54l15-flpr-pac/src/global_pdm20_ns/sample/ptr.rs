@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Address to write PDM samples to over DMA"]
     #[inline(always)]
-    #[must_use]
     pub fn sampleptr(&mut self) -> SampleptrW<PtrSpec> {
         SampleptrW::new(self, 0)
     }

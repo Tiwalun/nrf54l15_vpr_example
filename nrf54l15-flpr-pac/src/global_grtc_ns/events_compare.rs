@@ -70,7 +70,6 @@ impl W {
     #[doc = "Bit 0 - Compare event on CC\\[n\\]
 match"]
     #[inline(always)]
-    #[must_use]
     pub fn events_compare(&mut self) -> EventsCompareW<EventsCompareSpec> {
         EventsCompareW::new(self, 0)
     }

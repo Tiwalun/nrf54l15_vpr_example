@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Event from pin specified in CONFIG\\[n\\].PSEL"]
     #[inline(always)]
-    #[must_use]
     pub fn events_in(&mut self) -> EventsInW<EventsInSpec> {
         EventsInW::new(self, 0)
     }

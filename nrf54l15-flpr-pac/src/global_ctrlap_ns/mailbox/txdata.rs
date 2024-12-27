@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Data sent to debugger."]
     #[inline(always)]
-    #[must_use]
     pub fn txdata(&mut self) -> TxdataW<TxdataSpec> {
         TxdataW::new(self, 0)
     }

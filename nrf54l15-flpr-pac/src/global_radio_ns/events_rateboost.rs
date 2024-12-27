@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Ble_LR CI field received, receive mode is changed from Ble_LR125Kbit to Ble_LR500Kbit"]
     #[inline(always)]
-    #[must_use]
     pub fn events_rateboost(&mut self) -> EventsRateboostW<EventsRateboostSpec> {
         EventsRateboostW::new(self, 0)
     }

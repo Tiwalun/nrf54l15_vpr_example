@@ -123,13 +123,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable 32Ki clock output on pin"]
     #[inline(always)]
-    #[must_use]
     pub fn clkout32k(&mut self) -> Clkout32kW<ClkoutSpec> {
         Clkout32kW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable fast clock output on pin"]
     #[inline(always)]
-    #[must_use]
     pub fn clkoutfast(&mut self) -> ClkoutfastW<ClkoutSpec> {
         ClkoutfastW::new(self, 1)
     }

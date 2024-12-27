@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Marks the SEED as valid"]
     #[inline(always)]
-    #[must_use]
     pub fn valid(&mut self) -> ValidW<SeedvalidSpec> {
         ValidW::new(self, 0)
     }

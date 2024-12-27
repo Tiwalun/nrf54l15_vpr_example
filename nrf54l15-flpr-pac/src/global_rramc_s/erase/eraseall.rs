@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Erase whole RRAM main block"]
     #[inline(always)]
-    #[must_use]
     pub fn erase(&mut self) -> EraseW<EraseallSpec> {
         EraseW::new(self, 0)
     }

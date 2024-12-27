@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Operation aborted because of a STOP task or due to an error"]
     #[inline(always)]
-    #[must_use]
     pub fn events_error(&mut self) -> EventsErrorW<EventsErrorSpec> {
         EventsErrorW::new(self, 0)
     }

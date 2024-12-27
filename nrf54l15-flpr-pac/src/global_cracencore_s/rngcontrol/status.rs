@@ -154,37 +154,31 @@ impl R {
 impl W {
     #[doc = "Bit 4 - NIST-800-90B repetition Count Test interrupt status."]
     #[inline(always)]
-    #[must_use]
     pub fn repfail(&mut self) -> RepfailW<StatusSpec> {
         RepfailW::new(self, 4)
     }
     #[doc = "Bit 5 - NIST-800-90B adaptive Proportion Test (1024-sample window) interrupt status."]
     #[inline(always)]
-    #[must_use]
     pub fn propfail(&mut self) -> PropfailW<StatusSpec> {
         PropfailW::new(self, 5)
     }
     #[doc = "Bit 7 - FIFO full status."]
     #[inline(always)]
-    #[must_use]
     pub fn fullint(&mut self) -> FullintW<StatusSpec> {
         FullintW::new(self, 7)
     }
     #[doc = "Bit 8 - AIS31 preliminary noise alarm interrupt status."]
     #[inline(always)]
-    #[must_use]
     pub fn preint(&mut self) -> PreintW<StatusSpec> {
         PreintW::new(self, 8)
     }
     #[doc = "Bit 9 - AIS31 noise alarm interrupt status."]
     #[inline(always)]
-    #[must_use]
     pub fn almint(&mut self) -> AlmintW<StatusSpec> {
         AlmintW::new(self, 9)
     }
     #[doc = "Bit 11 - Set when a FIFO data read is performed while the NDRNG is disabled AND has its FIFO empty (FIFOLevel = 0)."]
     #[inline(always)]
-    #[must_use]
     pub fn fifoaccfail(&mut self) -> FifoaccfailW<StatusSpec> {
         FifoaccfailW::new(self, 11)
     }

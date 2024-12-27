@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start PLL and keep it running, regardless of the automatic clock requests"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_pllstart(&mut self) -> TasksPllstartW<TasksPllstartSpec> {
         TasksPllstartW::new(self, 0)
     }

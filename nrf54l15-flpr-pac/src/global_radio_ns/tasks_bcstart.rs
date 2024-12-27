@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start the bit counter"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_bcstart(&mut self) -> TasksBcstartW<TasksBcstartSpec> {
         TasksBcstartW::new(self, 0)
     }

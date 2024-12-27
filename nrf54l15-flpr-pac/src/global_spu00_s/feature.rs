@@ -30,7 +30,7 @@ impl Feature {
     #[doc = "0x200..0x384 - Unspecified"]
     #[inline(always)]
     pub const fn cracen(&self) -> &Cracen {
-        unsafe { &*(self as *const Self).cast::<u8>().add(512).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(512).cast() }
     }
     #[doc = "0x200..0x380 - Unspecified"]
     #[inline(always)]
@@ -38,7 +38,7 @@ impl Feature {
         #[allow(clippy::no_effect)]
         [(); 3][n];
         unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(512)
                 .add(128 * n)
@@ -50,7 +50,7 @@ impl Feature {
     #[inline(always)]
     pub fn gpio_iter(&self) -> impl Iterator<Item = &Gpio> {
         (0..3).map(move |n| unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(512)
                 .add(128 * n)

@@ -1051,109 +1051,91 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Enable or disable interrupt for event STOPPED"]
     #[inline(always)]
-    #[must_use]
     pub fn stopped(&mut self) -> StoppedW<IntenSpec> {
         StoppedW::new(self, 1)
     }
     #[doc = "Bit 2 - Enable or disable interrupt for event SEQSTARTED\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn seqstarted0(&mut self) -> Seqstarted0W<IntenSpec> {
         Seqstarted0W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable or disable interrupt for event SEQSTARTED\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn seqstarted1(&mut self) -> Seqstarted1W<IntenSpec> {
         Seqstarted1W::new(self, 3)
     }
     #[doc = "Bit 4 - Enable or disable interrupt for event SEQEND\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn seqend0(&mut self) -> Seqend0W<IntenSpec> {
         Seqend0W::new(self, 4)
     }
     #[doc = "Bit 5 - Enable or disable interrupt for event SEQEND\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn seqend1(&mut self) -> Seqend1W<IntenSpec> {
         Seqend1W::new(self, 5)
     }
     #[doc = "Bit 6 - Enable or disable interrupt for event PWMPERIODEND"]
     #[inline(always)]
-    #[must_use]
     pub fn pwmperiodend(&mut self) -> PwmperiodendW<IntenSpec> {
         PwmperiodendW::new(self, 6)
     }
     #[doc = "Bit 7 - Enable or disable interrupt for event LOOPSDONE"]
     #[inline(always)]
-    #[must_use]
     pub fn loopsdone(&mut self) -> LoopsdoneW<IntenSpec> {
         LoopsdoneW::new(self, 7)
     }
     #[doc = "Bit 8 - Enable or disable interrupt for event RAMUNDERFLOW"]
     #[inline(always)]
-    #[must_use]
     pub fn ramunderflow(&mut self) -> RamunderflowW<IntenSpec> {
         RamunderflowW::new(self, 8)
     }
     #[doc = "Bit 9 - Enable or disable interrupt for event DMASEQ0END"]
     #[inline(always)]
-    #[must_use]
     pub fn dmaseq0end(&mut self) -> Dmaseq0endW<IntenSpec> {
         Dmaseq0endW::new(self, 9)
     }
     #[doc = "Bit 10 - Enable or disable interrupt for event DMASEQ0READY"]
     #[inline(always)]
-    #[must_use]
     pub fn dmaseq0ready(&mut self) -> Dmaseq0readyW<IntenSpec> {
         Dmaseq0readyW::new(self, 10)
     }
     #[doc = "Bit 11 - Enable or disable interrupt for event DMASEQ0BUSERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn dmaseq0buserror(&mut self) -> Dmaseq0buserrorW<IntenSpec> {
         Dmaseq0buserrorW::new(self, 11)
     }
     #[doc = "Bit 12 - Enable or disable interrupt for event DMASEQ1END"]
     #[inline(always)]
-    #[must_use]
     pub fn dmaseq1end(&mut self) -> Dmaseq1endW<IntenSpec> {
         Dmaseq1endW::new(self, 12)
     }
     #[doc = "Bit 13 - Enable or disable interrupt for event DMASEQ1READY"]
     #[inline(always)]
-    #[must_use]
     pub fn dmaseq1ready(&mut self) -> Dmaseq1readyW<IntenSpec> {
         Dmaseq1readyW::new(self, 13)
     }
     #[doc = "Bit 14 - Enable or disable interrupt for event DMASEQ1BUSERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn dmaseq1buserror(&mut self) -> Dmaseq1buserrorW<IntenSpec> {
         Dmaseq1buserrorW::new(self, 14)
     }
     #[doc = "Bit 15 - Enable or disable interrupt for event COMPAREMATCH\\[0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn comparematch0(&mut self) -> Comparematch0W<IntenSpec> {
         Comparematch0W::new(self, 15)
     }
     #[doc = "Bit 16 - Enable or disable interrupt for event COMPAREMATCH\\[1\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn comparematch1(&mut self) -> Comparematch1W<IntenSpec> {
         Comparematch1W::new(self, 16)
     }
     #[doc = "Bit 17 - Enable or disable interrupt for event COMPAREMATCH\\[2\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn comparematch2(&mut self) -> Comparematch2W<IntenSpec> {
         Comparematch2W::new(self, 17)
     }
     #[doc = "Bit 18 - Enable or disable interrupt for event COMPAREMATCH\\[3\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn comparematch3(&mut self) -> Comparematch3W<IntenSpec> {
         Comparematch3W::new(self, 18)
     }

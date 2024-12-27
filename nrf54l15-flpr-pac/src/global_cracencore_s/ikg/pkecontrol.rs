@@ -9,13 +9,11 @@ pub type ClearirqW<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - Start the PKE operation or trigger for Secure mode exit."]
     #[inline(always)]
-    #[must_use]
     pub fn pkestart(&mut self) -> PkestartW<PkecontrolSpec> {
         PkestartW::new(self, 0)
     }
     #[doc = "Bit 1 - Clear the IRQ output."]
     #[inline(always)]
-    #[must_use]
     pub fn clearirq(&mut self) -> ClearirqW<PkecontrolSpec> {
         ClearirqW::new(self, 1)
     }

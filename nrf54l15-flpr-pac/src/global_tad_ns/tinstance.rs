@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - TINSTANCE bits are used in the SW-DP DLPIDR.TINSTANCE field."]
     #[inline(always)]
-    #[must_use]
     pub fn tinstance(&mut self) -> TinstanceW<TinstanceSpec> {
         TinstanceW::new(self, 0)
     }

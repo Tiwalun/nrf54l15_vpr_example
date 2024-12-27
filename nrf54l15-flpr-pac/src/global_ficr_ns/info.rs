@@ -54,12 +54,12 @@ impl Info {
     pub const fn package(&self) -> &Package {
         &self.package
     }
-    #[doc = "0x28 - RAM variant"]
+    #[doc = "0x28 - RAM size (KB)"]
     #[inline(always)]
     pub const fn ram(&self) -> &Ram {
         &self.ram
     }
-    #[doc = "0x2c - RRAM variant"]
+    #[doc = "0x2c - RRAM size (KB)"]
     #[inline(always)]
     pub const fn rram(&self) -> &Rram {
         &self.rram
@@ -101,15 +101,15 @@ module"]
 pub type Package = crate::Reg<package::PackageSpec>;
 #[doc = "Package option"]
 pub mod package;
-#[doc = "RAM (r) register accessor: RAM variant\n\nYou can [`read`](crate::Reg::read) this register and get [`ram::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ram`]
+#[doc = "RAM (r) register accessor: RAM size (KB)\n\nYou can [`read`](crate::Reg::read) this register and get [`ram::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ram`]
 module"]
 #[doc(alias = "RAM")]
 pub type Ram = crate::Reg<ram::RamSpec>;
-#[doc = "RAM variant"]
+#[doc = "RAM size (KB)"]
 pub mod ram;
-#[doc = "RRAM (r) register accessor: RRAM variant\n\nYou can [`read`](crate::Reg::read) this register and get [`rram::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rram`]
+#[doc = "RRAM (r) register accessor: RRAM size (KB)\n\nYou can [`read`](crate::Reg::read) this register and get [`rram::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rram`]
 module"]
 #[doc(alias = "RRAM")]
 pub type Rram = crate::Reg<rram::RramSpec>;
-#[doc = "RRAM variant"]
+#[doc = "RRAM size (KB)"]
 pub mod rram;

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Bit counter compare"]
     #[inline(always)]
-    #[must_use]
     pub fn bcc(&mut self) -> BccW<BccSpec> {
         BccW::new(self, 0)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - Minimum duration between edge of CSN and edge of SCK. When SHORTS.END_START is used, this is the minimum duration CSN must stay high between transactions. The value is specified in number of SPIM core clock cycles."]
     #[inline(always)]
-    #[must_use]
     pub fn csndur(&mut self) -> CsndurW<CsndurSpec> {
         CsndurW::new(self, 0)
     }

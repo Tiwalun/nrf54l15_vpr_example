@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:12 - Signed value offset after the end of the CRC before starting switching in number of 16M cycles"]
     #[inline(always)]
-    #[must_use]
     pub fn tswitchoffset(&mut self) -> TswitchoffsetW<Dfectrl2Spec> {
         TswitchoffsetW::new(self, 0)
     }
     #[doc = "Bits 16:27 - Signed value offset before starting sampling in number of 16M cycles relative to the beginning of the REFERENCE state - 12 us after switching start"]
     #[inline(always)]
-    #[must_use]
     pub fn tsampleoffset(&mut self) -> TsampleoffsetW<Dfectrl2Spec> {
         TsampleoffsetW::new(self, 16)
     }

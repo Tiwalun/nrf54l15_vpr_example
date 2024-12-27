@@ -137,13 +137,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to enable interrupt for event RXREADY"]
     #[inline(always)]
-    #[must_use]
     pub fn rxready(&mut self) -> RxreadyW<IntensetSpec> {
         RxreadyW::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to enable interrupt for event TXDONE"]
     #[inline(always)]
-    #[must_use]
     pub fn txdone(&mut self) -> TxdoneW<IntensetSpec> {
         TxdoneW::new(self, 1)
     }

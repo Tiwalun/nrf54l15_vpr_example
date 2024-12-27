@@ -1,6 +1,6 @@
 #[doc = "Register `TASKS_READMETADATA` writer"]
 pub type W = crate::W<TasksReadmetadataSpec>;
-#[doc = "Read key slot metedata into METADATA register\n\nValue on reset: 0"]
+#[doc = "Read key slot metadata into METADATA register\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TasksReadmetadata {
     #[doc = "1: Trigger task"]
@@ -12,7 +12,7 @@ impl From<TasksReadmetadata> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `TASKS_READMETADATA` writer - Read key slot metedata into METADATA register"]
+#[doc = "Field `TASKS_READMETADATA` writer - Read key slot metadata into METADATA register"]
 pub type TasksReadmetadataW<'a, REG> = crate::BitWriter<'a, REG, TasksReadmetadata>;
 impl<'a, REG> TasksReadmetadataW<'a, REG>
 where
@@ -25,14 +25,13 @@ where
     }
 }
 impl W {
-    #[doc = "Bit 0 - Read key slot metedata into METADATA register"]
+    #[doc = "Bit 0 - Read key slot metadata into METADATA register"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_readmetadata(&mut self) -> TasksReadmetadataW<TasksReadmetadataSpec> {
         TasksReadmetadataW::new(self, 0)
     }
 }
-#[doc = "Read key slot metedata into METADATA register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tasks_readmetadata::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Read key slot metadata into METADATA register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tasks_readmetadata::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TasksReadmetadataSpec;
 impl crate::RegisterSpec for TasksReadmetadataSpec {
     type Ux = u32;

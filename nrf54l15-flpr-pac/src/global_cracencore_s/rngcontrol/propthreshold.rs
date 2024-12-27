@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:9 - Adaptive Proportion Test (1024-sample window) Cut-Off value."]
     #[inline(always)]
-    #[must_use]
     pub fn propthreshold(&mut self) -> PropthresholdW<PropthresholdSpec> {
         PropthresholdW::new(self, 0)
     }

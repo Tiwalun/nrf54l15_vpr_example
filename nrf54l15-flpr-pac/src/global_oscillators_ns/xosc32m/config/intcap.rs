@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Crystal load capacitor value"]
     #[inline(always)]
-    #[must_use]
     pub fn val(&mut self) -> ValW<IntcapSpec> {
         ValW::new(self, 0)
     }

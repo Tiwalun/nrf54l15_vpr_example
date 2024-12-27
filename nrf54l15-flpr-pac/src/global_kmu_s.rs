@@ -36,12 +36,12 @@ impl RegisterBlock {
     pub const fn tasks_revoke(&self) -> &TasksRevoke {
         &self.tasks_revoke
     }
-    #[doc = "0x0c - Read key slot metedata into METADATA register"]
+    #[doc = "0x0c - Read key slot metadata into METADATA register"]
     #[inline(always)]
     pub const fn tasks_readmetadata(&self) -> &TasksReadmetadata {
         &self.tasks_readmetadata
     }
-    #[doc = "0x10 - Block the PUSH operation of key slot, preventing the key slot being PUSH until next reset"]
+    #[doc = "0x10 - Block only the PUSH operation of a key slot, preventing the key slot from being PUSHED until next reset. The task is kept for backwards compatibility."]
     #[inline(always)]
     pub const fn tasks_pushblock(&self) -> &TasksPushblock {
         &self.tasks_pushblock
@@ -61,17 +61,17 @@ impl RegisterBlock {
     pub const fn events_revoked(&self) -> &EventsRevoked {
         &self.events_revoked
     }
-    #[doc = "0x10c - Error during PROVISION, PUSH, or REVOKE operations"]
+    #[doc = "0x10c - Error generated during PROVISION, PUSH, READMETADATA or REVOKE operations. Triggering the PROVISION, PUSH and REVOKE tasks on a BLOCKED keyslot will also generate this event."]
     #[inline(always)]
     pub const fn events_error(&self) -> &EventsError {
         &self.events_error
     }
-    #[doc = "0x110 - Key slot metedata has been read into METADATA register"]
+    #[doc = "0x110 - Key slot metadata has been read into METADATA register"]
     #[inline(always)]
     pub const fn events_metadataread(&self) -> &EventsMetadataread {
         &self.events_metadataread
     }
-    #[doc = "0x114 - The PUSHBLOCK operation was succesful"]
+    #[doc = "0x114 - The PUSHBLOCK operation was successful. The event is kept for backwards compatibility."]
     #[inline(always)]
     pub const fn events_pushblocked(&self) -> &EventsPushblocked {
         &self.events_pushblocked
@@ -115,17 +115,17 @@ module"]
 pub type TasksRevoke = crate::Reg<tasks_revoke::TasksRevokeSpec>;
 #[doc = "Revoke key slot"]
 pub mod tasks_revoke;
-#[doc = "TASKS_READMETADATA (w) register accessor: Read key slot metedata into METADATA register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tasks_readmetadata::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tasks_readmetadata`]
+#[doc = "TASKS_READMETADATA (w) register accessor: Read key slot metadata into METADATA register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tasks_readmetadata::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tasks_readmetadata`]
 module"]
 #[doc(alias = "TASKS_READMETADATA")]
 pub type TasksReadmetadata = crate::Reg<tasks_readmetadata::TasksReadmetadataSpec>;
-#[doc = "Read key slot metedata into METADATA register"]
+#[doc = "Read key slot metadata into METADATA register"]
 pub mod tasks_readmetadata;
-#[doc = "TASKS_PUSHBLOCK (w) register accessor: Block the PUSH operation of key slot, preventing the key slot being PUSH until next reset\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tasks_pushblock::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tasks_pushblock`]
+#[doc = "TASKS_PUSHBLOCK (w) register accessor: Block only the PUSH operation of a key slot, preventing the key slot from being PUSHED until next reset. The task is kept for backwards compatibility.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tasks_pushblock::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tasks_pushblock`]
 module"]
 #[doc(alias = "TASKS_PUSHBLOCK")]
 pub type TasksPushblock = crate::Reg<tasks_pushblock::TasksPushblockSpec>;
-#[doc = "Block the PUSH operation of key slot, preventing the key slot being PUSH until next reset"]
+#[doc = "Block only the PUSH operation of a key slot, preventing the key slot from being PUSHED until next reset. The task is kept for backwards compatibility."]
 pub mod tasks_pushblock;
 #[doc = "EVENTS_PROVISIONED (rw) register accessor: Key slot successfully provisioned\n\nYou can [`read`](crate::Reg::read) this register and get [`events_provisioned::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_provisioned::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@events_provisioned`]
 module"]
@@ -145,23 +145,23 @@ module"]
 pub type EventsRevoked = crate::Reg<events_revoked::EventsRevokedSpec>;
 #[doc = "Key slot has been revoked and can no longer be used"]
 pub mod events_revoked;
-#[doc = "EVENTS_ERROR (rw) register accessor: Error during PROVISION, PUSH, or REVOKE operations\n\nYou can [`read`](crate::Reg::read) this register and get [`events_error::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_error::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@events_error`]
+#[doc = "EVENTS_ERROR (rw) register accessor: Error generated during PROVISION, PUSH, READMETADATA or REVOKE operations. Triggering the PROVISION, PUSH and REVOKE tasks on a BLOCKED keyslot will also generate this event.\n\nYou can [`read`](crate::Reg::read) this register and get [`events_error::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_error::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@events_error`]
 module"]
 #[doc(alias = "EVENTS_ERROR")]
 pub type EventsError = crate::Reg<events_error::EventsErrorSpec>;
-#[doc = "Error during PROVISION, PUSH, or REVOKE operations"]
+#[doc = "Error generated during PROVISION, PUSH, READMETADATA or REVOKE operations. Triggering the PROVISION, PUSH and REVOKE tasks on a BLOCKED keyslot will also generate this event."]
 pub mod events_error;
-#[doc = "EVENTS_METADATAREAD (rw) register accessor: Key slot metedata has been read into METADATA register\n\nYou can [`read`](crate::Reg::read) this register and get [`events_metadataread::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_metadataread::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@events_metadataread`]
+#[doc = "EVENTS_METADATAREAD (rw) register accessor: Key slot metadata has been read into METADATA register\n\nYou can [`read`](crate::Reg::read) this register and get [`events_metadataread::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_metadataread::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@events_metadataread`]
 module"]
 #[doc(alias = "EVENTS_METADATAREAD")]
 pub type EventsMetadataread = crate::Reg<events_metadataread::EventsMetadatareadSpec>;
-#[doc = "Key slot metedata has been read into METADATA register"]
+#[doc = "Key slot metadata has been read into METADATA register"]
 pub mod events_metadataread;
-#[doc = "EVENTS_PUSHBLOCKED (rw) register accessor: The PUSHBLOCK operation was succesful\n\nYou can [`read`](crate::Reg::read) this register and get [`events_pushblocked::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_pushblocked::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@events_pushblocked`]
+#[doc = "EVENTS_PUSHBLOCKED (rw) register accessor: The PUSHBLOCK operation was successful. The event is kept for backwards compatibility.\n\nYou can [`read`](crate::Reg::read) this register and get [`events_pushblocked::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`events_pushblocked::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@events_pushblocked`]
 module"]
 #[doc(alias = "EVENTS_PUSHBLOCKED")]
 pub type EventsPushblocked = crate::Reg<events_pushblocked::EventsPushblockedSpec>;
-#[doc = "The PUSHBLOCK operation was succesful"]
+#[doc = "The PUSHBLOCK operation was successful. The event is kept for backwards compatibility."]
 pub mod events_pushblocked;
 #[doc = "STATUS (r) register accessor: KMU status register\n\nYou can [`read`](crate::Reg::read) this register and get [`status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status`]
 module"]

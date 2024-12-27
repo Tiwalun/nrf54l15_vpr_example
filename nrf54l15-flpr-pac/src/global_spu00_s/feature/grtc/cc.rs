@@ -123,13 +123,11 @@ impl R {
 impl W {
     #[doc = "Bit 4 - SECATTR feature"]
     #[inline(always)]
-    #[must_use]
     pub fn secattr(&mut self) -> SecattrW<CcSpec> {
         SecattrW::new(self, 4)
     }
     #[doc = "Bit 8 - LOCK feature"]
     #[inline(always)]
-    #[must_use]
     pub fn lock(&mut self) -> LockW<CcSpec> {
         LockW::new(self, 8)
     }

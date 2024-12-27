@@ -5,35 +5,33 @@ pub struct RegisterBlock {
     tasks_stop: TasksStop,
     tasks_count: TasksCount,
     tasks_clear: TasksClear,
-    tasks_shutdown: TasksShutdown,
-    _reserved5: [u8; 0x2c],
+    _reserved4: [u8; 0x30],
     tasks_capture: [TasksCapture; 8],
-    _reserved6: [u8; 0x20],
+    _reserved5: [u8; 0x20],
     subscribe_start: SubscribeStart,
     subscribe_stop: SubscribeStop,
     subscribe_count: SubscribeCount,
     subscribe_clear: SubscribeClear,
-    subscribe_shutdown: SubscribeShutdown,
-    _reserved11: [u8; 0x2c],
+    _reserved9: [u8; 0x30],
     subscribe_capture: [SubscribeCapture; 8],
-    _reserved12: [u8; 0x60],
+    _reserved10: [u8; 0x60],
     events_compare: [EventsCompare; 8],
-    _reserved13: [u8; 0x60],
+    _reserved11: [u8; 0x60],
     publish_compare: [PublishCompare; 8],
-    _reserved14: [u8; 0x20],
+    _reserved12: [u8; 0x20],
     shorts: Shorts,
-    _reserved15: [u8; 0xfc],
+    _reserved13: [u8; 0xfc],
     inten: Inten,
     intenset: Intenset,
     intenclr: Intenclr,
-    _reserved18: [u8; 0x01f8],
+    _reserved16: [u8; 0x01f8],
     mode: Mode,
     bitmode: Bitmode,
-    _reserved20: [u8; 0x04],
+    _reserved18: [u8; 0x04],
     prescaler: Prescaler,
-    _reserved21: [u8; 0x2c],
+    _reserved19: [u8; 0x2c],
     cc: [Cc; 8],
-    _reserved22: [u8; 0x20],
+    _reserved20: [u8; 0x20],
     oneshoten: [Oneshoten; 8],
 }
 impl RegisterBlock {
@@ -56,11 +54,6 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn tasks_clear(&self) -> &TasksClear {
         &self.tasks_clear
-    }
-    #[doc = "0x10 - Deprecated register - Shut down timer"]
-    #[inline(always)]
-    pub const fn tasks_shutdown(&self) -> &TasksShutdown {
-        &self.tasks_shutdown
     }
     #[doc = "0x40..0x60 - Description collection: Capture Timer value to CC\\[n\\]
 register"]
@@ -94,11 +87,6 @@ register"]
     #[inline(always)]
     pub const fn subscribe_clear(&self) -> &SubscribeClear {
         &self.subscribe_clear
-    }
-    #[doc = "0x90 - Deprecated register - Subscribe configuration for task SHUTDOWN"]
-    #[inline(always)]
-    pub const fn subscribe_shutdown(&self) -> &SubscribeShutdown {
-        &self.subscribe_shutdown
     }
     #[doc = "0xc0..0xe0 - Description collection: Subscribe configuration for task CAPTURE\\[n\\]"]
     #[inline(always)]
@@ -217,12 +205,6 @@ module"]
 pub type TasksClear = crate::Reg<tasks_clear::TasksClearSpec>;
 #[doc = "Clear time"]
 pub mod tasks_clear;
-#[doc = "TASKS_SHUTDOWN (w) register accessor: Deprecated register - Shut down timer\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tasks_shutdown::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tasks_shutdown`]
-module"]
-#[doc(alias = "TASKS_SHUTDOWN")]
-pub type TasksShutdown = crate::Reg<tasks_shutdown::TasksShutdownSpec>;
-#[doc = "Deprecated register - Shut down timer"]
-pub mod tasks_shutdown;
 #[doc = "TASKS_CAPTURE (w) register accessor: Description collection: Capture Timer value to CC\\[n\\]
 register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tasks_capture::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tasks_capture`]
 module"]
@@ -255,12 +237,6 @@ module"]
 pub type SubscribeClear = crate::Reg<subscribe_clear::SubscribeClearSpec>;
 #[doc = "Subscribe configuration for task CLEAR"]
 pub mod subscribe_clear;
-#[doc = "SUBSCRIBE_SHUTDOWN (rw) register accessor: Deprecated register - Subscribe configuration for task SHUTDOWN\n\nYou can [`read`](crate::Reg::read) this register and get [`subscribe_shutdown::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`subscribe_shutdown::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@subscribe_shutdown`]
-module"]
-#[doc(alias = "SUBSCRIBE_SHUTDOWN")]
-pub type SubscribeShutdown = crate::Reg<subscribe_shutdown::SubscribeShutdownSpec>;
-#[doc = "Deprecated register - Subscribe configuration for task SHUTDOWN"]
-pub mod subscribe_shutdown;
 #[doc = "SUBSCRIBE_CAPTURE (rw) register accessor: Description collection: Subscribe configuration for task CAPTURE\\[n\\]\n\nYou can [`read`](crate::Reg::read) this register and get [`subscribe_capture::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`subscribe_capture::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@subscribe_capture`]
 module"]
 #[doc(alias = "SUBSCRIBE_CAPTURE")]

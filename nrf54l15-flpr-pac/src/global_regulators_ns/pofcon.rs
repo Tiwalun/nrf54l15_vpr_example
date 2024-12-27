@@ -318,19 +318,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable power-fail comparator"]
     #[inline(always)]
-    #[must_use]
     pub fn pof(&mut self) -> PofW<PofconSpec> {
         PofW::new(self, 0)
     }
     #[doc = "Bits 1:4 - Power-fail comparator threshold setting"]
     #[inline(always)]
-    #[must_use]
     pub fn threshold(&mut self) -> ThresholdW<PofconSpec> {
         ThresholdW::new(self, 1)
     }
     #[doc = "Bit 7 - Disable the POFWARN power-fail warning event"]
     #[inline(always)]
-    #[must_use]
     pub fn eventdisable(&mut self) -> EventdisableW<PofconSpec> {
         EventdisableW::new(self, 7)
     }

@@ -30,7 +30,6 @@ impl W {
     #[doc = "Bit 0 - VPR task \\[n\\]
 register"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_trigger(&mut self) -> TasksTriggerW<TasksTriggerSpec> {
         TasksTriggerW::new(self, 0)
     }

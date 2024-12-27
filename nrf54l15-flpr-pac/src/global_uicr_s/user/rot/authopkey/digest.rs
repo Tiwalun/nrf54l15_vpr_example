@@ -20,7 +20,6 @@ impl W {
     #[doc = "Bits 0:31 - Value for word \\[o\\]
 in the key digest \\[n\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn value(&mut self) -> ValueW<DigestSpec> {
         ValueW::new(self, 0)
     }

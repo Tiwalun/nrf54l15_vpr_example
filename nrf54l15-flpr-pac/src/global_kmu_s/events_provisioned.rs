@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Key slot successfully provisioned"]
     #[inline(always)]
-    #[must_use]
     pub fn events_provisioned(&mut self) -> EventsProvisionedW<EventsProvisionedSpec> {
         EventsProvisionedW::new(self, 0)
     }

@@ -239,25 +239,21 @@ impl R {
 impl W {
     #[doc = "Bit 1 - Enable or disable interrupt for event RXPTRUPD"]
     #[inline(always)]
-    #[must_use]
     pub fn rxptrupd(&mut self) -> RxptrupdW<IntenSpec> {
         RxptrupdW::new(self, 1)
     }
     #[doc = "Bit 2 - Enable or disable interrupt for event STOPPED"]
     #[inline(always)]
-    #[must_use]
     pub fn stopped(&mut self) -> StoppedW<IntenSpec> {
         StoppedW::new(self, 2)
     }
     #[doc = "Bit 5 - Enable or disable interrupt for event TXPTRUPD"]
     #[inline(always)]
-    #[must_use]
     pub fn txptrupd(&mut self) -> TxptrupdW<IntenSpec> {
         TxptrupdW::new(self, 5)
     }
     #[doc = "Bit 7 - Enable or disable interrupt for event FRAMESTART"]
     #[inline(always)]
-    #[must_use]
     pub fn framestart(&mut self) -> FramestartW<IntenSpec> {
         FramestartW::new(self, 7)
     }

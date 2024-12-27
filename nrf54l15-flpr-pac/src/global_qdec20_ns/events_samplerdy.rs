@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Event being generated for every new sample value written to the SAMPLE register"]
     #[inline(always)]
-    #[must_use]
     pub fn events_samplerdy(&mut self) -> EventsSamplerdyW<EventsSamplerdySpec> {
         EventsSamplerdyW::new(self, 0)
     }

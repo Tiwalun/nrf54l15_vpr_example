@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Selects up mode or up-and-down mode for the counter"]
     #[inline(always)]
-    #[must_use]
     pub fn updown(&mut self) -> UpdownW<ModeSpec> {
         UpdownW::new(self, 0)
     }

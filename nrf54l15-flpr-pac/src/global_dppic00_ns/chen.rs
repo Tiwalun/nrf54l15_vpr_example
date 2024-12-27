@@ -1399,145 +1399,121 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable channel 0"]
     #[inline(always)]
-    #[must_use]
     pub fn ch0(&mut self) -> Ch0W<ChenSpec> {
         Ch0W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable channel 1"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1(&mut self) -> Ch1W<ChenSpec> {
         Ch1W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable or disable channel 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ch2(&mut self) -> Ch2W<ChenSpec> {
         Ch2W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable or disable channel 3"]
     #[inline(always)]
-    #[must_use]
     pub fn ch3(&mut self) -> Ch3W<ChenSpec> {
         Ch3W::new(self, 3)
     }
     #[doc = "Bit 4 - Enable or disable channel 4"]
     #[inline(always)]
-    #[must_use]
     pub fn ch4(&mut self) -> Ch4W<ChenSpec> {
         Ch4W::new(self, 4)
     }
     #[doc = "Bit 5 - Enable or disable channel 5"]
     #[inline(always)]
-    #[must_use]
     pub fn ch5(&mut self) -> Ch5W<ChenSpec> {
         Ch5W::new(self, 5)
     }
     #[doc = "Bit 6 - Enable or disable channel 6"]
     #[inline(always)]
-    #[must_use]
     pub fn ch6(&mut self) -> Ch6W<ChenSpec> {
         Ch6W::new(self, 6)
     }
     #[doc = "Bit 7 - Enable or disable channel 7"]
     #[inline(always)]
-    #[must_use]
     pub fn ch7(&mut self) -> Ch7W<ChenSpec> {
         Ch7W::new(self, 7)
     }
     #[doc = "Bit 8 - Enable or disable channel 8"]
     #[inline(always)]
-    #[must_use]
     pub fn ch8(&mut self) -> Ch8W<ChenSpec> {
         Ch8W::new(self, 8)
     }
     #[doc = "Bit 9 - Enable or disable channel 9"]
     #[inline(always)]
-    #[must_use]
     pub fn ch9(&mut self) -> Ch9W<ChenSpec> {
         Ch9W::new(self, 9)
     }
     #[doc = "Bit 10 - Enable or disable channel 10"]
     #[inline(always)]
-    #[must_use]
     pub fn ch10(&mut self) -> Ch10W<ChenSpec> {
         Ch10W::new(self, 10)
     }
     #[doc = "Bit 11 - Enable or disable channel 11"]
     #[inline(always)]
-    #[must_use]
     pub fn ch11(&mut self) -> Ch11W<ChenSpec> {
         Ch11W::new(self, 11)
     }
     #[doc = "Bit 12 - Enable or disable channel 12"]
     #[inline(always)]
-    #[must_use]
     pub fn ch12(&mut self) -> Ch12W<ChenSpec> {
         Ch12W::new(self, 12)
     }
     #[doc = "Bit 13 - Enable or disable channel 13"]
     #[inline(always)]
-    #[must_use]
     pub fn ch13(&mut self) -> Ch13W<ChenSpec> {
         Ch13W::new(self, 13)
     }
     #[doc = "Bit 14 - Enable or disable channel 14"]
     #[inline(always)]
-    #[must_use]
     pub fn ch14(&mut self) -> Ch14W<ChenSpec> {
         Ch14W::new(self, 14)
     }
     #[doc = "Bit 15 - Enable or disable channel 15"]
     #[inline(always)]
-    #[must_use]
     pub fn ch15(&mut self) -> Ch15W<ChenSpec> {
         Ch15W::new(self, 15)
     }
     #[doc = "Bit 16 - Enable or disable channel 16"]
     #[inline(always)]
-    #[must_use]
     pub fn ch16(&mut self) -> Ch16W<ChenSpec> {
         Ch16W::new(self, 16)
     }
     #[doc = "Bit 17 - Enable or disable channel 17"]
     #[inline(always)]
-    #[must_use]
     pub fn ch17(&mut self) -> Ch17W<ChenSpec> {
         Ch17W::new(self, 17)
     }
     #[doc = "Bit 18 - Enable or disable channel 18"]
     #[inline(always)]
-    #[must_use]
     pub fn ch18(&mut self) -> Ch18W<ChenSpec> {
         Ch18W::new(self, 18)
     }
     #[doc = "Bit 19 - Enable or disable channel 19"]
     #[inline(always)]
-    #[must_use]
     pub fn ch19(&mut self) -> Ch19W<ChenSpec> {
         Ch19W::new(self, 19)
     }
     #[doc = "Bit 20 - Enable or disable channel 20"]
     #[inline(always)]
-    #[must_use]
     pub fn ch20(&mut self) -> Ch20W<ChenSpec> {
         Ch20W::new(self, 20)
     }
     #[doc = "Bit 21 - Enable or disable channel 21"]
     #[inline(always)]
-    #[must_use]
     pub fn ch21(&mut self) -> Ch21W<ChenSpec> {
         Ch21W::new(self, 21)
     }
     #[doc = "Bit 22 - Enable or disable channel 22"]
     #[inline(always)]
-    #[must_use]
     pub fn ch22(&mut self) -> Ch22W<ChenSpec> {
         Ch22W::new(self, 22)
     }
     #[doc = "Bit 23 - Enable or disable channel 23"]
     #[inline(always)]
-    #[must_use]
     pub fn ch23(&mut self) -> Ch23W<ChenSpec> {
         Ch23W::new(self, 23)
     }

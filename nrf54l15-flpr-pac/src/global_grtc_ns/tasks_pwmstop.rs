@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Stop the PWM"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_pwmstop(&mut self) -> TasksPwmstopW<TasksPwmstopSpec> {
         TasksPwmstopW::new(self, 0)
     }

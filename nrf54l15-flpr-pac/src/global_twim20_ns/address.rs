@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:6 - Address used in the TWI transfer"]
     #[inline(always)]
-    #[must_use]
     pub fn address(&mut self) -> AddressW<AddressSpec> {
         AddressW::new(self, 0)
     }

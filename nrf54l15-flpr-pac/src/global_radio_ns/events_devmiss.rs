@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - No device address match occurred on the last received packet"]
     #[inline(always)]
-    #[must_use]
     pub fn events_devmiss(&mut self) -> EventsDevmissW<EventsDevmissSpec> {
         EventsDevmissW::new(self, 0)
     }

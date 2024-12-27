@@ -5,7 +5,6 @@ pub type ClearpatternW<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - Clear the GPIO pattern array for antenna control Behaves as a task register, but does not have PPI nor IRQ"]
     #[inline(always)]
-    #[must_use]
     pub fn clearpattern(&mut self) -> ClearpatternW<ClearpatternSpec> {
         ClearpatternW::new(self, 0)
     }

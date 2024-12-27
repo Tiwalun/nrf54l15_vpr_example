@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Select between default DETECT signal behavior and LDETECT mode"]
     #[inline(always)]
-    #[must_use]
     pub fn detectmode(&mut self) -> DetectmodeW<DetectmodeSpec> {
         DetectmodeW::new(self, 0)
     }

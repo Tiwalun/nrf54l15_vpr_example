@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Keep SYSCOUNTER in active state"]
     #[inline(always)]
-    #[must_use]
     pub fn active(&mut self) -> ActiveW<ActiveSpec> {
         ActiveW::new(self, 0)
     }

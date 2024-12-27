@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - IEEE 802.15.4 start of frame delimiter. Note: the least significant 4 bits of the SFD cannot all be zeros."]
     #[inline(always)]
-    #[must_use]
     pub fn sfd(&mut self) -> SfdW<SfdSpec> {
         SfdW::new(self, 0)
     }

@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start the RSSI and take one single sample of the receive signal strength"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_rssistart(&mut self) -> TasksRssistartW<TasksRssistartSpec> {
         TasksRssistartW::new(self, 0)
     }

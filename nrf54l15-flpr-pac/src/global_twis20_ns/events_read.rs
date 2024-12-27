@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Read command received"]
     #[inline(always)]
-    #[must_use]
     pub fn events_read(&mut self) -> EventsReadW<EventsReadSpec> {
         EventsReadW::new(self, 0)
     }

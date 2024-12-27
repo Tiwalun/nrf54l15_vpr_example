@@ -280,7 +280,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - I2S MCK frequency configuration NOTE: Enumerations are deprecated, use MCKFREQ equation. NOTE: The 12 least significant bits of the register are ignored and shall be set to zero."]
     #[inline(always)]
-    #[must_use]
     pub fn mckfreq(&mut self) -> MckfreqW<MckfreqSpec> {
         MckfreqW::new(self, 0)
     }

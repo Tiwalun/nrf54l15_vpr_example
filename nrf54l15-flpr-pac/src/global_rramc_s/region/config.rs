@@ -440,49 +440,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Read access"]
     #[inline(always)]
-    #[must_use]
     pub fn read(&mut self) -> ReadW<ConfigSpec> {
         ReadW::new(self, 0)
     }
     #[doc = "Bit 1 - Write access"]
     #[inline(always)]
-    #[must_use]
     pub fn write(&mut self) -> WriteW<ConfigSpec> {
         WriteW::new(self, 1)
     }
     #[doc = "Bit 2 - Execute access"]
     #[inline(always)]
-    #[must_use]
     pub fn execute(&mut self) -> ExecuteW<ConfigSpec> {
         ExecuteW::new(self, 2)
     }
     #[doc = "Bit 3 - Secure access"]
     #[inline(always)]
-    #[must_use]
     pub fn secure(&mut self) -> SecureW<ConfigSpec> {
         SecureW::new(self, 3)
     }
     #[doc = "Bits 4:7 - Owner ID"]
     #[inline(always)]
-    #[must_use]
     pub fn owner(&mut self) -> OwnerW<ConfigSpec> {
         OwnerW::new(self, 4)
     }
     #[doc = "Bit 12 - Write-once"]
     #[inline(always)]
-    #[must_use]
     pub fn writeonce(&mut self) -> WriteonceW<ConfigSpec> {
         WriteonceW::new(self, 12)
     }
     #[doc = "Bit 13 - Enable lock"]
     #[inline(always)]
-    #[must_use]
     pub fn lock(&mut self) -> LockW<ConfigSpec> {
         LockW::new(self, 13)
     }
     #[doc = "Bits 16:20 - Size in KBytes of region \\[n\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn size(&mut self) -> SizeW<ConfigSpec> {
         SizeW::new(self, 16)
     }

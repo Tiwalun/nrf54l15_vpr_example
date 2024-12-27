@@ -123,13 +123,11 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Automatic enable to keep the SYSCOUNTER active."]
     #[inline(always)]
-    #[must_use]
     pub fn autoen(&mut self) -> AutoenW<ModeSpec> {
         AutoenW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable the SYSCOUNTER"]
     #[inline(always)]
-    #[must_use]
     pub fn syscounteren(&mut self) -> SyscounterenW<ModeSpec> {
         SyscounterenW::new(self, 1)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Polarity of CSN output"]
     #[inline(always)]
-    #[must_use]
     pub fn csnpol_0(&mut self) -> Csnpol0W<CsnpolSpec> {
         Csnpol0W::new(self, 0)
     }

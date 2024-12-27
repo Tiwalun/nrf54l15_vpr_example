@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Frame start event, generated on the active edge of LRCK"]
     #[inline(always)]
-    #[must_use]
     pub fn events_framestart(&mut self) -> EventsFramestartW<EventsFramestartSpec> {
         EventsFramestartW::new(self, 0)
     }

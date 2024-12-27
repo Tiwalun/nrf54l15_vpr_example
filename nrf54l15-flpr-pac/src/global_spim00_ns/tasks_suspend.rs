@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Suspend SPI transaction"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_suspend(&mut self) -> TasksSuspendW<TasksSuspendSpec> {
         TasksSuspendW::new(self, 0)
     }

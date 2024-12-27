@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - The CCA has stopped"]
     #[inline(always)]
-    #[must_use]
     pub fn events_ccastopped(&mut self) -> EventsCcastoppedW<EventsCcastoppedSpec> {
         EventsCcastoppedW::new(self, 0)
     }

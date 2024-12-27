@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:7 - General purpose retention register"]
     #[inline(always)]
-    #[must_use]
     pub fn gpregret(&mut self) -> GpregretW<GpregretSpec> {
         GpregretW::new(self, 0)
     }

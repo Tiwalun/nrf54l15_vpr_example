@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - This register specifies the number of command bytes preceding the data bytes. The PSEL.DCX line will be low during transmission of command bytes and high during transmission of data bytes. Value 0xF indicates that all bytes are command bytes."]
     #[inline(always)]
-    #[must_use]
     pub fn dcxcnt(&mut self) -> DcxcntW<DcxcntSpec> {
         DcxcntW::new(self, 0)
     }

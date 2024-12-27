@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Data to look for"]
     #[inline(always)]
-    #[must_use]
     pub fn data(&mut self) -> DataW<CandidateSpec> {
         DataW::new(self, 0)
     }

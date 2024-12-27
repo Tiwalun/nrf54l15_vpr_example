@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Disable oscillator rings #n*32 to #((n+1)*32)-1."]
     #[inline(always)]
-    #[must_use]
     pub fn disableosc(&mut self) -> DisableoscW<DisableoscSpec> {
         DisableoscW::new(self, 0)
     }

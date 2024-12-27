@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Force state machine to SLEEP_A state"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_gosleep(&mut self) -> TasksGosleepW<TasksGosleepSpec> {
         TasksGosleepW::new(self, 0)
     }

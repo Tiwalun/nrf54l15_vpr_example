@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Receive buffer Data RAM start address. When receiving, words containing samples will be written to this address. This address is a word aligned Data RAM address."]
     #[inline(always)]
-    #[must_use]
     pub fn ptr(&mut self) -> PtrW<PtrSpec> {
         PtrW::new(self, 0)
     }

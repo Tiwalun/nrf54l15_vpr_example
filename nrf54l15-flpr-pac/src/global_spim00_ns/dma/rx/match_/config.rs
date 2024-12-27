@@ -471,49 +471,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable match filter 0"]
     #[inline(always)]
-    #[must_use]
     pub fn enable_0(&mut self) -> Enable0W<ConfigSpec> {
         Enable0W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable match filter 1"]
     #[inline(always)]
-    #[must_use]
     pub fn enable_1(&mut self) -> Enable1W<ConfigSpec> {
         Enable1W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable match filter 2"]
     #[inline(always)]
-    #[must_use]
     pub fn enable_2(&mut self) -> Enable2W<ConfigSpec> {
         Enable2W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable match filter 3"]
     #[inline(always)]
-    #[must_use]
     pub fn enable_3(&mut self) -> Enable3W<ConfigSpec> {
         Enable3W::new(self, 3)
     }
     #[doc = "Bit 16 - Configure match filter 0 as one-shot or sticky"]
     #[inline(always)]
-    #[must_use]
     pub fn oneshot_0(&mut self) -> Oneshot0W<ConfigSpec> {
         Oneshot0W::new(self, 16)
     }
     #[doc = "Bit 17 - Configure match filter 1 as one-shot or sticky"]
     #[inline(always)]
-    #[must_use]
     pub fn oneshot_1(&mut self) -> Oneshot1W<ConfigSpec> {
         Oneshot1W::new(self, 17)
     }
     #[doc = "Bit 18 - Configure match filter 2 as one-shot or sticky"]
     #[inline(always)]
-    #[must_use]
     pub fn oneshot_2(&mut self) -> Oneshot2W<ConfigSpec> {
         Oneshot2W::new(self, 18)
     }
     #[doc = "Bit 19 - Configure match filter 3 as one-shot or sticky"]
     #[inline(always)]
-    #[must_use]
     pub fn oneshot_3(&mut self) -> Oneshot3W<ConfigSpec> {
         Oneshot3W::new(self, 19)
     }

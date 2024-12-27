@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable lock"]
     #[inline(always)]
-    #[must_use]
     pub fn lock(&mut self) -> LockW<LockSpec> {
         LockW::new(self, 0)
     }

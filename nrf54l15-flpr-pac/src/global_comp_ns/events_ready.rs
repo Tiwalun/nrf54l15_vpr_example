@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - COMP is ready and output is valid"]
     #[inline(always)]
-    #[must_use]
     pub fn events_ready(&mut self) -> EventsReadyW<EventsReadySpec> {
         EventsReadyW::new(self, 0)
     }

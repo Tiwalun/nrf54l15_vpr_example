@@ -1000,112 +1000,96 @@ impl W {
     #[doc = "Bit 0 - Shortcut between event COMPARE\\[0\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare0_clear(&mut self) -> Compare0ClearW<ShortsSpec> {
         Compare0ClearW::new(self, 0)
     }
     #[doc = "Bit 1 - Shortcut between event COMPARE\\[1\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare1_clear(&mut self) -> Compare1ClearW<ShortsSpec> {
         Compare1ClearW::new(self, 1)
     }
     #[doc = "Bit 2 - Shortcut between event COMPARE\\[2\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare2_clear(&mut self) -> Compare2ClearW<ShortsSpec> {
         Compare2ClearW::new(self, 2)
     }
     #[doc = "Bit 3 - Shortcut between event COMPARE\\[3\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare3_clear(&mut self) -> Compare3ClearW<ShortsSpec> {
         Compare3ClearW::new(self, 3)
     }
     #[doc = "Bit 4 - Shortcut between event COMPARE\\[4\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare4_clear(&mut self) -> Compare4ClearW<ShortsSpec> {
         Compare4ClearW::new(self, 4)
     }
     #[doc = "Bit 5 - Shortcut between event COMPARE\\[5\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare5_clear(&mut self) -> Compare5ClearW<ShortsSpec> {
         Compare5ClearW::new(self, 5)
     }
     #[doc = "Bit 6 - Shortcut between event COMPARE\\[6\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare6_clear(&mut self) -> Compare6ClearW<ShortsSpec> {
         Compare6ClearW::new(self, 6)
     }
     #[doc = "Bit 7 - Shortcut between event COMPARE\\[7\\]
 and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn compare7_clear(&mut self) -> Compare7ClearW<ShortsSpec> {
         Compare7ClearW::new(self, 7)
     }
     #[doc = "Bit 16 - Shortcut between event COMPARE\\[0\\]
 and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn compare0_stop(&mut self) -> Compare0StopW<ShortsSpec> {
         Compare0StopW::new(self, 16)
     }
     #[doc = "Bit 17 - Shortcut between event COMPARE\\[1\\]
 and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn compare1_stop(&mut self) -> Compare1StopW<ShortsSpec> {
         Compare1StopW::new(self, 17)
     }
     #[doc = "Bit 18 - Shortcut between event COMPARE\\[2\\]
 and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn compare2_stop(&mut self) -> Compare2StopW<ShortsSpec> {
         Compare2StopW::new(self, 18)
     }
     #[doc = "Bit 19 - Shortcut between event COMPARE\\[3\\]
 and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn compare3_stop(&mut self) -> Compare3StopW<ShortsSpec> {
         Compare3StopW::new(self, 19)
     }
     #[doc = "Bit 20 - Shortcut between event COMPARE\\[4\\]
 and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn compare4_stop(&mut self) -> Compare4StopW<ShortsSpec> {
         Compare4StopW::new(self, 20)
     }
     #[doc = "Bit 21 - Shortcut between event COMPARE\\[5\\]
 and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn compare5_stop(&mut self) -> Compare5StopW<ShortsSpec> {
         Compare5StopW::new(self, 21)
     }
     #[doc = "Bit 22 - Shortcut between event COMPARE\\[6\\]
 and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn compare6_stop(&mut self) -> Compare6StopW<ShortsSpec> {
         Compare6StopW::new(self, 22)
     }
     #[doc = "Bit 23 - Shortcut between event COMPARE\\[7\\]
 and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn compare7_stop(&mut self) -> Compare7StopW<ShortsSpec> {
         Compare7StopW::new(self, 23)
     }

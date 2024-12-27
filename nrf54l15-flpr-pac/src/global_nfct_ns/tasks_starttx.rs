@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start transmission of an outgoing frame, change state to transmit"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_starttx(&mut self) -> TasksStarttxW<TasksStarttxSpec> {
         TasksStarttxW::new(self, 0)
     }

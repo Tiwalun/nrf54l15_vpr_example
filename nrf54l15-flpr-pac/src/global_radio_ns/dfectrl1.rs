@@ -505,49 +505,41 @@ impl R {
 impl W {
     #[doc = "Bits 0:5 - Length of the AoA/AoD procedure in number of 8 us units"]
     #[inline(always)]
-    #[must_use]
     pub fn numberof8us(&mut self) -> Numberof8usW<Dfectrl1Spec> {
         Numberof8usW::new(self, 0)
     }
     #[doc = "Bit 7 - Add CTE extension and do antenna switching/sampling in this extension"]
     #[inline(always)]
-    #[must_use]
     pub fn dfeinextension(&mut self) -> DfeinextensionW<Dfectrl1Spec> {
         DfeinextensionW::new(self, 7)
     }
     #[doc = "Bits 8:10 - Interval between every time the antenna is changed in the SWITCHING state"]
     #[inline(always)]
-    #[must_use]
     pub fn tswitchspacing(&mut self) -> TswitchspacingW<Dfectrl1Spec> {
         TswitchspacingW::new(self, 8)
     }
     #[doc = "Bits 12:14 - Interval between samples in the REFERENCE period"]
     #[inline(always)]
-    #[must_use]
     pub fn tsamplespacingref(&mut self) -> TsamplespacingrefW<Dfectrl1Spec> {
         TsamplespacingrefW::new(self, 12)
     }
     #[doc = "Bit 15 - Whether to sample I/Q or magnitude/phase"]
     #[inline(always)]
-    #[must_use]
     pub fn sampletype(&mut self) -> SampletypeW<Dfectrl1Spec> {
         SampletypeW::new(self, 15)
     }
     #[doc = "Bits 16:18 - Interval between samples in the SWITCHING period when CTEINLINECTRLEN is 0"]
     #[inline(always)]
-    #[must_use]
     pub fn tsamplespacing(&mut self) -> TsamplespacingW<Dfectrl1Spec> {
         TsamplespacingW::new(self, 16)
     }
     #[doc = "Bits 20:23 - Repeat every antenna pattern N times."]
     #[inline(always)]
-    #[must_use]
     pub fn repeatpattern(&mut self) -> RepeatpatternW<Dfectrl1Spec> {
         RepeatpatternW::new(self, 20)
     }
     #[doc = "Bits 24:27 - Gain will be lowered by the specified number of gain steps at the start of CTE"]
     #[inline(always)]
-    #[must_use]
     pub fn agcbackoffgain(&mut self) -> AgcbackoffgainW<Dfectrl1Spec> {
         AgcbackoffgainW::new(self, 24)
     }

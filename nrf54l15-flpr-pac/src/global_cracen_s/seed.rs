@@ -5,7 +5,6 @@ pub type ValW<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl W {
     #[doc = "Bits 0:31 - Seed value"]
     #[inline(always)]
-    #[must_use]
     pub fn val(&mut self) -> ValW<SeedSpec> {
         ValW::new(self, 0)
     }

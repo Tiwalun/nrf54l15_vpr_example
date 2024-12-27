@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Number of bits in the last or first byte read from RAM that shall be included in the frame (excluding parity bit)."]
     #[inline(always)]
-    #[must_use]
     pub fn txdatabits(&mut self) -> TxdatabitsW<AmountSpec> {
         TxdatabitsW::new(self, 0)
     }
     #[doc = "Bits 3:11 - Number of complete bytes that shall be included in the frame, excluding CRC, parity, and framing."]
     #[inline(always)]
-    #[must_use]
     pub fn txdatabytes(&mut self) -> TxdatabytesW<AmountSpec> {
         TxdatabytesW::new(self, 3)
     }

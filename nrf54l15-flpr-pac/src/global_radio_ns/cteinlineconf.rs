@@ -511,49 +511,41 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable parsing of CTEInfo from received packet in BLE modes"]
     #[inline(always)]
-    #[must_use]
     pub fn cteinlinectrlen(&mut self) -> CteinlinectrlenW<CteinlineconfSpec> {
         CteinlinectrlenW::new(self, 0)
     }
     #[doc = "Bit 3 - CTEInfo is S1 byte or not"]
     #[inline(always)]
-    #[must_use]
     pub fn cteinfoins1(&mut self) -> Cteinfoins1W<CteinlineconfSpec> {
         Cteinfoins1W::new(self, 3)
     }
     #[doc = "Bit 4 - Sampling/switching if CRC is not OK"]
     #[inline(always)]
-    #[must_use]
     pub fn cteerrorhandling(&mut self) -> CteerrorhandlingW<CteinlineconfSpec> {
         CteerrorhandlingW::new(self, 4)
     }
     #[doc = "Bits 6:7 - Max range of CTETime"]
     #[inline(always)]
-    #[must_use]
     pub fn ctetimevalidrange(&mut self) -> CtetimevalidrangeW<CteinlineconfSpec> {
         CtetimevalidrangeW::new(self, 6)
     }
     #[doc = "Bits 10:12 - Spacing between samples for the samples in the SWITCHING period when CTEINLINEMODE is set"]
     #[inline(always)]
-    #[must_use]
     pub fn cteinlinerxmode1us(&mut self) -> Cteinlinerxmode1usW<CteinlineconfSpec> {
         Cteinlinerxmode1usW::new(self, 10)
     }
     #[doc = "Bits 13:15 - Spacing between samples for the samples in the SWITCHING period when CTEINLINEMODE is set"]
     #[inline(always)]
-    #[must_use]
     pub fn cteinlinerxmode2us(&mut self) -> Cteinlinerxmode2usW<CteinlineconfSpec> {
         Cteinlinerxmode2usW::new(self, 13)
     }
     #[doc = "Bits 16:23 - S0 bit pattern to match"]
     #[inline(always)]
-    #[must_use]
     pub fn s0conf(&mut self) -> S0confW<CteinlineconfSpec> {
         S0confW::new(self, 16)
     }
     #[doc = "Bits 24:31 - S0 bit mask to set which bit to match"]
     #[inline(always)]
-    #[must_use]
     pub fn s0mask(&mut self) -> S0maskW<CteinlineconfSpec> {
         S0maskW::new(self, 24)
     }

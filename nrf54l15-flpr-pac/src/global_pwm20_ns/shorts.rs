@@ -480,50 +480,42 @@ impl W {
     #[doc = "Bit 0 - Shortcut between event SEQEND\\[n\\]
 and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn seqend0_stop(&mut self) -> Seqend0StopW<ShortsSpec> {
         Seqend0StopW::new(self, 0)
     }
     #[doc = "Bit 1 - Shortcut between event SEQEND\\[n\\]
 and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn seqend1_stop(&mut self) -> Seqend1StopW<ShortsSpec> {
         Seqend1StopW::new(self, 1)
     }
     #[doc = "Bit 2 - Shortcut between event LOOPSDONE and task DMA.SEQ\\[n\\].START"]
     #[inline(always)]
-    #[must_use]
     pub fn loopsdone_dma_seq0_start(&mut self) -> LoopsdoneDmaSeq0StartW<ShortsSpec> {
         LoopsdoneDmaSeq0StartW::new(self, 2)
     }
     #[doc = "Bit 3 - Shortcut between event LOOPSDONE and task DMA.SEQ\\[n\\].START"]
     #[inline(always)]
-    #[must_use]
     pub fn loopsdone_dma_seq1_start(&mut self) -> LoopsdoneDmaSeq1StartW<ShortsSpec> {
         LoopsdoneDmaSeq1StartW::new(self, 3)
     }
     #[doc = "Bit 4 - Shortcut between event LOOPSDONE and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn loopsdone_stop(&mut self) -> LoopsdoneStopW<ShortsSpec> {
         LoopsdoneStopW::new(self, 4)
     }
     #[doc = "Bit 5 - Shortcut between event RAMUNDERFLOW and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn ramunderflow_stop(&mut self) -> RamunderflowStopW<ShortsSpec> {
         RamunderflowStopW::new(self, 5)
     }
     #[doc = "Bit 6 - Shortcut between event DMA.SEQ\\[n\\].BUSERROR and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_seq0_buserror_stop(&mut self) -> DmaSeq0BuserrorStopW<ShortsSpec> {
         DmaSeq0BuserrorStopW::new(self, 6)
     }
     #[doc = "Bit 7 - Shortcut between event DMA.SEQ\\[n\\].BUSERROR and task STOP"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_seq1_buserror_stop(&mut self) -> DmaSeq1BuserrorStopW<ShortsSpec> {
         DmaSeq1BuserrorStopW::new(self, 7)
     }

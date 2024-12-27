@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Non-null report ready"]
     #[inline(always)]
-    #[must_use]
     pub fn events_reportrdy(&mut self) -> EventsReportrdyW<EventsReportrdySpec> {
         EventsReportrdyW::new(self, 0)
     }

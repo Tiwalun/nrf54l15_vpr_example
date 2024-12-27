@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Start the energy detect measurement used in IEEE 802.15.4 mode"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_edstart(&mut self) -> TasksEdstartW<TasksEdstartSpec> {
         TasksEdstartW::new(self, 0)
     }

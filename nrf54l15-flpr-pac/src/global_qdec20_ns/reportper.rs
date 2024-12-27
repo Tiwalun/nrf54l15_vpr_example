@@ -163,7 +163,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:3 - Specifies the number of samples to be accumulated in the ACC register before the REPORTRDY and DBLRDY events can be generated."]
     #[inline(always)]
-    #[must_use]
     pub fn reportper(&mut self) -> ReportperW<ReportperSpec> {
         ReportperW::new(self, 0)
     }

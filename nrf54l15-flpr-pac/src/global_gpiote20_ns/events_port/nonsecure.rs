@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Non-secure port event from owner n"]
     #[inline(always)]
-    #[must_use]
     pub fn nonsecure(&mut self) -> NonsecureW<NonsecureSpec> {
         NonsecureW::new(self, 0)
     }

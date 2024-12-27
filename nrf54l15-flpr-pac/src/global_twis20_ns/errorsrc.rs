@@ -181,19 +181,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - RX buffer overflow detected, and prevented"]
     #[inline(always)]
-    #[must_use]
     pub fn overflow(&mut self) -> OverflowW<ErrorsrcSpec> {
         OverflowW::new(self, 0)
     }
     #[doc = "Bit 2 - NACK sent after receiving a data byte"]
     #[inline(always)]
-    #[must_use]
     pub fn dnack(&mut self) -> DnackW<ErrorsrcSpec> {
         DnackW::new(self, 2)
     }
     #[doc = "Bit 3 - TX buffer over-read detected, and prevented"]
     #[inline(always)]
-    #[must_use]
     pub fn overread(&mut self) -> OverreadW<ErrorsrcSpec> {
         OverreadW::new(self, 3)
     }

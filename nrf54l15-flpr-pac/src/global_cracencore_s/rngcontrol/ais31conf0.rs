@@ -25,13 +25,11 @@ impl R {
 impl W {
     #[doc = "Bits 0:14 - Start-up test threshold."]
     #[inline(always)]
-    #[must_use]
     pub fn startupthreshold(&mut self) -> StartupthresholdW<Ais31conf0Spec> {
         StartupthresholdW::new(self, 0)
     }
     #[doc = "Bits 16:30 - Online threshold."]
     #[inline(always)]
-    #[must_use]
     pub fn onlinethreshold(&mut self) -> OnlinethresholdW<Ais31conf0Spec> {
         OnlinethresholdW::new(self, 16)
     }

@@ -59,7 +59,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn pall(&mut self) -> PallW<Protect0Spec> {
         PallW::new(self, 0)
     }

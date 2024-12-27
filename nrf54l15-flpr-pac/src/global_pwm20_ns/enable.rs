@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable PWM module"]
     #[inline(always)]
-    #[must_use]
     pub fn enable(&mut self) -> EnableW<EnableSpec> {
         EnableW::new(self, 0)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Data Bits 31 - 0"]
     #[inline(always)]
-    #[must_use]
     pub fn data(&mut self) -> DataW<Segment01Spec> {
         DataW::new(self, 0)
     }

@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Reseed Interval MSB."]
     #[inline(always)]
-    #[must_use]
     pub fn reseedintervalmsb(&mut self) -> ReseedintervalmsbW<ReseedintervalmsbSpec> {
         ReseedintervalmsbW::new(self, 0)
     }

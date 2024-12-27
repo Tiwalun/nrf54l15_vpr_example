@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Number of 32Ki cycles"]
     #[inline(always)]
-    #[must_use]
     pub fn value(&mut self) -> ValueW<TimeoutSpec> {
         ValueW::new(self, 0)
     }

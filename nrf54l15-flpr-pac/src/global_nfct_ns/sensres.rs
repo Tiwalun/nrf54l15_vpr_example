@@ -229,31 +229,26 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - Bit frame SDD as defined by the b5:b1 of byte 1 in SENS_RES response in the NFC Forum, NFC Digital Protocol Technical Specification"]
     #[inline(always)]
-    #[must_use]
     pub fn bitframesdd(&mut self) -> BitframesddW<SensresSpec> {
         BitframesddW::new(self, 0)
     }
     #[doc = "Bit 5 - Reserved for future use. Shall be 0."]
     #[inline(always)]
-    #[must_use]
     pub fn rfu5(&mut self) -> Rfu5W<SensresSpec> {
         Rfu5W::new(self, 5)
     }
     #[doc = "Bits 6:7 - NFCID1 size. This value is used by the auto collision resolution engine."]
     #[inline(always)]
-    #[must_use]
     pub fn nfcidsize(&mut self) -> NfcidsizeW<SensresSpec> {
         NfcidsizeW::new(self, 6)
     }
     #[doc = "Bits 8:11 - Tag platform configuration as defined by the b4:b1 of byte 2 in SENS_RES response in the NFC Forum, NFC Digital Protocol Technical Specification"]
     #[inline(always)]
-    #[must_use]
     pub fn platfconfig(&mut self) -> PlatfconfigW<SensresSpec> {
         PlatfconfigW::new(self, 8)
     }
     #[doc = "Bits 12:15 - Reserved for future use. Shall be 0."]
     #[inline(always)]
-    #[must_use]
     pub fn rfu74(&mut self) -> Rfu74W<SensresSpec> {
         Rfu74W::new(self, 12)
     }

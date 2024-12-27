@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Transmitter stopped"]
     #[inline(always)]
-    #[must_use]
     pub fn events_txstopped(&mut self) -> EventsTxstoppedW<EventsTxstoppedSpec> {
         EventsTxstoppedW::new(self, 0)
     }

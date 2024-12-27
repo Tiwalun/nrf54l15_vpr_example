@@ -1437,133 +1437,111 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Write '1' to enable interrupt for event STARTED"]
     #[inline(always)]
-    #[must_use]
     pub fn started(&mut self) -> StartedW<IntensetSpec> {
         StartedW::new(self, 0)
     }
     #[doc = "Bit 1 - Write '1' to enable interrupt for event END"]
     #[inline(always)]
-    #[must_use]
     pub fn end(&mut self) -> EndW<IntensetSpec> {
         EndW::new(self, 1)
     }
     #[doc = "Bit 2 - Write '1' to enable interrupt for event DONE"]
     #[inline(always)]
-    #[must_use]
     pub fn done(&mut self) -> DoneW<IntensetSpec> {
         DoneW::new(self, 2)
     }
     #[doc = "Bit 3 - Write '1' to enable interrupt for event RESULTDONE"]
     #[inline(always)]
-    #[must_use]
     pub fn resultdone(&mut self) -> ResultdoneW<IntensetSpec> {
         ResultdoneW::new(self, 3)
     }
     #[doc = "Bit 4 - Write '1' to enable interrupt for event CALIBRATEDONE"]
     #[inline(always)]
-    #[must_use]
     pub fn calibratedone(&mut self) -> CalibratedoneW<IntensetSpec> {
         CalibratedoneW::new(self, 4)
     }
     #[doc = "Bit 5 - Write '1' to enable interrupt for event STOPPED"]
     #[inline(always)]
-    #[must_use]
     pub fn stopped(&mut self) -> StoppedW<IntensetSpec> {
         StoppedW::new(self, 5)
     }
     #[doc = "Bit 6 - Write '1' to enable interrupt for event CH0LIMITH"]
     #[inline(always)]
-    #[must_use]
     pub fn ch0limith(&mut self) -> Ch0limithW<IntensetSpec> {
         Ch0limithW::new(self, 6)
     }
     #[doc = "Bit 7 - Write '1' to enable interrupt for event CH0LIMITL"]
     #[inline(always)]
-    #[must_use]
     pub fn ch0limitl(&mut self) -> Ch0limitlW<IntensetSpec> {
         Ch0limitlW::new(self, 7)
     }
     #[doc = "Bit 8 - Write '1' to enable interrupt for event CH1LIMITH"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1limith(&mut self) -> Ch1limithW<IntensetSpec> {
         Ch1limithW::new(self, 8)
     }
     #[doc = "Bit 9 - Write '1' to enable interrupt for event CH1LIMITL"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1limitl(&mut self) -> Ch1limitlW<IntensetSpec> {
         Ch1limitlW::new(self, 9)
     }
     #[doc = "Bit 10 - Write '1' to enable interrupt for event CH2LIMITH"]
     #[inline(always)]
-    #[must_use]
     pub fn ch2limith(&mut self) -> Ch2limithW<IntensetSpec> {
         Ch2limithW::new(self, 10)
     }
     #[doc = "Bit 11 - Write '1' to enable interrupt for event CH2LIMITL"]
     #[inline(always)]
-    #[must_use]
     pub fn ch2limitl(&mut self) -> Ch2limitlW<IntensetSpec> {
         Ch2limitlW::new(self, 11)
     }
     #[doc = "Bit 12 - Write '1' to enable interrupt for event CH3LIMITH"]
     #[inline(always)]
-    #[must_use]
     pub fn ch3limith(&mut self) -> Ch3limithW<IntensetSpec> {
         Ch3limithW::new(self, 12)
     }
     #[doc = "Bit 13 - Write '1' to enable interrupt for event CH3LIMITL"]
     #[inline(always)]
-    #[must_use]
     pub fn ch3limitl(&mut self) -> Ch3limitlW<IntensetSpec> {
         Ch3limitlW::new(self, 13)
     }
     #[doc = "Bit 14 - Write '1' to enable interrupt for event CH4LIMITH"]
     #[inline(always)]
-    #[must_use]
     pub fn ch4limith(&mut self) -> Ch4limithW<IntensetSpec> {
         Ch4limithW::new(self, 14)
     }
     #[doc = "Bit 15 - Write '1' to enable interrupt for event CH4LIMITL"]
     #[inline(always)]
-    #[must_use]
     pub fn ch4limitl(&mut self) -> Ch4limitlW<IntensetSpec> {
         Ch4limitlW::new(self, 15)
     }
     #[doc = "Bit 16 - Write '1' to enable interrupt for event CH5LIMITH"]
     #[inline(always)]
-    #[must_use]
     pub fn ch5limith(&mut self) -> Ch5limithW<IntensetSpec> {
         Ch5limithW::new(self, 16)
     }
     #[doc = "Bit 17 - Write '1' to enable interrupt for event CH5LIMITL"]
     #[inline(always)]
-    #[must_use]
     pub fn ch5limitl(&mut self) -> Ch5limitlW<IntensetSpec> {
         Ch5limitlW::new(self, 17)
     }
     #[doc = "Bit 18 - Write '1' to enable interrupt for event CH6LIMITH"]
     #[inline(always)]
-    #[must_use]
     pub fn ch6limith(&mut self) -> Ch6limithW<IntensetSpec> {
         Ch6limithW::new(self, 18)
     }
     #[doc = "Bit 19 - Write '1' to enable interrupt for event CH6LIMITL"]
     #[inline(always)]
-    #[must_use]
     pub fn ch6limitl(&mut self) -> Ch6limitlW<IntensetSpec> {
         Ch6limitlW::new(self, 19)
     }
     #[doc = "Bit 20 - Write '1' to enable interrupt for event CH7LIMITH"]
     #[inline(always)]
-    #[must_use]
     pub fn ch7limith(&mut self) -> Ch7limithW<IntensetSpec> {
         Ch7limithW::new(self, 20)
     }
     #[doc = "Bit 21 - Write '1' to enable interrupt for event CH7LIMITL"]
     #[inline(always)]
-    #[must_use]
     pub fn ch7limitl(&mut self) -> Ch7limitlW<IntensetSpec> {
         Ch7limitlW::new(self, 21)
     }

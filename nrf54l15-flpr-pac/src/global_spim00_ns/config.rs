@@ -181,19 +181,16 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Bit order"]
     #[inline(always)]
-    #[must_use]
     pub fn order(&mut self) -> OrderW<ConfigSpec> {
         OrderW::new(self, 0)
     }
     #[doc = "Bit 1 - Serial clock (SCK) phase"]
     #[inline(always)]
-    #[must_use]
     pub fn cpha(&mut self) -> CphaW<ConfigSpec> {
         CphaW::new(self, 1)
     }
     #[doc = "Bit 2 - Serial clock (SCK) polarity"]
     #[inline(always)]
-    #[must_use]
     pub fn cpol(&mut self) -> CpolW<ConfigSpec> {
         CpolW::new(self, 2)
     }

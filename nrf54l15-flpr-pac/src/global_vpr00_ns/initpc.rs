@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Initial value of the PC at CPU start."]
     #[inline(always)]
-    #[must_use]
     pub fn initpc(&mut self) -> InitpcW<InitpcSpec> {
         InitpcW::new(self, 0)
     }

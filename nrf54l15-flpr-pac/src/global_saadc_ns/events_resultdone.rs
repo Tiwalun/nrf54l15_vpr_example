@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - A result is ready to get transferred to RAM."]
     #[inline(always)]
-    #[must_use]
     pub fn events_resultdone(&mut self) -> EventsResultdoneW<EventsResultdoneSpec> {
         EventsResultdoneW::new(self, 0)
     }

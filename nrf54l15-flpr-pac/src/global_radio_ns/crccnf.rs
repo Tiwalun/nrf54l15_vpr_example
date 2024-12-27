@@ -88,75 +88,75 @@ where
         self.variant(Len::Three)
     }
 }
-#[doc = "Which packet fields to be kept out of CRC calculation. Subsequent fields after the specified options are included in CRC calculation.\n\nValue on reset: 0"]
+#[doc = "Control whether CRC calculation skips the address field. Other fields can also be skipped.\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum Offset {
+pub enum Skipaddr {
     #[doc = "0: CRC calculation includes address field"]
     Include = 0,
-    #[doc = "1: CRC calculation does not include address field. The CRC calculation will start at the first byte after the address."]
+    #[doc = "1: CRC calculation starting at first byte after address field."]
     Skip = 1,
-    #[doc = "2: CRC calculation as per 802.15.4 standard. Starting at first byte after length field."]
-    Length = 2,
-    #[doc = "3: CRC calculation Starting at first byte after S0 field."]
-    So = 3,
-    #[doc = "4: CRC calculation Starting at first byte after S1 field."]
-    S1 = 4,
+    #[doc = "2: CRC calculation starting at first byte after length field (as per 802.15.4 standard)."]
+    Ieee802154 = 2,
+    #[doc = "3: CRC calculation starting at first byte after S0 field."]
+    SkipS0 = 3,
+    #[doc = "4: CRC calculation starting at first byte after S1 field."]
+    SkipS1 = 4,
 }
-impl From<Offset> for u8 {
+impl From<Skipaddr> for u8 {
     #[inline(always)]
-    fn from(variant: Offset) -> Self {
+    fn from(variant: Skipaddr) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for Offset {
+impl crate::FieldSpec for Skipaddr {
     type Ux = u8;
 }
-impl crate::IsEnum for Offset {}
-#[doc = "Field `OFFSET` reader - Which packet fields to be kept out of CRC calculation. Subsequent fields after the specified options are included in CRC calculation."]
-pub type OffsetR = crate::FieldReader<Offset>;
-impl OffsetR {
+impl crate::IsEnum for Skipaddr {}
+#[doc = "Field `SKIPADDR` reader - Control whether CRC calculation skips the address field. Other fields can also be skipped."]
+pub type SkipaddrR = crate::FieldReader<Skipaddr>;
+impl SkipaddrR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Option<Offset> {
+    pub const fn variant(&self) -> Option<Skipaddr> {
         match self.bits {
-            0 => Some(Offset::Include),
-            1 => Some(Offset::Skip),
-            2 => Some(Offset::Length),
-            3 => Some(Offset::So),
-            4 => Some(Offset::S1),
+            0 => Some(Skipaddr::Include),
+            1 => Some(Skipaddr::Skip),
+            2 => Some(Skipaddr::Ieee802154),
+            3 => Some(Skipaddr::SkipS0),
+            4 => Some(Skipaddr::SkipS1),
             _ => None,
         }
     }
     #[doc = "CRC calculation includes address field"]
     #[inline(always)]
     pub fn is_include(&self) -> bool {
-        *self == Offset::Include
+        *self == Skipaddr::Include
     }
-    #[doc = "CRC calculation does not include address field. The CRC calculation will start at the first byte after the address."]
+    #[doc = "CRC calculation starting at first byte after address field."]
     #[inline(always)]
     pub fn is_skip(&self) -> bool {
-        *self == Offset::Skip
+        *self == Skipaddr::Skip
     }
-    #[doc = "CRC calculation as per 802.15.4 standard. Starting at first byte after length field."]
+    #[doc = "CRC calculation starting at first byte after length field (as per 802.15.4 standard)."]
     #[inline(always)]
-    pub fn is_length(&self) -> bool {
-        *self == Offset::Length
+    pub fn is_ieee802154(&self) -> bool {
+        *self == Skipaddr::Ieee802154
     }
-    #[doc = "CRC calculation Starting at first byte after S0 field."]
+    #[doc = "CRC calculation starting at first byte after S0 field."]
     #[inline(always)]
-    pub fn is_so(&self) -> bool {
-        *self == Offset::So
+    pub fn is_skip_s0(&self) -> bool {
+        *self == Skipaddr::SkipS0
     }
-    #[doc = "CRC calculation Starting at first byte after S1 field."]
+    #[doc = "CRC calculation starting at first byte after S1 field."]
     #[inline(always)]
-    pub fn is_s1(&self) -> bool {
-        *self == Offset::S1
+    pub fn is_skip_s1(&self) -> bool {
+        *self == Skipaddr::SkipS1
     }
 }
-#[doc = "Field `OFFSET` writer - Which packet fields to be kept out of CRC calculation. Subsequent fields after the specified options are included in CRC calculation."]
-pub type OffsetW<'a, REG> = crate::FieldWriter<'a, REG, 3, Offset>;
-impl<'a, REG> OffsetW<'a, REG>
+#[doc = "Field `SKIPADDR` writer - Control whether CRC calculation skips the address field. Other fields can also be skipped."]
+pub type SkipaddrW<'a, REG> = crate::FieldWriter<'a, REG, 3, Skipaddr>;
+impl<'a, REG> SkipaddrW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -164,27 +164,27 @@ where
     #[doc = "CRC calculation includes address field"]
     #[inline(always)]
     pub fn include(self) -> &'a mut crate::W<REG> {
-        self.variant(Offset::Include)
+        self.variant(Skipaddr::Include)
     }
-    #[doc = "CRC calculation does not include address field. The CRC calculation will start at the first byte after the address."]
+    #[doc = "CRC calculation starting at first byte after address field."]
     #[inline(always)]
     pub fn skip(self) -> &'a mut crate::W<REG> {
-        self.variant(Offset::Skip)
+        self.variant(Skipaddr::Skip)
     }
-    #[doc = "CRC calculation as per 802.15.4 standard. Starting at first byte after length field."]
+    #[doc = "CRC calculation starting at first byte after length field (as per 802.15.4 standard)."]
     #[inline(always)]
-    pub fn length(self) -> &'a mut crate::W<REG> {
-        self.variant(Offset::Length)
+    pub fn ieee802154(self) -> &'a mut crate::W<REG> {
+        self.variant(Skipaddr::Ieee802154)
     }
-    #[doc = "CRC calculation Starting at first byte after S0 field."]
+    #[doc = "CRC calculation starting at first byte after S0 field."]
     #[inline(always)]
-    pub fn so(self) -> &'a mut crate::W<REG> {
-        self.variant(Offset::So)
+    pub fn skip_s0(self) -> &'a mut crate::W<REG> {
+        self.variant(Skipaddr::SkipS0)
     }
-    #[doc = "CRC calculation Starting at first byte after S1 field."]
+    #[doc = "CRC calculation starting at first byte after S1 field."]
     #[inline(always)]
-    pub fn s1(self) -> &'a mut crate::W<REG> {
-        self.variant(Offset::S1)
+    pub fn skip_s1(self) -> &'a mut crate::W<REG> {
+        self.variant(Skipaddr::SkipS1)
     }
 }
 impl R {
@@ -193,24 +193,22 @@ impl R {
     pub fn len(&self) -> LenR {
         LenR::new((self.bits & 3) as u8)
     }
-    #[doc = "Bits 8:10 - Which packet fields to be kept out of CRC calculation. Subsequent fields after the specified options are included in CRC calculation."]
+    #[doc = "Bits 8:10 - Control whether CRC calculation skips the address field. Other fields can also be skipped."]
     #[inline(always)]
-    pub fn offset(&self) -> OffsetR {
-        OffsetR::new(((self.bits >> 8) & 7) as u8)
+    pub fn skipaddr(&self) -> SkipaddrR {
+        SkipaddrR::new(((self.bits >> 8) & 7) as u8)
     }
 }
 impl W {
     #[doc = "Bits 0:1 - CRC length in number of bytes."]
     #[inline(always)]
-    #[must_use]
     pub fn len(&mut self) -> LenW<CrccnfSpec> {
         LenW::new(self, 0)
     }
-    #[doc = "Bits 8:10 - Which packet fields to be kept out of CRC calculation. Subsequent fields after the specified options are included in CRC calculation."]
+    #[doc = "Bits 8:10 - Control whether CRC calculation skips the address field. Other fields can also be skipped."]
     #[inline(always)]
-    #[must_use]
-    pub fn offset(&mut self) -> OffsetW<CrccnfSpec> {
-        OffsetW::new(self, 8)
+    pub fn skipaddr(&mut self) -> SkipaddrW<CrccnfSpec> {
+        SkipaddrW::new(self, 8)
     }
 }
 #[doc = "CRC configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`crccnf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`crccnf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

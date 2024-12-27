@@ -70,7 +70,6 @@ impl W {
     #[doc = "Bit 0 - This event is unused, but the PPIB provides the PUBLISH event to connect RECEIVE \\[n\\]
 event."]
     #[inline(always)]
-    #[must_use]
     pub fn events_receive(&mut self) -> EventsReceiveW<EventsReceiveSpec> {
         EventsReceiveW::new(self, 0)
     }

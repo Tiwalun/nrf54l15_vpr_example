@@ -1992,224 +1992,192 @@ impl W {
     #[doc = "Bit 0 - Keep the second bank in RAM block MEM\\[0\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem0(&mut self) -> Mem0W<Ret2Spec> {
         Mem0W::new(self, 0)
     }
     #[doc = "Bit 1 - Keep the second bank in RAM block MEM\\[1\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem1(&mut self) -> Mem1W<Ret2Spec> {
         Mem1W::new(self, 1)
     }
     #[doc = "Bit 2 - Keep the second bank in RAM block MEM\\[2\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem2(&mut self) -> Mem2W<Ret2Spec> {
         Mem2W::new(self, 2)
     }
     #[doc = "Bit 3 - Keep the second bank in RAM block MEM\\[3\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem3(&mut self) -> Mem3W<Ret2Spec> {
         Mem3W::new(self, 3)
     }
     #[doc = "Bit 4 - Keep the second bank in RAM block MEM\\[4\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem4(&mut self) -> Mem4W<Ret2Spec> {
         Mem4W::new(self, 4)
     }
     #[doc = "Bit 5 - Keep the second bank in RAM block MEM\\[5\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem5(&mut self) -> Mem5W<Ret2Spec> {
         Mem5W::new(self, 5)
     }
     #[doc = "Bit 6 - Keep the second bank in RAM block MEM\\[6\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem6(&mut self) -> Mem6W<Ret2Spec> {
         Mem6W::new(self, 6)
     }
     #[doc = "Bit 7 - Keep the second bank in RAM block MEM\\[7\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem7(&mut self) -> Mem7W<Ret2Spec> {
         Mem7W::new(self, 7)
     }
     #[doc = "Bit 8 - Keep the second bank in RAM block MEM\\[8\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem8(&mut self) -> Mem8W<Ret2Spec> {
         Mem8W::new(self, 8)
     }
     #[doc = "Bit 9 - Keep the second bank in RAM block MEM\\[9\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem9(&mut self) -> Mem9W<Ret2Spec> {
         Mem9W::new(self, 9)
     }
     #[doc = "Bit 10 - Keep the second bank in RAM block MEM\\[10\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem10(&mut self) -> Mem10W<Ret2Spec> {
         Mem10W::new(self, 10)
     }
     #[doc = "Bit 11 - Keep the second bank in RAM block MEM\\[11\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem11(&mut self) -> Mem11W<Ret2Spec> {
         Mem11W::new(self, 11)
     }
     #[doc = "Bit 12 - Keep the second bank in RAM block MEM\\[12\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem12(&mut self) -> Mem12W<Ret2Spec> {
         Mem12W::new(self, 12)
     }
     #[doc = "Bit 13 - Keep the second bank in RAM block MEM\\[13\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem13(&mut self) -> Mem13W<Ret2Spec> {
         Mem13W::new(self, 13)
     }
     #[doc = "Bit 14 - Keep the second bank in RAM block MEM\\[14\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem14(&mut self) -> Mem14W<Ret2Spec> {
         Mem14W::new(self, 14)
     }
     #[doc = "Bit 15 - Keep the second bank in RAM block MEM\\[15\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem15(&mut self) -> Mem15W<Ret2Spec> {
         Mem15W::new(self, 15)
     }
     #[doc = "Bit 16 - Keep the second bank in RAM block MEM\\[16\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem16(&mut self) -> Mem16W<Ret2Spec> {
         Mem16W::new(self, 16)
     }
     #[doc = "Bit 17 - Keep the second bank in RAM block MEM\\[17\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem17(&mut self) -> Mem17W<Ret2Spec> {
         Mem17W::new(self, 17)
     }
     #[doc = "Bit 18 - Keep the second bank in RAM block MEM\\[18\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem18(&mut self) -> Mem18W<Ret2Spec> {
         Mem18W::new(self, 18)
     }
     #[doc = "Bit 19 - Keep the second bank in RAM block MEM\\[19\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem19(&mut self) -> Mem19W<Ret2Spec> {
         Mem19W::new(self, 19)
     }
     #[doc = "Bit 20 - Keep the second bank in RAM block MEM\\[20\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem20(&mut self) -> Mem20W<Ret2Spec> {
         Mem20W::new(self, 20)
     }
     #[doc = "Bit 21 - Keep the second bank in RAM block MEM\\[21\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem21(&mut self) -> Mem21W<Ret2Spec> {
         Mem21W::new(self, 21)
     }
     #[doc = "Bit 22 - Keep the second bank in RAM block MEM\\[22\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem22(&mut self) -> Mem22W<Ret2Spec> {
         Mem22W::new(self, 22)
     }
     #[doc = "Bit 23 - Keep the second bank in RAM block MEM\\[23\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem23(&mut self) -> Mem23W<Ret2Spec> {
         Mem23W::new(self, 23)
     }
     #[doc = "Bit 24 - Keep the second bank in RAM block MEM\\[24\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem24(&mut self) -> Mem24W<Ret2Spec> {
         Mem24W::new(self, 24)
     }
     #[doc = "Bit 25 - Keep the second bank in RAM block MEM\\[25\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem25(&mut self) -> Mem25W<Ret2Spec> {
         Mem25W::new(self, 25)
     }
     #[doc = "Bit 26 - Keep the second bank in RAM block MEM\\[26\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem26(&mut self) -> Mem26W<Ret2Spec> {
         Mem26W::new(self, 26)
     }
     #[doc = "Bit 27 - Keep the second bank in RAM block MEM\\[27\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem27(&mut self) -> Mem27W<Ret2Spec> {
         Mem27W::new(self, 27)
     }
     #[doc = "Bit 28 - Keep the second bank in RAM block MEM\\[28\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem28(&mut self) -> Mem28W<Ret2Spec> {
         Mem28W::new(self, 28)
     }
     #[doc = "Bit 29 - Keep the second bank in RAM block MEM\\[29\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem29(&mut self) -> Mem29W<Ret2Spec> {
         Mem29W::new(self, 29)
     }
     #[doc = "Bit 30 - Keep the second bank in RAM block MEM\\[30\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem30(&mut self) -> Mem30W<Ret2Spec> {
         Mem30W::new(self, 30)
     }
     #[doc = "Bit 31 - Keep the second bank in RAM block MEM\\[31\\]
 retained when in System OFF mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem31(&mut self) -> Mem31W<Ret2Spec> {
         Mem31W::new(self, 31)
     }

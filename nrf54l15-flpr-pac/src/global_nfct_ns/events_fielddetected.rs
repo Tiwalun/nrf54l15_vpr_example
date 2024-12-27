@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Remote NFC field detected"]
     #[inline(always)]
-    #[must_use]
     pub fn events_fielddetected(&mut self) -> EventsFielddetectedW<EventsFielddetectedSpec> {
         EventsFielddetectedW::new(self, 0)
     }

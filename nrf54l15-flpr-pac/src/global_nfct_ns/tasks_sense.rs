@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Enable NFC sense field mode, change state to sense mode"]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_sense(&mut self) -> TasksSenseW<TasksSenseSpec> {
         TasksSenseW::new(self, 0)
     }

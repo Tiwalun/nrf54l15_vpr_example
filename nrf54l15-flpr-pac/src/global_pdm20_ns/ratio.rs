@@ -150,7 +150,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:2 - Selects the decimation ratio between PDM_CLK and output sample rate"]
     #[inline(always)]
-    #[must_use]
     pub fn ratio(&mut self) -> RatioW<RatioSpec> {
         RatioW::new(self, 0)
     }

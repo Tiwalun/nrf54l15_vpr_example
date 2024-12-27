@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Double displacement(s) detected"]
     #[inline(always)]
-    #[must_use]
     pub fn events_dblrdy(&mut self) -> EventsDblrdyW<EventsDblrdySpec> {
         EventsDblrdyW::new(self, 0)
     }

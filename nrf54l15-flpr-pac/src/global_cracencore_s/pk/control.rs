@@ -9,13 +9,11 @@ pub type ClearirqW<'a, REG> = crate::BitWriter<'a, REG>;
 impl W {
     #[doc = "Bit 0 - Writing a 1 starts the processing."]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> StartW<ControlSpec> {
         StartW::new(self, 0)
     }
     #[doc = "Bit 1 - Writing a 1 clears the IRQ output."]
     #[inline(always)]
-    #[must_use]
     pub fn clearirq(&mut self) -> ClearirqW<ControlSpec> {
         ClearirqW::new(self, 1)
     }

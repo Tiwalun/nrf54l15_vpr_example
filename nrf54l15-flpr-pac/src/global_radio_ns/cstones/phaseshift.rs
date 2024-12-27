@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:15 - Phase shift used in TPM calculation"]
     #[inline(always)]
-    #[must_use]
     pub fn phaseshift(&mut self) -> PhaseshiftW<PhaseshiftSpec> {
         PhaseshiftW::new(self, 0)
     }

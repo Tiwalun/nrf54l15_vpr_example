@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Emitted at the end of each PWM period"]
     #[inline(always)]
-    #[must_use]
     pub fn events_pwmperiodend(&mut self) -> EventsPwmperiodendW<EventsPwmperiodendSpec> {
         EventsPwmperiodendW::new(self, 0)
     }

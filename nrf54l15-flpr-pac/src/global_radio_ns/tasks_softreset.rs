@@ -27,7 +27,6 @@ where
 impl W {
     #[doc = "Bit 0 - Reset all public registers, but with these exceptions: DMA registers and EVENT/INTEN/SUBSCRIBE/PUBLISH registers. Only to be used in DISABLED state."]
     #[inline(always)]
-    #[must_use]
     pub fn tasks_softreset(&mut self) -> TasksSoftresetW<TasksSoftresetSpec> {
         TasksSoftresetW::new(self, 0)
     }

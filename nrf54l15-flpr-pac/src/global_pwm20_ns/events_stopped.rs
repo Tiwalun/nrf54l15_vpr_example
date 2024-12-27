@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Response to STOP task, emitted when PWM pulses are no longer generated"]
     #[inline(always)]
-    #[must_use]
     pub fn events_stopped(&mut self) -> EventsStoppedW<EventsStoppedSpec> {
         EventsStoppedW::new(self, 0)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Shortcut between event RTCOMPARE and task CLEAR"]
     #[inline(always)]
-    #[must_use]
     pub fn rtcompare_clear(&mut self) -> RtcompareClearW<ShortsSpec> {
         RtcompareClearW::new(self, 0)
     }

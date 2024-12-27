@@ -16,7 +16,6 @@ impl R {
 impl W {
     #[doc = "Bits 0:31 - Mask data."]
     #[inline(always)]
-    #[must_use]
     pub fn maskdata(&mut self) -> MaskdataW<HawindowSpec> {
         MaskdataW::new(self, 0)
     }

@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - HFXO quality issue detected, XOTUNE is needed"]
     #[inline(always)]
-    #[must_use]
     pub fn events_xotuneerror(&mut self) -> EventsXotuneerrorW<EventsXotuneerrorSpec> {
         EventsXotuneerrorW::new(self, 0)
     }

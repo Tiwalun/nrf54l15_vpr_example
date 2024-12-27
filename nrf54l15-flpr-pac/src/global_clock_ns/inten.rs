@@ -413,43 +413,36 @@ impl R {
 impl W {
     #[doc = "Bit 0 - Enable or disable interrupt for event XOSTARTED"]
     #[inline(always)]
-    #[must_use]
     pub fn xostarted(&mut self) -> XostartedW<IntenSpec> {
         XostartedW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable or disable interrupt for event PLLSTARTED"]
     #[inline(always)]
-    #[must_use]
     pub fn pllstarted(&mut self) -> PllstartedW<IntenSpec> {
         PllstartedW::new(self, 1)
     }
     #[doc = "Bit 2 - Enable or disable interrupt for event LFCLKSTARTED"]
     #[inline(always)]
-    #[must_use]
     pub fn lfclkstarted(&mut self) -> LfclkstartedW<IntenSpec> {
         LfclkstartedW::new(self, 2)
     }
     #[doc = "Bit 3 - Enable or disable interrupt for event DONE"]
     #[inline(always)]
-    #[must_use]
     pub fn done(&mut self) -> DoneW<IntenSpec> {
         DoneW::new(self, 3)
     }
     #[doc = "Bit 4 - Enable or disable interrupt for event XOTUNED"]
     #[inline(always)]
-    #[must_use]
     pub fn xotuned(&mut self) -> XotunedW<IntenSpec> {
         XotunedW::new(self, 4)
     }
     #[doc = "Bit 5 - Enable or disable interrupt for event XOTUNEERROR"]
     #[inline(always)]
-    #[must_use]
     pub fn xotuneerror(&mut self) -> XotuneerrorW<IntenSpec> {
         XotuneerrorW::new(self, 5)
     }
     #[doc = "Bit 6 - Enable or disable interrupt for event XOTUNEFAILED"]
     #[inline(always)]
-    #[must_use]
     pub fn xotunefailed(&mut self) -> XotunefailedW<IntenSpec> {
         XotunefailedW::new(self, 6)
     }

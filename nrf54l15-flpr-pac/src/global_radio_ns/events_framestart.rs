@@ -65,7 +65,6 @@ impl R {
 impl W {
     #[doc = "Bit 0 - IEEE 802.15.4 length field received"]
     #[inline(always)]
-    #[must_use]
     pub fn events_framestart(&mut self) -> EventsFramestartW<EventsFramestartSpec> {
         EventsFramestartW::new(self, 0)
     }
