@@ -4,7 +4,7 @@
 use panic_halt as _;
 use riscv_rt::entry;
 
-use riscv as _;
+use riscv::{self as _, asm::wfi};
 
 #[entry]
 fn main() -> ! {
@@ -16,5 +16,7 @@ fn main() -> ! {
     gpio_p1.outset().write(|w| w.pin10().bit(true));
     gpio_p1.dirset().write(|w| w.pin10().set_bit());
 
-    loop {}
+    loop {
+        wfi();
+    }
 }
