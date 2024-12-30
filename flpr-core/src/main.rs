@@ -1,22 +1,18 @@
 #![no_std]
 #![no_main]
 
+use embassy_executor::Spawner;
+use embassy_nrf::gpio::{Level, Output, OutputDrive};
 use panic_halt as _;
-use riscv_rt::entry;
 
-use riscv::{self as _, asm::wfi};
+use riscv::{self as _};
 
-#[entry]
-fn main() -> ! {
-    let peripherals = nrf54l15_flpr_pac::Peripherals::take().unwrap();
+#[embassy_executor::main]
+async fn main(_spawner: Spawner) {
+    let p = embassy_nrf::init(Default::default());
 
     // Turn on LED1
-    let gpio_p1 = peripherals.global_p1_s;
+    let mut led = Output::new(p.P1_10, Level::Low, OutputDrive::Standard);
 
-    gpio_p1.outset().write(|w| w.pin10().bit(true));
-    gpio_p1.dirset().write(|w| w.pin10().set_bit());
-
-    loop {
-        wfi();
-    }
+    led.set_high();
 }
