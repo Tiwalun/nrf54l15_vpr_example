@@ -5,15 +5,14 @@ edition = "2021"
 
 [dependencies]
 embassy-executor = { version = "0.7.0", path = "../../embassy/embassy-executor", features = [
-    "defmt",
+#    "defmt",
     "task-arena-size-32768",
     "arch-riscv32",
     "executor-thread",
 ] }
-embassy-nrf = { version = "0.2.0", path = "../../embassy/embassy-nrf", features = [
-    "defmt",
+embassy-nrf = { version = "0.3.0", path = "../../embassy/embassy-nrf", features = [
+#    "defmt",
     "nrf54l15-flpr-s",
-    "gpiote",
 ] }
 panic-halt = "0.2.0"
 riscv = { version = "0.12.1", features = ["critical-section-single-hart"] }

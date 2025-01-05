@@ -1,3 +1,5 @@
 *.hex
 
+.DS_Store
+
 **/target
