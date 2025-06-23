@@ -11,3 +11,7 @@ vcell = "0.1.0"
 
 [features]
 rt = ["riscv-rt"]
+
+[lints.rust]
+# Temporary, needs to be fixed in svd2rust
+"mismatched_lifetime_syntaxes" = "allow"

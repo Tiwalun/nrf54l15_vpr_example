@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+embedded-hal = "1.0.0"
 nrf54l15-flpr-pac = { version = "0.1.0", path = "../nrf54l15-flpr-pac", features = [
     "rt",
     "critical-section",

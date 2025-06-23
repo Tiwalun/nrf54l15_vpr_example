@@ -18,6 +18,7 @@ checksum = "361a90feb7004eca4019fb28352a9465666b24f840f5c3cddf0ff13920590b89"
 name = "flpr-core"
 version = "0.1.0"
 dependencies = [
+ "embedded-hal",
  "nrf54l15-flpr-pac",
  "panic-halt",
  "riscv",
