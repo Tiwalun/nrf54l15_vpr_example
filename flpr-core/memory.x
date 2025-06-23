@@ -8,7 +8,7 @@ MEMORY
   /* TODO: Figure out why this is necessary. If the heap is not specfied explicitly,
    * an error is raised that the heap is not aligned to 4 bytes.
    */
-  REGION_HEAP: ORIGIN = 0x2003f000, LENGTH = 0xf000
+  REGION_HEAP : ORIGIN = 0x2003f000, LENGTH = 0xf000
 }
 
 
