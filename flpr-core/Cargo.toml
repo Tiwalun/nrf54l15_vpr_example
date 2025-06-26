@@ -6,7 +6,6 @@ edition = "2021"
 [dependencies]
 embassy-executor = { version = "0.7.0", path = "../../embassy/embassy-executor", features = [
 #    "defmt",
-    "task-arena-size-32768",
     "arch-riscv32",
     "executor-thread",
 ] }
