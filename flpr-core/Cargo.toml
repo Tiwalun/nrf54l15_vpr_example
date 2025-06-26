@@ -4,13 +4,13 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-embassy-executor = { version = "0.7.0", path = "../../embassy/embassy-executor", features = [
-#    "defmt",
+embassy-executor = { version = "0.7.0", features = [
+    #    "defmt",
     "arch-riscv32",
     "executor-thread",
 ] }
-embassy-nrf = { version = "0.3.0", path = "../../embassy/embassy-nrf", features = [
-#    "defmt",
+embassy-nrf = { version = "0.3.0", features = [
+    #    "defmt",
     "nrf54l15-flpr-s",
 ] }
 panic-halt = "0.2.0"
@@ -21,3 +21,12 @@ riscv-rt = { version = "0.13.0", features = ["single-hart"] }
 # Patch needed to support RV32E
 riscv-rt = { git = "https://github.com/rust-embedded/riscv", rev = "fe6da179b437f23545a5db13ead28dc9855523a4" }
 riscv = { git = "https://github.com/rust-embedded/riscv", rev = "fe6da179b437f23545a5db13ead28dc9855523a4" }
+
+#embassy-executor = { git = "https://github.com/tiwalun/embassy", rev = "b6f86172"}
+#embassy-nrf = { git = "https://github.com/tiwalun/embassy", rev = "b6f86172"}
+
+embassy-executor = { path = "../../embassy/embassy/embassy-executor" }
+embassy-nrf = { path = "../../embassy/embassy/embassy-nrf" }
+
+nrf-pac = { path = "../../nrf-pac" }
+
