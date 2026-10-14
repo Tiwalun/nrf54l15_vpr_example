@@ -33,4 +33,4 @@ rust-objcopy -O ihex $FLPR_CORE_DIR/target/riscv32emc-unknown-none-elf/release/f
 probe-rs download flpr-core.hex --binary-format hex --chip nrf54l15
 
 #nrfutil device reset --reset-kind RESET_PIN --serial-number "$1"
-probe-rs reset
+probe-rs reset --chip nrf54l15

@@ -34,7 +34,7 @@ async fn main(spawner: Spawner) {
     let vpr = embassy_nrf::pac::VPR00_S;
 
     // Start the riscv core
-    const RISCV_ENTRY_ADDR: u32 = 0x00010000;
+    const RISCV_ENTRY_ADDR: u32 = 0x00020000;
 
     info!("Start VPR core from address {:#010x}", RISCV_ENTRY_ADDR);
 
