@@ -7,7 +7,11 @@ use defmt_rtt as _;
 use embassy_executor::Spawner;
 use embassy_nrf::{
     gpio::{Level, Output, OutputDrive},
-    pac::{spu::vals::Dmasec, vpr::vals},
+    pac::{
+        gpio::vals::{Ctrlsel, Dir, Drive, Input, Pull, Sense},
+        spu::vals::Dmasec,
+        vpr::vals,
+    },
 };
 use embassy_time::Timer;
 use panic_probe as _;
@@ -15,8 +19,6 @@ use panic_probe as _;
 #[embassy_executor::main]
 async fn main(spawner: Spawner) {
     let p = embassy_nrf::init(Default::default());
-
-    // TODO: Give LED2 (P2_07) to the VPR peripheral
 
     // Turn on LED1
     let led1 = Output::new(p.P1_10, Level::Low, OutputDrive::Standard);

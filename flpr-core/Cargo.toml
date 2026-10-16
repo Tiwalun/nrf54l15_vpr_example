@@ -25,4 +25,4 @@ riscv-rt = { version = "0.18.0", features = ["single-hart"] }
 #embassy-executor = { path = "../../embassy/embassy/embassy-executor" }
 #embassy-nrf = { path = "../../embassy/embassy/embassy-nrf" }
 
-nrf-pac = { path = "../../nrf-pac" }
+#nrf-pac = { path = "../../nrf-pac" }
