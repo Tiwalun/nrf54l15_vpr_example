@@ -11,8 +11,11 @@ use riscv_rt::entry;
 
 #[entry]
 fn main() -> ! {
-    let port1 = pac::P1_S;
-    port1.pin_cnf(10).write(|w| {
+    // Use LED 0
+    const LED_PIN: usize = 9;
+
+    let port2 = pac::P2_S;
+    port2.pin_cnf(LED_PIN).write(|w| {
         w.set_dir(vals::Dir::Output);
         w.set_input(vals::Input::Disconnect);
         w.set_pull(vals::Pull::Disabled);
@@ -34,8 +37,8 @@ fn main() -> ! {
 
     loop {
         delay.delay_ms(900);
-        port1.outclr().write(|w| w.set_pin(10, true));
+        port2.outclr().write(|w| w.set_pin(LED_PIN, true));
         delay.delay_ms(900);
-        port1.outset().write(|w| w.set_pin(10, true));
+        port2.outset().write(|w| w.set_pin(LED_PIN, true));
     }
 }

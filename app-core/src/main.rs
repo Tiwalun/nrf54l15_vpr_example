@@ -16,10 +16,10 @@ use panic_probe as _;
 async fn main(spawner: Spawner) {
     let p = embassy_nrf::init(Default::default());
 
-    // Turn on LED0
-    let led0 = Output::new(p.P2_09, Level::Low, OutputDrive::Standard);
+    // Turn on LED1
+    let led1 = Output::new(p.P1_10, Level::Low, OutputDrive::Standard);
 
-    unwrap!(spawner.spawn(blinker(led0)));
+    unwrap!(spawner.spawn(blinker(led1)));
 
     info!("Configure VPR core to secure mode");
     let spu = embassy_nrf::pac::SPU00_S;
@@ -44,9 +44,9 @@ async fn main(spawner: Spawner) {
 
     vpr.cpurun().write(|w| w.set_en(vals::CpurunEn::RUNNING));
 
-    // Turn on LED2
-    let led2 = Output::new(p.P2_07, Level::Low, OutputDrive::Standard);
-    unwrap!(spawner.spawn(blinker(led2)));
+    // Turn on LED3
+    let led3 = Output::new(p.P1_14, Level::Low, OutputDrive::Standard);
+    unwrap!(spawner.spawn(blinker(led3)));
 }
 
 #[embassy_executor::task(pool_size = 2)]
