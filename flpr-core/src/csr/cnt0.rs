@@ -4,7 +4,7 @@ const MASK: usize = 0xFFFF;
 
 read_write_csr! {
     /// Nordic Control Register
-    Cnt0: 0xBC1,
+    Cnt0: 0x7d5,
     mask: MASK,
 }
 

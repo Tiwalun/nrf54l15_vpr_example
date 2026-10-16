@@ -2,7 +2,10 @@
 #![no_main]
 
 use embedded_hal::delay::DelayNs as _;
-use flpr_core::csr;
+use flpr_core::csr::{
+    self, cnt::Cnt, cntmode0::CntMode0, cntmode1::CntMode1, cnttop::CntTop, outbtgl::OutBTgl,
+    wait::Wait,
+};
 use nrf_pac as pac;
 use pac::gpio::vals;
 use panic_halt as _;
@@ -63,6 +66,31 @@ fn main() -> ! {
         csr::dir::write(dir);
     }
 
+    // Setup the counter
+    //
+    // Goal is a 500 ms wait -> 64_000_000 / 32_000_000
+
+    // Lets load the combined counter, this means that it uses the combined value
+    // and we effectively only have cnt1.
+
+    // Reload after counter 0 has expired
+    let cnt_mode_0 = CntMode0::from_bits(2);
+
+    // Combine counter 1 with counter 0
+    let cnt_mode_1 = CntMode1::from_bits(3);
+
+    // Set reload value and initial value
+    let cnt_top = CntTop::from_bits(32_000_000);
+    let cnt = Cnt::from_bits(32_000_000);
+    unsafe {
+        csr::cnttop::write(cnt_top);
+        csr::cnt::write(cnt);
+        csr::cntmode1::write(cnt_mode_1);
+
+        // Have this last, because this starts?
+        csr::cntmode0::write(cnt_mode_0);
+    }
+
     // TODO: Remove, controlled above...
     //port2.outclr().write(|w| w.set_pin(7, true));
 
@@ -91,7 +119,12 @@ fn main() -> ! {
     }
     */
 
+    let out_b_tgl = OutBTgl::from_bits(1 << LED2_PIN);
+
     loop {
-        asm::wfi();
+        // This will wait until the counter has expired.
+        unsafe {
+            csr::outbtgl::write(out_b_tgl);
+        }
     }
 }

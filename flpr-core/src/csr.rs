@@ -1,5 +1,14 @@
+pub mod cnt;
 pub mod cnt0;
 pub mod cnt1;
+pub mod cntadd;
+pub mod cntmode0;
+pub mod cntmode1;
+pub mod cnttop;
 pub mod ctrl;
 pub mod dir;
 pub mod out;
+pub mod outbtgl;
+pub mod wait;
+pub mod wait0;
+pub mod wait1;
