@@ -1,24 +1,33 @@
 #![no_std]
 #![no_main]
 
+use core::{arch::global_asm, mem::MaybeUninit};
+
 use defmt::{info, unwrap};
 
 use defmt_rtt as _;
 use embassy_executor::Spawner;
 use embassy_nrf::{
     gpio::{Level, Output, OutputDrive},
-    pac::{
-        gpio::vals::{Ctrlsel, Dir, Drive, Input, Pull, Sense},
-        spu::vals::Dmasec,
-        vpr::vals,
-    },
+    pac::{spu::vals::Dmasec, vpr::vals},
 };
 use embassy_time::Timer;
 use panic_probe as _;
 
+unsafe extern "C" {
+    // Provided by the linker: This is the address of the static memory
+    pub static __shared_mem: u32;
+}
+
 #[embassy_executor::main]
 async fn main(spawner: Spawner) {
     let p = embassy_nrf::init(Default::default());
+
+    // Ensure shared flag is set to 0
+    unsafe {
+        let shared_mem_ptr: *mut u32 = __shared_mem as *mut _;
+        shared_mem_ptr.write_volatile(0);
+    }
 
     // Turn on LED1
     let led1 = Output::new(p.P1_10, Level::Low, OutputDrive::Standard);
@@ -47,6 +56,14 @@ async fn main(spawner: Spawner) {
     });
 
     vpr.cpurun().write(|w| w.set_en(vals::CpurunEn::Running));
+
+    Timer::after_secs(1).await;
+
+    // Set shared flag to 1
+    unsafe {
+        let shared_mem_ptr: *mut u32 = __shared_mem as *mut _;
+        shared_mem_ptr.write_volatile(1);
+    }
 
     // Turn on LED3
     let led3 = Output::new(p.P1_14, Level::Low, OutputDrive::Standard);

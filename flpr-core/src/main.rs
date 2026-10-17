@@ -12,6 +12,12 @@ use panic_halt as _;
 use riscv::{asm, delay::McycleDelay};
 use riscv_rt::entry;
 
+unsafe extern "C" {
+    // Provided by the linker: This is the address of the shared memory buffer
+    // used for communicating between the cores.
+    pub static __shared_mem: u32;
+}
+
 #[entry]
 fn main() -> ! {
     // Use LED 0
@@ -42,6 +48,15 @@ fn main() -> ! {
         w.set_drive1(vals::Drive::S);
         w.set_sense(vals::Sense::Disabled);
     });
+
+    // Wait until shared flag is set to 1
+    unsafe {
+        let shared_mem_ptr: *const u32 = __shared_mem as *const _;
+
+        while shared_mem_ptr.read_volatile() == 0 {
+            asm::nop();
+        }
+    }
 
     // Enable the Real-Time peripheral
     let mut ctrl = csr::ctrl::read();
@@ -96,28 +111,6 @@ fn main() -> ! {
 
     // Mark that we got here
     port2.outset().write(|w| w.set_pin(LED0_PIN, true));
-
-    /*
-    // 32 MHz seems to be the correct frequency for the RISCV core,
-    // but it's not documented in the datasheet.
-    const TICKS_PER_SECOND: u32 = 32_000_000;
-
-    // This gets disabled when the realtime peripherals are enabled, I think
-
-    let mut delay = McycleDelay::new(TICKS_PER_SECOND);
-
-    // Enable cycle counter, by clearing the CY inhibit bit
-    unsafe {
-        riscv::register::mcountinhibit::clear_cy();
-    }
-
-    loop {
-        delay.delay_ms(900);
-        port2.outclr().write(|w| w.set_pin(LED_PIN, true));
-        delay.delay_ms(900);
-        port2.outset().write(|w| w.set_pin(LED_PIN, true));
-    }
-    */
 
     let out_b_tgl = OutBTgl::from_bits(1 << LED2_PIN);
 
