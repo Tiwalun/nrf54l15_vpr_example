@@ -16,16 +16,20 @@ use panic_probe as _;
 
 unsafe extern "C" {
     // Provided by the linker: This is the address of the static memory
-    pub static __shared_mem: u32;
+    pub static mut __shared_mem: u32;
 }
 
 #[embassy_executor::main]
 async fn main(spawner: Spawner) {
     let p = embassy_nrf::init(Default::default());
 
+    let shared_mem_addr: *const u32 = &raw const __shared_mem;
+
+    defmt::debug!("Shared memory address: {:?}", shared_mem_addr);
+
     // Ensure shared flag is set to 0
     unsafe {
-        let shared_mem_ptr: *mut u32 = __shared_mem as *mut _;
+        let shared_mem_ptr: *mut u32 = &raw mut __shared_mem;
         shared_mem_ptr.write_volatile(0);
     }
 
@@ -57,11 +61,13 @@ async fn main(spawner: Spawner) {
 
     vpr.cpurun().write(|w| w.set_en(vals::CpurunEn::Running));
 
-    Timer::after_secs(1).await;
+    Timer::after_secs(5).await;
+
+    defmt::info!("Asking VPR to start blinking");
 
     // Set shared flag to 1
     unsafe {
-        let shared_mem_ptr: *mut u32 = __shared_mem as *mut _;
+        let shared_mem_ptr: *mut u32 = &raw mut __shared_mem;
         shared_mem_ptr.write_volatile(1);
     }
 

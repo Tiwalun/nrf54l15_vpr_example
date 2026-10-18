@@ -20,4 +20,5 @@ build: build_app build_vpr
 
 flash: flash_app flash_vpr
 
-run: flash reset
+run: flash_vpr build_app
+    probe-rs run --chip nrf54l15 app-core/target/thumbv8m.main-none-eabihf/release/rust-moonlight 

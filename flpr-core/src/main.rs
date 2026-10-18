@@ -13,9 +13,9 @@ use riscv::{asm, delay::McycleDelay};
 use riscv_rt::entry;
 
 unsafe extern "C" {
-    // Provided by the linker: This is the address of the shared memory buffer
+    // Provided by the linker: This is the start of the shared memory buffer
     // used for communicating between the cores.
-    pub static __shared_mem: u32;
+    pub static mut __shared_mem: u32;
 }
 
 #[entry]
@@ -49,9 +49,12 @@ fn main() -> ! {
         w.set_sense(vals::Sense::Disabled);
     });
 
+    // Mark that we got here
+    port2.outset().write(|w| w.set_pin(LED0_PIN, true));
+
     // Wait until shared flag is set to 1
     unsafe {
-        let shared_mem_ptr: *const u32 = __shared_mem as *const _;
+        let shared_mem_ptr: *const u32 = &raw const __shared_mem;
 
         while shared_mem_ptr.read_volatile() == 0 {
             asm::nop();
@@ -108,9 +111,6 @@ fn main() -> ! {
 
     // TODO: Remove, controlled above...
     //port2.outclr().write(|w| w.set_pin(7, true));
-
-    // Mark that we got here
-    port2.outset().write(|w| w.set_pin(LED0_PIN, true));
 
     let out_b_tgl = OutBTgl::from_bits(1 << LED2_PIN);
 
