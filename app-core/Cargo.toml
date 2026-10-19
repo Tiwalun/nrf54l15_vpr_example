@@ -1,5 +1,5 @@
 [package]
-name = "rust-moonlight"
+name = "nrf54l15-app"
 version = "0.1.0"
 edition = "2021"
 
