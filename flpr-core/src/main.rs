@@ -1,15 +1,13 @@
 #![no_std]
 #![no_main]
 
-use embedded_hal::delay::DelayNs as _;
 use flpr_core::csr::{
     self, cnt::Cnt, cntmode0::CntMode0, cntmode1::CntMode1, cnttop::CntTop, outbtgl::OutBTgl,
-    wait::Wait,
 };
 use nrf_pac as pac;
 use pac::gpio::vals;
 use panic_halt as _;
-use riscv::{asm, delay::McycleDelay};
+use riscv::asm;
 use riscv_rt::entry;
 
 unsafe extern "C" {

@@ -1,8 +1,6 @@
 #![no_std]
 #![no_main]
 
-use core::{arch::global_asm, mem::MaybeUninit};
-
 use defmt::{info, unwrap};
 
 use defmt_rtt as _;
