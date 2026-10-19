@@ -3,6 +3,7 @@
 channel = "nightly-2026-10-10"
 targets = ["thumbv8m.main-none-eabihf"]
 components = [
+    "clippy",
     "rust-src",
     "llvm-tools",
 ]

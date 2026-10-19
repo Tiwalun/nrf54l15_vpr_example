@@ -1,4 +1,6 @@
 *.hex
+*.sarif
+*.sarif.tmp
 
 .DS_Store
 
