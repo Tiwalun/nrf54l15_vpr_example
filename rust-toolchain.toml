@@ -1,7 +1,8 @@
 [toolchain]
+# Needed to build core and compiler_builtins for rv32emc
 channel = "nightly-2026-10-10"
 targets = ["thumbv8m.main-none-eabihf"]
 components = [
     "rust-src",
     "llvm-tools",
-] # Needed to build core and compiler_builtins for rv32emc
+]
