@@ -14,15 +14,5 @@ panic-halt = "1.0.0"
 riscv = { version = "0.16.1", features = ["critical-section-single-hart"] }
 riscv-rt = { version = "0.18.0", features = ["single-hart"] }
 
-[patch.crates-io]
-# Patch needed to support RV32E
-# riscv-rt = { git = "https://github.com/rust-embedded/riscv", rev = "fe6da179b437f23545a5db13ead28dc9855523a4" }
-# riscv = { git = "https://github.com/rust-embedded/riscv", rev = "fe6da179b437f23545a5db13ead28dc9855523a4" }
-
-#embassy-executor = { git = "https://github.com/tiwalun/embassy", rev = "b6f86172"}
-#embassy-nrf = { git = "https://github.com/tiwalun/embassy", rev = "b6f86172"}
-
-#embassy-executor = { path = "../../embassy/embassy/embassy-executor" }
-#embassy-nrf = { path = "../../embassy/embassy/embassy-nrf" }
-
-#nrf-pac = { path = "../../nrf-pac" }
+[profile.release]
+debug = 2

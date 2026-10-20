@@ -2,7 +2,7 @@
 MEMORY
 {
   /* NOTE 1 K = 1 KiBi = 1024 bytes */
-  FLASH : ORIGIN = 0x00000000, LENGTH = 64K
+  FLASH (RX) : ORIGIN = 0x00000000, LENGTH = 64K
 
   /* RAM00: Only used by application core */
   RAM_00 (RW) : ORIGIN = 0x20000000, LENGTH = 128K
