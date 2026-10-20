@@ -20,9 +20,9 @@ lint_vpr: (_lint "flpr" flpr_folder)
 
 _lint name folder: targetdir
     cd {{folder}} && cargo clippy --release --message-format json | clippy-sarif | tee {{target_dir}}/clippy_{{name}}.sarif.tmp | sarif-fmt
-    cat clippy_{{name}}.sarif.tmp \
-        | jq --arg pwd {{folder}} '.runs[].results[].locations[].physicalLocation.artifactLocation.uri |= $pwd + "/" + .' \
-        | jq --arg pwd {{folder}} '.runs[].results[].relatedLocations[].physicalLocation.artifactLocation.uri |= $pwd + "/" + .' \
+    jq --arg pwd {{folder}} \
+        '(.runs[].results[].locations[]?, .runs[].results[].relatedLocations[]?).physicalLocation.artifactLocation.uri |= $pwd + "/" + .' \
+        {{target_dir}}/clippy_{{name}}.sarif.tmp \
         > {{target_dir}}/clippy_{{name}}.sarif
 
 flash_app: build_app
