@@ -7,7 +7,8 @@ use defmt_rtt as _;
 use embassy_executor::Spawner;
 use embassy_nrf::{
     gpio::{Level, Output, OutputDrive},
-    pac::{spu::vals::Dmasec, vpr::vals},
+    pac::spu::vals::Dmasec,
+    vpr::Vpr,
 };
 use embassy_time::Timer;
 use panic_probe as _;
@@ -15,7 +16,10 @@ use panic_probe as _;
 unsafe extern "C" {
     // Provided by the linker: This is the address of the static memory
     pub static mut __shared_mem: u32;
+    pub static mut __vpr_load_address: u8;
 }
+
+const VPR_DATA: &[u8] = include_bytes!("../input/flpr-core.bin");
 
 #[embassy_executor::main]
 async fn main(spawner: Spawner) {
@@ -46,18 +50,15 @@ async fn main(spawner: Spawner) {
         w.set_dmasec(Dmasec::Secure);
     });
 
-    let vpr = embassy_nrf::pac::VPR00_S;
+    let vpr_address = &raw const __vpr_load_address;
 
-    // Start the riscv core
-    const RISCV_ENTRY_ADDR: u32 = 0x00020000;
+    let mut vpr = Vpr::new(p.VPR, vpr_address).unwrap();
 
-    info!("Start VPR core from address {:#010x}", RISCV_ENTRY_ADDR);
+    vpr.load(VPR_DATA).unwrap();
 
-    vpr.initpc().write(|w| {
-        *w = RISCV_ENTRY_ADDR;
-    });
+    info!("Start VPR core from address {:#010x}", vpr_address);
 
-    vpr.cpurun().write(|w| w.set_en(vals::CpurunEn::Running));
+    vpr.start();
 
     Timer::after_secs(5).await;
 

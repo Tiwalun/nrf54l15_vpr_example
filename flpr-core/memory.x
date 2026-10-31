@@ -25,9 +25,11 @@ SECTIONS
 
 _max_hart_id = 0;      /* Only a single hart */
 
-/* Everything will be loaded into RAM at runtime */
-REGION_ALIAS("REGION_TEXT", FLASH);
-REGION_ALIAS("REGION_RODATA", FLASH);
+/* Place everything into RAM. App core will load this. */
+REGION_ALIAS("REGION_TEXT", RAM_01);
+REGION_ALIAS("REGION_RODATA", RAM_01);
 REGION_ALIAS("REGION_DATA", RAM_01);
 REGION_ALIAS("REGION_BSS", RAM_01);
 REGION_ALIAS("REGION_STACK", RAM_01);
+
+ASSERT((__stext == 0x20020400), "Unexpected load address for VPR");
