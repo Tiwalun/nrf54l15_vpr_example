@@ -13,6 +13,10 @@ MEMORY
 
 REGION_ALIAS("RAM", RAM_00);
 
+__vpr_load_address = 0x20020000 + 1K;
+
+ASSERT((__vpr_load_address == 0x20020400), "Unexpected load address for VPR program");
+
 SECTIONS
 {
     /* Place shared memory buffer at fixed address */

@@ -11,9 +11,9 @@ use pac::gpio::vals;
 use panic_halt as _;
 use riscv::{
     asm,
-    interrupt::{self, enable_interrupt},
+    interrupt::{self},
 };
-use riscv_rt::{entry, interrupts};
+use riscv_rt::entry;
 
 unsafe extern "C" {
     // Provided by the linker: This is the start of the shared memory buffer
@@ -74,6 +74,15 @@ fn main() -> ! {
         interrupt::machine::enable();
     }
 
+    // Wait until shared flag is set to 1
+    unsafe {
+        let shared_mem_ptr: *const u32 = &raw const __shared_mem;
+
+        while shared_mem_ptr.read_volatile() == 0 {
+            asm::nop();
+        }
+    }
+
     // Trigger a load exception
     unsafe {
         asm! {
@@ -82,17 +91,12 @@ fn main() -> ! {
         }
     }
 
+    // enable some other interrupt
+    //
+    // Try to use clicint[0]
+
     loop {
         asm::nop();
-    }
-
-    // Wait until shared flag is set to 1
-    unsafe {
-        let shared_mem_ptr: *const u32 = &raw const __shared_mem;
-
-        while shared_mem_ptr.read_volatile() == 0 {
-            asm::nop();
-        }
     }
 
     // Enable the Real-Time peripheral
