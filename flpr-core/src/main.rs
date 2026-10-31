@@ -1,14 +1,19 @@
 #![no_std]
 #![no_main]
 
+use core::arch::asm;
+
 use flpr_core::csr::{
     self, cnt::Cnt, cntmode0::CntMode0, cntmode1::CntMode1, cnttop::CntTop, outbtgl::OutBTgl,
 };
 use nrf_pac as pac;
 use pac::gpio::vals;
 use panic_halt as _;
-use riscv::asm;
-use riscv_rt::entry;
+use riscv::{
+    asm,
+    interrupt::{self, enable_interrupt},
+};
+use riscv_rt::{entry, interrupts};
 
 unsafe extern "C" {
     // Provided by the linker: This is the start of the shared memory buffer
@@ -16,11 +21,30 @@ unsafe extern "C" {
     pub static mut __shared_mem: u32;
 }
 
+// Use LED 0
+const LED0_PIN: usize = 9;
+
+const LED2_PIN: usize = 7;
+
+// This is called for Exceptions
+#[unsafe(export_name = "ExceptionHandler")]
+pub unsafe fn default_exception_handler() {
+    let port2 = pac::P2_S;
+    // Mark that we got here
+    port2.outset().write(|w| w.set_pin(LED0_PIN, true));
+}
+
+// This is called for Core interrupts?
+#[unsafe(export_name = "DefaultHandler")]
+pub unsafe fn default_handler() {
+    let port2 = pac::P2_S;
+    // Mark that we got here
+    port2.outset().write(|w| w.set_pin(LED2_PIN, true));
+    loop {}
+}
+
 #[entry]
 fn main() -> ! {
-    // Use LED 0
-    const LED0_PIN: usize = 9;
-
     let port2 = pac::P2_S;
     port2.pin_cnf(LED0_PIN).write(|w| {
         w.set_dir(vals::Dir::Output);
@@ -33,12 +57,11 @@ fn main() -> ! {
 
     // Manually configure P2_07 to be used by the VPR core,
     // no embassy API (yet).
-    const LED2_PIN: usize = 7;
 
     pac::P2_S.outset().write(|w| w.set_pin(LED2_PIN, true));
 
     pac::P2_S.pin_cnf(LED2_PIN).write(|w| {
-        w.set_ctrlsel(vals::Ctrlsel::Vpr);
+        //    w.set_ctrlsel(vals::Ctrlsel::Vpr);
         w.set_dir(vals::Dir::Output);
         w.set_input(vals::Input::Disconnect);
         w.set_pull(vals::Pull::Disabled);
@@ -47,8 +70,21 @@ fn main() -> ! {
         w.set_sense(vals::Sense::Disabled);
     });
 
-    // Mark that we got here
-    port2.outset().write(|w| w.set_pin(LED0_PIN, true));
+    unsafe {
+        interrupt::machine::enable();
+    }
+
+    // Trigger a load exception
+    unsafe {
+        asm! {
+            "li t1, 0x11",
+            "lw t0, 0(t1)"
+        }
+    }
+
+    loop {
+        asm::nop();
+    }
 
     // Wait until shared flag is set to 1
     unsafe {
