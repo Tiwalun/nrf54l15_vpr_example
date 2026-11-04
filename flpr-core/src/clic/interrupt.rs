@@ -1,32 +1,107 @@
-//! FLPR interrupt sources.
+//! FLPR interrupt sources and the CLIC vector table.
 //!
-//! Generated from the `Interrupt` enum of `nrf-pac` (`nrf54l15-flpr`), so the names and numbers are
-//! the same as in the PAC and in Nordic's documentation. Every variant needs a matching
+//! The list is taken from the `Interrupt` enum of `nrf-pac` (`nrf54l15-flpr`), so the names and
+//! numbers are the same as in the PAC and in Nordic's documentation. Every entry needs a matching
 //! `PROVIDE(<name> = DefaultHandler);` line in `flpr-core/device.x`; if one is missing, linking
 //! fails with an undefined symbol.
 
-/// Interrupt sources of the FLPR CLIC.
-///
-/// The discriminant is the Nordic / PAC interrupt number (`IRQn`), which is also the index of the
-/// interrupt's `clicint` register. The CLIC reports interrupts in `mcause`, and looks them up in
-/// `mtvt`, using [`ID_OFFSET`](super::ID_OFFSET)` + IRQn`; the trap handler in [`super::rt`] takes
-/// care of that offset.
-///
-/// Use the variants with [`riscv_rt::core_interrupt`] to install a handler:
-///
-/// ```ignore
-/// #[riscv_rt::core_interrupt(flpr_core::clic::Interrupt::VPRCLIC_16)]
-/// fn vevif_16() {
-///     // ...
-/// }
-/// ```
-///
-/// Of the `VPRCLIC_<n>` (VEVIF) interrupts, only `n = 16..=22` are triggered by
-/// `VPR00.TASKS_TRIGGER[n]` on the nRF54L15.
-#[riscv::pac_enum(unsafe CoreInterruptNumber)]
-#[derive(Clone, Copy, Debug, Eq, PartialEq)]
-#[allow(non_camel_case_types)]
-pub enum Interrupt {
+use super::ID_OFFSET;
+use super::rt::{NUM_VECTORS, VectorTable};
+
+/// Defines [`Interrupt`], implements the `riscv` interrupt traits for it, and builds the vector
+/// table that points every CLIC interrupt ID at the handler of the same name.
+macro_rules! interrupts {
+    ($($name:ident = $irqn:literal,)*) => {
+        /// Interrupt sources of the FLPR CLIC.
+        ///
+        /// The discriminant is the Nordic / PAC interrupt number (`IRQn`), which is also the index
+        /// of the interrupt's `clicint` register. The CLIC reports interrupts in `mcause`, and looks
+        /// them up in `mtvt`, using [`ID_OFFSET`]` + IRQn`.
+        ///
+        /// Use the variants with [`riscv_rt::core_interrupt`] to install a handler:
+        ///
+        /// ```ignore
+        /// #[riscv_rt::core_interrupt(flpr_core::clic::Interrupt::VPRCLIC_16)]
+        /// fn vevif_16() {
+        ///     // ...
+        /// }
+        /// ```
+        ///
+        /// Of the `VPRCLIC_<n>` (VEVIF) interrupts, only `n = 16..=22` are triggered by
+        /// `VPR00.TASKS_TRIGGER[n]` on the nRF54L15.
+        #[derive(Clone, Copy, Debug, Eq, PartialEq)]
+        #[allow(non_camel_case_types)]
+        #[repr(u16)]
+        pub enum Interrupt {
+            $($name = $irqn,)*
+        }
+
+        /// Highest interrupt number.
+        #[allow(unused_comparisons)]
+        const MAX_IRQN: usize = {
+            let mut max = 0;
+            $(if $irqn > max { max = $irqn; })*
+            max
+        };
+
+        /// Bitmap of the valid interrupt numbers. Much smaller than a `match` on all variants,
+        /// which compiles to a jump table with one entry per number up to `MAX_IRQN`.
+        const VALID_IRQN: [u32; MAX_IRQN / 32 + 1] = {
+            let mut valid = [0; MAX_IRQN / 32 + 1];
+            $(valid[$irqn / 32] |= 1 << ($irqn % 32);)*
+            valid
+        };
+
+        // Implemented by hand instead of with `riscv::pac_enum`: with the `rt` feature, `pac_enum`
+        // also generates a software dispatch table (`__CORE_INTERRUPTS`), which is not needed
+        // because the hardware jumps straight to the handlers through `VECTOR_TABLE`.
+        //
+        // SAFETY: the discriminants are distinct and fixed, and `MAX_INTERRUPT_NUMBER` is the
+        // largest of them.
+        unsafe impl riscv::InterruptNumber for Interrupt {
+            const MAX_INTERRUPT_NUMBER: usize = MAX_IRQN;
+
+            #[inline]
+            fn number(self) -> usize {
+                self as usize
+            }
+
+            #[inline]
+            fn from_number(value: usize) -> riscv::result::Result<Self> {
+                if value <= MAX_IRQN && VALID_IRQN[value / 32] & (1 << (value % 32)) != 0 {
+                    // SAFETY: `value` is the discriminant of a variant of this `repr(u16)` enum.
+                    Ok(unsafe { core::mem::transmute::<u16, Self>(value as u16) })
+                } else {
+                    Err(riscv::result::Error::InvalidVariant(value))
+                }
+            }
+        }
+
+        // SAFETY: every variant is a CLIC interrupt of this core. Note that `mcause` reports it as
+        // `ID_OFFSET + number()`.
+        unsafe impl riscv::CoreInterruptNumber for Interrupt {}
+
+        #[allow(non_snake_case)]
+        unsafe extern "C" {
+            // Interrupt handlers: `#[riscv_rt::core_interrupt]` functions, or `DefaultHandler`
+            // (see `device.x`).
+            $(fn $name();)*
+            fn DefaultHandler();
+        }
+
+        /// The CLIC vector table (`mtvt`): entry `ID_OFFSET + IRQn` is the handler of `IRQn`.
+        ///
+        /// IDs without an [`Interrupt`] (including `0..ID_OFFSET`, which have no `clicint`
+        /// register on this core) point to `DefaultHandler`.
+        pub(super) static VECTOR_TABLE: VectorTable = {
+            let mut table = [DefaultHandler as unsafe extern "C" fn(); NUM_VECTORS];
+            $(table[ID_OFFSET + $irqn] = $name;)*
+            VectorTable(table)
+        };
+    };
+}
+
+interrupts! {
     VPRCLIC_0 = 0,
     VPRCLIC_1 = 1,
     VPRCLIC_2 = 2,

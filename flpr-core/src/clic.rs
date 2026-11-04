@@ -4,9 +4,10 @@
 //! CLIC mode with hardware vectoring. `riscv-rt` does not know about the CLIC, so this module plugs
 //! the CLIC into the standard `riscv-rt` hooks:
 //!
-//! * [`Interrupt`] implements [`riscv::CoreInterruptNumber`] (using [`riscv::pac_enum`]), so
-//!   handlers are defined with the standard [`riscv_rt::core_interrupt`] attribute. Interrupts
-//!   without a handler go to `DefaultHandler`, as usual.
+//! * [`Interrupt`] implements [`riscv::CoreInterruptNumber`], so handlers are defined with the
+//!   standard [`riscv_rt::core_interrupt`] attribute. Interrupts without a handler go to
+//!   `DefaultHandler`, as usual. The handlers are placed directly in the CLIC vector table: the VPR
+//!   saves the caller-saved registers in hardware, so no software trap entry is needed.
 //! * Exceptions go to the standard [`riscv_rt::exception`] handlers / `ExceptionHandler`.
 //! * `_setup_interrupts` (the `custom-setup-interrupts` hook of `riscv-rt`) switches `mtvec` to CLIC
 //!   mode and installs the vector table in `mtvt`, before `main` runs.
@@ -27,7 +28,8 @@
 //!  n                   clicint[n]      ID_OFFSET + n
 //! ```
 //!
-//! The [`Interrupt`] enum uses the Nordic numbers. Only `rt` and [`current`] deal with the offset.
+//! The [`Interrupt`] enum uses the Nordic numbers. Only the vector table and [`current`] deal with
+//! the offset.
 //! CLIC interrupt IDs `0..16` (the standard RISC-V interrupts, e.g. machine timer) are not wired up
 //! on this core; they have no `clicint` register.
 //!

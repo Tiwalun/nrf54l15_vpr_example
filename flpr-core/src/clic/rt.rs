@@ -1,26 +1,46 @@
 //! Trap handling glue between the CLIC and `riscv-rt`.
 //!
+//! # Interrupts
+//!
+//! The VPR saves the caller-saved registers in hardware, so interrupt handlers are ordinary
+//! functions that sit directly in the vector table:
+//!
 //! ```text
-//!  exception ──► mtvec (CLIC mode) ──┐
-//!                                    ├─► _start_trap ──► start_clic_trap_rust ─┬─► _dispatch_exception (riscv-rt)
-//!  interrupt ──► mtvt[ID] ───────────┘   (saves a          (decodes the CLIC   │     └─► #[exception] handlers / ExceptionHandler
-//!                                         TrapFrame)        mcause)            └─► _dispatch_core_interrupt (pac_enum)
-//!                                                                                    └─► #[core_interrupt] handlers / DefaultHandler
+//!  interrupt ──► hardware pushes ra, t0-t2, a0-a5 (+ previous mcause/mepc) and sets ra = INITPC + 0x1F0
+//!            ──► mtvt[ID_OFFSET + IRQn] = #[core_interrupt] handler / DefaultHandler
+//!            ──► `ret` to INITPC + 0x1F0 = `_clic_isr_return`: `mret` (hardware pops the registers)
 //! ```
 //!
-//! This replaces two parts of `riscv-rt`:
+//! The `mret` has to be at offset `0x1F0` of the image (`INITPC` is where the application core
+//! starts the FLPR, i.e. `_start`). `clic.x` puts it there.
 //!
-//! * `_start_trap`: `riscv-rt`'s `_start_trap_rust` takes the trap cause from `mcause` bits
-//!   `[30:0]`, but in CLIC mode `mcause` also holds `mpil`, `mpie`, `mpp` and `minhv`, so the cause
-//!   is wrong for every trap. Our `_start_trap` saves the same [`TrapFrame`] but calls
-//!   [`start_clic_trap_rust`], which only uses the exception code / interrupt ID in bits `[11:0]`.
-//!   `mtvec` must also be 64-byte aligned in CLIC mode, `riscv-rt`'s trap entry is only 4-byte aligned.
-//! * `_setup_interrupts` (`custom-setup-interrupts` feature): puts `mtvec` into CLIC mode and
-//!   installs `mtvt`.
+//! # Exceptions
 //!
-//! The CLIC always uses hardware vectoring on this core (`clicint.shv` is read-only 1), so
-//! interrupts are taken through the table at `mtvt`. Every entry points at `_start_trap`, so
-//! interrupts are dispatched in software through `riscv-rt`'s `__CORE_INTERRUPTS` table.
+//! On exceptions the hardware only pushes the previous `mcause` / `mepc`, so `_start_trap` (installed
+//! in `mtvec`) saves a [`TrapFrame`] in software and calls `riscv-rt`'s `_dispatch_exception` with
+//! the exception code. `riscv-rt`'s own `_start_trap_rust` can't be used: it takes the cause from
+//! `mcause` bits `[30:0]`, but in CLIC mode `mcause` also holds `mpil`, `mpie`, `mpp` and `minhv`.
+//!
+//! Exception handlers may change `mepc`: `mret` returns to the `mepc` CSR, and then restores the
+//! stacked previous value.
+//!
+//! # Hardware stacking details
+//!
+//! Measured on the nRF54L15:
+//!
+//! ```text
+//!  interrupt (48 bytes)          exception (8 bytes)
+//!  sp + 0   ra                   sp + 0   previous mcause
+//!  sp + 4   t2                   sp + 4   previous mepc | padding flag
+//!  sp + 8   t1
+//!  sp + 12  t0
+//!  sp + 16  a5 ... sp + 36 a0
+//!  sp + 40  previous mcause
+//!  sp + 44  previous mepc | padding flag
+//! ```
+//!
+//! If `sp` is not 8-byte aligned, the hardware first inserts 4 bytes of padding and sets bit 0 of
+//! the stacked `mepc` word; `mret` removes it again.
 
 use core::arch::global_asm;
 use core::mem::{offset_of, size_of};
@@ -29,6 +49,7 @@ use riscv::InterruptNumber;
 use riscv::register::{mcause, mtvec};
 use riscv_rt::TrapFrame;
 
+use super::interrupt::VECTOR_TABLE;
 use super::{ID_OFFSET, Interrupt, MCAUSE_CODE_MASK};
 
 mod mtvt {
@@ -45,17 +66,16 @@ mod mtvt {
 const MTVEC_MODE_CLIC: usize = 0b11;
 
 /// Number of `mtvt` entries: one per CLIC interrupt ID, up to the highest [`Interrupt`].
-const NUM_VECTORS: usize = ID_OFFSET + Interrupt::MAX_INTERRUPT_NUMBER + 1;
+pub(super) const NUM_VECTORS: usize = ID_OFFSET + Interrupt::MAX_INTERRUPT_NUMBER + 1;
 
 /// The CLIC vector table. The FLPR implements bits `[31:6]` of `mtvt`, hence the 64-byte alignment.
 #[repr(C, align(64))]
-struct VectorTable([unsafe extern "C" fn(); NUM_VECTORS]);
-
-static MTVT: VectorTable = VectorTable([_start_trap; NUM_VECTORS]);
+pub(super) struct VectorTable(pub(super) [unsafe extern "C" fn(); NUM_VECTORS]);
 
 unsafe extern "C" {
-    /// The trap entry point defined below.
+    /// The exception entry point defined below.
     fn _start_trap();
+    fn DefaultHandler();
 }
 
 // The trap frame layout of riscv-rt is fixed for RV32E; make sure we save all of it.
@@ -64,10 +84,10 @@ const _: () = assert!(
     "this trap entry only supports RV32E (ra, t0-t2, a0-a5)"
 );
 
-// Trap entry point, used for exceptions (via `mtvec`) and for interrupts (via `mtvt`).
+// Exception entry point (`mtvec`), and the return path of interrupt handlers.
 //
 // Defining `_start_trap` overrides `riscv-rt`'s default (`PROVIDE(_start_trap = _default_start_trap)`
-// in its `link.x`).
+// in its `link.x`). Both sections are placed by `clic.x`.
 global_asm!(
     r#"
     .section .trap.start.clic, "ax"
@@ -101,6 +121,13 @@ _start_trap:
     addi sp, sp, {size}
     mret
     .size _start_trap, . - _start_trap
+
+    .section .trap.isr_return, "ax"
+    .global _clic_isr_return
+    .type _clic_isr_return, @function
+_clic_isr_return:
+    mret
+    .size _clic_isr_return, . - _clic_isr_return
     "#,
     size = const size_of::<TrapFrame>(),
     ra = const offset_of!(TrapFrame, ra),
@@ -116,7 +143,7 @@ _start_trap:
     trap_rust = sym start_clic_trap_rust,
 );
 
-/// Decodes the (CLIC-mode) `mcause` and calls the matching `riscv-rt` dispatcher.
+/// Decodes the (CLIC-mode) `mcause` and calls `riscv-rt`'s exception dispatcher.
 ///
 /// # Safety
 ///
@@ -124,26 +151,27 @@ _start_trap:
 #[unsafe(link_section = ".trap.rust")]
 unsafe extern "C" fn start_clic_trap_rust(trap_frame: &TrapFrame) {
     unsafe extern "C" {
-        /// Generated by `riscv::pac_enum` for [`Interrupt`].
-        fn _dispatch_core_interrupt(code: usize);
         /// Generated by `riscv-rt` for the standard exceptions.
         fn _dispatch_exception(trap_frame: &TrapFrame, code: usize);
-        fn DefaultHandler();
     }
 
     let mcause = mcause::read();
-    let code = mcause.bits() & MCAUSE_CODE_MASK;
 
     unsafe {
         if mcause.is_interrupt() {
-            match code.checked_sub(ID_OFFSET) {
-                Some(irqn) => _dispatch_core_interrupt(irqn),
-                None => DefaultHandler(),
-            }
+            // Not expected: all interrupts are hardware vectored through `mtvt`.
+            DefaultHandler();
         } else {
-            _dispatch_exception(trap_frame, code);
+            _dispatch_exception(trap_frame, mcause.bits() & MCAUSE_CODE_MASK);
         }
     }
+}
+
+/// Required by `riscv-rt`'s (unused) default trap handler when the `custom-interrupts` feature is
+/// enabled. Interrupts never get there, they are dispatched by the hardware through `mtvt`.
+#[unsafe(no_mangle)]
+extern "C" fn _dispatch_core_interrupt(_code: usize) {
+    unsafe { DefaultHandler() };
 }
 
 /// Puts `mtvec` into CLIC mode and installs the vector table.
@@ -152,7 +180,7 @@ unsafe extern "C" fn start_clic_trap_rust(trap_frame: &TrapFrame) {
 #[riscv_rt::setup_interrupts]
 fn setup_interrupts(_hart_id: usize) {
     unsafe {
-        mtvt::write(mtvt::Mtvt::from_bits(&raw const MTVT as usize));
+        mtvt::write(mtvt::Mtvt::from_bits(&raw const VECTOR_TABLE as usize));
         mtvec::write(mtvec::Mtvec::from_bits(
             _start_trap as *const () as usize | MTVEC_MODE_CLIC,
         ));

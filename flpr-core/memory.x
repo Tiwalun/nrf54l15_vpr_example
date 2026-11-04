@@ -32,4 +32,4 @@ REGION_ALIAS("REGION_DATA", RAM_01);
 REGION_ALIAS("REGION_BSS", RAM_01);
 REGION_ALIAS("REGION_STACK", RAM_01);
 
-ASSERT((__stext == 0x20020400), "Unexpected load address for VPR");
+ASSERT((_start == 0x20020400), "Unexpected load address for VPR");
