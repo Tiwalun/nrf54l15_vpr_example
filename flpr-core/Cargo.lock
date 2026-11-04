@@ -71,6 +71,7 @@ version = "0.1.0"
 dependencies = [
  "embedded-hal 1.0.0",
  "nrf-pac",
+ "nrf-vpr-clic",
  "panic-halt",
  "riscv",
  "riscv-rt",
@@ -98,6 +99,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "83531b9f1e19f493018da9b8b20359e4cedd6d1357553b1ac50f3fa27a0104fa"
 dependencies = [
  "cortex-m",
+]
+
+[[package]]
+name = "nrf-vpr-clic"
+version = "0.1.0"
+dependencies = [
+ "nrf-pac",
+ "riscv",
+ "riscv-rt",
 ]
 
 [[package]]

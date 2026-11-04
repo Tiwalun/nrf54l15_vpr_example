@@ -3,7 +3,7 @@
 //! The application core raises interrupts on the FLPR by writing to the
 //! `VPR00.TASKS_TRIGGER[n]` registers ("VEVIF" = VPR event interface). The
 //! FLPR handles them with the standard `riscv-rt` attributes; the CLIC
-//! integration lives in [`flpr_core::clic`].
+//! integration lives in the `nrf-vpr-clic` crate.
 //!
 //! ## Interrupt mapping
 //!
@@ -36,8 +36,8 @@
 
 use core::arch::asm;
 
-use flpr_core::clic::{self, Interrupt, Priority};
 use flpr_core::csr;
+use nrf_vpr_clic::{self as clic, Interrupt, Priority};
 use panic_halt as _;
 use riscv::InterruptNumber;
 use riscv::asm;
@@ -148,7 +148,7 @@ extern "C" fn ExceptionHandler(_trap_frame: &TrapFrame) -> ! {
 #[entry]
 fn main() -> ! {
     // `riscv-rt` has already installed the CLIC trap handling (see
-    // `flpr_core::clic::rt`), interrupts are globally disabled.
+    // `nrf_vpr_clic::rt`), interrupts are globally disabled.
 
     // The Nordic-specific CSRs (VEVIF tasks/events at 0x7e0..0x7e6, ...) trap as
     // illegal instructions until the real-time peripheral block is unlocked.

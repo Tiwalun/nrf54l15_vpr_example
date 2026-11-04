@@ -1,5 +1,9 @@
-/* Default handlers for the FLPR CLIC interrupts (see `src/clic/interrupt.rs`).
-   Included by the riscv-rt linker script (`device` feature). */
+/* Linker script fragment of `nrf-vpr-clic`.
+
+   riscv-rt's `link.x` includes `device.x` (`device` feature) before its own SECTIONS, which is
+   what both parts below need. */
+
+/* Default handlers for the FLPR CLIC interrupts (see `src/interrupt.rs`). */
 PROVIDE(VPRCLIC_0 = DefaultHandler);
 PROVIDE(VPRCLIC_1 = DefaultHandler);
 PROVIDE(VPRCLIC_2 = DefaultHandler);
@@ -82,3 +86,30 @@ PROVIDE(WDT30 = DefaultHandler);
 PROVIDE(WDT31 = DefaultHandler);
 PROVIDE(GPIOTE30_0 = DefaultHandler);
 PROVIDE(GPIOTE30_1 = DefaultHandler);
+
+/* Image layout required by the CLIC support (see `src/rt.rs`).
+
+   On interrupt entry the VPR sets `ra` to INITPC + 0x1F0 (INITPC is where the application
+   core starts the FLPR, i.e. `_start`), so that interrupt handlers can be plain functions whose
+   `ret` lands on an `mret`. This puts that `mret` at offset 0x1F0, and uses the space before it
+   for the startup code and the exception entry, which are both written in assembly and so have
+   a fixed size. */
+
+SECTIONS
+{
+  .vpr_head ORIGIN(REGION_TEXT) :
+  {
+    KEEP(*(.init));             /* riscv-rt `_start`: must be at INITPC */
+    KEEP(*(.trap.start.clic));  /* exception entry (`mtvec`) */
+    . = ADDR(.vpr_head) + 0x1F0; /* fails to link if the code above does not fit */
+    KEEP(*(.trap.isr_return));  /* `mret` for interrupt handlers */
+  } > REGION_TEXT
+}
+
+/* The riscv-rt `.text` section follows */
+_stext = ADDR(.vpr_head) + SIZEOF(.vpr_head);
+
+ASSERT(_start == ADDR(.vpr_head), "
+ERROR(nrf-vpr-clic): `_start` must be at the start of the image");
+ASSERT(_clic_isr_return == _start + 0x1F0, "
+ERROR(nrf-vpr-clic): the interrupt return `mret` must be at offset 0x1F0 of the image");

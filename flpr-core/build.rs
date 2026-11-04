@@ -23,17 +23,6 @@ fn main() {
         .unwrap()
         .write_all(include_bytes!("memory.x"))
         .unwrap();
-    // `device.x` provides default handlers for the CLIC interrupts. It's included by
-    // the `riscv-rt` linker script (`device` feature).
-    File::create(out.join("device.x"))
-        .unwrap()
-        .write_all(include_bytes!("device.x"))
-        .unwrap();
-    // `clic.x` places the interrupt return `mret` at the offset expected by the VPR.
-    File::create(out.join("clic.x"))
-        .unwrap()
-        .write_all(include_bytes!("clic.x"))
-        .unwrap();
     println!("cargo:rustc-link-search={}", out.display());
 
     // By default, Cargo will re-run a build script whenever
@@ -41,8 +30,6 @@ fn main() {
     // here, we ensure the build script is only re-run when
     // `memory.x` is changed.
     println!("cargo:rerun-if-changed=memory.x");
-    println!("cargo:rerun-if-changed=device.x");
-    println!("cargo:rerun-if-changed=clic.x");
 
     // Specify linker arguments.
 
@@ -53,6 +40,5 @@ fn main() {
 
     // Set the linker script to the one provided by riscv-rt.
     println!("cargo:rustc-link-arg=-Tmemory.x");
-    println!("cargo:rustc-link-arg=-Tclic.x");
     println!("cargo:rustc-link-arg=-Tlink.x");
 }

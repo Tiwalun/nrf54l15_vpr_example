@@ -2,7 +2,7 @@
 //!
 //! The list is taken from the `Interrupt` enum of `nrf-pac` (`nrf54l15-flpr`), so the names and
 //! numbers are the same as in the PAC and in Nordic's documentation. Every entry needs a matching
-//! `PROVIDE(<name> = DefaultHandler);` line in `flpr-core/device.x`; if one is missing, linking
+//! `PROVIDE(<name> = DefaultHandler);` line in `device.x`; if one is missing, linking
 //! fails with an undefined symbol.
 
 use super::ID_OFFSET;
@@ -21,7 +21,7 @@ macro_rules! interrupts {
         /// Use the variants with [`riscv_rt::core_interrupt`] to install a handler:
         ///
         /// ```ignore
-        /// #[riscv_rt::core_interrupt(flpr_core::clic::Interrupt::VPRCLIC_16)]
+        /// #[riscv_rt::core_interrupt(nrf_vpr_clic::Interrupt::VPRCLIC_16)]
         /// fn vevif_16() {
         ///     // ...
         /// }

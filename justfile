@@ -6,6 +6,8 @@ flpr_folder := "flpr-core"
 flpr_target := "riscv32emc-unknown-none-elf"
 flpr_elf :=  f"{{flpr_folder}}/target/{{flpr_target}}/release/flpr-core"
 
+clic_folder := "nrf-vpr-clic"
+
 target_dir := f"{{justfile_dir()}}/target"
 
 targetdir:
@@ -17,6 +19,8 @@ build_app: build_vpr
 lint_app: (_lint "app" app_folder)
 
 lint_vpr: (_lint "flpr" flpr_folder)
+
+lint_clic: (_lint "clic" clic_folder)
 
 _lint name folder: targetdir
     cd {{folder}} && cargo clippy --release --message-format json | clippy-sarif | tee {{target_dir}}/clippy_{{name}}.sarif.tmp | sarif-fmt
@@ -42,7 +46,7 @@ build: build_app build_vpr
 zizmor:
     zizmor .
 
-lint-ci: lint_app lint_vpr
+lint-ci: lint_app lint_vpr lint_clic
 
 lint-local: zizmor lint-ci
 

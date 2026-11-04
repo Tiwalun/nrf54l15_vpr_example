@@ -12,7 +12,7 @@
 //! ```
 //!
 //! The `mret` has to be at offset `0x1F0` of the image (`INITPC` is where the application core
-//! starts the FLPR, i.e. `_start`). `clic.x` puts it there.
+//! starts the FLPR, i.e. `_start`). This crate's `device.x` puts it there.
 //!
 //! # Exceptions
 //!
@@ -87,7 +87,7 @@ const _: () = assert!(
 // Exception entry point (`mtvec`), and the return path of interrupt handlers.
 //
 // Defining `_start_trap` overrides `riscv-rt`'s default (`PROVIDE(_start_trap = _default_start_trap)`
-// in its `link.x`). Both sections are placed by `clic.x`.
+// in its `link.x`). Both sections are placed by `device.x`.
 global_asm!(
     r#"
     .section .trap.start.clic, "ax"

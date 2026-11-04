@@ -30,6 +30,7 @@ jobs:
           workspaces: |
             app-core
             flpr-core
+            nrf-vpr-clic
 
       - uses: taiki-e/install-action@v2.87.29
         with:
@@ -48,3 +49,8 @@ jobs:
         with:
           sarif_file: target/clippy_flpr.sarif
           category: clippy-flpr
+
+      - uses: github/codeql-action/upload-sarif@v4.39.0
+        with:
+          sarif_file: target/clippy_clic.sarif
+          category: clippy-clic

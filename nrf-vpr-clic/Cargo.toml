@@ -1,0 +1,18 @@
+[package]
+name = "nrf-vpr-clic"
+version = "0.1.0"
+edition = "2024"
+description = "CLIC interrupt support for the nRF54L15 FLPR (VPR), integrated with riscv-rt"
+links = "nrf-vpr-clic"
+
+[dependencies]
+nrf-pac = { version = "0.4.0", features = ["nrf54l15-flpr"] }
+riscv = "0.16.1"
+riscv-rt = { version = "0.18.0", features = [
+    # The CLIC interrupts are defined in `nrf_vpr_clic::Interrupt` instead.
+    "custom-interrupts",
+    # `nrf_vpr_clic::rt` sets up `mtvec` / `mtvt` for CLIC mode.
+    "custom-setup-interrupts",
+    # Include `device.x` (default handlers and image layout) in the linker script.
+    "device",
+] }

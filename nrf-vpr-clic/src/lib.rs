@@ -1,4 +1,5 @@
-//! CLIC (Core-Local Interrupt Controller) support for the FLPR, integrated with `riscv-rt`.
+//! CLIC (Core-Local Interrupt Controller) support for the nRF54L15 FLPR (VPR), integrated with
+//! `riscv-rt`.
 //!
 //! The FLPR has no PLIC/CLINT, only a CLIC (at `0xF000_0000` as seen from the core) that runs in
 //! CLIC mode with hardware vectoring. `riscv-rt` does not know about the CLIC, so this module plugs
@@ -15,6 +16,39 @@
 //!   interrupts with [`enable`] / [`disable`] in this module.
 //!
 //! See [`rt`] for how the trap handling works.
+//!
+//! # Usage
+//!
+//! Add this crate and `riscv-rt` as dependencies, and link with `memory.x` and `riscv-rt`'s `link.x`
+//! as usual. This crate enables the `riscv-rt` features it needs (`custom-interrupts`,
+//! `custom-setup-interrupts`, `device`) and provides the `device.x` they require, so there is
+//! nothing else to configure. Requirements:
+//!
+//! * The image must start at the address the application core puts into `VPR00.INITPC`, with
+//!   `_start` first (the `device.x` of this crate places it there). Interrupts return through an
+//!   `mret` at offset `0x1F0` of the image, see [`rt`].
+//! * No other crate may provide a `device.x` (e.g. a PAC with its `rt` feature).
+//!
+//! ```ignore
+//! use nrf_vpr_clic::{Interrupt, Priority};
+//!
+//! #[riscv_rt::core_interrupt(Interrupt::VPRCLIC_16)]
+//! fn vevif_16() {
+//!     // ...
+//! }
+//!
+//! #[riscv_rt::entry]
+//! fn main() -> ! {
+//!     unsafe {
+//!         nrf_vpr_clic::set_priority(Interrupt::VPRCLIC_16, Priority::P3);
+//!         nrf_vpr_clic::enable(Interrupt::VPRCLIC_16);
+//!         riscv::interrupt::enable();
+//!     }
+//!     loop {
+//!         riscv::asm::wfi();
+//!     }
+//! }
+//! ```
 //!
 //! # Interrupt numbering
 //!
@@ -39,6 +73,8 @@
 //!   do nothing; use [`enable`] / [`disable`] instead.
 //! * `mcause` contains extra fields in CLIC mode (`mpil`, `mpie`, `mpp`, `minhv`), so
 //!   `riscv::register::mcause::read().code()` is wrong. Use [`current`] inside interrupt handlers.
+
+#![no_std]
 
 use nrf_pac::clic::regs::Clicint;
 use nrf_pac::clic::vals::{Mode, Trig};

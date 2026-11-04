@@ -1,0 +1,17 @@
+[build]
+target = "riscv32emc-unknown-none-elf"
+rustflags = [
+    "-C", "target-feature=+zba",
+    "-C", "target-feature=+zbb",
+    "-C", "target-feature=+zbc",
+    "-C", "target-feature=+zbs",
+    "-C", "target-feature=+zicsr",
+    "-C", "target-feature=+zcb",
+]
+
+#target = "riscv32imc-unknown-none-elf"
+#Specify the -e option
+#rustflags = ["-C", "target-feature=+e"]
+
+[unstable]
+build-std = ["core", "compiler_builtins"]
