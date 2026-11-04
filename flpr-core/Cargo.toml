@@ -12,7 +12,15 @@ nrf-pac = { version = "0.4.0", features = ["nrf54l15-flpr"] }
 #] }
 panic-halt = "1.0.0"
 riscv = { version = "0.16.1", features = ["critical-section-single-hart"] }
-riscv-rt = { version = "0.18.0", features = ["single-hart"] }
+riscv-rt = { version = "0.18.0", features = [
+    "single-hart",
+    # The CLIC interrupts are defined in `flpr_core::clic::Interrupt` instead.
+    "custom-interrupts",
+    # `flpr_core::clic::rt` sets up `mtvec` / `mtvt` for CLIC mode.
+    "custom-setup-interrupts",
+    # Include `device.x` (default handlers for the CLIC interrupts) in the linker script.
+    "device",
+] }
 
 [profile.release]
 debug = 2
