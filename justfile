@@ -11,7 +11,7 @@ target_dir := f"{{justfile_dir()}}/target"
 targetdir:
     mkdir -p {{target_dir}}
 
-build_app:
+build_app: build_vpr
     cd {{app_folder}} && cargo build --release
 
 lint_app: (_lint "app" app_folder)
@@ -30,11 +30,9 @@ flash_app: build_app
 
 build_vpr: targetdir
     cd {{flpr_folder}} && cargo build --release
-    rust-objcopy -O ihex {{flpr_elf}} {{target_dir}}/flpr-core.hex
+    rust-objcopy -O binary {{flpr_elf}} {{app_folder}}/input/flpr-core.bin
 
 
-flash_vpr: build_vpr
-    probe-rs download {{target_dir}}/flpr-core.hex --binary-format hex --chip nrf54l15
 
 reset:
     probe-rs reset --chip nrf54l15
@@ -50,7 +48,7 @@ lint-local: zizmor lint-ci
 
 ci: build lint-ci
 
-flash: flash_app flash_vpr
+flash: flash_app
 
-run: flash_vpr build_app
+run: build_app
     probe-rs run --chip nrf54l15 {{app_elf}}
