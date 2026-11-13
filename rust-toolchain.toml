@@ -1,6 +1,6 @@
 [toolchain]
 # Needed to build core and compiler_builtins for rv32emc
-channel = "nightly-2026-10-10"
+channel = "nightly-2026-11-10"
 targets = ["thumbv8m.main-none-eabihf"]
 components = [
     "clippy",
